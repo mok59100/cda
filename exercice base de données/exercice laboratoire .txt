@@ -1,0 +1,23 @@
+1)oui
+2)non 1 seule
+3)oui
+4)oui
+5)non
+6)non
+7)non
+8)non 
+9)oui
+10)oui
+11)le labo peut distribue 1 ou 0 medicaments
+
+
+1)prenom,annee de naissance,
+table chercheur 1.1
+2)directeur
+3)cle varchar,
+5)manque dans chercheur cle equipe
+manque cle labaratoire dans table equipe 
+4) appartient creation de table + manque 2 cle 
+12) manque 3 cle + creation de table travail sur 
+13) manques 2 clés + creation de table effectue
+14)nom du pays comme cle de la table
