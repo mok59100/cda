@@ -1,0 +1,27 @@
+fautes
+ode unique un titre 
+une date de detection
+commentaire
+date de reparation
+
+manuel de qualite de l'entreprise
+defaut constaté sur une piece produite en fin de chaine 
+
+produit concerne
+categorie
+un nom 
+une description
+sous categorie
+modele associe
+num de serie 6 chiffre 
+le num de produit  4 caractere 
+annee de production
+
+produit
+numero de serie 
+numero de produit 
+
+code 8 caractere 
+son nom 
+date de mise 
+
