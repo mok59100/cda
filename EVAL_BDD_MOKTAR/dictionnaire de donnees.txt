@@ -1,0 +1,42 @@
+prospection des voeux 
+choix des cadeaux emballage 
+stockage 
+livraison a la main
+
+voeux des enfants 
+numero identification (2039) leurs noms prenom adresse 
+leur sexe leur voeux pourcentage de sagesse 
+
+
+petit lutin 
+nom, prenom, indentification numero specifique 
+
+traineau
+une taille
+numero de traineau
+une date mise en service  
+date de la derniere revision
+
+historique responsabilite
+nom du responsable 
+date de responsabilite 
+numero du traineau
+
+
+livraison 
+numero unique 
+traineau concerne
+lutin conducteur 
+heure de depart tournee  
+
+cadeau 
+numero unique 
+designation
+nom de l'enfant
+
+
+rennes 
+nom particulier 
+son sexe 
+sa date de naissance 
+
