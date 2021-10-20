@@ -45,9 +45,8 @@ WHERE titre ='représentant' OR titre ='president'
 -- 11.Afficher le nom, le titre, le numéro de département, le salaire des 
 -- employés du département 34, dont le titre est « Représentant » ou 
 -- « Secrétaire ». 
-SELECT nom AS 'Nom Employe', nodep AS 'Numero Departement Employe', salaire AS 'Salaire Employe'
-FROM employe
-WHERE nodep = 34 AND (titre = 'Représentant' OR titre = 'Secrétaire')
+SELECT nom AS 'Nom Employe',nodep AS 'Numero Departement Employe',salaire AS 'Salaire Employe'
+FROM employe WHERE nodep =34 AND(titre ='Représentant' OR titre ='Secrétaire')
 
 -- 12.Afficher le nom, le titre, le numéro de département, le salaire des 
 -- employés dont le titre est Représentant, ou dont le titre est Secrétaire 
@@ -148,7 +147,7 @@ SELECT nom, LENGTH(nom) as longeurNom FROM employe
 
 --Rechercher le numéro du département, le nom du département, le 
 --nom des employés classés par numéro de département (renommer lestables utilisées).
-SELECT e.nodep, d.nom AS 'nom departement', e.nom A 'nom employe'FROM employe AS e INNER JOIN dept AS d ON e.nodep = d.nodept ORDER BY e.nodep
+SELECT e.nodep, d.nom AS 'nom departement', e.nom A 'nom employe' FROM employe AS e INNER JOIN dept AS d ON e.nodep = d.nodept ORDER BY e.nodep
 
 --Rechercher le nom des employés du département Distribution.
 SELECT E.nom
@@ -196,7 +195,7 @@ WHERE NOT nom = 'Fairent'AND (titre,salaire) = (SELECT titre,salaire FROM employ
 
 SELECT e.nodep, d.nom AS 'nom departement', e.nom As 'nom employe'FROM employe AS e RIGHT JOIN dept AS d ON e.nodep = d.nodept ORDER BY e.nodep
 
--- 1. Calculer le nombre d'employés de chaque titre. 
+-- 1. Calculer le nombre demployés de chaque titre. 
 SELECT titre, COUNT (*) as "nombre employe" FROM employe GROUP BY titre
 
 
@@ -230,8 +229,6 @@ SELECT titre,COUNT(*) FROM employe GROUP BY titre
 -- 8. Pour chaque nom de département, afficher le nom du département et le nombre d'employés.
  SELECT d.nom, count(e.noemp) as "Nb employes" FROM employe as e INNER JOIN dept as d ON d.nodept=e.nodep GROUP BY d.nom;
 -- 9. Rechercher les titres et la moyenne des salaires par titre dont la moyenne est supérieure à la moyenne des salaires des Représentants. 
-
-
 SELECT titre, ROUND(AVG(salaire)) as "MoySalaire" FROM employe GROUP BY titre HAVING MoySalaire > (SELECT AVG(salaire) FROM employe WHERE titre="représentant")
 -- 10.Rechercher le nombre de salaires renseignés et le nombre de taux de commission renseignés.
 SELECT COUNT (salaire) , COUNT (tauxcom) FROM Employe
@@ -272,27 +269,45 @@ SELECT numcom , SUM(qtecde*priuni) as total  FROM ligcom WHERE qtecde<1000 GROUP
 
 -- 10.Lister les commandes par nom fournisseur 
 -- (Afficher le nom du fournisseur, le numéro de commande et la date)
-SELECT nomfou FROM fournis INNER JOIN entcom on entcom.numcom=numfou.numfou
+SELECT nomfou FROM fournis 
+INNER JOIN entcom on entcom.numcom=numfou.numfou
+
 -- 11.Sortir les produits des commandes ayant le mot urgent en observation?
 -- (Afficher le numéro de commande, le nom du fournisseur, le libellé du produit et 
 -- le sous total = quantité commandée * Prix unitaire
+SELECT entcom.numcom, nomfou, libart, SUM(qtecde*priuni) AS total FROM fournis 
+INNER JOIN entcom ON fournis.numfou=entcom.numfou INNER JOIN ligcom ON entcom.numcom=ligcom.numcom
+INNER JOIN produit ON produit.codart=ligcom.codart WHERE obscom LIKE'%urgent%'
 -- 12.Coder de 2 manières différentes la requête suivante :
 -- Lister le nom des fournisseurs susceptibles de livrer au moins un article
+SELECT DISTINCT nomfou FROM fournis
+ INNER JOIN vente ON fournis.numfou=vente.numfou 
 -- 13.Coder de 2 manières différentes la requête suivante
 -- Lister les commandes (Numéro et date) dont le fournisseur est celui de la 
 -- commande 70210 :
+SELECT numcom, derliv FROM ligcom WHERE numcom=70210
 -- 14.Dans les articles susceptibles d’être vendus, lister les articles moins chers (basés 
 -- sur Prix1) que le moins cher des rubans (article dont le premier caractère 
--- commence par R). On affichera le libellé de l’article et prix1
+-- commence par R). On affichera le libellé de l’article et prix1 
+SELECT libart, prix1 FROM produit
+INNER JOIN vente ON produit.codart=vente.codart WHERE prix1<(
+SELECT MIN(prix1) FROM vente 
+INNER JOIN produit ON vente.codart=produit.codart WHERE libart LIKE'R%')
 -- 15.Editer la liste des fournisseurs susceptibles de livrer les produits dont le stock est 
 -- inférieur ou égal à 150 % du stock dalerte. La liste est triée par produit puis 
--- fournisseur
+-- fournisseur trié
+SELECT numfou,stkphy,stkale FROM vente 
+INNER JOIN produit ON vente.codart=produit.codart WHERE stkphy<=(150/100)*stkale
+
 -- 16.Éditer la liste des fournisseurs susceptibles de livrer les produit dont le stock est 
 -- inférieur ou égal à 150 % du stock dalerte et un délai de livraison Dau plus 30 
 -- jours. La liste est triée par fournisseur puis produit
+SELECT numfou, libart,stkphy,stkale,delliv FROM vente
+INNER JOIN produit ON vente.codart=produit.codart WHERE stkphy<=(150/100)*stkale AND delliv<=30
 -- 17.Avec le même type de sélection que ci-dessus, sortir un total des stocks par 
 -- fournisseur trié par total décroissant
--- 18.En fin dannée, sortir la liste des produits dont la quantité réellement commandée 
+SELECT numfou, libart,stkphy,stkale,delliv FROM vente
+INNER JOIN produit ON vente.codart=produit.codart WHERE stkphy<=(150/100)*stkale AND delliv<=30 AND sum (stkphy=numfou) ORDER BY total DESC
 -- dépasse 90% de la quantité annuelle prévue.
 -- 19.Calculer le chiffre daffaire par fournisseur pour lannée 93 sachant que les prix 
 -- indiqués sont hors taxes et que le taux de TVA est 20%.
