@@ -275,7 +275,7 @@ INNER JOIN entcom on entcom.numcom=numfou.numfou
 -- 11.Sortir les produits des commandes ayant le mot urgent en observation?
 -- (Afficher le numéro de commande, le nom du fournisseur, le libellé du produit et 
 -- le sous total = quantité commandée * Prix unitaire
-SELECT entcom.numcom, nomfou, libart, SUM(qtecde*priuni) AS total FROM fournis 
+SELECT entcom.numcom, nomfou, libart,SUM(qtecde*priuni) AS total FROM fournis 
 INNER JOIN entcom ON fournis.numfou=entcom.numfou INNER JOIN ligcom ON entcom.numcom=ligcom.numcom
 INNER JOIN produit ON produit.codart=ligcom.codart WHERE obscom LIKE'%urgent%'
 -- 12.Coder de 2 manières différentes la requête suivante :
@@ -305,11 +305,12 @@ INNER JOIN produit ON vente.codart=produit.codart WHERE stkphy<=(150/100)*stkale
 SELECT numfou, libart,stkphy,stkale,delliv FROM vente
 INNER JOIN produit ON vente.codart=produit.codart WHERE stkphy<=(150/100)*stkale AND delliv<=30
 -- 17.Avec le même type de sélection que ci-dessus, sortir un total des stocks par 
--- fournisseur trié par total décroissant
-SELECT numfou, libart,stkphy,stkale,delliv FROM vente
-INNER JOIN produit ON vente.codart=produit.codart WHERE stkphy<=(150/100)*stkale AND delliv<=30 AND sum (stkphy=numfou) ORDER BY total DESC
--- dépasse 90% de la quantité annuelle prévue.
+-- fournisseur trié par total décroissant dépasse 90% de la quantité annuelle prévue.
+SELECT numfou,libart,stkphy,stkale,delliv,qteann FROM vente 
+INNER JOIN produit ON vente.codart=produit.codart WHERE stkphy<=(150/100)*stkale AND delliv<=30 and stkphy<=(90/100)*qteann ORDER BY stkphy DESC 
 -- 19.Calculer le chiffre daffaire par fournisseur pour lannée 93 sachant que les prix 
 -- indiqués sont hors taxes et que le taux de TVA est 20%.
+SELECT numfou,round(SUM(qtecde*priuni*1.2)) as total  FROM ligcom  
+INNER JOIN entcom ON LIGCOM.NUMCOM=entcom.numcom GROUP BY numfou 
 -- 20.Existe-t-il des lignes de commande non cohérentes avec les produits vendus par 
 -- les fournisseurs. 
