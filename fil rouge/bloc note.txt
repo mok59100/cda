@@ -1,0 +1,64 @@
+produits reference aupres du fournisseur (constructeur,importateur)
+produits organise en rubrique/sous rubrique
+ libelle court du produit 
+libelle long( description)
+ue reference fournisseur
+prix d'achat
+une photo
+
+catalogue 
+mise a jour stock
+valide la publication de nouveaux produits 
+desactive les anciens produits
+arborescence rubrique/sous rubrique 
+
+
+prix hors taxe
+prix de vente par rapport au prix d'achat
+coefficient en fonction de la cat du client part/prof
+
+client 
+attribution d'un commercial client particulier 
+reduction suppl sur le total
+negocie par le service commercial
+
+
+commande 
+adresse de livraison
+adresse de facturation
+bon de livraison
+facture 
+reglement:
+client paticulier  paiement exige
+client prof le paiement est differe 
+reference identification avec tout les services( commercial, sav, comptabilite ) 
+expedition partielle commande facturation entiere 
+documents conserver 3 ans
+
+ 
+service commercial : 
+Créer une nouvelle commande
+Ajouter des produits dans la commande
+connaître l’état de la commande (saisie, annulée, en préparation, expédiée, facturée, 
+retard de paiement, soldée)
+Consulter les clients en retard de paiement à une date donnée
+Modifier ou annuler la commande avant qu’elle ne soit en préparation
+
+
+gestion des produits 
+ajouter des produits
+supprimer des produits 
+modifier les caractéristiques (libellé, caractéristique, tarif)
+
+e-commerce clients
+Consulter le catalogue
+saisir de nouvelles commandes
+De visualiser les anciennes commandes
+
+Chiffre d'affaire general et par fournisseur
+Liste des produits commandés pour une année sélectionnée (référence et nom du 
+produit, quantité commandée, fournisseur)
+Liste des commandes pour un client (date de commande, ref client, montant, état de la 
+commande)
+Répartition du chiffre d'affaire par type de client
+Lister les commandes en cours de livraison.
