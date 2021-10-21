@@ -215,19 +215,19 @@ SELECT nodep FROM employe GROUP BY nodep HAVING COUNT (nodep) >= 3
 
 
 
--- 4. Afficher les lettres qui sont l'initiale d'au moins trois employés.
+-- 4. Afficher les lettres qui sont linitiale d'au moins trois employés.
 --  SELECT nodep FROM employe GROUP BY nodep HAVING COUNT (nodep) >= 3//
 SELECT substring(nom,1,1) as 'initial'FROM employe GROUP BY initial having count(initial) > 2
 
 -- 5. Rechercher le salaire maximum et le salaire minimum parmi tous les salariés et l'écart entre les deux.
-SELECT MIN(salaire) as 'salaire min' , MAX(salaire) as 'salaire max' , MAX(salaire)-MIN(salaire) as 'difference' FROM employe
+SELECT MIN(salaire) as 'salaire min', MAX(salaire)as'salaire max' , MAX(salaire)-MIN(salaire) as 'difference' FROM employe
 
 -- 6. Rechercher le nombre de titres différents.
 SELECT COUNT (DISTINCT titre) FROM employe 
--- 7. Pour chaque titre, compter le nombre d'employés possédant ce titre. 
+-- 7. Pour chaque titre, compter le nombre demployés possédant ce titre. 
 SELECT titre,COUNT(*) FROM employe GROUP BY titre 
 -- 8. Pour chaque nom de département, afficher le nom du département et le nombre d'employés.
- SELECT d.nom, count(e.noemp) as "Nb employes" FROM employe as e INNER JOIN dept as d ON d.nodept=e.nodep GROUP BY d.nom;
+ SELECT d.nom, count(e.noemp) as"Nb employes" FROM employe as e INNER JOIN dept as d ON d.nodept=e.nodep GROUP BY d.nom;
 -- 9. Rechercher les titres et la moyenne des salaires par titre dont la moyenne est supérieure à la moyenne des salaires des Représentants. 
 SELECT titre, ROUND(AVG(salaire)) as "MoySalaire" FROM employe GROUP BY titre HAVING MoySalaire > (SELECT AVG(salaire) FROM employe WHERE titre="représentant")
 -- 10.Rechercher le nombre de salaires renseignés et le nombre de taux de commission renseignés.
@@ -237,28 +237,31 @@ SELECT COUNT (salaire) , COUNT (tauxcom) FROM Employe
 PAPYRUS
 
 --1. Quelles sont les commandes du fournisseur 09120 ?
-SELECT* FROM entcom WHERE numfou= 9120
+SELECT* FROM entcom WHERE numfou= 09120
 --2. Afficher le code des fournisseurs pour lesquels des commandes ont été passées.
-SELECT numfou FROM entcom
+SELECT DISTINCT numfou FROM entcom
 --3. Afficher le nombre de commandes fournisseurs passées, et le nombre de 
 --fournisseur concernés.
-SELECT COUNT(numcom),COUNT(DISTINCT numfou) FROM entcom  
+SELECT COUNT(*) AS "Commande passées",COUNT(DISTINCT numfou) AS "Nombre de fournisseur" FROM entcom
+
 --4. Editer les produits ayant un stock inférieur ou égal au stock dalerte et dont la 
 --quantité annuelle est inférieur  à 1000
-SELECT libart from produit WHERE stkale >= stkphy AND stkphy<1000
+SELECT * FROM produit WHERE stkphy <= stkale AND qteann < 1000 
 --(informations à fournir : n° produit, libellé produit, stock, stock actuel dalerte, 
 --quantité annuelle)
 --5. Quels sont les fournisseurs situés dans les départements 75 78 92 77
 --Laffichage (département, nom fournisseur) sera effectué par département 
 --décroissant, puis par ordre alphabétique
-Select substr(posfou,1,2) as 'Département' , nomfou from fournis
-where substr(posfou,1,2) in (75,77,78,92)
-order by posfou desc, nomfou asc;
+ SELECT nomfou AS "nomFournisseur", SUBSTRING(posfou,1,2) AS "Departement" FROM fournis 
+WHERE SUBSTRING(posfou,1,2) IN ("75","78","92","77") ORDER BY Departement DESC,nomfou;
 -- 6. Quelles sont les commandes passées au mois de mars et avril ?
-Select datcom from entcom where extract(month from datcom) in (3,4)
+
+SELECT * FROM entcom WHERE MONTH(datcom) IN (3,4)
+select *from entcom where DATE_FORMAT(datcom,'%m') in (3,4
 -- 7. Quelles sont les commandes du jour qui ont des observations particulières ?
 -- (Affichage numéro de commande, date de commande)
-SELECT numcom, datcom FROM entcom WHERE obscom <> "" AND datcom=CURDATE()
+select numcom, datcom from entcom where obscom <> "" and DATE(datcom)=DATE(NOW());
+SELECT obscom, numcom FROM entcom WHERE obscom != "" AND datcom = CURDATE()
 -- 8. Lister le total de chaque commande par total décroissant 
 -- (Affichage numéro de commande et total)
 SELECT numcom , SUM(qtecde*priuni) as total  FROM ligcom GROUP BY numcom ORDER BY total DESC
@@ -269,8 +272,8 @@ SELECT numcom , SUM(qtecde*priuni) as total  FROM ligcom WHERE qtecde<1000 GROUP
 
 -- 10.Lister les commandes par nom fournisseur 
 -- (Afficher le nom du fournisseur, le numéro de commande et la date)
-SELECT nomfou FROM fournis 
-INNER JOIN entcom on entcom.numcom=numfou.numfou
+select Distinct F.nomfou , E.numcom, E.datcom from fournis as F INNER JOIN entcom as E on F.numfou=E.numfou
+
 
 -- 11.Sortir les produits des commandes ayant le mot urgent en observation?
 -- (Afficher le numéro de commande, le nom du fournisseur, le libellé du produit et 
@@ -282,35 +285,85 @@ INNER JOIN produit ON produit.codart=ligcom.codart WHERE obscom LIKE'%urgent%'
 -- Lister le nom des fournisseurs susceptibles de livrer au moins un article
 SELECT DISTINCT nomfou FROM fournis
  INNER JOIN vente ON fournis.numfou=vente.numfou 
+
+SELECT DISTINCT nomfou FROM fournis 
+WHERE numfou = IN (SELECT DISTINCT numfou FROM vente);
 -- 13.Coder de 2 manières différentes la requête suivante
 -- Lister les commandes (Numéro et date) dont le fournisseur est celui de la 
 -- commande 70210 :
-SELECT numcom, derliv FROM ligcom WHERE numcom=70210
+SELECT numcom, datcom, numfou FROM entcom as E1
+WHERE  numfou = ( SELECT numfou FROM entcom as E2 WHERE numcom = 70210) AND E1.numfou != 70210
 -- 14.Dans les articles susceptibles d’être vendus, lister les articles moins chers (basés 
 -- sur Prix1) que le moins cher des rubans (article dont le premier caractère 
 -- commence par R). On affichera le libellé de l’article et prix1 
-SELECT libart, prix1 FROM produit
-INNER JOIN vente ON produit.codart=vente.codart WHERE prix1<(
-SELECT MIN(prix1) FROM vente 
-INNER JOIN produit ON vente.codart=produit.codart WHERE libart LIKE'R%')
+SELECT libart, prix1 FROM vente 
+INNER JOIN produit ON vente.codart = produit.codart 
+WHERE prix1 <  (SELECT MIN(prix1) FROM vente
+                WHERE vente.codart LIKE 'R%' )
+
 -- 15.Editer la liste des fournisseurs susceptibles de livrer les produits dont le stock est 
 -- inférieur ou égal à 150 % du stock dalerte. La liste est triée par produit puis 
 -- fournisseur trié
-SELECT numfou,stkphy,stkale FROM vente 
-INNER JOIN produit ON vente.codart=produit.codart WHERE stkphy<=(150/100)*stkale
-
+SELECT nomfou,vente.codart FROM vente 
+INNER JOIN produit ON vente.codart=produit.codart
+INNER JOIN fournis ON vente.numfou=fournis.numfou  
+WHERE stkphy<=1.5*stkale 
+ORDER BY codart,nomfou
 -- 16.Éditer la liste des fournisseurs susceptibles de livrer les produit dont le stock est 
 -- inférieur ou égal à 150 % du stock dalerte et un délai de livraison Dau plus 30 
 -- jours. La liste est triée par fournisseur puis produit
-SELECT numfou, libart,stkphy,stkale,delliv FROM vente
-INNER JOIN produit ON vente.codart=produit.codart WHERE stkphy<=(150/100)*stkale AND delliv<=30
+SELECT nomfou,vente.codart FROM vente 
+INNER JOIN produit ON vente.codart=produit.codart
+INNER JOIN fournis ON vente.numfou=fournis.numfou  
+WHERE stkphy<=1.5*stkale 
+AND vente.delliv <= 30
+ORDER BY codart,nomfou
 -- 17.Avec le même type de sélection que ci-dessus, sortir un total des stocks par 
 -- fournisseur trié par total décroissant dépasse 90% de la quantité annuelle prévue.
-SELECT numfou,libart,stkphy,stkale,delliv,qteann FROM vente 
-INNER JOIN produit ON vente.codart=produit.codart WHERE stkphy<=(150/100)*stkale AND delliv<=30 and stkphy<=(90/100)*qteann ORDER BY stkphy DESC 
+select nomfou, sum(stkphy) as stockTotal
+from fournis
+     inner join vente on fournis.numfou=vente.numfou
+     inner join produit on vente.codart=produit.codart
+where stkphy<1.5*stkale and delliv<=30
+group by fournis.numfou
+order by stockTotal DESC
+-- 18.En fin dannée, sortir la liste des produits dont la quantité réellement commandée dépasse 90% de la quantité annuelle prévue.
+SELECT produit.codart, SUM(qtecde) as"somme quantité commandée",qteann 
+FROM ligcom INNER JOIN produit ON ligcom.codart = produit.codart 
+GROUP BY codart HAVING SUM(qtecde) > qteann*0.90
+
 -- 19.Calculer le chiffre daffaire par fournisseur pour lannée 93 sachant que les prix 
 -- indiqués sont hors taxes et que le taux de TVA est 20%.
-SELECT numfou,round(SUM(qtecde*priuni*1.2)) as total  FROM ligcom  
-INNER JOIN entcom ON LIGCOM.NUMCOM=entcom.numcom GROUP BY numfou 
+SELECT nomfou, SUM((l.priuni*l.qteliv)*1.20) AS"Chiffre d'affaire par fournisseur pour l'année 93"
+FROM entcom AS e
+INNER JOIN fournis AS f ON e.numfou = f.numfou
+INNER JOIN ligcom AS l ON e.numcom = l.numcom
+WHERE YEAR(e.datcom) = '1993'
+GROUP BY e.numfou
+
 -- 20.Existe-t-il des lignes de commande non cohérentes avec les produits vendus par 
 -- les fournisseurs. 
+
+
+
+--1. Application d''une augmentation de tarif de 4% pour le prix 1, 2% pour le prix2 pour le fournisseur 9180
+
+update vente 
+set prix1 = prix1 * 1.04, prix2 = prix2 *1.02
+where numfou = 9180
+
+--2. Dans la table vente, mettre à jour le prix2 des articles dont le prix2 est null, en affectant a valeur de prix.
+
+UPDATE `vente` SET prix2 = prix1 WHERE prix2 = 0
+
+--3. Mettre à jour le champ obscom en positionnant '*****' pour toutes les commandes dont le fournisseur a un indice de satisfaction <5
+    UPDATE entcom 
+    SET obscom="*****"
+    WHERE numfou IN (SELECT numfou FROM fournis WHERE satisf<5);
+
+
+--4. Suppression du produit I110
+delete from produit where codart = 'I110';
+
+--5. Suppression des entête de commande qui n'ont aucune ligne
+DELETE FROM entcom WHERE numcom not in (SELECT DISTINCT numcom FROM ligcom);

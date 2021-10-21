@@ -52,3 +52,17 @@ select nomemp from employe where nomemp LIKE'c%'
 select nomemp,comm from employe where comm is null
 16.	Donner la liste des employés qui ont une commission et qui sont dans le département 30 ou 20
 select nomemp,comm from employe where comm is>0 and nodep=30 or nodep=20
+
+
+C.	Requêtes avec clause « order by »
+
+1.	Donner la liste des salaires, fonctions et noms des employés du département 30, selon lordre croissant des salaires
+select sala,fonction,nomemp,nodep from employe where nomemp=30 and sala order by sala asc
+2.	Donner la liste des salaires, fonctions et noms des employés du département 30, selon l'ordre décroissant des salaires
+
+3.	Donner la liste des employés triée selon l'ordre croissant des fonctions et l'ordre décroissant des salaires
+
+4.	Donner la liste des commissions, salaires et noms triée selon l'ordre croissant des commissions
+
+5.	Donner la liste des commissions, salaires et noms triée selon l'ordre décroissant des commissions
+
