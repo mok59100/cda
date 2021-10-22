@@ -30,13 +30,13 @@ select nomemp,sala, comm from employes where comm>sala
 --5.	Donner les noms et salaires des vendeurs du département 30 dont le salaire est supérieur à 1500 €
 select nomemp,sala from employes where nodep=30 and sala>1500  
 --6.	Donner la liste des noms, fonctions et salaires des directeurs et des présidents
-select nomemp,fonction,sala from employes where fonction ='directeur','president'
+select nomemp,fonction,sala from employes where fonction ="directeur" or fonction ="president"
 --7.	Donner la liste des noms, fonctions et salaires des directeurs et des employés qui ont un salaire > 2500 €
 select noemp,fonction,sala from employes where sala>2500
 --8.	Donner la liste des noms, numéros de département des directeurs et des ouvriers du département 10
-select nomemp,nodep from employes where nodep=10 and fonction= 'directeur','ouvrier' 
+select nomemp,nodep from employes where nodep=10 and (fonction= 'directeur'or fonction='ouvrier')
 --9.	Donner la liste des noms, fonctions et numéros de département des employés du département 10 qui ne sont ni ouvrier ni directeur
-select nomemp,fonction, nodep from employes where nodep=10 and fonction!= 'directeur' or fonction!='ouvrier'
+select nomemp,fonction, nodep from employes where nodep=10 and (fonction!= 'directeur' and fonction!='ouvrier')
 --10.	Donner la liste des noms, fonctions et numéros de département des directeurs qui ne sont pas directeur dans le département 30
 select nomemp,fonction,nodep from employes where fonction='directeur'  and nodep!='30'
 --11.	Donner la liste des noms, fonctions et salaires des employés qui gagnent entre 1200 € et 1300 €
@@ -51,13 +51,13 @@ select nomemp from employes where nomemp LIKE'c%'
 --15.	Donner la liste des employés qui nont pas de commission
 select nomemp,comm from employes where comm is null
 --16.	Donner la liste des employés qui ont une commission et qui sont dans le département 30 ou 20
-select nomemp,comm from employes where comm is>0 and nodep=30 or nodep=20
+select nomemp,comm from employes where comm >0 and nodep=30 or nodep=20
 
 
 C.	Requêtes avec clause « order by »
 
 --1.	Donner la liste des salaires, fonctions et noms des employés du département 30, selon lordre croissant des salaires
-select sala,fonction,nomemp,nodep from employes where nomemp=30 and sala order by sala asc
+select sala,fonction,nomemp,nodep from employes where nomemp=30 order by sala asc
 --2.	Donner la liste des salaires, fonctions et noms des employés du département 30, selon l'ordre décroissant des salaires
 
 --3.	Donner la liste des employés triée selon l'ordre croissant des fonctions et l'ordre décroissant des salaires
