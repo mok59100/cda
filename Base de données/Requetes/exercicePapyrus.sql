@@ -147,7 +147,7 @@ SELECT nom, LENGTH(nom) as longeurNom FROM employe
 
 --Rechercher le numéro du département, le nom du département, le 
 --nom des employés classés par numéro de département (renommer lestables utilisées).
-SELECT e.nodep, d.nom AS 'nom departement', e.nom A 'nom employe' FROM employe AS e INNER JOIN dept AS d ON e.nodep = d.nodept ORDER BY e.nodep
+SELECT e.nodep, d.nom AS "nom departement", e.nom A 'nom employe' FROM employe AS e INNER JOIN dept AS d ON e.nodep = d.nodept ORDER BY e.nodep
 
 --Rechercher le nom des employés du département Distribution.
 SELECT E.nom
