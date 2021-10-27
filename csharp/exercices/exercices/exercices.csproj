@@ -5,8 +5,4 @@
     <TargetFramework>net5.0</TargetFramework>
   </PropertyGroup>
 
-  <ItemGroup>
-    <Compile Include="C:\Users\59011-07-10\Desktop\exercice csharp.cs" Link="exercice csharp.cs" />
-  </ItemGroup>
-
 </Project>

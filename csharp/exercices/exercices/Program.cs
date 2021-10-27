@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace exercice
+namespace exercices
 {
     class Program
     {
@@ -33,7 +33,7 @@ namespace exercice
             Console.WriteLine("La somme de a et b est :" + (a + b));
             Console.WriteLine("La division de a et b est:" + (a / b));*/
 
-            /* Exercice 4 - Saisie et affichage
+            /*1.3  Exercice 4 - Saisie et affichage
              Saisir une variable de type float, afficher sa valeur.
              Console.WriteLine("veuillez saisir une valeur numerique");
              Console.WriteLine("Saisir un premier nombre !");
@@ -94,7 +94,7 @@ surface = longueur * largeur;
             Console.WriteLine();
             Console.ReadLine();*/
 
-            /*
+            /*1.4 1.4 Caractères
                         Exercice 7 - Prise en main
                         Affectez le caractère ’a’ à une variable de type char, affichez ce caractère ainsi que son code
                         UNICODE.
@@ -469,12 +469,15 @@ surface = longueur * largeur;
             //                        Déplacement du roi de(5, 6) vers(6, 7) correct.
 
             //int piece, i1, i2, j1, j2;
-            //Console.WriteLine("Quelle piece voulez-vous déplacer ?");
-            //Console.WriteLine("0 = Cavalier");
-            //Console.WriteLine("1 = Tour");
-            //Console.WriteLine("2 = Fou");
-            //Console.WriteLine("3 = Dame");
-            //Console.Write("4 = Roi ");
+            //bool boolean = false;
+            //Console.WriteLine("Quelle piece souhaitez-vous deplacer ? :" +
+            //                  "\n**************************************" +
+            //                  "\n0 = Cavalier " +
+            //                  "\n1 = Tour" +
+            //                  "\n2 = Fou" +
+            //                  "\n3 = Dame" +
+            //                  "\n4 = Roi" +
+            //                  "\n**************************************");
             //piece = int.Parse(Console.ReadLine());
             //Console.WriteLine("Coordonnées (i,j) de la position de départ :");
             //Console.Write("i = ");
@@ -489,60 +492,36 @@ surface = longueur * largeur;
 
             //switch (piece)
             //{
-            //    case 0:
-            //        if (Math.Abs(i1 - i2) == 2 && Math.Abs(j1 - j2) == 1 || Math.Abs(i1 - i2) == 1 && Math.Abs(j1 - j2) == 2)
-            //        {
-            //            Console.WriteLine("Déplacement du cavalier de (" + i1 + "," + j1 + ") vers (" + i2 + "," + j2 + ") correct.");
-            //        }
-            //        else
-            //        {
-            //            Console.WriteLine("Déplacement du cavalier de (" + i1 + "," + j1 + ") vers (" + i2 + "," + j2 + ") incorrect.");
-            //        }
+
+            //    case 0: // Cavalier
+            //        boolean = Math.Abs(i1 - i2) == 2 && Math.Abs(j1 - j2) == 1 || Math.Abs(i1 - i2) == 1 && Math.Abs(j1 - j2) == 2 ? true : false;
+
+
+
+
             //        break;
-            //    case 1:
-            //        if (i1 == i2 || j1 == j2)
-            //        {
-            //            Console.WriteLine("Déplacement de la tour de (" + i1 + "," + j1 + ") vers (" + i2 + "," + j2 + ") correct.");
-            //        }
-            //        else
-            //        {
-            //            Console.WriteLine("Déplacement de la tour de (" + i1 + "," + j1 + ") vers (" + i2 + "," + j2 + ") incorrect.");
-            //        }
+            //    case 1: // Tour
+            //        boolean = i1 == i2 || j1 == j2 ? true : false;
+
             //        break;
-            //    case 2:
-            //        if (Math.Abs(i1 - i2) == Math.Abs(j1 - j2))
-            //        {
-            //            Console.WriteLine("Déplacement du fou de (" + i1 + "," + j1 + ") vers (" + i2 + "," + j2 + ") correct.");
-            //        }
-            //        else
-            //        {
-            //            Console.WriteLine("Déplacement du fou de (" + i1 + "," + j1 + ") vers (" + i2 + "," + j2 + ") incorrect.");
-            //        }
+            //    case 2: // Fou
+            //        boolean = Math.Abs(i1 - i2) == Math.Abs(j1 - j2) ? true : false;
+
+
             //        break;
             //    case 3: // Dame
-            //        if (i1 == i2 || j1 == j2 || Math.Abs(i1 - i2) == Math.Abs(j1 - j2))
-            //        {
-            //            Console.WriteLine("Déplacement de la dame de (" + i1 + "," + j1 + ") vers (" + i2 + "," + j2 + ") correct.");
-            //        }
-            //        else
-            //        {
-            //            Console.WriteLine("Déplacement de la dame de (" + i1 + "," + j1 + ") vers (" + i2 + "," + j2 + ") incorrect.");
-            //        }
+            //        boolean = i1 == i2 || j1 == j2 || Math.Abs(i1 - i2) == Math.Abs(j1 - j2) ? true : false;
+
             //        break;
             //    case 4: // Roi
-            //        if (Math.Abs(i1 - i2) < 2 && Math.Abs(j1 - j2) < 2)
-            //        {
-            //            Console.WriteLine("Déplacement du roi de (" + i1 + "," + j1 + ") vers (" + i2 + "," + j2 + ") correct.");
-            //        }
-            //        else
-            //        {
-            //            Console.WriteLine("Déplacement du roi de (" + i1 + "," + j1 + ") vers (" + i2 + "," + j2 + ") incorrect.");
-            //        }
+            //        boolean = Math.Abs(i1 - i2) < 2 && Math.Abs(j1 - j2) < 2 ? true : false;
+
             //        break;
             //    default:
             //        break;
-            //}
 
+            //}
+            //Console.WriteLine(" Déplacement " + (boolean ? "correct" : "incorrect"));
 
 
             //                        3.4 Heures et dates
@@ -558,26 +537,33 @@ surface = longueur * largeur;
             //                        — minutes de début
             //                        — heures de fin
             //                        — minutes de fin
-            int debut;
-            int fin;
-            
-            Console.WriteLine("veuillez saisir une heure debut");
-            debut = Convert.ToInt32(Console.ReadLine()); 
-            Console.WriteLine("veuillez saisir les minutes de debut");
-            debut = Convert.ToInt32(Console.ReadLine());
-            Console.WriteLine("veuillez saisir une heure fin");
-            fin = Convert.ToInt32(Console.ReadLine());
-            Console.WriteLine("veuillez saisir les minutes de fin");
-            fin = Convert.ToInt32(Console.ReadLine());
-            if ()
-            {
+            //int hd;
+            //int md;
+            //int hf;
+            //int mf;
+            //int nbheure = 24;
+            //int nbminute = 60;
+            //Console.WriteLine("veuillez saisir une heure debut");
+            //hd = Convert.ToInt32(Console.ReadLine());
+            //Console.WriteLine("veuillez saisir les minutes de debut");
+            //md = Convert.ToInt32(Console.ReadLine());
+            //Console.WriteLine("veuillez saisir une heure fin");
+            //hf = Convert.ToInt32(Console.ReadLine());
+            //Console.WriteLine("veuillez saisir les minutes de fin");
+            //mf = Convert.ToInt32(Console.ReadLine());
 
-            }
 
-            else
-            {
+            //if  {
 
-            };
+            //    Console.WriteLine(;
+
+
+            //}
+
+            //else
+            //{
+            //    Console.WriteLine("la saisie est erronné");
+            //}
 
 
             //                        Exercice 12 - Le jour d’après
@@ -586,24 +572,48 @@ surface = longueur * largeur;
             //                        garde aux nombre de jours que comporte chaque mois, et au fait que le mois de février
             //                        comporte 29 jours les années bissextiles.
             //                        Allez sur http://fr.wikipedia.org/wiki/Ann\%C3\%A9e_bissextilepourconnatrelesrglesexactes, 
-            //je vous avais dit que les années étaient bissextiles si et seulement si elles étaient divisibles par
+            //                        je vous avais dit que les années étaient bissextiles si et seulement si elles étaient divisibles par
             //                        4, après vérification, j’ai constaté que c’était légèrement plus complexe. Je vous laisse vous
             //                        documenter et retranscrire ces règles de la façon la plus simple possible.
+            //int jour;
+            //int mois;
+            //int annee;
+            
+            //Console.WriteLine("veuillez saisir le jour");
+            //jour = Convert.ToInt32(Console.ReadLine());
+            //Console.WriteLine("veuillez saisir le mois");
+            //mois= Convert.ToInt32(Console.ReadLine());
+            //Console.WriteLine("veuillez saisir l'année");
+            //annee = Convert.ToInt32(Console.ReadLine());
+
+            
+            //
+            //
             //                        3.5 Intervalles et rectangles
+
+
+
+
             //                        Exercice 13 - Intervalles bien formés
             //                        Demandez à l’utilisateur de saisir les deux bornes a et b d’un intervalle[a, b]. Contrôler les
             //                        valeurs saisies.
+
+
+
             //                        Exercice 14 - Appartenance
             //                        Demandez - lui ensuite de saisir une valeur x, dites-lui si x ∈ [a, b]
-            //Exercice 15 - Rectangles
+
+
+            //                        Exercice 15 - Rectangles
             //                        Nous représenterons un rectangle R aux cotés parallèles aux axes des abscisses et ordonnées
             //                        à l’aide des coordonnées de deux points diamétralement opposés, le point en haut à gauche,
             //                        de coordonnées(xHautGauche, yHautGauche), et le point en bas à droite, de coordonnées
             //                        (xBasDroite, yBasDroite). Demander à l’utilisateur de saisir ces 4 valeurs, contrôlez la saisie.
+
+
             //                        Exercice 16 - Appartenance
             //                        Demandez à l’utilisateur de saisir les 2 coordonnées d’un point(x, y) et dites à l’utilisateur si
             //                        ce point se trouve dans le rectangle R*/
         }
     }
 }
-
