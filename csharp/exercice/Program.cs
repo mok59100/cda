@@ -468,7 +468,80 @@ surface = longueur * largeur;
             //                        j’ = 7
             //                        Déplacement du roi de(5, 6) vers(6, 7) correct.
 
-           
+            //int piece, i1, i2, j1, j2;
+            //Console.WriteLine("Quelle piece voulez-vous déplacer ?");
+            //Console.WriteLine("0 = Cavalier");
+            //Console.WriteLine("1 = Tour");
+            //Console.WriteLine("2 = Fou");
+            //Console.WriteLine("3 = Dame");
+            //Console.Write("4 = Roi ");
+            //piece = int.Parse(Console.ReadLine());
+            //Console.WriteLine("Coordonnées (i,j) de la position de départ :");
+            //Console.Write("i = ");
+            //i1 = int.Parse(Console.ReadLine());
+            //Console.Write("j = ");
+            //j1 = int.Parse(Console.ReadLine());
+            //Console.WriteLine("Coordonnées (i',j') de la position d'arrivée :");
+            //Console.Write("i' = ");
+            //i2 = int.Parse(Console.ReadLine());
+            //Console.Write("j' = ");
+            //j2 = int.Parse(Console.ReadLine());
+
+            //switch (piece)
+            //{
+            //    case 0:
+            //        if (Math.Abs(i1 - i2) == 2 && Math.Abs(j1 - j2) == 1 || Math.Abs(i1 - i2) == 1 && Math.Abs(j1 - j2) == 2)
+            //        {
+            //            Console.WriteLine("Déplacement du cavalier de (" + i1 + "," + j1 + ") vers (" + i2 + "," + j2 + ") correct.");
+            //        }
+            //        else
+            //        {
+            //            Console.WriteLine("Déplacement du cavalier de (" + i1 + "," + j1 + ") vers (" + i2 + "," + j2 + ") incorrect.");
+            //        }
+            //        break;
+            //    case 1:
+            //        if (i1 == i2 || j1 == j2)
+            //        {
+            //            Console.WriteLine("Déplacement de la tour de (" + i1 + "," + j1 + ") vers (" + i2 + "," + j2 + ") correct.");
+            //        }
+            //        else
+            //        {
+            //            Console.WriteLine("Déplacement de la tour de (" + i1 + "," + j1 + ") vers (" + i2 + "," + j2 + ") incorrect.");
+            //        }
+            //        break;
+            //    case 2:
+            //        if (Math.Abs(i1 - i2) == Math.Abs(j1 - j2))
+            //        {
+            //            Console.WriteLine("Déplacement du fou de (" + i1 + "," + j1 + ") vers (" + i2 + "," + j2 + ") correct.");
+            //        }
+            //        else
+            //        {
+            //            Console.WriteLine("Déplacement du fou de (" + i1 + "," + j1 + ") vers (" + i2 + "," + j2 + ") incorrect.");
+            //        }
+            //        break;
+            //    case 3: // Dame
+            //        if (i1 == i2 || j1 == j2 || Math.Abs(i1 - i2) == Math.Abs(j1 - j2))
+            //        {
+            //            Console.WriteLine("Déplacement de la dame de (" + i1 + "," + j1 + ") vers (" + i2 + "," + j2 + ") correct.");
+            //        }
+            //        else
+            //        {
+            //            Console.WriteLine("Déplacement de la dame de (" + i1 + "," + j1 + ") vers (" + i2 + "," + j2 + ") incorrect.");
+            //        }
+            //        break;
+            //    case 4: // Roi
+            //        if (Math.Abs(i1 - i2) < 2 && Math.Abs(j1 - j2) < 2)
+            //        {
+            //            Console.WriteLine("Déplacement du roi de (" + i1 + "," + j1 + ") vers (" + i2 + "," + j2 + ") correct.");
+            //        }
+            //        else
+            //        {
+            //            Console.WriteLine("Déplacement du roi de (" + i1 + "," + j1 + ") vers (" + i2 + "," + j2 + ") incorrect.");
+            //        }
+            //        break;
+            //    default:
+            //        break;
+            //}
 
 
 
