@@ -537,33 +537,31 @@ surface = longueur * largeur;
             //                        — minutes de début
             //                        — heures de fin
             //                        — minutes de fin
-            //int hd;
-            //int md;
-            //int hf;
-            //int mf;
-            //int nbheure = 24;
-            //int nbminute = 60;
-            //Console.WriteLine("veuillez saisir une heure debut");
-            //hd = Convert.ToInt32(Console.ReadLine());
-            //Console.WriteLine("veuillez saisir les minutes de debut");
-            //md = Convert.ToInt32(Console.ReadLine());
-            //Console.WriteLine("veuillez saisir une heure fin");
-            //hf = Convert.ToInt32(Console.ReadLine());
-            //Console.WriteLine("veuillez saisir les minutes de fin");
-            //mf = Convert.ToInt32(Console.ReadLine());
+            int hd;
+            int md;
+            int hf;
+            int mf;
+
+            Console.WriteLine("veuillez saisir une heure debut");
+            hd = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("veuillez saisir les minutes de debut");
+            md = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("veuillez saisir une heure fin");
+            hf = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("veuillez saisir les minutes de fin");
+            mf = Convert.ToInt32(Console.ReadLine());
 
 
-            //if  {
+            if (hf - hd < 0)
+            {
+                Console.WriteLine("l'heure depart est apres l'heure d'arrive");
 
-            //    Console.WriteLine(;
+            }
+            else
+            {
+                     Console.WriteLine("il y a" + (hf -  hd) + "minute" + (mf - md) 
+            }
 
-
-            //}
-
-            //else
-            //{
-            //    Console.WriteLine("la saisie est erronné");
-            //}
 
 
             //                        Exercice 12 - Le jour d’après
@@ -578,15 +576,36 @@ surface = longueur * largeur;
             //int jour;
             //int mois;
             //int annee;
-            
+
             //Console.WriteLine("veuillez saisir le jour");
             //jour = Convert.ToInt32(Console.ReadLine());
             //Console.WriteLine("veuillez saisir le mois");
             //mois= Convert.ToInt32(Console.ReadLine());
             //Console.WriteLine("veuillez saisir l'année");
             //annee = Convert.ToInt32(Console.ReadLine());
+            //if (a % 4 == 0)
+            //{
+            //    if (a % 100 != 0)
+            //    {
+            //        bissextile = true;
+            //    }
+            //    else
+            //    {
+            //        if (a % 400 == 0)
+            //        {
+            //            bissextile = true;
+            //        }
+            //        else
+            //        {
+            //            bissextile = false;
+            //        }
+            //    }
+            //}
+            //else
+            //{
+            //    bissextile = false;
+            //}
 
-            
             //
             //
             //                        3.5 Intervalles et rectangles
@@ -614,6 +633,122 @@ surface = longueur * largeur;
             //                        Exercice 16 - Appartenance
             //                        Demandez à l’utilisateur de saisir les 2 coordonnées d’un point(x, y) et dites à l’utilisateur si
             //                        ce point se trouve dans le rectangle R*/
+
+
+
+
+
+
+            //                       4 Boucles
+            //                       4.1 Compréhension
+            //                         Exercice 1
+            //                      Qu’affiche le programme suivant ?
+            //using System;
+
+
+
+
+            //            int a = 1, b = 0, n = 5;
+            //            while (a <= n)
+            //                b += a++;
+            //            Console.WriteLine(a + " , " + b);
+            //        }
+            //    }
+            //}
+            //    Exercice 2
+            //Qu’affiche le programme suivant ?
+            //using System;
+            //namespace tests
+            //    {
+            //        class MainClass
+            //        {
+            //            public static void Main(string[]
+            //            args)
+            //            {
+            //                int a = 0, b = 0, c = 0, d = 3, m = 3, n = 4;
+            //                for (a = 0; a < m; a++)
+            //                {
+            //                    d = 0;
+            //                    for (b = 0; b < n; b++)
+            //                        d += b;
+            //                    c += d;
+            //                }
+            //                Console.WriteLine(a + " , " + b + " , " + c + " , " + d + " . ");
+            //            }
+            //        }
+            //    }
+            //    Exercice 3
+            //Qu’affiche le programme suivant ?
+            //using System;
+            //namespace tests
+            //    {
+            //        class MainClass
+            //        {
+            //            public static void Main(string[] args)
+            //            {
+            //                int a, b, c, d;
+            //                a = 1; b = 2;
+            //                c = a / b;
+            //                d = (a == b) ? 3 : 4;
+            //                Console.WriteLine(c + " , " + d + " . ");
+            //                a = ++b;
+            //                b %= 3;
+            //                Console.WriteLine(a + " , " + b + " . ");
+            //                b = 1;
+            //                for (a = 0; a <= 10; a++)
+            //                    c = ++b;
+            //                Console.WriteLine(a + " , " + b + " , " + c + " , " + d + " . ");
+            //            }
+            //        }
+            //    }
+            //4.2 Utilisation de toutes les boucles
+            //Les exercices suivants seront rédigés avec les trois types de boucle : tant que, répéter jusqu’à
+            //et pour.
+            //Exercice 4 - Compte à rebours
+            //Ecrire un programme demandant à l’utilisateur de saisir une valeur numérique positive n et
+            //affichant toutes les valeurs n, n − 1, . . . , 2, 1, 0.
+            //Exercice 5 - Factorielle
+            //Ecrire un programme calculant la factorielle(factorielle n = n! = 1 2 . . . n et 0! = 1)
+            //d’un nombre saisi par l’utilisateur.
+            //4.3 Choix de la boucle la plus appropriée
+            //Pour les exercices suivants, vous choisirez la boucle la plus simple et la plus lisible.
+            //Exercice 6 - Table de multiplication
+            //Ecrire un programme affichant la table de multiplication d’un nombre saisi par l’utilisateur.
+            //Exercice 7 - Tables de multiplications
+            //Ecrire un programme affichant les tables de multiplications des nombres de 1 à 10 dans un
+            //tableau à deux entrées.
+            //Exercice 8 - Puissance
+            //Ecrire un programme demandant à l’utilisateur de saisir deux valeurs numériques b et n
+            //(vérifier que n est positif) et affichant la valeur bn
+            //.
+            //Exercice 9 - Joli carré
+            //Ecrire un programme qui saisit une valeur n et qui affiche le carré suivant(n = 5 dans
+            //l’exemple) :
+            //n = 5
+            //X X X X X
+            //X X X X X
+            //X X X X X
+            //X X X X X
+            //X X X X X
+            //4.4 Extension de la calculatrice
+            //Une calculatrice de poche prend de façon alternée la saisie d’un opérateur et d’un opérande.
+            //Si l’utilisateur saisit 3, + et 2, cette calculatrice affiche 5, l’utilisateur a ensuite la possibilité de
+            //se servir de 5 comme d’un opérande gauche dans un calcul ultérieur.Si l’utilisateur saisit par
+            //la suite et 4, la calculatrice affiche 20. La saisie de la touche = met fin au calcul et affiche un
+            //résultat final.
+            //Exercice 10 - Calculatrice de poche
+            //Implémentez le comportement décrit ci-dessus.
+            //Exercice 11 - Puissance
+            //Ajoutez l’opérateur $ qui calcule ab, vous vous restreindrez à des valeurs de b entières et
+            //positives.
+            //Exercice 12 - Opérations unaires
+            //Ajoutez les opérations unaires racine carrée et factorielle
+
         }
-    }
+    
 }
+
+}
+
+
+   

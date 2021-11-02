@@ -78,12 +78,12 @@ WHERE substring(nom,3,1)= "u"
 
 -- 18.Afficher le salaire et le nom des employés du service 41 classés par 
 -- salaire croissant. 
-SELECT  FROM employe 
+SELECT*FROM employe 
 WHERE nodep = 41 order by salaire 
 
 -- 19.Afficher le salaire et le nom des employés du service 41 classés par 
 -- salaire décroissant. 
-SELECT FROM  employe 
+SELECT*FROM  employe 
 where nodep = 41 order by salaire DESC 
 
 
@@ -147,7 +147,7 @@ SELECT nom, LENGTH(nom) as longeurNom FROM employe
 
 --Rechercher le numéro du département, le nom du département, le 
 --nom des employés classés par numéro de département (renommer lestables utilisées).
-SELECT e.nodep, d.nom AS "nom departement", e.nom A 'nom employe' FROM employe AS e INNER JOIN dept AS d ON e.nodep = d.nodept ORDER BY e.nodep
+SELECT e.nodep, d.nom AS "nom departement", e.nom AS 'nom employe' FROM employe AS e INNER JOIN dept AS d ON e.nodep = d.nodept ORDER BY e.nodep
 
 --Rechercher le nom des employés du département Distribution.
 SELECT E.nom
