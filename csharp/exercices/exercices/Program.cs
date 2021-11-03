@@ -537,31 +537,75 @@ surface = longueur * largeur;
             //                        — minutes de début
             //                        — heures de fin
             //                        — minutes de fin
-            int hd;
-            int md;
-            int hf;
-            int mf;
+            //int heureDebut, minuteDebut, heureFin, minuteFin, heureRest = 0, minuteRest = 0;
+            //do
+            //{
+            //    Console.Write("Saisissez une heure de début : ");
+            //    heureDebut = int.Parse(Console.ReadLine());
+            //    Console.Write("Saisissez les minutes de début : ");
+            //    minuteDebut = int.Parse(Console.ReadLine());
+            //    Console.Write("Saisissez une heure de fin : ");
+            //    heureFin = int.Parse(Console.ReadLine());
+            //    Console.Write("Saisissez les minutes de fin : ");
+            //    minuteFin = int.Parse(Console.ReadLine());
+            //    if (heureDebut > heureFin)
+            //    {
+            //        Console.WriteLine("Erreur !!! Essaie encore.");
+            //    }
+            //} while (heureDebut > heureFin);
 
-            Console.WriteLine("veuillez saisir une heure debut");
-            hd = Convert.ToInt32(Console.ReadLine());
-            Console.WriteLine("veuillez saisir les minutes de debut");
-            md = Convert.ToInt32(Console.ReadLine());
-            Console.WriteLine("veuillez saisir une heure fin");
-            hf = Convert.ToInt32(Console.ReadLine());
-            Console.WriteLine("veuillez saisir les minutes de fin");
-            mf = Convert.ToInt32(Console.ReadLine());
+            //if (minuteDebut <= minuteFin)
+            //{
+            //    minuteRest = minuteFin - minuteDebut;
+            //}
+            //else if (minuteDebut > minuteFin && (minuteDebut + minuteFin) > 60)
+            //{
+            //    minuteRest = (60 - minuteDebut) + minuteFin;
+            //    heureRest++;
+            //}
+            //else
+            //{
+            //    minuteRest = minuteDebut + minuteFin;
+            //    heureRest++;
+            //}
+            //heureRest = (heureFin - heureDebut) - heureRest;
+            //Console.WriteLine("Il reste " + heureRest + " h et " + minuteRest + "m.");
 
+            // exemple 2
 
-            if (hf - hd < 0)
-            {
-                Console.WriteLine("l'heure depart est apres l'heure d'arrive");
-
-            }
-            else
-            {
-                     Console.WriteLine("il y a" + (hf -  hd) + "minute" + (mf - md) 
-            }
-
+            //int heureDebut;
+            //int minuteDebut;
+            //int heureFin;
+            //int minuteFin;
+            //int heureDEcart;
+            //int minuteDEcart;
+            //Console.WriteLine("heure de début :");
+            //heureDebut = int.Parse(Console.ReadLine());
+            //Console.WriteLine("minutes de début :");
+            //minuteDebut = int.Parse(Console.ReadLine());
+            //Console.WriteLine("heure de fin :");
+            //heureFin = int.Parse(Console.ReadLine());
+            //Console.WriteLine("minutes de fin :");
+            //minuteFin = int.Parse(Console.ReadLine());
+            //if (minuteDebut > minuteFin)
+            //{
+            //    minuteDEcart = 60 - minuteDebut + minuteFin;
+            //    heureDEcart = -1;
+            //}
+            //else
+            //{
+            //    minuteDEcart = minuteFin - minuteDebut;
+            //    heureDEcart = 0;
+            //}
+            //if (heureFin > heureDebut || (heureFin == heureDebut && heureDEcart == 0))
+            //{
+            //    heureDEcart += heureFin - heureDebut;
+            //    Console.WriteLine("L'écart entre " + heureDebut + "h" + minuteDebut + " et " + heureFin + "h" + minuteFin + " est de " + heureDEcart + "h" + minuteDEcart);
+            //}
+            //else
+            //{
+            //    Console.WriteLine("Erreur. L'heure de début est après celle de fin.");
+            //}
 
 
             //                        Exercice 12 - Le jour d’après
@@ -573,37 +617,35 @@ surface = longueur * largeur;
             //                        je vous avais dit que les années étaient bissextiles si et seulement si elles étaient divisibles par
             //                        4, après vérification, j’ai constaté que c’était légèrement plus complexe. Je vous laisse vous
             //                        documenter et retranscrire ces règles de la façon la plus simple possible.
-            //int jour;
-            //int mois;
-            //int annee;
+            //    int jour, mois, annee;
+            //    Console.WriteLine("Saisissez le jour, mois, annee dans cette ordre et appuyer sur Entrée après chaque nombre : ");
+            //    jour = int.Parse(Console.ReadLine());
+            //    mois = int.Parse(Console.ReadLine());
+            //    annee = int.Parse(Console.ReadLine());
 
-            //Console.WriteLine("veuillez saisir le jour");
-            //jour = Convert.ToInt32(Console.ReadLine());
-            //Console.WriteLine("veuillez saisir le mois");
-            //mois= Convert.ToInt32(Console.ReadLine());
-            //Console.WriteLine("veuillez saisir l'année");
-            //annee = Convert.ToInt32(Console.ReadLine());
-            //if (a % 4 == 0)
-            //{
-            //    if (a % 100 != 0)
+            //    jour++; // on prend le lendemain
+
+            //    if ((jour == 31) && ((mois == 4 || mois == 6 || mois == 9 || mois == 11)) // 31 d'un mois à 30 jours
+            //        ||
+            //        ((jour == 32) && (mois == 1 || mois == 3 || mois == 5 || mois == 7 || mois == 8 || mois == 10 || mois == 12))) //32 d'un mois à 31 jours
             //    {
-            //        bissextile = true;
-            //    }
-            //    else
-            //    {
-            //        if (a % 400 == 0)
+            //        jour = 1;
+            //        mois++;
+            //        if (mois == 13)
             //        {
-            //            bissextile = true;
-            //        }
-            //        else
-            //        {
-            //            bissextile = false;
+            //            mois = 1;
+            //            annee++;
             //        }
             //    }
-            //}
-            //else
-            //{
-            //    bissextile = false;
+            //    else if ((mois == 2) // mois de fevrier
+            //            && ((jour == 29 && !((annee % 4) == 0 && (annee % 100) != 0 || (annee % 400) == 0)) // 29 d'une année non bissextile
+            //              ||
+            //              jour == 30)) //30 (l'année est forcément bissextile, sinon la date ne serait pas correcte)
+            //    {
+            //        jour = 1;
+            //        mois = 3;
+            //    }
+            //    Console.WriteLine("Jour d'après : " + jour + " " + mois + " " + annee);
             //}
 
             //
@@ -616,18 +658,66 @@ surface = longueur * largeur;
             //                        Exercice 13 - Intervalles bien formés
             //                        Demandez à l’utilisateur de saisir les deux bornes a et b d’un intervalle[a, b]. Contrôler les
             //                        valeurs saisies.
+            //int val1;
+            //int val2;
+            //int x;
+            //int val1;
+            //Console.Write("Saisissez le premiere borne :");
+            //val1 = int.Parse(Console.ReadLine());
+            //Console.Write("Saisissez la deuxieme borne :");
+            //val2 = int.Parse(Console.ReadLine());
+            //Console.Write("Saisissez uen valeur :");
+            //x = int.Parse(Console.ReadLine());
 
+            //Console.WriteLine((x >= val1 && x <= val2) ? "Votre valeur appartient a l'intervalle " + "[" + val1 + "," + val2 + "]" : "Votre valeur n'appartient pas a l'intervalle " + "[" + val1 + "," + val2 + "]");
 
 
             //                        Exercice 14 - Appartenance
             //                        Demandez - lui ensuite de saisir une valeur x, dites-lui si x ∈ [a, b]
+            //string saisie;
+            //int val;
+            //bool flag;
+            //Console.Write("Entrer une valeur");
+            ///*  saisie = Console.ReadLine();
+            //  flag = int.TryParse(saisie, out val);
 
+            //  */
+            //if (int.TryParse(Console.ReadLine(), out val))
+            //    Console.WriteLine("La valeur est " + val);
+            //else
+            //    Console.WriteLine("La valeur n'est pas un entier");
 
             //                        Exercice 15 - Rectangles
             //                        Nous représenterons un rectangle R aux cotés parallèles aux axes des abscisses et ordonnées
             //                        à l’aide des coordonnées de deux points diamétralement opposés, le point en haut à gauche,
             //                        de coordonnées(xHautGauche, yHautGauche), et le point en bas à droite, de coordonnées
             //                        (xBasDroite, yBasDroite). Demander à l’utilisateur de saisir ces 4 valeurs, contrôlez la saisie.
+            //string xHautGauche, yHautGauche, xBasDroite, yBasDroite;
+            //int xGauche, yHaut, xDroite, yBas;
+
+            //Console.Write("Entrez la valeur de xHautGauche : ");
+            //xHautGauche = Console.ReadLine();
+
+            //Console.Write("Entrez la valeur de yHautGauche : ");
+            //yHautGauche = Console.ReadLine();
+
+            //Console.Write("Entrez la valeur de xBasDroite : ");
+            //xBasDroite = Console.ReadLine();
+
+            //Console.Write("Entrez la valeur de yBasDroite : ");
+            //yBasDroite = Console.ReadLine();
+
+            //if (int.TryParse(xHautGauche, out xGauche) && int.TryParse(yHautGauche, out yHaut) && int.TryParse(xBasDroite, out xDroite) && int.TryParse(yBasDroite, out yBas))
+            //{
+            //    if (xDroite > xGauche && yHaut > yBas)
+            //    {
+            //        Console.WriteLine(" Le rectangle est correct.");
+            //    }
+            //    else
+            //    {
+            //        Console.WriteLine(" Le rectangle est incorrect.");
+            //    }
+            //}
 
 
             //                        Exercice 16 - Appartenance
@@ -635,7 +725,59 @@ surface = longueur * largeur;
             //                        ce point se trouve dans le rectangle R*/
 
 
+            //string xHautGauche, yHautGauche, xBasDroite, yBasDroite, xPointS, yPointS;
+            //int xGauche, yHaut, xDroite, yBas, xPoint, yPoint;
 
+            //Console.Write("Entrez la valeur de xHautGauche : ");
+            //xHautGauche = Console.ReadLine();
+
+            //Console.Write("Entrez la valeur de yHautGauche : ");
+            //yHautGauche = Console.ReadLine();
+
+            //Console.Write("Entrez la valeur de xBasDroite : ");
+            //xBasDroite = Console.ReadLine();
+
+            //Console.Write("Entrez la valeur de yBasDroite : ");
+            //yBasDroite = Console.ReadLine();
+
+            ///* On essai de convertir les valeurs */
+            //if (int.TryParse(xHautGauche, out xGauche) && int.TryParse(yHautGauche, out yHaut) && int.TryParse(xBasDroite, out xDroite) && int.TryParse(yBasDroite, out yBas))
+            //{
+            //    if (xDroite > xGauche && yHaut > yBas) // on vérifie que le rectangle est correct
+            //    {
+            //        Console.WriteLine(" Le rectangle est correct.");
+            //        /* On demande les coordonnées du point */
+            //        Console.Write("Entrez la valeur de xPoint : ");
+            //        xPointS = Console.ReadLine();
+
+            //        Console.Write("Entrez la valeur de yPoint : ");
+            //        yPointS = Console.ReadLine();
+
+            //        if (int.TryParse(xPointS, out xPoint) && int.TryParse(yPointS, out yPoint))
+            //        {
+            //            if (xPoint <= xDroite && xPoint >= xGauche && yPoint <= yHaut && yPoint >= yBas)
+            //            {
+            //                Console.WriteLine(" Le point appartient au rectangle.");
+            //            }
+            //            else
+            //            {
+            //                Console.WriteLine(" Le point n'appartient pas au rectangle.");
+            //            }
+            //        }
+            //        else
+            //        {
+            //            Console.WriteLine(" Le point est mal défini.");
+            //        }
+            //    }
+            //    else
+            //    {
+            //        Console.WriteLine(" Le rectangle est incorrect.");
+            //    }
+            //}
+            //else
+            //{
+            //    Console.WriteLine(" Le rectangle est mal défini.");
+            //}
 
 
 
@@ -686,41 +828,162 @@ surface = longueur * largeur;
             //        {
             //            public static void Main(string[] args)
             //            {
-            //                int a, b, c, d;
-            //                a = 1; b = 2;
-            //                c = a / b;
-            //                d = (a == b) ? 3 : 4;
-            //                Console.WriteLine(c + " , " + d + " . ");
-            //                a = ++b;
-            //                b %= 3;
-            //                Console.WriteLine(a + " , " + b + " . ");
-            //                b = 1;
-            //                for (a = 0; a <= 10; a++)
-            //                    c = ++b;
-            //                Console.WriteLine(a + " , " + b + " , " + c + " , " + d + " . ");
+            //                           int a, b, c, d;
+            //a = 1; b = 2;
+            //c = a / b; /* c = 1/2 c'est a dire 0 */
+            //d = (a == b) ? 3 : 4; /* si a egal b on fait soit 3 soit 4 */
+            //Console.WriteLine(c + " , " + d + " . "); /* on ecrit c et d */
+            //a = ++b;  /* b++ = b+1 apres , ++b = b + 1 direct */
+            //b %= 3; /* b/3 = le reste = modulo */
+            //Console.WriteLine(a + " , " + b + " . "); /* ecrit a et b */
+            //b = 1;
+            //for (a = 0; a <= 10; a++)/* tant que a est inferieur ou egal a 10 */
+            //    c = ++b; /* c == b+1 */
+            //Console.WriteLine(a + " , " + b + " , " + c + " , " + d + " . ");
+
+            /* resultat 0 . 4 / 3 . 0 / 11 . 12 . 12 . 04 */
             //            }
             //        }
             //    }
+
+
             //4.2 Utilisation de toutes les boucles
             //Les exercices suivants seront rédigés avec les trois types de boucle : tant que, répéter jusqu’à
             //et pour.
+
+
             //Exercice 4 - Compte à rebours
             //Ecrire un programme demandant à l’utilisateur de saisir une valeur numérique positive n et
             //affichant toutes les valeurs n, n − 1, . . . , 2, 1, 0.
+            //int val;
+            //Console.WriteLine("Entrez une valeur :");
+            //val = int.Parse(Console.ReadLine());
+            //do
+            //{
+            //    Console.WriteLine(val--);
+            //} while (val >= 0);
+            //exemple 2
+            //int val1;
+            //Console.Write("Saisissez une valeur:");
+            //val1 = int.Parse(Console.ReadLine());
+            //while (val1 >= 0)
+            //{
+            //    Console.WriteLine(val1--);
+            //}
+
+
             //Exercice 5 - Factorielle
             //Ecrire un programme calculant la factorielle(factorielle n = n! = 1 2 . . . n et 0! = 1)
             //d’un nombre saisi par l’utilisateur.
+
+            //            int valeur;
+            //            int fact = 1;
+            //            int i = 1;
+            //            Console.Write("Entrez une valeur entière positive : ");
+            //            valeur = Convert.ToInt32(Console.ReadLine());
+            //            while (i <= valeur)
+            //            {
+            //                fact *= i++;
+            //            }
+            //            Console.WriteLine("La factorielle de " + valeur + " est " + fact);
+
+            //            exemple2
+            //            int saisie;
+            //            int resultat;
+            //            Console.WriteLine("saisir un entier positif");
+            //            saisie = int.Parse(Console.ReadLine());
+
+            //            Console.WriteLine();
+            //            resultat = 1;
+            //            for (int i = 1; i <= saisie; i++)
+            //            {
+            //                resultat *= i;
+            //            }
+            //            Console.WriteLine(resultat);
+
+            //            exemple3
+            //            int n;
+            //            int i = 1;
+            //            int fact = 1;
+            //            Console.Write("Veuillez entrez une valeur :");
+            //            n = int.Parse(Console.ReadLine());
+            //            do
+            //            {
+            //                fact *= i++;
+            //            }
+            //            while (i <= n)
+            //Console.WriteLine("La factorielle de " + n + "est" + fact);
+
             //4.3 Choix de la boucle la plus appropriée
             //Pour les exercices suivants, vous choisirez la boucle la plus simple et la plus lisible.
+
+
+
             //Exercice 6 - Table de multiplication
             //Ecrire un programme affichant la table de multiplication d’un nombre saisi par l’utilisateur.
+
+
             //Exercice 7 - Tables de multiplications
             //Ecrire un programme affichant les tables de multiplications des nombres de 1 à 10 dans un
             //tableau à deux entrées.
+
+            //int i = 1;
+            //int j;
+            //int valeur;
+            //while (i <= 10)
+            //{
+
+            //    j = 1;
+            //    while (j <= 10)
+            //    {
+            //        valeur = i * j;
+            //        Console.Write(valeur + ",");
+            //        j++;
+            //    }
+            //    Console.WriteLine("");
+            //    i++;
+
+            //}
+
+            //exemple 2
+            //         int valeur;
+            //for (int i = 1; i <= 10; i++)
+            //{
+            //    for (int j = 1; j <= 10; j++)
+            //    {
+            //        valeur = i * j;
+            //        Console.Write(valeur + ",");
+            //    }
+            //    Console.WriteLine("");
+            //}
+
+
             //Exercice 8 - Puissance
             //Ecrire un programme demandant à l’utilisateur de saisir deux valeurs numériques b et n
             //(vérifier que n est positif) et affichant la valeur bn
-            //.
+            //
+            //int nombre, puissance;
+            //int total = 1;
+            //int i;
+            //bool boolean;
+
+            //do
+            //{
+
+            //    Console.WriteLine("entrer le nombre ");
+            //    nombre = int.Parse(Console.ReadLine());
+            //    Console.WriteLine("entrer la puissance ");
+            //    boolean = int.TryParse(Console.ReadLine(), out puissance);
+
+            //} while (!boolean || puissance < 0);
+
+            //for (i = 1; i <= puissance; i++)
+            //{
+            //    total = total * nombre;
+            //}
+            //Console.WriteLine("total de l'operation " + total);
+
+
             //Exercice 9 - Joli carré
             //Ecrire un programme qui saisit une valeur n et qui affiche le carré suivant(n = 5 dans
             //l’exemple) :
@@ -730,12 +993,89 @@ surface = longueur * largeur;
             //X X X X X
             //X X X X X
             //X X X X X
+
+
+            //int n;
+            //Console.Write("Saisissez une valeur:");
+            //n = int.Parse(Console.ReadLine());
+            //for (int j = 0; j < n; j++)
+            //{
+            //    Console.WriteLine();
+
+            //    for (int i = 0; i < n; i++)
+            //    {
+            //        Console.Write("X ");
+            //    }
+
+            //}
+
             //4.4 Extension de la calculatrice
             //Une calculatrice de poche prend de façon alternée la saisie d’un opérateur et d’un opérande.
             //Si l’utilisateur saisit 3, + et 2, cette calculatrice affiche 5, l’utilisateur a ensuite la possibilité de
             //se servir de 5 comme d’un opérande gauche dans un calcul ultérieur.Si l’utilisateur saisit par
             //la suite et 4, la calculatrice affiche 20. La saisie de la touche = met fin au calcul et affiche un
             //résultat final.
+
+
+
+            //double value1, value2;
+            //char operateur;
+
+            //value1 = demanderDouble();
+            //do
+            //{
+            //    operateur = demanderOperateur();
+            //    switch (operateur)
+            //    {
+            //        case '-':
+            //        case '+':
+            //        case '*':
+            //            value2 = demanderDouble();
+            //            value1 = calculSimple(value1, value2, operateur);
+            //            break;
+            //        case '/':
+            //            value2 = demanderDoubleNonNull();
+            //            value1 = calculSimple(value1, value2, operateur);
+            //            break;
+            //        case '$':
+            //            value2 = demanderEntierPositif();
+            //            value1 = calculSimple(value1, value2, operateur);
+            //            break;
+            //        case '!':
+            //            if (value1 % 1 == 0 && value1 > 0) // On vérifie que value1 est un Entier et qu'il est positif.
+            //            {
+            //                value1 = calcul(value1, operateur);
+            //            }
+            //            else
+            //            {
+            //                Console.WriteLine("Calcul impossible !");
+            //            }
+            //            break;
+            //        case 'V':
+            //            if (value1 > 0) // On vérifie que value1 est positif.
+            //            {
+            //                value1 = calcul(value1, operateur);
+            //            }
+            //            else
+            //            {
+            //                Console.WriteLine("Calcul impossible !");
+            //            }
+            //            break;
+            //        case '=':
+            //            break;
+            //        default:
+            //            Console.WriteLine("Opérateur incorrect.");
+            //            break;
+            //    }
+
+            //    Console.WriteLine("Résultat = " + value1);
+            //    if (operateur == '=')
+            //    {
+            //        Console.WriteLine("Merci d'avoir utiliser cette calculatrice made in AFPA.");
+            //    }
+            //} while (operateur != '=');
+
+
             //Exercice 10 - Calculatrice de poche
             //Implémentez le comportement décrit ci-dessus.
             //Exercice 11 - Puissance
@@ -744,9 +1084,218 @@ surface = longueur * largeur;
             //Exercice 12 - Opérations unaires
             //Ajoutez les opérations unaires racine carrée et factorielle
 
+            // declaration programmme (voir foctions apres le main du programme)
+
+
+
+            //            Question 1 - Affichage
+            //Créer une chaîne de caractères contenant la valeur ”Les framboises sont perchées sur le
+            //tabouret de mon grand-père.” et affichez-la caractère par caractère.
+
+            //string phrase = "Les framboises sont perchées sur le tabouret de mon grand-père";
+            //for (int i = 1 ; i< phrase.Length; i++)
+            //{
+            //    Console.WriteLine(phrase[i]);
+            //}
+
+            //Question 2 - Extraction
+            //Ecrire un programme saisissant une chaîne de caractère t, deux indices i et j et recopiant dans
+            //une deuxième chaîne t′ la tranche[ti, . . . , tj]. Vous construirez la deuxième chaîne par
+            //concaténations successives(sans Substring ni System.Text.StringBuilder).
+
+            //string caractere,caractere2="";
+            //int indice1 ;
+            //int indice2  ;
+            //Console.WriteLine("entrer la premiere chaine ");
+            //caractere = Console.ReadLine();
+            //Console.WriteLine("entrer indice 1");
+            //indice1 =int.Parse (Console.ReadLine());
+            //Console.WriteLine("entrer indice 2");
+            //indice2 = int.Parse(Console.ReadLine());
+            //for (int i = indice1; i <indice2; i++)
+            //{
+
+            //    caractere2 = caractere2 + caractere[i];
+
+            //}
+
+            // Console.WriteLine(caractere2);
+
+            //Question 3 - Extraction sans concaténation
+            //Ecrire un programme saisissant une chaîne de caractère t, deux indices i et j et recopiant dans
+            //une deuxième chaîne t′ la tranche[ti, . . . , tj]. Vous construirez la deuxième chaîne en utilisant
+            //la fonction insert(indice, caractère) de System.Text.StringBuilder.
+
+            //string caractere, caractere2 ="";
+            //int indice1;
+            //int indice2;
+            //Console.WriteLine("entrer la premiere chaine ");
+            //caractere = Console.ReadLine();
+            //Console.WriteLine("entrer indice 1");
+            //indice1 = int.Parse(Console.ReadLine());
+            //Console.WriteLine("entrer indice 2");
+            //indice2 = int.Parse(Console.ReadLine());
+
+            // caractere2= caractere.Insert(0, indice1 ,indice2);
+
+
+
+            //Console.WriteLine(caractere2);
+
+
+            //Question 4 - Substitution
+            //Ecrire un programme saisissant une chaîne de caractère t, deux caractères a et b et substituant
+            //des a à toutes les occurrences de b.Vous utiliserez s.Replace(a, b), qui crée une copie de s
+            //dans laquelle tous les a ont été remplacés par des b.
+            string caractereT;
+            string caractereA,caractereB = "";
+            
+
+
+            //Question 5 - Substitution sans Replace
+            //Ecrire un programme saisissant une Stringbuilder t, deux caractères a et b et modifiant t pour
+            //substituer des a à toutes les occurrences de b. Vous n’utiliserez donc pas Replace !
+            //5.2 Morceaux choisis
+               
+
+
+
+
+
+            //Question 6 - Extensions
+            //Ecrire un programme saisissant un nom de fichier et affichant séparément le nom du fichier
+            //et l’extension.Dans le cas ou` plusieurs extensions sont concaténées(par exemple : 
+            //langageC.tar.gz), vous n’afficherez que la dernière extension(donc.gz).
+
+
+
+
+            //Question 7 - Expressions arithmétiques
+            //Ecrire un programme saisissant une expression arithmétique totalement parenthésée, (par
+            //exemple 3 + 4, ((3 − 2) +(7 / 3))) et disant à l’utilisateur si l’expression est correctement
+            // parenthésée
+
+
+
+
+
+
+
+
+
         }
-    
-}
+
+
+        // declaration programmme (fonction) en dehors du main
+
+
+        //public static int demanderEntierPositif(string texte)
+        //{
+        //    int valeur;
+        //    bool conversionReussie;
+        //    do
+        //    {
+        //        Console.WriteLine(texte);
+        //        conversionReussie = int.TryParse(Console.ReadLine(), out valeur);
+
+        //    } while (!conversionReussie || valeur < 0);
+        //    return valeur;
+        //}
+
+        //static double demanderDouble(string texte)
+        //{
+        //    double nb;
+        //    bool ok;
+        //    do
+        //    {
+        //        Console.Write(texte);
+        //        ok = double.TryParse(Console.ReadLine(), out nb);
+        //    } while (!ok);
+        //    return nb;
+        //}
+        //public static double demanderDoubleNonNull(string texte)
+        //{
+        //    double n;
+        //    bool conversionReussie;
+        //    do
+        //    {
+        //        Console.WriteLine(texte);
+        //        conversionReussie = double.TryParse(Console.ReadLine(), out n);
+        //    } while (!conversionReussie || n != 0);
+        //    return n;
+        //}
+
+        //static char DemanderOperateur()
+        //{
+        //    bool ok = true;
+        //    char op;
+        //    bool condition;
+
+        //    do
+        //    {
+        //        Console.Write("Entrez un opérateur +,-,*,/,$,!,V : ");
+        //        ok = char.TryParse(Console.ReadLine(), out op);
+        //        condition = !ok || (op != '+' && op != '-' && op != '*' && op != '/' && op != '$' && op != '!' && op != 'V' && op != 'v');
+        //        if (condition)
+        //            Console.WriteLine("Saisie incorrecte.");
+
+        //    } while (condition);
+        //    return char.ToUpper(op);
+        //}
+
+        //static double calculSimple(double valeur1, char operateur, double valeur2)
+        //{
+        //    double resultat = 0;
+        //    switch (operateur)
+        //    {
+        //        case '+':
+        //            resultat = valeur1 + valeur2;
+        //            break;
+        //        case '-':
+        //            resultat = valeur1 - valeur2;
+        //            break;
+        //        case '*':
+        //            resultat = valeur1 * valeur2;
+        //            break;
+        //        case '/':
+        //            resultat = valeur1 / valeur2;
+        //            break;
+        //        case '$':
+        //            resultat = Math.Pow(valeur1, valeur2);
+        //            break;
+        //        default:
+        //            break;
+        //    }
+        //    return resultat;
+        //}
+
+        //static double Calcul(double valeur, char operateur)
+        //{
+        //    double result;
+        //    result = 1;
+
+        //    switch (operateur)
+        //    {
+        //        case 'V':
+        //            result = Math.Sqrt(valeur);
+        //            break;
+
+        //        case '!':
+        //            for (int i = 1; i <= valeur; i++)
+        //            {
+        //                result *= i;
+        //            }
+        //            break;
+
+        //        default:
+        //            break;
+        //    }
+        //    return result;
+        //}
+
+
+
+    }
 
 }
 
