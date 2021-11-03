@@ -1084,7 +1084,7 @@ surface = longueur * largeur;
             //Exercice 12 - Opérations unaires
             //Ajoutez les opérations unaires racine carrée et factorielle
 
-            // declaration programmme (voir foctions apres le main du programme)
+            // declaration programmme (voir fonctions apres le main du programme)
 
 
 
@@ -1118,6 +1118,21 @@ surface = longueur * largeur;
             //    caractere2 = caractere2 + caractere[i];
 
             //}
+            //exemple
+            //        string t, t2 = "";
+            //int ind1, ind2;
+            //Console.WriteLine("Entrez une chaine de caractere : ");
+            //t = Console.ReadLine();
+            //Console.WriteLine("Entrez le premier indice : ");
+            //ind1 = int.Parse(Console.ReadLine());
+            //Console.WriteLine("Entrez le second indice : ");
+            //ind2 = int.Parse(Console.ReadLine());
+            //for (int i = ind1; i < ind2; i++)
+            //{
+            //    t2 = t2 + t[i];
+            //}
+            //Console.WriteLine(t);
+            //Console.WriteLine(t2);
 
             // Console.WriteLine(caractere2);
 
@@ -1126,42 +1141,102 @@ surface = longueur * largeur;
             //une deuxième chaîne t′ la tranche[ti, . . . , tj]. Vous construirez la deuxième chaîne en utilisant
             //la fonction insert(indice, caractère) de System.Text.StringBuilder.
 
-            //string caractere, caractere2 ="";
-            //int indice1;
-            //int indice2;
-            //Console.WriteLine("entrer la premiere chaine ");
-            //caractere = Console.ReadLine();
-            //Console.WriteLine("entrer indice 1");
-            //indice1 = int.Parse(Console.ReadLine());
-            //Console.WriteLine("entrer indice 2");
-            //indice2 = int.Parse(Console.ReadLine());
-
-            // caractere2= caractere.Insert(0, indice1 ,indice2);
+            //bool conversion;
+            //string t;
+            //string t2 = "";
+            //int ti;
+            //int tj;
+            //string temp;
+            //temp = "";
 
 
+            //Console.Write("saisissez une chaine de caractères : ");
+            //t = Console.ReadLine();
 
-            //Console.WriteLine(caractere2);
+            //do
+            //{
+            //    Console.Write("saisissez ti : ");
+            //    conversion = int.TryParse(Console.ReadLine(), out ti);
+
+            //    Console.Write("saisissez tj : ");
+            //    conversion &= int.TryParse(Console.ReadLine(), out tj);
+
+            //    if (!conversion)
+            //        Console.WriteLine("Entrez une valeur positive");
+
+            //} while (!conversion || ti < 0 || tj < ti || tj > t.Length);
+
+            //for (int i = ti; i < tj; i++)
+            //{
+            //    t2 = t2.Insert(t2.Length, t[i].ToString());
+            //}
+
+            //Console.Write(t2);
+
+
+
 
 
             //Question 4 - Substitution
             //Ecrire un programme saisissant une chaîne de caractère t, deux caractères a et b et substituant
             //des a à toutes les occurrences de b.Vous utiliserez s.Replace(a, b), qui crée une copie de s
             //dans laquelle tous les a ont été remplacés par des b.
-            string caractereT;
-            string caractereA,caractereB = "";
-            
+            //string chaine, a, b;
+            //Console.Write("Entrez une chaine de caractere : ");
+            //chaine = Console.ReadLine();
+            //Console.Write("Entrez la premiere lettre : ");
+            //a = Console.ReadLine();
+            //Console.Write("Entrez la seconde lettre : ");
+            //b = Console.ReadLine();
+            //Console.WriteLine(chaine.Replace(a, b));
+
+
+            //exemple 
+            //string t;
+            //string t2;
+            //string iI;
+            //string jJ;
+            //int i;
+            //int j;
+            //int e;
+            //t2 = "";
+            //string a;
+
+            //Console.WriteLine(" Ecrivez votre premiere phrase : ");
+            //t = Console.ReadLine();
+            //Console.WriteLine(" Vous souhaitez commencer a quel caractere ? ");
+            //i = = int.TryParse(Console.ReadLine(), out iI) - 1;
+            //Console.WriteLine(" Vous souhaitez terminer a quel caractere ?");
+            //j = int.TryParse(Console.ReadLine(), out jJ);
+
+            //for (e = i; i < j; i++) /* i valeur de depart tant quelle est plus petite que j valeur d'arriver on boucle */
+            //{
+            //    t2 = t2 + t[i]; /* t2 va recevoir les differents t[i] au fil des boucles : t2 vide , t2 + ti1, t2+ ti1 + ti2, ...  */
+            //}
+            //Console.WriteLine(t2);
+
+            //Console.WriteLine("la chaine d'origine  \"{0}\"", t2); /* j'ecrie la selection d'origine */
+            //Console.WriteLine("la chaine modifier   \"{0}\"", t2.Replace('a', 'b')); /* j ecrie b a la place de tout les a */
+
+
 
 
             //Question 5 - Substitution sans Replace
             //Ecrire un programme saisissant une Stringbuilder t, deux caractères a et b et modifiant t pour
             //substituer des a à toutes les occurrences de b. Vous n’utiliserez donc pas Replace !
-            //5.2 Morceaux choisis
-               
+            //string t = "";
+            //string caractereA="a";
+            //string caractereB="b";
+            //Console.Write("Entrez un caractere : ");
+            //caractereA = Console.ReadLine();
+            //Console.Write("Entrez un deuxieme caractere : ");
+            //caractereB= Console.ReadLine();
 
 
 
 
 
+            //5.2 Morceaux choisi
             //Question 6 - Extensions
             //Ecrire un programme saisissant un nom de fichier et affichant séparément le nom du fichier
             //et l’extension.Dans le cas ou` plusieurs extensions sont concaténées(par exemple : 
@@ -1176,7 +1251,193 @@ surface = longueur * largeur;
             // parenthésée
 
 
+            //6 Tableaux
+            //6.1 Exercices de compréhension
+            //Qu’affichent les programmes suivants ?
+            //Exercice 1
+            // char[] c = new char[4];
+            //            c[0] = 'a';
+            //            c[3] = 'J';
+            //            c[2] = 'k';
+            //            c[1] = 'R';
+            //            for (int k = 0; k < 4; k++)
+            //                Console.WriteLine(c[k]);
+            //            for (int k = 0; k < 4; k++)
+            //                c[k]++;
+            //            foreach (char i in c)
+            //                Console.WriteLine(i);
+            //
+            //           Exercice 2
+            //            int[] k;
+            //            k = new int[10];
+            //            k[0] = 1;
+            //            for (int i = 1; i < 10; i++)
+            //                k[i] = 0;
+            //            for (int j = 1; j <= 3; j++)
+            //                for (int i = 1; i < 10; i++)
+            //                    k[i] += k[i - 1];
+            //            foreach (int i in k)
+            //                Console.WriteLine(i);
 
+
+            //            Exercice 3
+            //            int[] k;
+            //            k = new int[10];
+            //            k[0] = 1;
+            //            k[1] = 1;
+            //            for (int i = 2; i < 10; i++)
+            //                k[i] = 0;
+            //            for (int j = 1; j <= 3; j++)
+            //                for (int i = 1; i < 10; i++)
+            //                    k[i] += k[i - 1];
+            //            foreach (int p in k)
+            //                Console.WriteLine(p);
+            //
+            //
+            //            6.2 Prise en main
+            //            Exercice 4 - Initialisation et affichage
+
+
+
+            //Ecrire un programme plaçant dans un tableau int[] T; les valeurs 1, 2, . . . , 10, puis affichant
+            //ce tableau. Vous initialiserez le tableau à la déclaration.
+            //int[] T= new int[10] { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
+
+            //foreach (int  valeur in T)
+            //{
+            //    Console.Write(valeur);
+            //}
+
+
+            //Exercice 5 - Initialisation avec une boucle
+            //Même exercice en initialisant le tableau avec une boucle.
+            //int[] T = new int[10];
+
+            //for (int i = 1; i <= T.Length; i++)
+            //{
+            //    T[i - 1] = i;
+            //}
+            //foreach (int valeur in T)
+            //{
+            //    Console.Write(valeur);
+            //}
+
+            //Exercice 6 - Somme
+            //Affichez la somme des n éléments du tableau T.
+            //int[] T = new int[10] { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 }; 
+            //int somme=0;
+
+
+            //for (int i = 0; i <T.Length; i++)
+            //{
+
+            //    somme = somme +T[i];
+            //}
+
+
+            //    Console.Write("la somme est de: " + somme);
+
+
+
+
+
+            //Exercice 7 - Recherche
+            //Demandez à l’utilisateur de saisir un int et dites - lui si ce nombre se trouve dans T.
+            //int[] T = new int[10] { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
+            //int users;
+            //bool contenu = false;
+            //Console.WriteLine("saisissez un nombre entier");
+            //users = int.Parse(Console.ReadLine());
+            //for (int i = 0; i < T.Length; i++)
+            //{
+            //    if (T[i] == users)
+            //    {
+            //        contenu = true;
+
+
+
+
+            //    }
+            //}
+            //if (contenu)
+            //{
+            //    Console.WriteLine("le chiffre se trouve dans T" );
+
+            //}
+            //else
+            //{
+            //    Console.WriteLine("le chiffre n'est pas dans le T" );
+
+
+            //}
+
+
+
+
+            //6.3 Indices
+            //Exercice 8 - Permutation circulaire
+            //Placez dans un deuxième tableau la permutation circulaire vers la droite des éléments de T.
+
+
+                int[] T = new int[10] { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
+                int tab[M]
+                
+
+                }
+
+            }
+
+
+            //Exercice 9 - Permutation circulaire sans deuxième tableau
+            //Même exercice mais sans utiliser de deuxième tableau.
+
+
+            //Exercice 10 - Miroir
+            //Inversez l’ordre des éléments de T sans utiliser de deuxième tableau.
+
+
+
+
+
+            //6.4 Recherche séquentielle
+            //Exercice 11 - Modification du tableau
+            //Etendez le tableau T à 20 éléments.Placez dans T[i] le reste modulo 17 de i2.
+
+            //Exercice 12 - Min / max
+            //Affichez les valeurs du plus petit et du plus grand élément de T.
+
+            //Exercice 13 - Recherche séquentielle
+            //Demandez à l’utilisateur de saisir une valeur x et donnez-lui la liste des indices i tels que T[i] a
+            //la valeur x.
+
+            //Exercice 14 - Recherche séquentielle avec stockage des indices
+            //Même exercice que précédemment, mais vous en affichant La valeur ... se trouve aux indices
+            //suivants: ... si x se trouve dans T, et La valeur ... n’a pas été trouvée si x ne se trouve pas dans
+            //T.Vous utiliserez un tableau Q dans lequel vous stockerez les indices auxquels x aura été
+            //trouvé dans T.
+
+
+            //6.5 Morceaux choisis
+            //Exercice 15 - Pièces de monnaie
+            //Reprenez l’exercice sur les pièces de monnaie en utilisant deux tableaux, un pour stocker les
+            //valeurs des pièces dans l’ordre décroissant, l’autre pour stocker le nombre de chaque pièce.
+
+            //Exercice 16 - Recherche de la tranche minimale en 3 boucles
+            //Une tranche est délimitée par deux indices i et j tels que i j, la valeur d’une tranche est ti + . .
+            //. + tj.Ecrire un programme de recherche de la plus petite tranche d’un tableau, vous utiliserez
+            //trois boucles imbriquées. Vous testerez votre algorithme sur un tableau T à 20 éléments
+            //aléatoires de signes quelconques.
+
+            //Exercice 17 - Recherche de la tranche minimale en 2 boucles(difficile)
+            //Même exercice mais en utilisant deux boucles imbriquées. Vous évaluerez ti + . . . + tj + 1 en
+            //calculant(ti + . . . + tj) + tj + 1.
+
+            //Exercice 19 - Recherche de la tranche minimale en 1 boucle(très difficile)
+            //Même exercice mais en utilisant une seule boucle. Vous trouverez une relation simple entre :
+            //— la plus petite tranche de t0, . . . , tj
+            //— la plus petite tranche de t0, . . . , tj contenant tj
+            //— la plus petite tranche de t0, . . . , tj+1
+            //— la plus petite tranche de t0, . . . , tj+1 contenant tj+1
 
 
 
@@ -1186,7 +1447,7 @@ surface = longueur * largeur;
         }
 
 
-        // declaration programmme (fonction) en dehors du main
+        // declaration programmme (fonction) en dehors du main a partir de la ligne 1079 
 
 
         //public static int demanderEntierPositif(string texte)
