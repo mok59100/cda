@@ -1587,18 +1587,18 @@ surface = longueur * largeur;
             //Exercice 10 - Miroir
             //Inversez l’ordre des éléments de T sans utiliser de deuxième tableau.
 
-            int n = 10;
-            int[] tableau = new int[n];
+            //int n = 10;
+            //int[] tableau = new int[n];
 
-            for (int i = 0;
-                i < n; i++)
-                tableau[i] = i + 1;
-            int temp = tableau[n];
-            for (int i = n + 1; i >= 1; i++)
-                tableau[i] = tableau[i +1];
-            tableau[0] = temp;
-            foreach (int val in tableau)
-                Console.WriteLine(val);
+            //for (int i = 0;
+            //    i < n; i++)
+            //    tableau[i] = i + 1;
+            //int temp = tableau[n-1];
+            //for (int i = n -1; i >= 1; i++)
+            //    tableau[i] = tableau[i +1];
+            //tableau[0] = temp;
+            //foreach (int val in tableau)
+            //    Console.WriteLine(val);
 
 
 
