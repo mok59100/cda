@@ -1570,6 +1570,7 @@ surface = longueur * largeur;
 
             //Exercice 9 - Permutation circulaire sans deuxième tableau
             //Même exercice mais sans utiliser de deuxième tableau.
+
             //int n = 10;
             //int[] tableau = new int[n];
 
@@ -1583,41 +1584,152 @@ surface = longueur * largeur;
             //foreach (int val in tableau)
             //    Console.WriteLine(val);
 
+            //exemple
+
+            //stock = k[k.Length - 1];
+
+            //for (int index = k.Length - 2; index >= 0; index--)
+            //{
+            //    k[index + 1] = k[index];
+
+            //}
+            //k[0] = stock;
+            //foreach (int p in k)
+            //{
+            //    Console.WriteLine(p);
+
+            //}
 
             //Exercice 10 - Miroir
             //Inversez l’ordre des éléments de T sans utiliser de deuxième tableau.
 
-            //int n = 10;
-            //int[] tableau = new int[n];
-
-            //for (int i = 0;
-            //    i < n; i++)
-            //    tableau[i] = i + 1;
-            //int temp = tableau[n-1];
-            //for (int i = n -1; i >= 1; i++)
-            //    tableau[i] = tableau[i +1];
-            //tableau[0] = temp;
-            //foreach (int val in tableau)
-            //    Console.WriteLine(val);
-
-
+            //int[] t = new int[] { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11 };
+            //int temp;
+            //for (int i = 0; i < (t.length / 2); i++)
+            //{
+            //    temp = t[i];
+            //    t[i] = t[t.Length - 1 - i];
+            //    t[t.Length - 1 - i] = temp;
+            //}
+            //foreach (int val in t)
+            //{
+            //    Console.Write(val + " ");
+            //}
 
             //6.4 Recherche séquentielle
             //Exercice 11 - Modification du tableau
-            //Etendez le tableau T à 20 éléments.Placez dans T[i] le reste modulo 17 de i2.
+            //Etendez le tableau T à 20 éléments.Placez dans T[i] le reste modulo 17 de i2(carre).
+
+            //int[] t = new int[10];
+            //Array.Resize(ref t, t.Length + 10);
+            //for (int i = 0; i < t.Length; i++)
+            //{
+            //    t[i] = (i * i) % 17;
+            //    Console.WriteLine(t[i]);
+            //}
+
+
 
             //Exercice 12 - Min / max
             //Affichez les valeurs du plus petit et du plus grand élément de T.
+            //int[] t = new int[20] { 1, 2, -3, 4, 5, 6, 7, 8, 9, 10, 15, 20, 30, 35, 40, 45, 50, 55, 0, 65 };
+            //int min, max;
+            //min = t[0];
+            //max = t[0];
+            //for (int i = 0; i < t.Length; i++)
+            //{
+            //    if (t[i] < min)
+            //    {
+            //        min = t[i];
+
+            //    }
+
+            //    else if (t[i] > max)
+            //    {
+            //        max = t[i];
+            //    }
+            //}
+            //Console.Write("la valeur minimale est de " + min + " et la valeur maximale est de " + max);
+
+
+
+
+
+
 
             //Exercice 13 - Recherche séquentielle
             //Demandez à l’utilisateur de saisir une valeur x et donnez-lui la liste des indices i tels que T[i] a
             //la valeur x.
+
+            //int[] t = new int[10] { 42, 59, 75, 62, 14, 1, 32, 5, 689, 32 };
+            //int value;
+            //bool apparition = false;
+
+            //Console.Write("Saisissez une valeur numérique : ");
+            //while (!int.TryParse(Console.ReadLine(), out value)) ;
+
+            //for (int i = 0; i < t.Length; i++)
+            //{
+            //    if (t[i] == value)
+            //    {
+            //        Console.WriteLine("La valeur apparait a l'indice " + i + " du tableau.");
+            //        apparition = true;
+            //    }
+            //}
+
+            //if (!apparition)
+            //{
+            //    Console.WriteLine("La valeur n'apparait pas dans le tableau.");
+            //}
 
             //Exercice 14 - Recherche séquentielle avec stockage des indices
             //Même exercice que précédemment, mais vous en affichant La valeur ... se trouve aux indices
             //suivants: ... si x se trouve dans T, et La valeur ... n’a pas été trouvée si x ne se trouve pas dans
             //T.Vous utiliserez un tableau Q dans lequel vous stockerez les indices auxquels x aura été
             //trouvé dans T.
+
+            //int[] tab = new int[10] { 1, 58, 58, 4, 5, 6, 0, 8, 3, 58 };
+            //int[] tab2 = new int[0];
+            //int cpt = 0;
+            //Console.Write("Entrez votre valeur : ");
+            //int valeur = int.Parse(Console.ReadLine());
+            //for (int i = 0; i < tab.Length; i++)
+            //{
+            //    if (tab[i] == valeur)
+            //    {
+            //        Array.Resize(ref tab2, tab2.Length + 1);
+            //        tab2[cpt] = i;
+            //        cpt++;
+            //    }
+            //}
+            //foreach (var item in tab2)
+            //{
+            //    Console.Write(item + " ");
+            //}
+
+           //exemple
+
+           //     int valeur;
+           // int[] k = new int[10] { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
+           // int[] q = new int[10];
+           // List<int> liste = new List<int>();
+           // Console.Write("Saisissez une valeur : ");
+           // valeur = int.Parse(Console.ReadLine());
+           // for (int i = 0; i < k.Length; i++)
+           // {
+           //     if (k[i] == valeur)
+           //     {
+           //         liste.Add(i);
+           //     }
+           // }
+
+           // q = liste.ToArray();
+
+           // foreach (int p in q)
+           // {
+           //     Console.WriteLine(p);
+
+           // }
 
 
             //6.5 Morceaux choisis
@@ -1647,8 +1759,8 @@ surface = longueur * largeur;
 
 
 
-        }
 
+        }
 
         // declaration programmme (fonction) en dehors du main a partir de la ligne 1079 
 
@@ -1761,7 +1873,7 @@ surface = longueur * largeur;
 
     }
 
-}
+ }
 
 
    
