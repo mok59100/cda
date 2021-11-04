@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Text;
 
 namespace exercices
 {
@@ -1224,17 +1225,33 @@ surface = longueur * largeur;
             //Question 5 - Substitution sans Replace
             //Ecrire un programme saisissant une Stringbuilder t, deux caractères a et b et modifiant t pour
             //substituer des a à toutes les occurrences de b. Vous n’utiliserez donc pas Replace !
-            //string t = "";
-            //string caractereA="a";
-            //string caractereB="b";
-            //Console.Write("Entrez un caractere : ");
-            //caractereA = Console.ReadLine();
-            //Console.Write("Entrez un deuxieme caractere : ");
-            //caractereB= Console.ReadLine();
+            //string t ,t2 = "";
+            //char a, b;
+
+
+            //StringBuilder t;
+            //char a, b;
+
+            //Console.Write("Entrez la valeur  t : ");
+            //t = new StringBuilder(Console.ReadLine());
+            //Console.Write("Entrez la valeur a : ");
+            //a = Char.Parse(Console.ReadLine());
+            //Console.Write("Entrez la valeur b : ");
+            //b = Char.Parse(Console.ReadLine());
 
 
 
+            //for (int i = 0; i < t.Length; i++)
+            //{
+            //    if (t[i] == a)
+            //    {
+            //        t[i] = b;
+            //    }
 
+
+
+            //}
+            //Console.Write(t);
 
             //5.2 Morceaux choisi
             //Question 6 - Extensions
@@ -1242,31 +1259,122 @@ surface = longueur * largeur;
             //et l’extension.Dans le cas ou` plusieurs extensions sont concaténées(par exemple : 
             //langageC.tar.gz), vous n’afficherez que la dernière extension(donc.gz).
 
+            //string Val = "langageC.tar.gz";
+            //int id = Val.IndexOf('.');
+            //int id2 = Val.LastIndexOf('.');
+            //string nom = Val.Substring(0, id);
+            //string exct = Val.Substring(id2);
+
+            //Console.WriteLine(nom);
+            //Console.WriteLine(exct);
 
 
+            //exemple
+            //                Console.Write("Entrez le nom du fichier : ");
+            //string nomFichier = Console.ReadLine();
+            //Console.WriteLine("Le nom du fichier est : '" + nomFichier.Substring(0, nomFichier.LastIndexOf(".")) + "' et son extention est : '" + nomFichier.Substring(nomFichier.LastIndexOf(".")) + "'");
 
             //Question 7 - Expressions arithmétiques
             //Ecrire un programme saisissant une expression arithmétique totalement parenthésée, (par
             //exemple 3 + 4, ((3 − 2) +(7 / 3))) et disant à l’utilisateur si l’expression est correctement
             // parenthésée
+            //string calcul;
+            //int cptOuv = 0;
+            //int cptFer = 0;
+            //int cpt = 0;
+
+            //Console.WriteLine("Entrez votre calcul");
+            //calcul = Console.ReadLine();
+
+            //while (cptOuv >= cptFer && cpt < calcul.Length - 1)
+            //{
+            //    if (calcul[cpt] == '(')
+            //    {
+            //        cptOuv++;
+            //    }
+            //    else if (calcul[cpt] == ')')
+            //    {
+            //        cptFer++;
+            //    }
+
+            //    cpt++;
+            //}
+
+            //if (cptOuv == cptFer)
+            //{
+            //    Console.WriteLine("expression correctement parenthesée.");
+            //}
+            //else
+            //{
+            //    Console.WriteLine("expression mal parenthesée.");
+            //}
+
+            //exemple
+            //    string a;
+
+            //string b;
+            //int i;
+            //Console.WriteLine(" saisissez votre calcule : ");
+            //a = Console.ReadLine();
+            //int compteur = 0; /* initialisation du compteur a 0 */
+
+
+            //for (i = 0; i < a.Length; i++) /* pour i jusqu'a la taille du tableau */
+            //{
+            //    if (a[i] == '(')             /* on regarde si l'entrer cest une parenthese */
+            //    {
+            //        compteur++;               /* si c'est une parenthese on met 1 au compteur */
+
+
+            //    }
+            //    else if (a[i] == ')')
+            //    {     /* si cest une fermente */
+            //        compteur--;               /* on met compteur -1 */
+            //    }
+
+            //}
+            //if (compteur == 0)                 /* si le compteur est a 0 cest bon */
+            //{
+            //    Console.WriteLine(" its ok ! ");
+
+
+            //}
+            //else
+            //{
+            //    Console.WriteLine("its not ok ! ");  /* sinon cest pas bon */
+            //}
+
 
 
             //6 Tableaux
             //6.1 Exercices de compréhension
             //Qu’affichent les programmes suivants ?
-            //Exercice 1
-            // char[] c = new char[4];
-            //            c[0] = 'a';
-            //            c[3] = 'J';
-            //            c[2] = 'k';
-            //            c[1] = 'R';
-            //            for (int k = 0; k < 4; k++)
-            //                Console.WriteLine(c[k]);
-            //            for (int k = 0; k < 4; k++)
-            //                c[k]++;
-            //            foreach (char i in c)
-            //                Console.WriteLine(i);
-            //
+            //char[] c = new char[4];
+            //c[0] = 'a';
+            //c[3] = 'J';
+            //c[2] = 'k';
+            //c[1] = 'R';
+            //for (int k = 0; k < 4; k++)
+            //    Console.WriteLine(c[k]);
+            //for (int k = 0; k < 4; k++)
+            //    c[k]++;
+            //foreach (char i in c)
+            //    Console.WriteLine(i);
+
+            //Exercice 1   char[] c = new char[4];      /* on cree un nouveau tableau a 4 cases */
+            //c[0] = 'a';                  /* la position 1 */
+            //c[3] = 'J';                  /* la position 4 */
+            //c[2] = 'k';                  /* la position 3 */
+            //c[1] = 'R';                  /* la position 2 */
+            //for (int k = 0; k < 4; k++)  /* tant que k est inferieur a 4 */
+            //    Console.WriteLine(c[k]); /* on ecrit les lettres dans l'ordre du tableau */
+            //for (int k = 0; k < 4; k++)  /* tant que k est inferieur a 4 */
+            //    c[k]++;                  /* on fait la position +1 */
+            //foreach (char i in c)        /* on recherche i dans le tableau c  */
+            //    Console.WriteLine(i);    /* on affiche les données  */
+
+            /* resultat R k J b S l K */
+
             //           Exercice 2
             //            int[] k;
             //            k = new int[10];
@@ -1278,6 +1386,21 @@ surface = longueur * largeur;
             //                    k[i] += k[i - 1];
             //            foreach (int i in k)
             //                Console.WriteLine(i);
+            //
+
+
+
+            //int[] k;
+            //k = new int[10];
+            //k[0] = 1;// k[0] = 1
+            //for (int i = 1; i < 10; i++)
+            //    k[i] = 0; //k[1,0,0,0,0,0,0,0,0,0]
+            //for (int j = 1; j <= 3; j++)
+            //    for (int i = 1; i < 10; i++) // tour 1 = k[1,1,1,1,1,1,1,1,1,1] / tour 2 = k[1,2,3,4,5,6,7,8,9,10] / tour 3 = k[1,3,6,10,15,21,28,36,45,55]
+            //        k[i] += k[i - 1];
+            //foreach (int i in k)
+            //    Console.WriteLine(i);
+            //Le programme affiche(1, 3, 6, 10, 15, 21, 28, 36, 45, 55)
 
 
             //            Exercice 3
@@ -1301,8 +1424,26 @@ surface = longueur * largeur;
 
             //Ecrire un programme plaçant dans un tableau int[] T; les valeurs 1, 2, . . . , 10, puis affichant
             //ce tableau. Vous initialiserez le tableau à la déclaration.
-            //int[] T= new int[10] { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
 
+
+            //int[] liste = new int[10] { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
+            //Console.WriteLine("              Un beau tableau  ");
+            //Console.WriteLine("              +-------------+");
+            //for (int i = 0; i < liste.Length; i++)
+            //{
+
+            //    if (liste[i] < 10)
+            //    {
+            //        Console.WriteLine("              | Poste {0}: {1}  |", i, liste[i]);
+            //    }
+            //    else { Console.WriteLine("              | Poste {0}: {1} |", i, liste[i]); }
+            //}
+            //Console.WriteLine("              +-------------+");
+
+
+            //exemple
+
+            //int[] T= new int[10] { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
             //foreach (int  valeur in T)
             //{
             //    Console.Write(valeur);
@@ -1322,20 +1463,28 @@ surface = longueur * largeur;
             //    Console.Write(valeur);
             //}
 
+            //exemple
+            //    int[] tab = new int[10];
+            //for (int i = 0; i < tab.Length; i++)
+            //{
+            //    tab[i] = i + 1;
+            //    Console.WriteLine("valeur : " + tab[i]);
+            //}
+
             //Exercice 6 - Somme
             //Affichez la somme des n éléments du tableau T.
-            //int[] T = new int[10] { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 }; 
-            //int somme=0;
+            //int[] t = new int[10] { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
+            //int somme = 0;
 
 
-            //for (int i = 0; i <T.Length; i++)
+            //for (int i = 0; i < t.Length; i++)
             //{
 
-            //    somme = somme +T[i];
+            //    somme = somme + t[i];
             //}
 
 
-            //    Console.Write("la somme est de: " + somme);
+            //Console.Write("la somme est de: " + somme);
 
 
 
@@ -1371,31 +1520,85 @@ surface = longueur * largeur;
 
             //}
 
+            //exemple
 
+            //int[] t = new int[10] { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
+            //int cpt = 0;
 
+            //Console.WriteLine("Donner un chiffre :");
+            //int value = int.Parse(Console.ReadLine());
+
+            //while (cpt < t.Length && t[cpt] != value)
+            //{
+            //    cpt++;
+            //}
+
+            //if (cpt < t.Length)
+            //{
+            //    Console.WriteLine("Bien joué !");
+            //}
+            //else
+            //{
+            //    Console.WriteLine("Le chiffre n'est pas dans le tableau.");
+            //}
+
+            //exemple
+            //int[] T = new int[10];
+            //for (int i = 0; i < T.Length; i++)
+            //{
+            //    T[i] = i + 1;
+            //}
+            //Console.WriteLine("Donnez une valeur");
+            //int t = int.Parse(Console.ReadLine());
+
+            //Console.WriteLine(Array.Exists(T, elt => elt == t));
 
             //6.3 Indices
             //Exercice 8 - Permutation circulaire
             //Placez dans un deuxième tableau la permutation circulaire vers la droite des éléments de T.
 
+            //int[] tableau = new int[10];
+            //int[] tableauCirculezYaRienAVoir = new int[10];
+            //for (int i = 0; i < tableau.Length; i++)
+            //    tableau[i] = i + 1;
+            //for (int i = 0; i < tableau.Length; i++)
+            //    tableauCirculezYaRienAVoir[(i + 1) % tableau.Length] = tableau[i];
+            //foreach (int p in tableauCirculezYaRienAVoir)
+            //    Console.WriteLine(p);
 
-                int[] T = new int[10] { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
-                int tab[M]
-                
-
-                }
-
-            }
 
 
             //Exercice 9 - Permutation circulaire sans deuxième tableau
             //Même exercice mais sans utiliser de deuxième tableau.
+            //int n = 10;
+            //int[] tableau = new int[n];
+
+            //for (int i = 0; 
+            //    i < n; i++)
+            //    tableau[i] = i + 1;
+            //  int temp = tableau[n - 1];
+            //for (int i = n - 1;  i >= 1; i--)
+            //    tableau[i] = tableau[i - 1];
+            //tableau[0] = temp;
+            //foreach (int val in tableau)
+            //    Console.WriteLine(val);
 
 
             //Exercice 10 - Miroir
             //Inversez l’ordre des éléments de T sans utiliser de deuxième tableau.
 
+            int n = 10;
+            int[] tableau = new int[n];
 
+            for (int i = 0;
+                i < n; i++)
+                tableau[i] = i + 1;
+            int temp = tableau[n];
+            for (int i = n + 1; i >= 1; i++)
+                tableau[i] = tableau[i +1];
+            tableau[0] = temp;
+            foreach (int val in tableau)
+                Console.WriteLine(val);
 
 
 
