@@ -39,6 +39,28 @@ namespace personnes
         //accesseurs
 
         public string GetNom()
+        {
+            return this.nom;
+        }
 
+        public void SetNom( string nvNom)
+        {
+            this.nom = nvNom;
+        }
+        public string GetPrenom()
+        {
+            return this.prenom;
+        }
+        public void SetPrenom(string nvPrenom)
+        {
+            this.prenom = nvPrenom;
+
+        }
+        //ToString
+        public override string ToString()
+        {
+            return "nom : " + this.nom + " prenom : " + this.prenom + " age : " + this.age + " adresse : " + this.adresse;
+        }
+    
     }
 }
