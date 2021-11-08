@@ -13,7 +13,7 @@ namespace ConsoleApp1
         public string Cin { get; set; }
         public string Nom { get; set; }
         public string Prenom { get; set; }
-        public int Tel { get; set; }
+        public string Tel { get; set; }
 
 
 
@@ -22,7 +22,7 @@ namespace ConsoleApp1
            
 
         }
-        public Clients(string cin, string nom, int prenom, int tel)
+        public Clients(string cin, string nom, string prenom, string tel)
         {
 
         this.Cin = cin;
@@ -31,7 +31,7 @@ namespace ConsoleApp1
         this.Tel = tel;
 
         }
-        public Clients(string cin, string nom, int prenom)
+        public Clients(string cin, string nom, string prenom)
         {
 
         this.Cin = cin;
@@ -39,10 +39,10 @@ namespace ConsoleApp1
         this.Prenom = prenom;
        
         }
-        public string afficher(Comptes c1)
+        public string Afficher()
         {
             
-            return "\n************************"+
+            return 
                    "\n Cin : " + this.Cin +
                    "\n Nom : " + this.Nom +
                    "\n Prenom : " + this.Prenom +
@@ -50,16 +50,6 @@ namespace ConsoleApp1
 
 
         }
-        public string afficher(Comptes c2)
-        {
-
-            return "\n************************"+
-                   "\n Cin : " + this.Cin +
-                   "\n Nom : " + this.Nom +
-                   "\n Prenom : " + this.Prenom +
-                   "\n Tel : " + this.Tel;
-
-         
-        }
+       
     }
 }

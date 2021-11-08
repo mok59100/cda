@@ -8,18 +8,12 @@ namespace ConsoleApp1
 {
     class Comptes
     {
-        private int Solde;
-        private double Code ;
-        private string Client ;
-        private int NumCompte;
-        public string Client
-        {
-            get { return Client; }
-        }
-        public double Solde
-        {
-            get { return Solde; }
-        }
+        public double Solde { get; private set; }
+        public int Code { get; set; }
+        public Clients Client { get; set; }
+
+        private static int numCompte= 1;
+       
 
       
         //constructeur
@@ -28,30 +22,47 @@ namespace ConsoleApp1
 
         }
 
-        private Comptes(double solde, int code, string client, int numCompte)
+       
+        public Comptes(double solde, Clients client)
         {
             this.Solde =solde;
-            this.Code = code;
+            this.Code = numCompte ++;
             this.Client = client;
-            this.NumCompte = numCompte;
+       
 
         }
        //ajout montant au compte
-       public void Crediter(double Montant )
+       public void Crediter(double montant )
         {
-            Solde = Solde + Montant;
+            Solde = Solde + montant;
         }
-        public void Debiter(double Montant)
+        public void Crediter(double montant, Comptes c)
         {
-            Solde = Solde - Montant;
+            this.Crediter(montant);
+            c.Debiter(montant);
 
-            //ToString
-       
-        public string Resumer()
+        }
+        public void Debiter(double montant)
         {
-         string Resumer = "Le solde du compte de " + this.Client + " est de " + this.Solde;
-         return Resumer;
+            Solde = Solde - montant;
         }
+        public void Debiter(double montant, Comptes c)
+        {
+            this.Debiter(montant);
+            c.Crediter(montant);
+
         }
+        //ToString
+
+        public string Afficher()
+            {
+                return "\n************************" +
+                    "\n Numéro de Compte : " + this.Code +
+                    "\n Solde de compte : " + this.Solde +
+                    "\n Propriétaire du compte : \n" + this.Client.Afficher();
+                              
+                   
+            }
+        
     }
 }
