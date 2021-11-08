@@ -28,12 +28,12 @@ namespace ConsoleApp1
 
         }
 
-        private Comptes(double nvSolde, int nvCode, string nvClient, int nvNumCompte)
+        private Comptes(double solde, int code, string client, int numCompte)
         {
-            this.Solde = nvSolde;
-            this.Code = nvCode;
-            this.Client = nvClient;
-            this.NumCompte = nvNumCompte;
+            this.Solde =solde;
+            this.Code = code;
+            this.Client = client;
+            this.NumCompte = numCompte;
 
         }
        //ajout montant au compte

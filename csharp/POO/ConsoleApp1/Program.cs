@@ -12,7 +12,7 @@ namespace Comptes
 
             Console.WriteLine(Comptes c1.ToString());
             Console.WriteLine(Comptes c2.ToString());
-        Co 
+            Comptes c1 = new clients(+5000);
             
             //Car.Rouler(15000);
             //Console.WriteLine(Car.ToString());

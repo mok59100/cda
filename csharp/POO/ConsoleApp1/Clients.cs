@@ -22,24 +22,24 @@ namespace ConsoleApp1
            
 
         }
-        public Clients(string Cin, string Nom, int Prenom, int tel)
+        public Clients(string cin, string nom, int prenom, int tel)
         {
 
-        this.Cin = nvCin;
-        this.Nom = nvNom;
-        this.Prenom = nvPrenom;
-        this.Tel = nvTel;
+        this.Cin = cin;
+        this.Nom = nom;
+        this.Prenom = prenom;
+        this.Tel = tel;
 
         }
-        public Clients(string Cin, string Nom, int Prenom)
+        public Clients(string cin, string nom, int prenom)
         {
 
-        this.Cin = nvCin;
-        this.Nom = nvNom;
-        this.Prenom = nvPrenom;
+        this.Cin = cin;
+        this.Nom = nom;
+        this.Prenom = prenom;
        
         }
-        public string afficher(Compte c1)
+        public string afficher(Comptes c1)
         {
             
             return "\n************************"+
@@ -50,7 +50,7 @@ namespace ConsoleApp1
 
 
         }
-        public string afficher()
+        public string afficher(Comptes c2)
         {
 
             return "\n************************"+
