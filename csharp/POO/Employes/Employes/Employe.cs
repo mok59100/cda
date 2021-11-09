@@ -16,8 +16,9 @@ namespace Employes
         public double Salaire { get; set; }
        public string Service { get; set; }
 
+        public Agences Agence { get; set; }
 
-        public Employe(string nom, string prenom, DateTime dateEmbauche, string fonction, double salaire, string service )
+        public Employe(string nom, string prenom, DateTime dateEmbauche, string fonction, double salaire, string service, Agences agence)
         {
             this.Nom = nom;
             this.Prenom = prenom;
@@ -25,6 +26,8 @@ namespace Employes
             this.Fonction = fonction;
             this.Salaire = salaire;
             this.Service = service;
+            this.Agence = agence;
+
         }
         public int Anciennete()
         {
@@ -35,7 +38,7 @@ namespace Employes
             return (int) (DateTime.Today - this.DateEmbauche).TotalDays / 365;
         }
 
-        public double PrimeSalaireAnnuel()
+        public double PrimeSalaire()
         {
             return (this.Salaire * 5) / 100;
         }
@@ -47,25 +50,73 @@ namespace Employes
 
         public double Prime()
         {
-            return this.PrimeSalaireAnnuel() + this.PrimeAnciennete()
-;        }
+            return Math.Round(this.PrimeSalaire() + this.PrimeAnciennete(), 2);
+        }
+
+        public void OrdreDeTransfert()
+        {
+            DateTime dateVersement = new DateTime(DateTime.Now.Year, 11, 30); // DateTime.Now.Year donne l'année du jour en cours
+            if (DateTime.Now == dateVersement)  // peut être modifié par une comparaison de mois et jour uniquement
+            {
+                Console.WriteLine("Ordre de transfert de " + this.Prime() + "pour la salarié " + this.Nom);
+            }
+        }
+
+        public static int ClassementNom(Employe a, Employe b)
+        {
+            if (a.Nom.CompareTo(b.Nom) > 0)
+            {
+                return 1;
+            }
+            else if (a.Nom.CompareTo(b.Nom) < 0)
+            {
+                return -1;
+            }
+            else if (a.Prenom.CompareTo(b.Prenom) > 0) // les noms sont égaux, on compare les prenoms
+            {
+                return 1;
+            }
+            else if (a.Prenom.CompareTo(b.Prenom) < 0)
+            {
+                return -1;
+            }
+            else
+            {
+                return 0; // noms et prenoms egaux
+            }
+        }
+
+        public static int ClassementService(Employe a, Employe b)
+        {
+            if (a.Service.CompareTo(b.Service) > 0)
+            {
+                return 1;
+            }
+            else if (a.Service.CompareTo(b.Service) < 0)
+            {
+                return -1;
+            }
+            return ClassementNom(a, b); // si les services sont égaux, on renvoi la comparaison par Nom
+       }
+        public double MasseSalariale()
+        {
+            return this.Salaire + this.Prime();
+        }
+
         public override string ToString()
         {
-            return " nom : " + this.Nom + " prenom : " + this.Prenom + " date embauche : "+ this.DateEmbauche + " fonction : "+ this.Fonction + " salaire: "+ this.Salaire + " service : "+ this.Service;
+            string reponse =
+           "****_INFORMATION_SUR_L'EMPLOYES_****" +
+           "\n|Nom                : " + this.Nom +
+           "\n|Prenom           : " + this.Prenom +
+           "\n|Date Embauche    : " + this.DateEmbauche.ToString("dd/MM/yyyy") +  // on formate la date avant l'affichage
+           "\n|Fonction         : " + this.Fonction +
+           "\n|Salaire          : " + this.Salaire +
+           "\n|Service          : " + this.Service;
+            return reponse;
         }
-        //public override int CompareTo (Employe e1, Employe e2)
-        //{ if (e1.Nom  e2.Nom)
-
-        //}
-        public override int CompareTo(Employe e2, Employe e1)
-        {
-            return e1.CompareTo((e2 as Employe).Nom);
-        }
-
-        private int CompareTo(string nom)
-        {
-            throw new NotImplementedException();
-        }
+        
+        
     }
  
 }
