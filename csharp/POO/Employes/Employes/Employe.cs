@@ -9,16 +9,17 @@ namespace Employes
     class Employe
     {
         // Attributs
-        public string Nom { get; set; } 
+        public string Nom { get; set; }
         public string Prenom { get; set; }
         public DateTime DateEmbauche { get; set; }
         public string Fonction { get; set; }
         public double Salaire { get; set; }
-       public string Service { get; set; }
+        public string Service { get; set; }
+        public List<Enfants> ListeEnfants { get; set; } = new List<Enfants>();
 
         public Agences Agence { get; set; }
 
-        public Employe(string nom, string prenom, DateTime dateEmbauche, string fonction, double salaire, string service, Agences agence)
+        public Employe(string nom, string prenom, DateTime dateEmbauche, string fonction, double salaire, string service, List<Enfants> ListeEnfants, Agences agence)
         {
             this.Nom = nom;
             this.Prenom = prenom;
@@ -27,6 +28,7 @@ namespace Employes
             this.Salaire = salaire;
             this.Service = service;
             this.Agence = agence;
+            new List<Enfants> ListeEnfants;
 
         }
         public int Anciennete()
@@ -35,7 +37,7 @@ namespace Employes
             //DateTime dateEmb = this.DateEmbauche;
             //TimeSpan nbJour=dateJour-dateEmb;
             //return (int) nbJour.TotalDays/365;
-            return (int) (DateTime.Today - this.DateEmbauche).TotalDays / 365;
+            return (int)(DateTime.Today - this.DateEmbauche).TotalDays / 365;
         }
 
         public double PrimeSalaire()
@@ -97,12 +99,75 @@ namespace Employes
                 return -1;
             }
             return ClassementNom(a, b); // si les services sont égaux, on renvoi la comparaison par Nom
-       }
+        }
         public double MasseSalariale()
         {
             return this.Salaire + this.Prime();
         }
 
+
+        public string ChequeVacance()
+        {
+            if (this.Anciennete() >= 1)
+            {
+                return "vous avez droit à des cheques vacances";
+            }
+
+            {
+                return "vous n'avez pas droit à des cheques vacances";
+            }
+        }
+
+
+        public int[] ChequeNoel()
+
+        {
+            int[] tab = new int[3] { 0, 0, 0 };
+            foreach (var ListeEnfants in Enfants)
+            {
+                int Age =
+               (int)DateTime.Today.Subtract(ListeEnfants.DateNaissance).TotalDays / 365;//on transforme ce calcul en jours puis en le divise  par 365
+                if (ListeEnfants.DateNaissance > DateTime.Now)
+                {
+                    Age--;
+                }
+                if (Age < 10)
+                {
+                    tab[0]++;
+                }
+                else if (Age >= 11 && Age <= 15) // **
+                {
+                    tab[1]++;
+                }
+                else if (Age >= 16 && Age <= 18) // **
+                {
+                    tab[2]++;
+                }
+            }
+            return tab;
+        }
+        public void AjouterEnfant(Enfants ListeEnfants)
+        {
+            this.ListeEnfants.Add(Enfants);
+        }
+ //       public int[] ChequeNoel()
+ //        int[] tab = new int[3] { 0, 0, 0 };
+ //       foreach (var Enfants in Enfants)
+	//{
+ //          switch(Enfants.ChequeNoel())
+ //           case20: tab[0]++;break;
+ //           case30: tab[1]++;break;
+ //           case50: tab[2]++;break;
+ //           default:break;
+	//}
+ //   if (tab.Sum()==0)
+ //       {
+ //       return "pas de droit aux cheques de noel";
+
+ //       }
+ //       if (tab[0]> 0) reponse  += tab[0]+ "cheque de 20 \n"
+ //       if (tab[1] > 0) reponse += tab[1] + "cheque de 30 \n"
+ //       if (tab[2] > 0) reponse += tab[2] + "cheque de 50 \n"
         public override string ToString()
         {
             string reponse =
@@ -112,11 +177,20 @@ namespace Employes
            "\n|Date Embauche    : " + this.DateEmbauche.ToString("dd/MM/yyyy") +  // on formate la date avant l'affichage
            "\n|Fonction         : " + this.Fonction +
            "\n|Salaire          : " + this.Salaire +
-           "\n|Service          : " + this.Service;
+           "\n|Service          : " + this.Service +
+           "\n|Restauration          : " + Agence.ModeRestauration() +
+           "\n|ChequeVacance         : " + this.ChequeVacance();
+         
+
+
+
             return reponse;
         }
+
+    } 
+
+    } 
         
-        
-    }
+    
  
-}
+
