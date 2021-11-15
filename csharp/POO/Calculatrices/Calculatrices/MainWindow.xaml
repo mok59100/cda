@@ -1,0 +1,56 @@
+﻿<Window x:Class="Calculatrices.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Calculatrices"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid OpacityMask="Black" Background="#FF150D0D">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="10*"/>
+            <RowDefinition Height="98*"/>
+            <RowDefinition Height="10*"/>
+            <RowDefinition Height="66*"/>
+            <RowDefinition Height="10*"/>
+            <RowDefinition Height="66*"/>
+            <RowDefinition Height="9*"/>
+            <RowDefinition Height="66*"/>
+            <RowDefinition Height="9*"/>
+            <RowDefinition Height="66*"/>
+            <RowDefinition Height="9*"/>
+
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="43*"/>
+            <ColumnDefinition Width="16*"/>
+            <ColumnDefinition Width="161*"/>
+            <ColumnDefinition Width="16*"/>
+            <ColumnDefinition Width="161*"/>
+            <ColumnDefinition Width="16*"/>
+            <ColumnDefinition Width="161*"/>
+            <ColumnDefinition Width="16*"/>
+            <ColumnDefinition Width="161*"/>
+            <ColumnDefinition Width="16*"/>
+            <ColumnDefinition Width="43*"/>
+        </Grid.ColumnDefinitions>
+        <Button Content="7" Grid.Column="2" HorizontalAlignment="Left" Grid.Row="3" VerticalAlignment="Top" Width="157" Height="66" Click="Button_Click" Background="#FF898787" FontSize="40" FontWeight="Bold"/>
+        <Button Content="4" Grid.Column="2" HorizontalAlignment="Left" Grid.Row="5" VerticalAlignment="Top" Width="157" Height="66" Background="Gray" FontSize="40" FontWeight="Bold"/>
+        <Button Content="1" Grid.Column="2" HorizontalAlignment="Left" Margin="0,1,0,0" Grid.Row="7" VerticalAlignment="Top" Width="157" Height="65" Background="Gray" FontWeight="Bold" FontSize="40"/>
+        <Button Content="," Grid.Column="2" HorizontalAlignment="Left" Margin="0,1,0,0" Grid.Row="9" VerticalAlignment="Top" Width="157" Height="64" Background="Gray" FontSize="40" FontWeight="Bold"/>
+        <Button Content="8" Grid.Column="4" HorizontalAlignment="Left" Grid.Row="3" VerticalAlignment="Top" Width="157" Height="66" Background="Gray" FontWeight="Bold" FontSize="40"/>
+        <Button Content="5" Grid.Column="4" HorizontalAlignment="Left" Grid.Row="5" VerticalAlignment="Top" Width="157" Height="66" Background="Gray" FontWeight="Bold" FontSize="40"/>
+        <Button Content="2" Grid.Column="4" HorizontalAlignment="Left" Margin="0,1,0,0" Grid.Row="7" VerticalAlignment="Top" Width="157" Height="65" Background="Gray" FontSize="40" FontWeight="Bold"/>
+        <Button Content="0" Grid.Column="4" HorizontalAlignment="Left" Grid.Row="9" VerticalAlignment="Top" Width="157" Height="66" Background="Gray" FontSize="40" FontWeight="Bold"/>
+        <Button Content="9" Grid.Column="6" HorizontalAlignment="Left" Grid.Row="3" VerticalAlignment="Top" Width="157" Height="66" Background="Gray" FontSize="40" FontWeight="Bold"/>
+        <Button Content="6" Grid.Column="6" HorizontalAlignment="Left" Grid.Row="5" VerticalAlignment="Top" Width="157" Height="66" Background="Gray" FontSize="40" FontWeight="Bold"/>
+        <Button Content="3" Grid.Column="6" HorizontalAlignment="Left" Margin="0,1,0,0" Grid.Row="7" VerticalAlignment="Top" Width="157" Height="65" Background="Gray" FontSize="40" FontWeight="Bold"/>
+        <Button Content="=" Grid.Column="6" HorizontalAlignment="Left" Margin="0,1,0,0" Grid.Row="9" VerticalAlignment="Top" Width="157" Height="64" Background="#FFF3387C" FontSize="40" FontWeight="Bold"/>
+        <Button Content="/" Grid.Column="8" HorizontalAlignment="Left" Grid.Row="3" VerticalAlignment="Top" Width="157" Height="66" Background="#FF3367A6" FontSize="40" FontWeight="Bold"/>
+        <Button Content="*" Grid.Column="8" HorizontalAlignment="Left" Grid.Row="5" VerticalAlignment="Top" Width="157" Height="66" Background="#FF3C71B0" FontSize="40" FontWeight="Bold"/>
+        <Button Content="+" Grid.Column="8" HorizontalAlignment="Left" Margin="0,1,0,0" Grid.Row="7" VerticalAlignment="Top" Width="157" Height="65" Background="#FF3C71B0" FontSize="40" FontWeight="Bold"/>
+        <Button Content="-" Grid.Column="8" HorizontalAlignment="Left" Margin="0,1,0,0" Grid.Row="9" VerticalAlignment="Top" Width="157" Height="64" Background="#FF3C71B0" FontSize="40" FontWeight="Bold"/>
+        <TextBox Grid.Column="2" HorizontalAlignment="Left" Height="98" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="676" Grid.ColumnSpan="7" Grid.Row="1" OpacityMask="#FF2F34A2" Background="#FF0C21A6"/>
+
+    </Grid>
+</Window>

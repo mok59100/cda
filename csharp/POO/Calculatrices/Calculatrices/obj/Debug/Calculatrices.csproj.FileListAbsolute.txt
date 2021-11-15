@@ -1,0 +1,15 @@
+U:\59011-07-10\csharp\POO\Calculatrices\Calculatrices\bin\Debug\Calculatrices.exe.config
+U:\59011-07-10\csharp\POO\Calculatrices\Calculatrices\bin\Debug\Calculatrices.exe
+U:\59011-07-10\csharp\POO\Calculatrices\Calculatrices\bin\Debug\Calculatrices.pdb
+U:\59011-07-10\csharp\POO\Calculatrices\Calculatrices\obj\Debug\Calculatrices.csproj.AssemblyReference.cache
+U:\59011-07-10\csharp\POO\Calculatrices\Calculatrices\obj\Debug\MainWindow.g.cs
+U:\59011-07-10\csharp\POO\Calculatrices\Calculatrices\obj\Debug\App.g.cs
+U:\59011-07-10\csharp\POO\Calculatrices\Calculatrices\obj\Debug\Calculatrices_MarkupCompile.cache
+U:\59011-07-10\csharp\POO\Calculatrices\Calculatrices\obj\Debug\Calculatrices_MarkupCompile.lref
+U:\59011-07-10\csharp\POO\Calculatrices\Calculatrices\obj\Debug\MainWindow.baml
+U:\59011-07-10\csharp\POO\Calculatrices\Calculatrices\obj\Debug\Calculatrices.g.resources
+U:\59011-07-10\csharp\POO\Calculatrices\Calculatrices\obj\Debug\Calculatrices.Properties.Resources.resources
+U:\59011-07-10\csharp\POO\Calculatrices\Calculatrices\obj\Debug\Calculatrices.csproj.GenerateResource.cache
+U:\59011-07-10\csharp\POO\Calculatrices\Calculatrices\obj\Debug\Calculatrices.csproj.CoreCompileInputs.cache
+U:\59011-07-10\csharp\POO\Calculatrices\Calculatrices\obj\Debug\Calculatrices.exe
+U:\59011-07-10\csharp\POO\Calculatrices\Calculatrices\obj\Debug\Calculatrices.pdb
