@@ -18,17 +18,21 @@
             <RowDefinition Height="30*"/>
             <RowDefinition Height="20*"/>
             <RowDefinition Height="30*"/>
-            <RowDefinition Height="65*"/>
-            <RowDefinition Height="25*"/>
+            <RowDefinition Height="35*"/>
+            <RowDefinition Height="20*"/>
             <RowDefinition Height="30*"/>
-            <RowDefinition Height="199*"/>
+            <RowDefinition Height="229*"/>
         </Grid.RowDefinitions>
-        <TextBox HorizontalAlignment="Left" Height="30" Margin="5,0,0,0" Grid.Row="1" TextWrapping="Wrap" Text="Nom/Prénom :" VerticalAlignment="Top" Width="275" TextChanged="TextBox_TextChanged" Background="#FFA4A1A1" BorderBrush="{x:Null}" FontWeight="Bold" Grid.Column="1"/>
+        <TextBox HorizontalAlignment="Left" Height="30" Grid.Row="1" TextWrapping="Wrap" Text="Nom/Prénom :" VerticalAlignment="Top" Width="280" TextChanged="TextBox_TextChanged" Background="#FFA4A1A1" BorderBrush="{x:Null}" FontWeight="Bold" Grid.Column="1"/>
         <TextBox HorizontalAlignment="Left" Height="30" Grid.Row="1" TextWrapping="Wrap" Text="Denry Didier" VerticalAlignment="Top" Width="430" FontWeight="Bold" Grid.Column="2"/>
-        <TextBox Height="23" Margin="0,0,1,0" Grid.Row="3" TextWrapping="Wrap" Text="Adresse :" VerticalAlignment="Top" Grid.Column="1" HorizontalAlignment="Right" Width="280" TextChanged="TextBox_TextChanged_1" FontWeight="Bold" Background="#FFA4A1A1"/>
-        <TextBox HorizontalAlignment="Left" Height="95" Grid.Row="3" TextWrapping="Wrap" Text="2, rue des fleurs&#xD;&#xA;59000 Lille" VerticalAlignment="Top" Width="430" Grid.Column="2" Grid.RowSpan="2" FontWeight="Bold"/>
-        <TextBox Grid.Column="1" HorizontalAlignment="Left" Height="30" Grid.Row="6" TextWrapping="Wrap" Text="Date de naissance :" VerticalAlignment="Top" Width="281" TextChanged="TextBox_TextChanged_2" FontWeight="Bold" Background="#FFA4A1A1"/>
-        <ComboBox Grid.Column="2" HorizontalAlignment="Left" Grid.Row="6" VerticalAlignment="Top" Width="194" Height="30" SelectionChanged="ComboBox_SelectionChanged"/>
+        <TextBox Height="23" Margin="0,0,1,0" Grid.Row="3" TextWrapping="Wrap" Text="Adresse :" VerticalAlignment="Top" Grid.Column="1" HorizontalAlignment="Right" Width="280" TextChanged="TextBox_TextChanged_1" FontWeight="Bold" Background="#FFA4A1A1" BorderBrush="{x:Null}"/>
+        <TextBox HorizontalAlignment="Left" Height="65" Grid.Row="3" TextWrapping="Wrap" Text="2, rue des fleurs&#xD;&#xA;59000 Lille" VerticalAlignment="Top" Width="430" Grid.Column="2" Grid.RowSpan="2" FontWeight="Bold"/>
+        <TextBox HorizontalAlignment="Left" Height="30" Grid.Row="6" TextWrapping="Wrap" Text="Date de naissance :" VerticalAlignment="Top" Width="281" TextChanged="TextBox_TextChanged_2" FontWeight="Bold" Background="#FFA4A1A1" BorderBrush="{x:Null}" Grid.ColumnSpan="2" Margin="39,0,0,0"/>
+        <ComboBox Grid.Column="1" HorizontalAlignment="Left" Grid.Row="6" VerticalAlignment="Top" Width="194" Height="30" SelectionChanged="ComboBox_SelectionChanged" Margin="280,0,0,0" Grid.ColumnSpan="2">
+            <Label Content="mercredi 15 decembre 1954 "/>
+        </ComboBox>
+        <Button Grid.ColumnSpan="2" Content="Button" Grid.Column="2" HorizontalAlignment="Left" Margin="349,153,-25,0" Grid.Row="7" VerticalAlignment="Top" Width="147"/>
+        <Button Content="Button" Grid.Column="2" HorizontalAlignment="Left" Margin="349,198,0,0" Grid.Row="7" VerticalAlignment="Top" Width="81"/>
 
     </Grid>
 </Window>
