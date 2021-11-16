@@ -11,10 +11,10 @@
             <ColumnDefinition Width="5*"/>
             <ColumnDefinition Width="170*"/>
             <ColumnDefinition Width="5*"/>
-            <ColumnDefinition Width="200*"/>
+            <ColumnDefinition Width="220*"/>
             <ColumnDefinition Width="4*"/>
-            <ColumnDefinition Width="149*"/>
-            <ColumnDefinition Width="9*"/>
+            <ColumnDefinition Width="170*"/>
+            <ColumnDefinition Width="5*"/>
             <ColumnDefinition Width="281*"/>
             <ColumnDefinition Width="5*"/>
         </Grid.ColumnDefinitions>
