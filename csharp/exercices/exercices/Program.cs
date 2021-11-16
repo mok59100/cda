@@ -607,6 +607,31 @@ surface = longueur * largeur;
             //{
             //    Console.WriteLine("Erreur. L'heure de début est après celle de fin.");
             //}
+            int hd;
+            int md;
+            int hf;
+            int mf;
+
+            Console.WriteLine("veuillez saisir une heure debut");
+            hd = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("veuillez saisir les minutes de debut");
+            md = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("veuillez saisir une heure fin");
+            hf = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("veuillez saisir les minutes de fin");
+            mf = Convert.ToInt32(Console.ReadLine());
+
+
+            if (hf - hd < 0)
+            {
+                Console.WriteLine("l'heure depart est apres l'heure d'arrive");
+
+            }
+            else
+            {
+                     Console.WriteLine("il y a" + (hf -  hd) + "minute" + (mf - md) 
+            }
+
 
 
             //                        Exercice 12 - Le jour d’après
@@ -647,6 +672,37 @@ surface = longueur * largeur;
             //        mois = 3;
             //    }
             //    Console.WriteLine("Jour d'après : " + jour + " " + mois + " " + annee);
+            //int jour;
+            //int mois;
+            //int annee;
+
+            //Console.WriteLine("veuillez saisir le jour");
+            //jour = Convert.ToInt32(Console.ReadLine());
+            //Console.WriteLine("veuillez saisir le mois");
+            //mois= Convert.ToInt32(Console.ReadLine());
+            //Console.WriteLine("veuillez saisir l'année");
+            //annee = Convert.ToInt32(Console.ReadLine());
+            //if (a % 4 == 0)
+            //{
+            //    if (a % 100 != 0)
+            //    {
+            //        bissextile = true;
+            //    }
+            //    else
+            //    {
+            //        if (a % 400 == 0)
+            //        {
+            //            bissextile = true;
+            //        }
+            //        else
+            //        {
+            //            bissextile = false;
+            //        }
+            //    }
+            //}
+            //else
+            //{
+            //    bissextile = false;
             //}
 
             //
@@ -779,6 +835,7 @@ surface = longueur * largeur;
             //{
             //    Console.WriteLine(" Le rectangle est mal défini.");
             //}
+
 
 
 
@@ -985,6 +1042,41 @@ surface = longueur * largeur;
             //Console.WriteLine("total de l'operation " + total);
 
 
+            //                int a, b, c, d;
+            //                a = 1; b = 2;
+            //                c = a / b;
+            //                d = (a == b) ? 3 : 4;
+            //                Console.WriteLine(c + " , " + d + " . ");
+            //                a = ++b;
+            //                b %= 3;
+            //                Console.WriteLine(a + " , " + b + " . ");
+            //                b = 1;
+            //                for (a = 0; a <= 10; a++)
+            //                    c = ++b;
+            //                Console.WriteLine(a + " , " + b + " , " + c + " , " + d + " . ");
+            //            }
+            //        }
+            //    }
+            //4.2 Utilisation de toutes les boucles
+            //Les exercices suivants seront rédigés avec les trois types de boucle : tant que, répéter jusqu’à
+            //et pour.
+            //Exercice 4 - Compte à rebours
+            //Ecrire un programme demandant à l’utilisateur de saisir une valeur numérique positive n et
+            //affichant toutes les valeurs n, n − 1, . . . , 2, 1, 0.
+            //Exercice 5 - Factorielle
+            //Ecrire un programme calculant la factorielle(factorielle n = n! = 1 2 . . . n et 0! = 1)
+            //d’un nombre saisi par l’utilisateur.
+            //4.3 Choix de la boucle la plus appropriée
+            //Pour les exercices suivants, vous choisirez la boucle la plus simple et la plus lisible.
+            //Exercice 6 - Table de multiplication
+            //Ecrire un programme affichant la table de multiplication d’un nombre saisi par l’utilisateur.
+            //Exercice 7 - Tables de multiplications
+            //Ecrire un programme affichant les tables de multiplications des nombres de 1 à 10 dans un
+            //tableau à deux entrées.
+            //Exercice 8 - Puissance
+            //Ecrire un programme demandant à l’utilisateur de saisir deux valeurs numériques b et n
+            //(vérifier que n est positif) et affichant la valeur bn
+            //.
             //Exercice 9 - Joli carré
             //Ecrire un programme qui saisit une valeur n et qui affiche le carré suivant(n = 5 dans
             //l’exemple) :
@@ -1872,6 +1964,9 @@ surface = longueur * largeur;
 
 
     }
+        }
+    
+}
 
 }
 
