@@ -38,35 +38,58 @@
             <RowDefinition Height="130*"/>
             <RowDefinition Height="158*"/>
         </Grid.RowDefinitions>
-        <GroupBox Grid.Column="1" Header="Navire" Grid.Row="1" RenderTransformOrigin="0.466,0.462"  Grid.RowSpan="5" Grid.ColumnSpan="5">
+        <GroupBox Grid.Column="1" Header="Navire" Grid.Row="1"   Grid.RowSpan="5" Grid.ColumnSpan="5">
             <Grid >
-                <Label Content="Immatriculation:" HorizontalAlignment="Left" Margin="1,12,0,0" VerticalAlignment="Top" Width="73" Height="22" FontSize="9"/>
-                <TextBox  TextWrapping="Wrap"   TextChanged="TextBox_TextChanged_2" Text="639451" Background="#FFE0E0E0" HorizontalAlignment="Right" Margin="0,10,0,30" Width="70" FontSize="10"/>
-                <Label Content="Nom :" HorizontalAlignment="Left" Margin="0,38,0,0" VerticalAlignment="Top" Width="70" Height="24" FontSize="9"/>
-                <TextBox HorizontalAlignment="Left" Height="23" Margin="74,39,0,0" TextWrapping="Wrap" Text="PHILCATHAN" VerticalAlignment="Top" Width="70" TextChanged="TextBox_TextChanged_3" FontSize="8" Background="#FFE0E0E0"/>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="25*"/>
+                    <RowDefinition Height="4*"/>
+                    <RowDefinition Height="35*"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="83*"/>
+                    <ColumnDefinition Width="62*"/>
+                </Grid.ColumnDefinitions>
+                <Label Content="Immatriculation : "  FontSize="9" HorizontalContentAlignment="Right"/>
+                <Label Content="Nom : " HorizontalContentAlignment="Right" Grid.Row="2" FontSize="9"/>
+                <TextBox Grid.Column="1" Text="639451" FontSize="9"/>
+                <TextBox Grid.Column="1"  Grid.Row="2" Text="PHILCATHAN" FontSize="9"/>
             </Grid>
         </GroupBox>
         <GroupBox Grid.Column="7" Header="Marée" Grid.Row="1" Grid.RowSpan="5" Grid.ColumnSpan="2">
-            <Label Content="Retour :" HorizontalAlignment="Right" Margin="-4,38,143,0" VerticalAlignment="Top" Width="49" Height="24" FontSize="9"/>
+            <Grid Margin="0,0,44,0" >
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="25*"/>
+                    <RowDefinition Height="4*"/>
+                    <RowDefinition Height="35*"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="83*"/>
+                    <ColumnDefinition Width="62*"/>
+                </Grid.ColumnDefinitions>
+                <Label Content="Départ : "  FontSize="9" HorizontalContentAlignment="Right"/>
+                <Label Content="Retour : " HorizontalContentAlignment="Right" Grid.Row="2" FontSize="9"/>
+                <TextBox Grid.Column="1" Text="22/01/2013 -UCH- Granville" FontSize="9" />
+                <TextBox Grid.Column="1"  Grid.Row="2" Text="23/01/2013 -UCH- Granville" FontSize="9" />
+
+            </Grid>
         </GroupBox>
         <GroupBox Grid.Column="10" Header="Programme d'observation"  Grid.Row="1" Grid.RowSpan="5"/>
         <GroupBox Grid.Column="12" Header="Saisisseur" Grid.Row="1" Grid.RowSpan="5" />
         <TabControl Grid.ColumnSpan="12" Grid.Row="7" SelectionChanged="TabControl_SelectionChanged" Grid.Column="1" >
-            <TabItem Header="Opération" Margin="-2,-2,-2,0">
+            <TabItem Header="Opération">
                 <Grid Background="#FFE5E5E5">
                     <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="47*"/>
-                        <ColumnDefinition Width="734*"/>
+                        <ColumnDefinition Width="1*"/>
+                        <ColumnDefinition Width="1*"/>
                     </Grid.ColumnDefinitions>
-                    <GroupBox Header="Début de l'opération (filage) " HorizontalAlignment="Left" Height="81" Margin="5,4,0,0" VerticalAlignment="Top" Width="341" Grid.ColumnSpan="2"/>
-                    <GroupBox Grid.Column="1" Header="Fin de l'opération (virage)" HorizontalAlignment="Left" Height="81" Margin="307,4,0,0" VerticalAlignment="Top" Width="348"/>
+                    <GroupBox Header="Début de l'opération (filage) "  />
+                    <GroupBox Grid.Column="1" Header="Fin de l'opération (virage)"/>
                 </Grid>
             </TabItem>
-            <TabItem Margin="0,-2,-11,0" Header="Engin"/>
-            <TabItem Margin="9,-2,-7,0" RenderTransformOrigin="0.9,0.727" Header="Positions géographiques"/>
-            <TabItem Margin="6,-2,-24,0" Header="Commentaire"/>
-            <TabItem Header="" Margin="23,-2,-276,0"/>
+            <TabItem  Header="Engin"/>
+            <TabItem Header="Positions géographiques"/>
+            <TabItem Header="Commentaire"/>
         </TabControl>
-        <Label Content="Départ :" Grid.Column="7" Margin="1,0" Grid.Row="2" VerticalAlignment="Bottom" FontSize="9" Height="24"/>
+
     </Grid>
 </Window>
