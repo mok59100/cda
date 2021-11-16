@@ -9,8 +9,9 @@
     <Grid OpacityMask="#FFA4A1A1" Background="#FFA4A1A1">
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="20*"/>
-            <ColumnDefinition Width="140*"/>
-            <ColumnDefinition Width="215*"/>
+            <ColumnDefinition Width="115*"/>
+            <ColumnDefinition Width="25*"/>
+            <ColumnDefinition Width="216*"/>
             <ColumnDefinition Width="20*"/>
         </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
@@ -18,21 +19,37 @@
             <RowDefinition Height="30*"/>
             <RowDefinition Height="20*"/>
             <RowDefinition Height="30*"/>
-            <RowDefinition Height="35*"/>
+            <RowDefinition Height="36*"/>
             <RowDefinition Height="20*"/>
-            <RowDefinition Height="30*"/>
-            <RowDefinition Height="229*"/>
+            <RowDefinition Height="59*"/>
+            <RowDefinition Height="20*"/>
+            <RowDefinition Height="65*"/>
+            <RowDefinition Height="119*"/>
         </Grid.RowDefinitions>
-        <TextBox HorizontalAlignment="Left" Height="30" Grid.Row="1" TextWrapping="Wrap" Text="Nom/Prénom :" VerticalAlignment="Top" Width="280" TextChanged="TextBox_TextChanged" Background="#FFA4A1A1" BorderBrush="{x:Null}" FontWeight="Bold" Grid.Column="1"/>
-        <TextBox HorizontalAlignment="Left" Height="30" Grid.Row="1" TextWrapping="Wrap" Text="Denry Didier" VerticalAlignment="Top" Width="430" FontWeight="Bold" Grid.Column="2"/>
-        <TextBox Height="23" Margin="0,0,1,0" Grid.Row="3" TextWrapping="Wrap" Text="Adresse :" VerticalAlignment="Top" Grid.Column="1" HorizontalAlignment="Right" Width="280" TextChanged="TextBox_TextChanged_1" FontWeight="Bold" Background="#FFA4A1A1" BorderBrush="{x:Null}"/>
-        <TextBox HorizontalAlignment="Left" Height="65" Grid.Row="3" TextWrapping="Wrap" Text="2, rue des fleurs&#xD;&#xA;59000 Lille" VerticalAlignment="Top" Width="430" Grid.Column="2" Grid.RowSpan="2" FontWeight="Bold"/>
-        <TextBox HorizontalAlignment="Left" Height="30" Grid.Row="6" TextWrapping="Wrap" Text="Date de naissance :" VerticalAlignment="Top" Width="281" TextChanged="TextBox_TextChanged_2" FontWeight="Bold" Background="#FFA4A1A1" BorderBrush="{x:Null}" Grid.ColumnSpan="2" Margin="39,0,0,0"/>
-        <ComboBox Grid.Column="1" HorizontalAlignment="Left" Grid.Row="6" VerticalAlignment="Top" Width="194" Height="30" SelectionChanged="ComboBox_SelectionChanged" Margin="280,0,0,0" Grid.ColumnSpan="2">
+        <TextBox HorizontalAlignment="Left" Height="30" Grid.Row="1" TextWrapping="Wrap" Text="Nom/Prénom :" VerticalAlignment="Top" TextChanged="TextBox_TextChanged" Background="#FFA4A1A1" BorderBrush="{x:Null}" FontWeight="Bold" Grid.Column="1"/>
+        <TextBox HorizontalAlignment="Left" Height="30" Grid.Row="1" TextWrapping="Wrap" Text="Denry Didier" VerticalAlignment="Top" FontWeight="Bold" Grid.Column="3" BorderBrush="#FF101011" Width="431"/>
+        <TextBox Height="23" Grid.Row="3" TextWrapping="Wrap" Text="Adresse :" VerticalAlignment="Top" HorizontalAlignment="Right" TextChanged="TextBox_TextChanged_1" FontWeight="Bold" Background="#FFA4A1A1" BorderBrush="{x:Null}" Grid.Column="1" Width="230"/>
+        <TextBox HorizontalAlignment="Left" Height="65" Grid.Row="3" TextWrapping="Wrap" Text="2, rue des fleurs&#xD;&#xA;59000 Lille" VerticalAlignment="Top" Grid.Column="3" Grid.RowSpan="2" FontWeight="Bold" BorderBrush="#FF161617" Width="432"/>
+        <TextBox HorizontalAlignment="Left" Height="30" Grid.Row="6" TextWrapping="Wrap" Text="Date de naissance :" VerticalAlignment="Top" TextChanged="TextBox_TextChanged_2" FontWeight="Bold" Background="#FFA4A1A1" BorderBrush="{x:Null}" Grid.ColumnSpan="2" Width="147" Margin="39,0,0,0"/>
+        <ComboBox Grid.Column="3" HorizontalAlignment="Left" Grid.Row="6" VerticalAlignment="Top" Height="30" SelectionChanged="ComboBox_SelectionChanged" BorderBrush="#FF0F0F0F" Width="245">
             <Label Content="mercredi 15 decembre 1954 "/>
         </ComboBox>
-        <Button Grid.ColumnSpan="2" Content="Button" Grid.Column="2" HorizontalAlignment="Left" Margin="349,153,-25,0" Grid.Row="7" VerticalAlignment="Top" Width="147"/>
-        <Button Content="Button" Grid.Column="2" HorizontalAlignment="Left" Margin="349,198,0,0" Grid.Row="7" VerticalAlignment="Top" Width="81"/>
-
+        <Button Content="Button" Grid.Column="3" HorizontalAlignment="Left" Margin="350,30,0,0" Grid.Row="9" VerticalAlignment="Top" Width="81" Height="35"/>
+        <Button Content="Button" Grid.Column="3" HorizontalAlignment="Left" Margin="351,85,0,0" Grid.Row="9" VerticalAlignment="Top" Width="81" Height="34"/>
+        <Grid Grid.Column="3" HorizontalAlignment="Left" Height="63" Margin="322,4,0,0" Grid.Row="8" VerticalAlignment="Top" Width="110" Grid.RowSpan="2"/>
+        <Button Content="Activité :" Grid.Column="1" HorizontalAlignment="Left" Grid.Row="6" Width="60" Click="Button_Click_1" FontWeight="Bold" Background="{x:Null}" BorderBrush="{x:Null}" Margin="0,53,0,6" Grid.RowSpan="2"/>
+        <Button Content="Niveau :" Grid.Column="3" HorizontalAlignment="Left" Margin="4,53,0,6" Grid.Row="6" Width="55" FontWeight="Bold" Background="{x:Null}" BorderBrush="{x:Null}" Grid.RowSpan="2"/>
+        <ListBox Grid.Column="3" HorizontalAlignment="Left" Height="67" Grid.Row="8" VerticalAlignment="Top" Width="432" Grid.RowSpan="2"/>
+        <ListView HorizontalAlignment="Left" Height="68" Margin="39,19,0,0" Grid.Row="7" VerticalAlignment="Top" Width="231" Grid.ColumnSpan="2" Grid.RowSpan="3">
+            <ListView.View>
+                <GridView>
+                    <GridViewColumn/>
+                </GridView>
+            </ListView.View>
+        </ListView>
+        <Grid Grid.Column="3" HorizontalAlignment="Left" Height="100" Margin="140,85,0,-66" Grid.Row="9" VerticalAlignment="Top" Width="90"/>
+        <GroupBox Grid.Column="1" Header="GroupBox" HorizontalAlignment="Left" Height="109" Margin="0,10,0,0" Grid.Row="9" VerticalAlignment="Top" Width="230"/>
+        <Grid Grid.Column="1" HorizontalAlignment="Left" Height="120" Margin="10,30,0,-31" Grid.Row="9" VerticalAlignment="Top" Width="210"/>
+        <GroupBox Grid.ColumnSpan="2" Grid.Column="3" Header="GroupBox" HorizontalAlignment="Left" Height="70" Margin="280,9,0,0" Grid.Row="5" Grid.RowSpan="2" VerticalAlignment="Top" Width="155"/>
     </Grid>
 </Window>

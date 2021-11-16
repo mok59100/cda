@@ -1801,49 +1801,49 @@ surface = longueur * largeur;
         //    return n;
         //}
 
-        //static char DemanderOperateur()
-        //{
-        //    bool ok = true;
-        //    char op;
-        //    bool condition;
+        static char DemanderOperateur()
+        {
+            bool ok = true;
+            char op;
+            bool condition;
 
-        //    do
-        //    {
-        //        Console.Write("Entrez un opérateur +,-,*,/,$,!,V : ");
-        //        ok = char.TryParse(Console.ReadLine(), out op);
-        //        condition = !ok || (op != '+' && op != '-' && op != '*' && op != '/' && op != '$' && op != '!' && op != 'V' && op != 'v');
-        //        if (condition)
-        //            Console.WriteLine("Saisie incorrecte.");
+            do
+            {
+                Console.Write("Entrez un opérateur +,-,*,/,$,!,V : ");
+                ok = char.TryParse(Console.ReadLine(), out op);
+                condition = !ok || (op != '+' && op != '-' && op != '*' && op != '/' && op != '$' && op != '!' && op != 'V' && op != 'v');
+                if (condition)
+                    Console.WriteLine("Saisie incorrecte.");
 
-        //    } while (condition);
-        //    return char.ToUpper(op);
-        //}
+            } while (condition);
+            return char.ToUpper(op);
+        }
 
-        //static double calculSimple(double valeur1, char operateur, double valeur2)
-        //{
-        //    double resultat = 0;
-        //    switch (operateur)
-        //    {
-        //        case '+':
-        //            resultat = valeur1 + valeur2;
-        //            break;
-        //        case '-':
-        //            resultat = valeur1 - valeur2;
-        //            break;
-        //        case '*':
-        //            resultat = valeur1 * valeur2;
-        //            break;
-        //        case '/':
-        //            resultat = valeur1 / valeur2;
-        //            break;
-        //        case '$':
-        //            resultat = Math.Pow(valeur1, valeur2);
-        //            break;
-        //        default:
-        //            break;
-        //    }
-        //    return resultat;
-        //}
+        static double calculSimple(double valeur1, char operateur, double valeur2)
+        {
+            double resultat = 0;
+            switch (operateur)
+            {
+                case '+':
+                    resultat = valeur1 + valeur2;
+                    break;
+                case '-':
+                    resultat = valeur1 - valeur2;
+                    break;
+                case '*':
+                    resultat = valeur1 * valeur2;
+                    break;
+                case '/':
+                    resultat = valeur1 / valeur2;
+                    break;
+                case '$':
+                    resultat = Math.Pow(valeur1, valeur2);
+                    break;
+                default:
+                    break;
+            }
+            return resultat;
+        }
 
         //static double Calcul(double valeur, char operateur)
         //{
@@ -1873,7 +1873,7 @@ surface = longueur * largeur;
 
     }
 
- }
+}
 
 
    
