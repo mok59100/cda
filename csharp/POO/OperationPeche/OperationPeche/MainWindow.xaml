@@ -6,5 +6,24 @@
         xmlns:local="clr-namespace:OperationPeche"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
-    <Grid/>
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="5*"/>
+            <ColumnDefinition Width="170*"/>
+            <ColumnDefinition Width="5*"/>
+            <ColumnDefinition Width="200*"/>
+            <ColumnDefinition Width="4*"/>
+            <ColumnDefinition Width="149*"/>
+            <ColumnDefinition Width="9*"/>
+            <ColumnDefinition Width="281*"/>
+            <ColumnDefinition Width="5*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="80*"/>
+            <RowDefinition Height="95*"/>
+            <RowDefinition Height="15*"/>
+            <RowDefinition Height="90*"/>
+            <RowDefinition Height="139*"/>
+        </Grid.RowDefinitions>
+    </Grid>
 </Window>
