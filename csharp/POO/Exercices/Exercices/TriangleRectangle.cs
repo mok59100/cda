@@ -8,7 +8,7 @@ namespace Exercices
 {
     class TriangleRectangle
     {
-
+        
         public double Base { get; set; }
         public double Hauteur { get; set; }
 
@@ -16,10 +16,19 @@ namespace Exercices
         {
         }
 
-        public TriangleRectangle(double base , double hauteur)
+        public TriangleRectangle(double @base , double hauteur)
         {
             this.Base = @base;
             this.Hauteur = hauteur;
         }
+
+        public double Perimetre()
+        {
+
+            return (Hauteur + Base + ) * 2;
+
+        }
+
+
     }
 }
