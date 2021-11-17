@@ -59,5 +59,20 @@ namespace OperationPeche
         {
 
         }
+
+        private void TextBox_TextChanged_6(object sender, TextChangedEventArgs e)
+        {
+
+        }
+
+        private void TextBox_TextChanged_7(object sender, TextChangedEventArgs e)
+        {
+
+        }
+
+        private void TextBox_TextChanged_8(object sender, TextChangedEventArgs e)
+        {
+
+        }
     }
 }

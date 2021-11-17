@@ -56,7 +56,7 @@
             </Grid>
         </GroupBox>
         <GroupBox Grid.Column="7" Header="Marée" Grid.Row="1" Grid.RowSpan="5" Grid.ColumnSpan="2">
-            <Grid Margin="0,0,44,0" >
+            <Grid  >
                 <Grid.RowDefinitions>
                     <RowDefinition Height="25*"/>
                     <RowDefinition Height="4*"/>
@@ -73,8 +73,40 @@
 
             </Grid>
         </GroupBox>
-        <GroupBox Grid.Column="10" Header="Programme d'observation"  Grid.Row="1" Grid.RowSpan="5"/>
-        <GroupBox Grid.Column="12" Header="Saisisseur" Grid.Row="1" Grid.RowSpan="5" />
+        <GroupBox Grid.Column="10" Header="Programme d'observation"  Grid.Row="1" Grid.RowSpan="5">
+            <Grid >
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="25*"/>
+                    <RowDefinition Height="4*"/>
+                    <RowDefinition Height="35*"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="83*"/>
+                    <ColumnDefinition Width="62*"/>
+                </Grid.ColumnDefinitions>
+                <Label Content="Programme :"  FontSize="9" HorizontalContentAlignment="Right" Background="#FFFBF9F9" Foreground="#FFF30909"/>
+                <Label Content="Strategie: " HorizontalContentAlignment="Right" Grid.Row="2" FontSize="9"/>
+                <TextBox Grid.Column="1" Text="SIH-OBSMER" FontSize="9"/>
+                <TextBox Grid.Column="1"  Grid.Row="2" Text="OBSMER démar" FontSize="9"/>
+            </Grid>
+        </GroupBox>
+        <GroupBox Grid.Column="12" Header="Saisisseur" Grid.Row="1" Grid.RowSpan="5" >
+            <Grid >
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="25*"/>
+                    <RowDefinition Height="4*"/>
+                    <RowDefinition Height="35*"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="83*"/>
+                    <ColumnDefinition Width="62*"/>
+                </Grid.ColumnDefinitions>
+                <Label Content="Opérateur de saisie : "  FontSize="9" HorizontalContentAlignment="Right"/>
+                <Label Content="Dernière modification : " HorizontalContentAlignment="Right" Grid.Row="2" FontSize="9"/>
+                <TextBox Grid.Column="1" Text="TETARD Xavier" FontSize="9" TextChanged="TextBox_TextChanged_7"/>
+                <TextBox Grid.Column="1"  Grid.Row="2" Text="25/11/2013  10:16:37" FontSize="9" TextChanged="TextBox_TextChanged_6"/>
+            </Grid>
+        </GroupBox>
         <TabControl Grid.ColumnSpan="12" Grid.Row="7" SelectionChanged="TabControl_SelectionChanged" Grid.Column="1" >
             <TabItem Header="Opération">
                 <Grid Background="#FFE5E5E5">
@@ -90,6 +122,7 @@
             <TabItem Header="Positions géographiques"/>
             <TabItem Header="Commentaire"/>
         </TabControl>
+        <TextBox Grid.ColumnSpan="5" Grid.Column="1" Grid.RowSpan="2" TextWrapping="Wrap" Text="Opération de pêche" VerticalAlignment="Top" Width="154" TextChanged="TextBox_TextChanged_8" FontWeight="Bold" FontSize="9" Background="{x:Null}" BorderBrush="{x:Null}"/>
 
     </Grid>
 </Window>
