@@ -70,8 +70,15 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="Fenetre1.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Fenetre1.xaml.cs">
+      <DependentUpon>Fenetre1.xaml</DependentUpon>
+    </Compile>
     <Compile Include="ObjectHelper.cs" />
     <Compile Include="Produits.cs" />
     <Compile Include="Properties\AssemblyInfo.cs">

@@ -16,3 +16,5 @@ U:\59011-07-10\csharp\POO\Interfaces\Interfaces\obj\Debug\Interfaces.pdb
 U:\59011-07-10\csharp\POO\Interfaces\Interfaces\obj\Debug\App.baml
 U:\59011-07-10\csharp\POO\Interfaces\Interfaces\bin\Debug\Newtonsoft.Json.dll
 U:\59011-07-10\csharp\POO\Interfaces\Interfaces\bin\Debug\Newtonsoft.Json.xml
+U:\59011-07-10\csharp\POO\Interfaces\Interfaces\obj\Debug\New window.g.cs
+U:\59011-07-10\csharp\POO\Interfaces\Interfaces\obj\Debug\New window.baml

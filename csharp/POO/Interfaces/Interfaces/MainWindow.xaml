@@ -34,7 +34,7 @@
             <ColumnDefinition Width="76*"/>
         </Grid.ColumnDefinitions>
         <DataGrid  Grid.Row="1" Grid.Column="1"/>
-        <Button Content="Ajouter" Grid.Column="1"   Grid.Row="1"   Background="{DynamicResource Couleur1}"/>
+        <Button Content="Ajouter" Grid.Column="1"   Grid.Row="1"   Background="{DynamicResource Couleur1}" Click="Button_Click"/>
         <Button Content="Modifier" Grid.Column="3"   Grid.Row="1"  Background="{DynamicResource Couleur1}"/>
         <Button Content="Supprimer" Grid.Column="5"   Grid.Row="1"  Grid.ColumnSpan="3" Background="{DynamicResource Couleur1}" />
         <Button Content="Duppliquer" Grid.Column="9"   Grid.Row="1"  Background="{DynamicResource Couleur1}"/>

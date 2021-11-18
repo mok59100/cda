@@ -81,5 +81,10 @@ namespace Interfaces
             List<Produits> liste = JsonConvert.DeserializeObject<List<Produits>>(chaine);
             return liste;
         }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            NewWindow= new N
+        }
     }
 }
