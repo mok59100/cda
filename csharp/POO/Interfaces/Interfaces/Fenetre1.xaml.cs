@@ -15,13 +15,28 @@ using System.Windows.Shapes;
 namespace Interfaces
 {
     /// <summary>
-    /// Logique d'interaction pour New_window.xaml
+    /// Logique d'interaction pour Fenetre1.xaml
     /// </summary>
-    public partial class New_window : Window
+    public partial class Fenetre1 : Window
     {
-        public New_window()
+        public Fenetre1(string mode)
         {
             InitializeComponent();
+            this.BtnAction.Content = mode;
+        }
+
+        private void dgProduits_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+
+        }
+
+        
+
+        private void btnAction_Click(object sender, RoutedEventArgs e)
+        {
+            /* Enregistrer un produit avec les données dans le formulaire*/
+            int idProduit = tbxIdProduit.Text;
+        
         }
     }
 }

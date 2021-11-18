@@ -82,9 +82,19 @@ namespace Interfaces
             return liste;
         }
 
-        private void Button_Click(object sender, RoutedEventArgs e)
+
+        public void BtnModifier(object sender, RoutedEventArgs e)
         {
-            NewWindow= new N
+
+        }
+
+        private void btnAjouter_Click(object sender, RoutedEventArgs e)
+        {
+            /* ouvrir la fenêtre pour ajouter un enregistrement*/
+            this.Opacity = 0.5;
+            Fenetre1 f1 = new Fenetre1((string)((Button)sender).Content);
+            f1.ShowDialog();
+            this.Opacity = 1;
         }
     }
 }

@@ -1,4 +1,4 @@
-U:\59011-07-10\csharp\POO\Interfaces\Interfaces\obj\Debug\Interfaces.csproj.AssemblyReference.cache
+U:\59011-07-10\csharp\POO\Interfaces\Interfaces\obj\Debug\Fenetre1.g.cs
 U:\59011-07-10\csharp\POO\Interfaces\Interfaces\obj\Debug\MainWindow.g.cs
 U:\59011-07-10\csharp\POO\Interfaces\Interfaces\obj\Debug\App.g.cs
 U:\59011-07-10\csharp\POO\Interfaces\Interfaces\obj\Debug\Interfaces_MarkupCompile.cache
@@ -6,6 +6,10 @@ U:\59011-07-10\csharp\POO\Interfaces\Interfaces\obj\Debug\Interfaces_MarkupCompi
 U:\59011-07-10\csharp\POO\Interfaces\Interfaces\bin\Debug\Interfaces.exe.config
 U:\59011-07-10\csharp\POO\Interfaces\Interfaces\bin\Debug\Interfaces.exe
 U:\59011-07-10\csharp\POO\Interfaces\Interfaces\bin\Debug\Interfaces.pdb
+U:\59011-07-10\csharp\POO\Interfaces\Interfaces\bin\Debug\Newtonsoft.Json.dll
+U:\59011-07-10\csharp\POO\Interfaces\Interfaces\bin\Debug\Newtonsoft.Json.xml
+U:\59011-07-10\csharp\POO\Interfaces\Interfaces\obj\Debug\App.baml
+U:\59011-07-10\csharp\POO\Interfaces\Interfaces\obj\Debug\Fenetre1.baml
 U:\59011-07-10\csharp\POO\Interfaces\Interfaces\obj\Debug\MainWindow.baml
 U:\59011-07-10\csharp\POO\Interfaces\Interfaces\obj\Debug\Interfaces.g.resources
 U:\59011-07-10\csharp\POO\Interfaces\Interfaces\obj\Debug\Interfaces.Properties.Resources.resources
@@ -13,8 +17,3 @@ U:\59011-07-10\csharp\POO\Interfaces\Interfaces\obj\Debug\Interfaces.csproj.Gene
 U:\59011-07-10\csharp\POO\Interfaces\Interfaces\obj\Debug\Interfaces.csproj.CoreCompileInputs.cache
 U:\59011-07-10\csharp\POO\Interfaces\Interfaces\obj\Debug\Interfaces.exe
 U:\59011-07-10\csharp\POO\Interfaces\Interfaces\obj\Debug\Interfaces.pdb
-U:\59011-07-10\csharp\POO\Interfaces\Interfaces\obj\Debug\App.baml
-U:\59011-07-10\csharp\POO\Interfaces\Interfaces\bin\Debug\Newtonsoft.Json.dll
-U:\59011-07-10\csharp\POO\Interfaces\Interfaces\bin\Debug\Newtonsoft.Json.xml
-U:\59011-07-10\csharp\POO\Interfaces\Interfaces\obj\Debug\New window.g.cs
-U:\59011-07-10\csharp\POO\Interfaces\Interfaces\obj\Debug\New window.baml
