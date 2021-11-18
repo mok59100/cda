@@ -1,0 +1,86 @@
+[
+  {
+    "IdProduit": 1,
+    "LibelleProduit": " Produits 1",
+    "Categories": " categories 2",
+    "Rayons": " rayons 3"
+  },
+  {
+    "IdProduit": 1,
+    "LibelleProduit": " Produits 2",
+    "Categories": " categories 4",
+    "Rayons": " rayons 6"
+  },
+  {
+    "IdProduit": 1,
+    "LibelleProduit": " Produits 3",
+    "Categories": " categories 6",
+    "Rayons": " rayons 9"
+  },
+  {
+    "IdProduit": 1,
+    "LibelleProduit": " Produits 4",
+    "Categories": " categories 8",
+    "Rayons": " rayons 12"
+  },
+  {
+    "IdProduit": 1,
+    "LibelleProduit": " Produits 5",
+    "Categories": " categories 10",
+    "Rayons": " rayons 15"
+  },
+  {
+    "IdProduit": 1,
+    "LibelleProduit": " Produits 6",
+    "Categories": " categories 12",
+    "Rayons": " rayons 18"
+  },
+  {
+    "IdProduit": 1,
+    "LibelleProduit": " Produits 7",
+    "Categories": " categories 14",
+    "Rayons": " rayons 21"
+  },
+  {
+    "IdProduit": 1,
+    "LibelleProduit": " Produits 8",
+    "Categories": " categories 16",
+    "Rayons": " rayons 24"
+  },
+  {
+    "IdProduit": 1,
+    "LibelleProduit": " Produits 9",
+    "Categories": " categories 18",
+    "Rayons": " rayons 27"
+  },
+  {
+    "IdProduit": 1,
+    "LibelleProduit": " Produits 10",
+    "Categories": " categories 20",
+    "Rayons": " rayons 30"
+  },
+  {
+    "IdProduit": 1,
+    "LibelleProduit": " Produits 11",
+    "Categories": " categories 22",
+    "Rayons": " rayons 33"
+  },
+  {
+    "IdProduit": 1,
+    "LibelleProduit": " Produits 12",
+    "Categories": " categories 24",
+    "Rayons": " rayons 36"
+  },
+  {
+    "IdProduit": 1,
+    "LibelleProduit": " Produits 13",
+    "Categories": " categories 26",
+    "Rayons": " rayons 39"
+  },
+  {
+    "IdProduit": 1,
+    "LibelleProduit": " Produits 14",
+    "Categories": " categories 28",
+    "Rayons": " rayons 42"
+  }
+]

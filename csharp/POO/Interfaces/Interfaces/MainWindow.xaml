@@ -33,6 +33,7 @@
             <ColumnDefinition Width="122*"/>
             <ColumnDefinition Width="76*"/>
         </Grid.ColumnDefinitions>
+        <DataGrid  Grid.Row="1" Grid.Column="1"/>
         <Button Content="Ajouter" Grid.Column="1"   Grid.Row="1"   Background="{DynamicResource Couleur1}"/>
         <Button Content="Modifier" Grid.Column="3"   Grid.Row="1"  Background="{DynamicResource Couleur1}"/>
         <Button Content="Supprimer" Grid.Column="5"   Grid.Row="1"  Grid.ColumnSpan="3" Background="{DynamicResource Couleur1}" />
@@ -43,12 +44,13 @@
 
         </Button>
         <Button Grid.ColumnSpan="5" Content="Liste des rayons" Grid.Column="7" Grid.Row="5" Background="{DynamicResource degrade}"/>
-        <DataGrid Grid.ColumnSpan="12" Grid.Column="1" Grid.Row="3" AutoGenerateColumns="False" BorderBrush="#FF327EC7" >
+        <DataGrid x:Name="dgProduits" Grid.ColumnSpan="11" Grid.Column="1" Grid.Row="3"  BorderBrush="#FF327EC7"
+            AutoGenerateColumns="False">
             <DataGrid.Columns>
-                <DataGridTextColumn Binding="{x:Null}" ClipboardContentBinding="{x:Null}" Header="IdProduit"/>
-                <DataGridTextColumn Binding="{x:Null}" ClipboardContentBinding="{x:Null}" Header="LibelleProduit"/>
-                <DataGridTextColumn Binding="{x:Null}" ClipboardContentBinding="{x:Null}" Header="Categories"/>
-                <DataGridTextColumn Binding="{x:Null}" ClipboardContentBinding="{x:Null}" Header="Rayons"/>
+                <DataGridTextColumn  Header="IdProduit" Binding="{Binding IdProduit }"/>
+                <DataGridTextColumn   Header="LibelleProduit" Binding="{Binding LibelleProduit}"/>
+                <DataGridTextColumn  Header="Categories" Binding="{Binding Categories}" />
+                <DataGridTextColumn  Header="Rayons" Binding="{Binding Rayons}" />
             </DataGrid.Columns>
         </DataGrid>
 

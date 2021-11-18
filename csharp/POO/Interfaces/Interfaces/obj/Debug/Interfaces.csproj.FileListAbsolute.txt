@@ -14,3 +14,5 @@ U:\59011-07-10\csharp\POO\Interfaces\Interfaces\obj\Debug\Interfaces.csproj.Core
 U:\59011-07-10\csharp\POO\Interfaces\Interfaces\obj\Debug\Interfaces.exe
 U:\59011-07-10\csharp\POO\Interfaces\Interfaces\obj\Debug\Interfaces.pdb
 U:\59011-07-10\csharp\POO\Interfaces\Interfaces\obj\Debug\App.baml
+U:\59011-07-10\csharp\POO\Interfaces\Interfaces\bin\Debug\Newtonsoft.Json.dll
+U:\59011-07-10\csharp\POO\Interfaces\Interfaces\bin\Debug\Newtonsoft.Json.xml
