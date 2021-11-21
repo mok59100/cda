@@ -9,26 +9,35 @@
     <Grid Background="#FF635959">
         <Grid.RowDefinitions>
             <RowDefinition Height="0*"/>
-            <RowDefinition Height="35*"/>
-            <RowDefinition Height="10*"/>
-            <RowDefinition Height="183*"/>
-            <RowDefinition Height="35*"/>
-            <RowDefinition Height="146"/>
-            <RowDefinition Height="10*"/>
+            <RowDefinition Height="38*"/>
+            <RowDefinition Height="11*"/>
+            <RowDefinition Height="175*"/>
+            <RowDefinition Height="14*"/>
+            <RowDefinition Height="33*"/>
+            <RowDefinition Height="11*"/>
+            <RowDefinition Height="18"/>
+            <RowDefinition Height="27*"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="25"/>
+            <RowDefinition Height="25"/>
+            <RowDefinition Height="29"/>
+            <RowDefinition Height="11*"/>
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="20*"/>
             <ColumnDefinition Width="110*"/>
             <ColumnDefinition Width="113*"/>
             <ColumnDefinition Width="40*"/>
-            <ColumnDefinition Width="112*"/>
-            <ColumnDefinition Width="112*"/>
+            <ColumnDefinition Width="97*"/>
+            <ColumnDefinition Width="127*"/>
             <ColumnDefinition Width="40*"/>
-            <ColumnDefinition Width="225*"/>
+            <ColumnDefinition Width="111*"/>
+            <ColumnDefinition Width="94*"/>
+            <ColumnDefinition Width="20*"/>
             <ColumnDefinition Width="20*"/>
         </Grid.ColumnDefinitions>
-        <TabControl  Grid.Column="1" Grid.Row="3" Grid.RowSpan="1" Grid.ColumnSpan="7">
-            <TabItem Header="Numero" Background="#FFF36666">
+        <TabControl  Grid.Column="1" Grid.Row="3" Grid.ColumnSpan="9">
+            <TabItem Header="Numero" Background="#FFF36666" Height="22" VerticalAlignment="Bottom">
                 <Grid Background="#FFE5E5E5">
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition Width="21*"/>
@@ -67,11 +76,11 @@
                 </Grid>
             </TabItem>
         </TabControl>
-        <GroupBox Grid.Column="1" Header="Partie UEM" Grid.Row="5" Grid.RowSpan="2" Background="#FF495461" Grid.ColumnSpan="2" >
+        <GroupBox Grid.Column="1" Header="Partie UEM" Grid.Row="7" Grid.RowSpan="7" Background="#FF495461" Grid.ColumnSpan="2" >
             <Grid >
                 <ListBox HorizontalAlignment="Left" Width="211" SelectionChanged="ListBox_SelectionChanged_1" >
                     <Label Width="144">
-                        <RadioButton Content="Acces UEM Canal" FontWeight="Bold" />
+                        <RadioButton Content="Acces UEM Canal" FontWeight="Bold" Checked="RadioButton_Checked" />
                     </Label>
                     <Label>
                         <RadioButton Content="Acces UEM Tous" FontWeight="Bold" />
@@ -85,19 +94,50 @@
                     <TextBox  Text="Nd-Dis-NDebouchage" Width="179"  />
                 </ListBox>
             </Grid>
-        </GroupBox>
-        <GroupBox Grid.Column="4" Header="Partie Prevision"  Grid.Row="5" Grid.RowSpan="2" Background="#FF495461" Grid.ColumnSpan="2" >
-            <ListBox SelectionChanged="ListBox_SelectionChanged_2">
-                <Label Content="Type de travail :"/>
-                <TextBox Text="travail" Width="196" />
-                <Label Content="type d'entretien :"/>
-                <TextBox  Text="entretien" Width="196"/>
-            </ListBox>
 
 
         </GroupBox>
-        <GroupBox Grid.Column="7" Header="Partie Réalisation"  Grid.Row="5" Grid.RowSpan="2" Background="#FF495461" />
+
         <DatePicker Grid.Column="2" Grid.Row="1" Grid.ColumnSpan="5" BorderBrush="{x:Null}"/>
+
+
+
+        <GroupBox Grid.Column="4" Header="Partie Prevision"  Grid.Row="7" Grid.RowSpan="7" Background="#FF495461" Grid.ColumnSpan="2" >
+            <Grid>
+                <ListBox SelectionChanged="ListBox_SelectionChanged_2"  >
+
+
+
+                    <Label Content="Type de travail:" Grid.Column="4"  Grid.Row="6" FontWeight="Bold"/>
+                    <TextBox Grid.ColumnSpan="2" Grid.Column="1" Grid.Row="2" Grid.RowSpan="1"  Text="travail" Width="176"  />
+
+                    <Label Content="Type d'entretien :" Grid.Column="4" Grid.Row="7" FontWeight="Bold" />
+                    <TextBox Grid.ColumnSpan="2" Grid.Column="5"  Grid.Row="7" TextWrapping="Wrap" Text="entretien" Width="176" />
+                    <Label Content="Point kilometre :" Grid.Column="4"  Grid.Row="8"  Grid.RowSpan="1" FontWeight="Bold"/>
+                    <Menu />
+                    <TextBox Grid.ColumnSpan="2" Grid.Column="5" Grid.Row="8" Grid.RowSpan="1" Text="debut" Width="174"  />
+                    <TextBox Grid.ColumnSpan="2" Grid.Column="5"  Grid.Row="9" Grid.RowSpan="1"  Text="fin" Width="173"/>
+
+                    <Label Content="Nature déféctuosité : " Grid.Column="4"  Grid.Row="8"  Grid.RowSpan="1" FontWeight="Bold"/>
+                    <TextBox Text="déféctuosite " Width="174"/>
+                </ListBox>
+            </Grid>
+        </GroupBox>
+
+
+        <GroupBox Grid.Column="7" Header="Partie Réalisation"  Grid.Row="7" Grid.RowSpan="7" Background="#FF495461" Grid.ColumnSpan="3" >
+
+
+        </GroupBox>
+        <Grid Margin="0,0,0,38" Grid.RowSpan="2" />
+        <Label Content="Label" Grid.Column="7"  Grid.Row="8"/>
+
+        <Label Content="Label" Grid.Column="7"  Grid.Row="10"  />
+        <TextBox Grid.Column="8"  Grid.Row="8" TextWrapping="Wrap" Text="TextBox" />
+        <Button Content="Ajouter" Grid.Column="1" Grid.Row="5" Grid.RowSpan="1" FontWeight="Bold"/>
+        <Button Grid.ColumnSpan="1" Content="Modifier" Grid.Column="2" Grid.Row="5" FontWeight="Bold"/>
+        <Button Content="Sauvegarder" Grid.Column="4"  Grid.Row="5" Grid.RowSpan="1" FontWeight="Bold"/>
+        <Button Content="Supprimer" Grid.Column="5" Grid.Row="5" Grid.RowSpan="1" FontWeight="Bold"/>
 
     </Grid>
 </Window>

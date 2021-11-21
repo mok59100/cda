@@ -13,3 +13,4 @@ C:\afpa\cda\csharp\POO\InterventionMaintenance\InterventionMaintenance\obj\Debug
 C:\afpa\cda\csharp\POO\InterventionMaintenance\InterventionMaintenance\obj\Debug\InterventionMaintenance.csproj.CoreCompileInputs.cache
 C:\afpa\cda\csharp\POO\InterventionMaintenance\InterventionMaintenance\obj\Debug\InterventionMaintenance.exe
 C:\afpa\cda\csharp\POO\InterventionMaintenance\InterventionMaintenance\obj\Debug\InterventionMaintenance.pdb
+C:\afpa\cda\csharp\POO\InterventionMaintenance\InterventionMaintenance\obj\Debug\Dictionary1.baml
