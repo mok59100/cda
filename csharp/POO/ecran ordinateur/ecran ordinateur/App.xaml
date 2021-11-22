@@ -1,0 +1,12 @@
+﻿<Application x:Class="ecran_ordinateur.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:local="clr-namespace:ecran_ordinateur"
+             StartupUri="MainWindow.xaml">
+    <Application.Resources>
+
+        <BitmapImage x:Key="ImageEcran" CreateOptions="IgnoreImageCache" CacheOption="OnLoad" UriSource="U:\59011-07-10\csharp\POO\ecran ordinateur\ecran ordinateur\Ecran.png"/>
+        <BitmapImage x:Key="ImageEval" CreateOptions="IgnoreImageCache" CacheOption="OnLoad" UriSource="U:\59011-07-10\csharp\POO\ecran ordinateur\ecran ordinateur\Etoiles.png"/>
+
+    </Application.Resources>
+</Application>

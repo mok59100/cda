@@ -1,0 +1,15 @@
+U:\59011-07-10\csharp\POO\ecran ordinateur\ecran ordinateur\obj\Debug\MainWindow.g.cs
+U:\59011-07-10\csharp\POO\ecran ordinateur\ecran ordinateur\obj\Debug\App.g.cs
+U:\59011-07-10\csharp\POO\ecran ordinateur\ecran ordinateur\obj\Debug\ecran ordinateur_MarkupCompile.cache
+U:\59011-07-10\csharp\POO\ecran ordinateur\ecran ordinateur\obj\Debug\ecran ordinateur_MarkupCompile.lref
+U:\59011-07-10\csharp\POO\ecran ordinateur\ecran ordinateur\obj\Debug\App.baml
+U:\59011-07-10\csharp\POO\ecran ordinateur\ecran ordinateur\obj\Debug\MainWindow.baml
+U:\59011-07-10\csharp\POO\ecran ordinateur\ecran ordinateur\obj\Debug\ecran ordinateur.g.resources
+U:\59011-07-10\csharp\POO\ecran ordinateur\ecran ordinateur\obj\Debug\ecran ordinateur.pdb
+U:\59011-07-10\csharp\POO\ecran ordinateur\ecran ordinateur\bin\Debug\ecran ordinateur.exe.config
+U:\59011-07-10\csharp\POO\ecran ordinateur\ecran ordinateur\bin\Debug\ecran ordinateur.exe
+U:\59011-07-10\csharp\POO\ecran ordinateur\ecran ordinateur\bin\Debug\ecran ordinateur.pdb
+U:\59011-07-10\csharp\POO\ecran ordinateur\ecran ordinateur\obj\Debug\ecran_ordinateur.Properties.Resources.resources
+U:\59011-07-10\csharp\POO\ecran ordinateur\ecran ordinateur\obj\Debug\ecran ordinateur.csproj.GenerateResource.cache
+U:\59011-07-10\csharp\POO\ecran ordinateur\ecran ordinateur\obj\Debug\ecran ordinateur.csproj.CoreCompileInputs.cache
+U:\59011-07-10\csharp\POO\ecran ordinateur\ecran ordinateur\obj\Debug\ecran ordinateur.exe
