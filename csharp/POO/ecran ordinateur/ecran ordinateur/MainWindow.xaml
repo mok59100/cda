@@ -24,7 +24,7 @@
             <RowDefinition Height="280*"/>
             <RowDefinition Height="2*"/>
         </Grid.RowDefinitions>
-        <ComboBox Grid.Column="2" VerticalAlignment="Bottom"  Grid.Row="1" Grid.ColumnSpan="1" Background="#FFD5F0F7" Height="29" />
+        <ComboBox Grid.Column="2" VerticalAlignment="Bottom"  Grid.Row="1" Grid.ColumnSpan="1" Background="#FFD5F0F7" Height="28" />
         <Label Content="Type produit catalogue :" Grid.Column="1" Grid.Row="1"  FontStyle="Normal" FontWeight="Bold" Background="#FFD5F0F7" />
         <Label Content="Evaluation : " Grid.Column="3"   Grid.Row="1" Grid.ColumnSpan="2" FontWeight="Bold" Background="#FFD5F0F7"/>
         <Image x:Name="imgEval" Grid.Column="4"  Grid.Row="1" Source="{DynamicResource ImageEval}"/>
@@ -38,7 +38,35 @@
                 </Paragraph>
             </FlowDocument>
         </RichTextBox>
-        <GroupBox Header="Descriptif technique produit" Grid.Row="5"  Grid.Column="1" Grid.ColumnSpan="1" FontWeight="Bold"/>
+        <GroupBox Header="Descriptif technique produit" Grid.Row="5"  Grid.Column="1" Grid.ColumnSpan="1" FontWeight="Bold">
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="108*"/>
+                    <ColumnDefinition Width="107*"/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="18*"/>
+                    <RowDefinition Height="18*"/>
+                    <RowDefinition Height="18*"/>
+                    <RowDefinition Height="18*"/>
+                    <RowDefinition Height="18*"/>
+                    <RowDefinition Height="18*"/>
+                    <RowDefinition Height="18*"/>
+                    <RowDefinition Height="18*"/>
+                    <RowDefinition Height="18*"/>
+                    <RowDefinition Height="18*"/>
+                    <RowDefinition Height="18*"/>
+                    <RowDefinition Height="18*"/>
+                    <RowDefinition Height="18*"/>
+                    <RowDefinition Height="18*"/>
+                    <RowDefinition Height="18*"/>
+                    <RowDefinition Height="18*"/>
+                </Grid.RowDefinitions>
+                <Label  Grid.Column="0"   Grid.Row="0" Background="#FFD5F0F7"/>
+                <TextBox 
+
+            </Grid>
+        </GroupBox>
 
     </Grid>
 </Window>
