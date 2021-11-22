@@ -9,37 +9,64 @@
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="10*"/>
-            <ColumnDefinition Width="227*"/>
-            <ColumnDefinition Width="408*"/>
-            <ColumnDefinition Width="68*"/>
-            <ColumnDefinition Width="69*"/>
+            <ColumnDefinition Width="132*"/>
+            <ColumnDefinition Width="50*"/>
+            <ColumnDefinition Width="45*"/>
+            <ColumnDefinition Width="192*"/>
+            <ColumnDefinition Width="5*"/>
+            <ColumnDefinition Width="192*"/>
+            <ColumnDefinition Width="79*"/>
+            <ColumnDefinition Width="77*"/>
             <ColumnDefinition Width="10*"/>
         </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
             <RowDefinition Height="2*"/>
             <RowDefinition Height="29"/>
+            <RowDefinition Height="0*"/>
+            <RowDefinition Height="35"/>
+            <RowDefinition Height="37*"/>
+            <RowDefinition Height="21*"/>
             <RowDefinition Height="2*"/>
-            <RowDefinition Height="86*"/>
-            <RowDefinition Height="2*"/>
-            <RowDefinition Height="280*"/>
+            <RowDefinition Height="118*"/>
+            <RowDefinition Height="25*"/>
+            <RowDefinition Height="28*"/>
+            <RowDefinition Height="28*"/>
+            <RowDefinition Height="29*"/>
+            <RowDefinition Height="33*"/>
+            <RowDefinition Height="30*"/>
             <RowDefinition Height="2*"/>
         </Grid.RowDefinitions>
-        <ComboBox Grid.Column="2" VerticalAlignment="Bottom"  Grid.Row="1" Grid.ColumnSpan="1" Background="#FFD5F0F7" Height="28" />
-        <Label Content="Type produit catalogue :" Grid.Column="1" Grid.Row="1"  FontStyle="Normal" FontWeight="Bold" Background="#FFD5F0F7" />
-        <Label Content="Evaluation : " Grid.Column="3"   Grid.Row="1" Grid.ColumnSpan="2" FontWeight="Bold" Background="#FFD5F0F7"/>
-        <Image x:Name="imgEval" Grid.Column="4"  Grid.Row="1" Source="{DynamicResource ImageEval}"/>
+        <ComboBox Grid.Column="4" VerticalAlignment="Bottom"  Grid.Row="1" Grid.ColumnSpan="3" Background="#FFD5F0F7" Height="28" />
+        <Label Content="Type d'écran ordinateur : " Grid.Column="1" Grid.Row="1"  FontStyle="Normal" FontWeight="Bold" Background="#FFD5F0F7" Grid.ColumnSpan="3" />
+        <Label Content="Evaluation : " Grid.Column="7"   Grid.Row="1" Grid.ColumnSpan="2" FontWeight="Bold" Background="#FFD5F0F7"/>
+        <Image x:Name="imgEval" Grid.Column="8"  Grid.Row="1" Source="{DynamicResource ImageEval}"/>
 
-        <Label  Grid.Column="1"   Grid.Row="3" Background="#FFD5F0F7"/>
-        <Image x:Name="imgEcran" Grid.Column="1"  Grid.Row="3" Grid.ColumnSpan="1" Grid.RowSpan="1" Source="{DynamicResource ImageEcran}"  />
-        <RichTextBox Grid.Column="2" Grid.Row="3" Grid.RowSpan="1" Grid.ColumnSpan="3" Background="#FFD5F0F7" VerticalScrollBarVisibility="Auto">
+        <Label  Grid.Column="1"   Grid.Row="3" Background="#FFD5F0F7" Grid.ColumnSpan="3" Grid.RowSpan="3">
+            <Image Height="100" Width="100"/>
+        </Label>
+        <Image x:Name="imgEcran"  Grid.Row="3" Source="{DynamicResource ImageEcran}" Grid.RowSpan="3" Grid.ColumnSpan="3" Margin="-35,0,29,0"  />
+        <Image Grid.Column="2" Grid.Row="3"  Source="imageCote.png"/>
+        <Image Grid.Column="3" Grid.Row="3"  Source="ImageJeu.png"/>
+        <Image Grid.Column="3" Grid.Row="4"  Source="ImageCouleur.png"/>
+
+
+        <Button Content="+ images" Grid.Column="2" Grid.Row="5"  FontWeight="Bold" Background="#FFA9BBBB" Grid.ColumnSpan="2"/>
+        <RichTextBox Grid.Column="4" Grid.Row="3" Grid.RowSpan="3" Grid.ColumnSpan="5" TextChanged="RichTextBox_TextChanged_1" FontSize="16" FontWeight="Bold" Background="#FFD5F0F7" >
             <FlowDocument>
                 <Paragraph>
-                    <Run Text="Description :  Dalle IPS de 27 pouces avec Résolution FHD (1920 x 1080 px) et DCI-P3 90% de gamme de couleurs; Format d'image : 16 : 9. Écran pc avec HDR10, Taux de rafraîchissement de 165 Hz et Temps de réponse de 1 ms; écran pc 27 compris les technologies de faible lumière bleue et sans scintillement, angle de vision large de 178°  luminosité/contraste : 300 cd/m²" FontWeight="Bold" FontStyle="Italic" TextDecorations="{x:Null}"/>
+                    <Run Text="KOORUI Ecran PC Gaming 27 Pouces 165hz, Moniteur PC Dalle IPS, Résolution Full HD (1920 x 1080), 1MS, Display Port 1.2 - 1x HDMI1.4 - Type-c(15W), FreeSync, HDR10, Noir"  Background= "#FFD5F0F7"/>
                 </Paragraph>
             </FlowDocument>
         </RichTextBox>
-        <GroupBox Header="Descriptif technique produit" Grid.Row="5"  Grid.Column="1" Grid.ColumnSpan="1" FontWeight="Bold">
-            <Grid>
+        <RichTextBox Grid.Column="4" Grid.Row="7" Grid.ColumnSpan="5" Background="#FFD5F0F7" VerticalScrollBarVisibility="Auto" TextChanged="RichTextBox_TextChanged"  >
+            <FlowDocument>
+                <Paragraph>
+                    <Run FontWeight="Bold" FontStyle="Italic" Text="A propos de cette article :  Dalle IPS de 27 pouces avec Résolution FHD (1920 x 1080 px) et DCI-P3 90% de gamme de couleurs; Format d'image : 16 : 9. Écran pc avec HDR10, Taux de rafraîchissement de 165 Hz et Temps de réponse de 1 ms; écran pc 27 compris les technologies de faible lumière bleue et sans scintillement, angle de vision large de 178°  luminosité/contraste : 300 cd/m² ecran pc 27 pouces vous emmène dans les mondes du jeu immersif】 Le écrans pc utilise le mode de jeu unique - un positionnement précis améliore les taux de tir et de réussite et augmente ainsi vos chances de gagner le jeu. ecran pc 27 pouces avec taux de rafraîchissement de 165 Hz garantit que le jeu fonctionne sans bégaiement gênant. La technologie Adaptive Freesync garantit que les images sont affichées en douceur et que les retards d'image n'ont aucune chance." TextDecorations="{x:Null}"/>
+                </Paragraph>
+            </FlowDocument>
+        </RichTextBox>
+        <GroupBox Header="Descriptif technique produit" Grid.Row="7"  Grid.Column="1" Grid.ColumnSpan="3" FontWeight="Bold" Grid.RowSpan="7">
+            <Grid Background="#FFD5F0F7">
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="108*"/>
                     <ColumnDefinition Width="107*"/>
@@ -62,11 +89,57 @@
                     <RowDefinition Height="18*"/>
                     <RowDefinition Height="18*"/>
                 </Grid.RowDefinitions>
-                <Label  Grid.Column="0"   Grid.Row="0" Background="#FFD5F0F7"/>
-                <TextBox 
+                <Label Content="Prix :" Grid.Column="0"   Grid.Row="0" Background="#FFD5F0F7" BorderBrush="#FF85868B" Padding="0"    />
+                <TextBox Text="299.99€" Grid.Column="1"   Grid.Row= "0" Background="#FFD5F0F7" BorderBrush="#FF89898D"/>
+                <Label  Content="Vendu par :" Grid.Column="0"   Grid.Row="1" Background="#FFD5F0F7" BorderBrush="#FF85868B" Padding="0" />
+                <TextBox Grid.Column="1"   Text="Fleuriring store" Grid.Row="1"  Background="#FFD5F0F7"/>
+                <Label Content="16/9" Grid.Column="0" Grid.Row="2" Grid.RowSpan="1" Padding="0"  Background="#FFD5F0F7"   />
+                <TextBox Grid.Column="1"   Text="Oui" Grid.Row="2"  Background="#FFD5F0F7"/>
+                <Label Content="Couleur :" Grid.Column="0" Grid.Row="3" Grid.RowSpan="1" Padding="0"  Background="#FFD5F0F7"   />
+                <TextBox Grid.Column="1"   Text="Noir" Grid.Row="3"  Background="#FFD5F0F7"/>
+                <Label Content="Connectivité :" Grid.Column="0" Grid.Row="4" Grid.RowSpan="1" Padding="0"  Background="#FFD5F0F7"   />
+                <TextBox Grid.Column="1"   Text="Hdmi DisplayPort" Grid.Row="4"  Background="#FFD5F0F7"/>
+                <Label Content="Taille écran :" Grid.Column="0" Grid.Row="5" Grid.RowSpan="1" Padding="0"  Background="#FFD5F0F7"   />
+                <TextBox Grid.Column="1"   Text="27 pouces" Grid.Row="5"  Background="#FFD5F0F7"/>
+                <Label Content="tech.Affichage :" Grid.Column="0" Grid.Row="6" Grid.RowSpan="1" Padding="0"  Background="#FFD5F0F7"   />
+                <TextBox Grid.Column="1"   Text="IPS" Grid.Row="6"  Background="#FFD5F0F7"/>
+                <Label Content="Luminosité :" Grid.Column="0" Grid.Row="7" Grid.RowSpan="1" Padding="0"  Background="#FFD5F0F7"   />
+                <TextBox Grid.Column="1"   Text="300cd/㎡ candela" Grid.Row="7"  Background="#FFD5F0F7"/>
+                <Label Content="Contraste :" Grid.Column="0" Grid.Row="8" Grid.RowSpan="1" Padding="0"  Background="#FFD5F0F7"   />
+                <TextBox Grid.Column="1"   Text="1000:1" Grid.Row="8"  Background="#FFD5F0F7"/>
+                <Label Content="Dimension tv :" Grid.Column="0" Grid.Row="9" Grid.RowSpan="1" Padding="0"  Background="#FFD5F0F7"   />
+                <TextBox Grid.Column="1"   Text="61.35x54.41x23.3cm" Grid.Row="9"  Background="#FFD5F0F7"/>
+                <Label Content="Résolution native :" Grid.Column="0" Grid.Row="10" Grid.RowSpan="1" Padding="0"  Background="#FFD5F0F7"   />
+                <TextBox Grid.Column="1"   Text="1920 *1080" Grid.Row="10"  Background="#FFD5F0F7"/>
+                <Label Content="Angle de vue réel:" Grid.Column="0" Grid.Row="11" Grid.RowSpan="1" Padding="0"  Background="#FFD5F0F7"   />
+                <TextBox Grid.Column="1"   Text="178 degrés" Grid.Row="11"  Background="#FFD5F0F7"/>
+                <Label Content="Résolution :" Grid.Column="0" Grid.Row="12" Grid.RowSpan="1" Padding="0"  Background="#FFD5F0F7"   />
+                <TextBox Grid.Column="1"   Text="FHD 1080p" Grid.Row="12"  Background="#FFD5F0F7"/>
+                <Label Content="Temps de réponse :" Grid.Column="0" Grid.Row="13" Grid.RowSpan="1" Padding="0"  Background="#FFD5F0F7"   />
+                <TextBox Grid.Column="1"   Text="1 millisecondes" Grid.Row="13"  Background="#FFD5F0F7"/>
+                <Label Content="Marque :" Grid.Column="0" Grid.Row="14" Grid.RowSpan="1" Padding="0"  Background="#FFD5F0F7"   />
+                <TextBox Grid.Column="1"   Text="KOORUI" Grid.Row="14"  Background="#FFD5F0F7"/>
+                <Label Content="Modèle :" Grid.Column="0" Grid.Row="15" Grid.RowSpan="1" Padding="0"  Background="#FFD5F0F7"   />
+                <TextBox Grid.Column="1"   Text="27E1" Grid.Row="15"  Background="#FFD5F0F7"/>
+
 
             </Grid>
         </GroupBox>
+        <GroupBox Grid.Column="4" Header="Livraison" Grid.Row="8" FontWeight="Bold" Background="#FFD5F0F7" Grid.RowSpan="6">
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="53*"/>
+                    <ColumnDefinition Width="128*"/>
+                </Grid.ColumnDefinitions>
+                <Label Content="type de livraison" Grid.Column="0"  Grid.RowSpan="2" Padding="0" Grid.ColumnSpan="2" />
+            </Grid>
+        </GroupBox>
+        <GroupBox Grid.Column="6" Header="Politique de retour" Grid.Row="8" Grid.RowSpan="6" VerticalAlignment="Bottom" Height="170" Background="#FFD5F0F7" FontWeight="Bold"/>
+        <Button Grid.ColumnSpan="2" Content="Modifier" Grid.Column="7" Grid.Row="12" FontWeight="Bold" Padding="0"/>
+        <Button Grid.ColumnSpan="2" Content="Valider" Grid.Column="7"  Grid.Row="13" FontWeight="Bold" Padding="0"/>
+
+
+
 
     </Grid>
 </Window>

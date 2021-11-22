@@ -24,5 +24,15 @@ namespace ecran_ordinateur
         {
             InitializeComponent();
         }
+
+        private void RichTextBox_TextChanged(object sender, TextChangedEventArgs e)
+        {
+
+        }
+
+        private void RichTextBox_TextChanged_1(object sender, TextChangedEventArgs e)
+        {
+
+        }
     }
 }

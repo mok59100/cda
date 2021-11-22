@@ -13,3 +13,4 @@ U:\59011-07-10\csharp\POO\ecran ordinateur\ecran ordinateur\obj\Debug\ecran_ordi
 U:\59011-07-10\csharp\POO\ecran ordinateur\ecran ordinateur\obj\Debug\ecran ordinateur.csproj.GenerateResource.cache
 U:\59011-07-10\csharp\POO\ecran ordinateur\ecran ordinateur\obj\Debug\ecran ordinateur.csproj.CoreCompileInputs.cache
 U:\59011-07-10\csharp\POO\ecran ordinateur\ecran ordinateur\obj\Debug\ecran ordinateur.exe
+U:\59011-07-10\csharp\POO\ecran ordinateur\ecran ordinateur\obj\Debug\ecran ordinateur.csproj.AssemblyReference.cache
