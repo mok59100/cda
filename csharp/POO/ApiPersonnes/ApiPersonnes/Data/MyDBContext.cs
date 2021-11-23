@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace ApiPersonnes.Data
 {
-    public class MyDBContext : DbContext
+    public class MyDbContext : DbContext
     {
-        public MyDBContext(DbContextOptions<MyDbContext> options):base(options)
+        public MyDbContext(DbContextOptions<MyDbContext> options):base(options)
         {
 
         }
