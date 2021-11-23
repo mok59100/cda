@@ -1,11 +1,9 @@
-U:\59011-07-10\csharp\POO\ApiPersonnes\ApiPersonnes\obj\Debug\net5.0\ApiPersonnes.csproj.AssemblyReference.cache
 U:\59011-07-10\csharp\POO\ApiPersonnes\ApiPersonnes\obj\Debug\net5.0\ApiPersonnes.GeneratedMSBuildEditorConfig.editorconfig
 U:\59011-07-10\csharp\POO\ApiPersonnes\ApiPersonnes\obj\Debug\net5.0\ApiPersonnes.AssemblyInfoInputs.cache
 U:\59011-07-10\csharp\POO\ApiPersonnes\ApiPersonnes\obj\Debug\net5.0\ApiPersonnes.AssemblyInfo.cs
 U:\59011-07-10\csharp\POO\ApiPersonnes\ApiPersonnes\obj\Debug\net5.0\ApiPersonnes.csproj.CoreCompileInputs.cache
 U:\59011-07-10\csharp\POO\ApiPersonnes\ApiPersonnes\obj\Debug\net5.0\ApiPersonnes.MvcApplicationPartsAssemblyInfo.cs
 U:\59011-07-10\csharp\POO\ApiPersonnes\ApiPersonnes\obj\Debug\net5.0\ApiPersonnes.MvcApplicationPartsAssemblyInfo.cache
-U:\59011-07-10\csharp\POO\ApiPersonnes\ApiPersonnes\bin\Debug\net5.0\appsettings.Development.json
 U:\59011-07-10\csharp\POO\ApiPersonnes\ApiPersonnes\bin\Debug\net5.0\appsettings.json
 U:\59011-07-10\csharp\POO\ApiPersonnes\ApiPersonnes\bin\Debug\net5.0\ApiPersonnes.exe
 U:\59011-07-10\csharp\POO\ApiPersonnes\ApiPersonnes\bin\Debug\net5.0\ApiPersonnes.deps.json
@@ -46,3 +44,10 @@ U:\59011-07-10\csharp\POO\ApiPersonnes\ApiPersonnes\obj\Debug\net5.0\ref\ApiPers
 U:\59011-07-10\csharp\POO\ApiPersonnes\ApiPersonnes\obj\Debug\net5.0\ApiPersonnes.pdb
 U:\59011-07-10\csharp\POO\ApiPersonnes\ApiPersonnes\obj\Debug\net5.0\ApiPersonnes.genruntimeconfig.cache
 U:\59011-07-10\csharp\POO\ApiPersonnes\ApiPersonnes\obj\Debug\net5.0\ApiPersonnes.csproj.CopyComplete
+U:\59011-07-10\csharp\POO\ApiPersonnes\ApiPersonnes\bin\Debug\net5.0\AutoMapper.dll
+U:\59011-07-10\csharp\POO\ApiPersonnes\ApiPersonnes\bin\Debug\net5.0\AutoMapper.Extensions.Microsoft.DependencyInjection.dll
+U:\59011-07-10\csharp\POO\ApiPersonnes\ApiPersonnes\obj\Debug\net5.0\ApiPersonnes.csproj.AssemblyReference.cache
+U:\59011-07-10\csharp\POO\ApiPersonnes\ApiPersonnes\bin\Debug\net5.0\Microsoft.AspNetCore.JsonPatch.dll
+U:\59011-07-10\csharp\POO\ApiPersonnes\ApiPersonnes\bin\Debug\net5.0\Microsoft.AspNetCore.Mvc.NewtonsoftJson.dll
+U:\59011-07-10\csharp\POO\ApiPersonnes\ApiPersonnes\bin\Debug\net5.0\Newtonsoft.Json.dll
+U:\59011-07-10\csharp\POO\ApiPersonnes\ApiPersonnes\bin\Debug\net5.0\Newtonsoft.Json.Bson.dll
