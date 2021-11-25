@@ -39,7 +39,7 @@
         <ComboBox Grid.Column="4" VerticalAlignment="Bottom"  Grid.Row="1" Grid.ColumnSpan="3" Background="#FFD5F0F7" Height="28" SelectionChanged="ComboBox_SelectionChanged">
             <ComboBoxItem Content="ordinateur" IsSelected="True"></ComboBoxItem>
         </ComboBox>
-        <Label Content="Type d'écran ordinateur : " Grid.Column="1" Grid.Row="1"  FontStyle="Normal" FontWeight="Bold" B Grid.ColumnSpan="3" />
+        <Label Content="Type d'écran ordinateur : " Grid.Column="1" Grid.Row="1"  FontStyle="Normal" FontWeight="Bold"  Grid.ColumnSpan="3" />
         <Label Content="Evaluation : " Grid.Column="7"   Grid.Row="1" Grid.ColumnSpan="2" FontWeight="Bold" Background="#FFD5F0F7"/>
         <Image x:Name="imgEval" Grid.Column="8"  Grid.Row="1" Source="{DynamicResource ImageEval}"/>
 

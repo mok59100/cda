@@ -13,5 +13,6 @@ namespace ExerciceApi2.Data.Models
         public string NomClient { get; set; }
         public string VilleClient { get; set; }
        
-    }
+
+}
 }

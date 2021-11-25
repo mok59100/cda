@@ -11,8 +11,10 @@ namespace ExerciceApi2.Data.Models
 
         [Key]
         public int IdVente { get; set; }
-        public int IdClient{ get; set; }
+        public int IdClient { get; set; }
         public int Quantite { get; set; }
-        
+
+        public Clients Consumer { get; set; }
+
     }
 }

@@ -16,8 +16,8 @@ namespace ExerciceApi2.Data.Profiles
 
         public IEnumerable<Clients> GetAllClients()
         {
-
             return _context.Clients.ToList();
+
         }
         public Clients GetClientsById(int id)
         {

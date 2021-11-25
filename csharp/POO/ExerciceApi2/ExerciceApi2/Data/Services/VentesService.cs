@@ -18,16 +18,41 @@ namespace ExerciceApi2.Data.Services
         public IEnumerable<Ventes> GetAllVentes()
         {
 
-            return _context.Ventes.ToList();
+            var liste = (from c1 in _context.Clients
+                         join v1 in _context.Ventes
+                         on c1.IdClient equals v1.IdClient
+                         select new Ventes
+                         {
+                             IdVente = v1.IdVente,
+                             Quantite = v1.Quantite,
+                             IdClient = v1.IdClient,
+                             
+                             Consumer=c1
+
+                         }).ToList();
+
+            return liste;
         }
         public Ventes GetVentesById(int id)
         {
-            return _context.Ventes.FirstOrDefault(p => p.IdVente == id);
+            var liste = (from c1 in _context.Clients
+                         join v1 in _context.Ventes
+                         on c1.IdClient equals v1.IdClient
+                         select new Ventes
+                         {
+                             IdVente = v1.IdVente,
+                             Quantite = v1.Quantite,
+                             IdClient = v1.IdClient,
+                             Consumer = c1
+
+                         }).FirstOrDefault(p => p.IdVente == id);
+
+            return liste;
         }
 
         public void UpdateVentes(Ventes p)
         {
-            _context.SaveChanges();
+           var liste = uptade Ventes   _context.SaveChanges();
 
             //nothing
             //on va mettre à jour le context dans le controller par mapping et passer 

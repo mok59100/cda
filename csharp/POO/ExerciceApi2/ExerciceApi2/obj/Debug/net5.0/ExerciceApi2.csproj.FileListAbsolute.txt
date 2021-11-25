@@ -36,7 +36,6 @@ U:\59011-07-10\csharp\POO\ExerciceApi2\ExerciceApi2\bin\Debug\net5.0\System.Conf
 U:\59011-07-10\csharp\POO\ExerciceApi2\ExerciceApi2\bin\Debug\net5.0\System.Diagnostics.DiagnosticSource.dll
 U:\59011-07-10\csharp\POO\ExerciceApi2\ExerciceApi2\bin\Debug\net5.0\System.Security.Cryptography.ProtectedData.dll
 U:\59011-07-10\csharp\POO\ExerciceApi2\ExerciceApi2\bin\Debug\net5.0\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll
-U:\59011-07-10\csharp\POO\ExerciceApi2\ExerciceApi2\obj\Debug\net5.0\ExerciceApi2.csproj.AssemblyReference.cache
 U:\59011-07-10\csharp\POO\ExerciceApi2\ExerciceApi2\obj\Debug\net5.0\ExerciceApi2.GeneratedMSBuildEditorConfig.editorconfig
 U:\59011-07-10\csharp\POO\ExerciceApi2\ExerciceApi2\obj\Debug\net5.0\ExerciceApi2.AssemblyInfoInputs.cache
 U:\59011-07-10\csharp\POO\ExerciceApi2\ExerciceApi2\obj\Debug\net5.0\ExerciceApi2.AssemblyInfo.cs
@@ -52,3 +51,4 @@ U:\59011-07-10\csharp\POO\ExerciceApi2\ExerciceApi2\obj\Debug\net5.0\ExerciceApi
 U:\59011-07-10\csharp\POO\ExerciceApi2\ExerciceApi2\obj\Debug\net5.0\ref\ExerciceApi2.dll
 U:\59011-07-10\csharp\POO\ExerciceApi2\ExerciceApi2\obj\Debug\net5.0\ExerciceApi2.pdb
 U:\59011-07-10\csharp\POO\ExerciceApi2\ExerciceApi2\obj\Debug\net5.0\ExerciceApi2.genruntimeconfig.cache
+U:\59011-07-10\csharp\POO\ExerciceApi2\ExerciceApi2\obj\Debug\net5.0\ExerciceApi2.csproj.AssemblyReference.cache
