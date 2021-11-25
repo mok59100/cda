@@ -173,8 +173,8 @@
                 <Label Content=" Net à payer :"  Grid.Row="8" Grid.Column="0" Grid.RowSpan="1" Grid.ColumnSpan="1" FontWeight="Bold" Background="#FFD5F0F7" />
                 <TextBox  Grid.Row="8" Grid.ColumnSpan="1" Grid.Column="1" Text=""  Grid.RowSpan="1" />
                 <Label Content=" Taux :"  Grid.Row="0" Grid.Column="2" Grid.RowSpan="1" Grid.ColumnSpan="1" FontWeight="Bold" Background="#FFD5F0F7" />
-                <Label Content=" 36.65 :" Grid.Row="1" Grid.ColumnSpan="1" Grid.Column="2"  Grid.RowSpan="1" Background="#FFD8D3D3"/>
-                <Label Content=" 10% :" Grid.Row="2" Grid.ColumnSpan="1" Grid.Column="2"  Grid.RowSpan="1" Background="#FFD8D3D3"/>
+                <Label Content=" 36.65 " Grid.Row="1" Grid.ColumnSpan="1" Grid.Column="2"  Grid.RowSpan="1" Background="#FFD8D3D3"/>
+                <Label Content=" 10% " Grid.Row="2" Grid.ColumnSpan="1" Grid.Column="2"  Grid.RowSpan="1" Background="#FFD8D3D3"/>
                 <Label Content=" " Grid.Row="3" Grid.ColumnSpan="1" Grid.Column="2"  Grid.RowSpan="1" />
                 <Label Content=" 4.48% " Grid.Row="4" Grid.ColumnSpan="1" Grid.Column="2"  Grid.RowSpan="1" Background="#FFD8D3D3"/>
                 <Label Content=" 2.26% " Grid.Row="5" Grid.ColumnSpan="1" Grid.Column="2"  Grid.RowSpan="1" Background="#FFD8D3D3"/>
@@ -182,22 +182,22 @@
                 <Label Content=" 1 " Grid.Row="7" Grid.ColumnSpan="1" Grid.Column="2"  Grid.RowSpan="1" Background="#FFD8D3D3"/>
                 <Label Content=" " Grid.Row="8" Grid.ColumnSpan="1" Grid.Column="2"  Grid.RowSpan="1" />
                 <Label Content=" A payer :"  Grid.Row="0" Grid.Column="3" Grid.RowSpan="1" Grid.ColumnSpan="1" FontWeight="Bold" Background="#FFD5F0F7" />
-                <Label Content=" 7000.00€ :" Grid.Row="1" Grid.ColumnSpan="1" Grid.Column="3"  Grid.RowSpan="1" Background="#FFD8D3D3"/>
-                <Label Content=" 700.00€ :" Grid.Row="2" Grid.ColumnSpan="1" Grid.Column="3"  Grid.RowSpan="1" Background="#FFD8D3D3"/>
-                <Label Content=" 7700.00€ :" Grid.Row="3" Grid.ColumnSpan="1" Grid.Column="3"  Grid.RowSpan="1" Background="#FFD8D3D3"/>
+                <Label Content=" 7000.00€ " Grid.Row="1" Grid.ColumnSpan="1" Grid.Column="3"  Grid.RowSpan="1" Background="#FFD8D3D3"/>
+                <Label Content=" 700.00€ " Grid.Row="2" Grid.ColumnSpan="1" Grid.Column="3"  Grid.RowSpan="1" Background="#FFD8D3D3"/>
+                <Label Content=" 7700.00€ " Grid.Row="3" Grid.ColumnSpan="1" Grid.Column="3"  Grid.RowSpan="1" Background="#FFD8D3D3"/>
                 <Label Content=" " Grid.Row="4" Grid.ColumnSpan="1" Grid.Column="3"  Grid.RowSpan="1" />
                 <Label Content=" " Grid.Row="5" Grid.ColumnSpan="1" Grid.Column="3"  Grid.RowSpan="1" />
                 <Label Content=" " Grid.Row="6" Grid.ColumnSpan="1" Grid.Column="3"  Grid.RowSpan="1" />
                 <Label Content=" " Grid.Row="7" Grid.ColumnSpan="1" Grid.Column="3"  Grid.RowSpan="1" />
-                <Label Content=" 5808.20€ :" Grid.Row="8" Grid.ColumnSpan="1" Grid.Column="3"  Grid.RowSpan="1" Background="#FFD8D3D3"/>
+                <Label Content=" 5808.20€ " Grid.Row="8" Grid.ColumnSpan="1" Grid.Column="3"  Grid.RowSpan="1" Background="#FFD8D3D3"/>
                 <Label Content=" A retenir :"  Grid.Row="0" Grid.Column="4" Grid.RowSpan="1" Grid.ColumnSpan="1" FontWeight="Bold" Background="#FFD5F0F7" />
                 <Label Content="" Grid.Row="1" Grid.ColumnSpan="1" Grid.Column="4"  Grid.RowSpan="1" />
                 <Label Content="" Grid.Row="2" Grid.ColumnSpan="1" Grid.Column="4"  Grid.RowSpan="1" />
                 <Label Content="" Grid.Row="3" Grid.ColumnSpan="1" Grid.Column="4"  Grid.RowSpan="1" />
-                <Label Content=" 313.60€ :" Grid.Row="4" Grid.ColumnSpan="1" Grid.Column="4"  Grid.RowSpan="1" Background="#FFD8D3D3"/>
-                <Label Content=" 158.20€ :" Grid.Row="5" Grid.ColumnSpan="1" Grid.Column="4"  Grid.RowSpan="1" Background="#FFD8D3D3"/>
-                <Label Content=" 1400.00€ :" Grid.Row="6" Grid.ColumnSpan="1" Grid.Column="4"  Grid.RowSpan="1" Background="#FFD8D3D3"/>
-                <Label Content=" 20.00€ :" Grid.Row="7" Grid.ColumnSpan="1" Grid.Column="4"  Grid.RowSpan="1" Background="#FFD8D3D3"/>
+                <Label Content=" 313.60€ " Grid.Row="4" Grid.ColumnSpan="1" Grid.Column="4"  Grid.RowSpan="1" Background="#FFD8D3D3"/>
+                <Label Content=" 158.20€ " Grid.Row="5" Grid.ColumnSpan="1" Grid.Column="4"  Grid.RowSpan="1" Background="#FFD8D3D3"/>
+                <Label Content=" 1400.00€ " Grid.Row="6" Grid.ColumnSpan="1" Grid.Column="4"  Grid.RowSpan="1" Background="#FFD8D3D3"/>
+                <Label Content=" 20.00€ " Grid.Row="7" Grid.ColumnSpan="1" Grid.Column="4"  Grid.RowSpan="1" Background="#FFD8D3D3"/>
                 <Label Content=" " Grid.Row="8" Grid.ColumnSpan="1" Grid.Column="4"  Grid.RowSpan="1"/>
 
 
@@ -214,6 +214,7 @@
             </Grid>
         </GroupBox>
         <Button Content="Enregister"  Grid.ColumnSpan="1" Grid.Column="4"  Grid.Row="14" Grid.RowSpan="1" Background="#FFE8F7B2"/>
-        <Button Content="Modifier"  Grid.ColumnSpan="2" Grid.Column="5"  Grid.Row="14" Grid.RowSpan="1" Background="#FFE8F7B2"/>
+        <Button Content="Modifier"  Grid.ColumnSpan="1" Grid.Column="5"  Grid.Row="14" Grid.RowSpan="1" Background="#FFE8F7B2"/>
+        <Button Content="Sortir"  Grid.ColumnSpan="1" Grid.Column="1"  Grid.Row="14" Grid.RowSpan="1" Background="#FFE8F7B2"/>
     </Grid>
 </Window>
