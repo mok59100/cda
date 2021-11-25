@@ -25,7 +25,7 @@ namespace ExerciceApi2.Controllers
         }
 
         [HttpGet]
-        public ActionResult<IEnumerable<ClientsDTO>> GetAllAbonnes()
+        public ActionResult<IEnumerable<ClientsDTO>> GetAllClients()
         {
             var listeClients = _service.GetAllClients();
             return Ok(_mapper.Map<IEnumerable<ClientsDTO>>(listeClients));

@@ -34,5 +34,10 @@ namespace ecran_ordinateur
         {
 
         }
+
+        private void ComboBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+
+        }
     }
 }

@@ -1,0 +1,219 @@
+﻿<Window x:Class="MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:EvalMaquetteMoktar"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="850" Width="800">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="5*"/>
+            <ColumnDefinition Width="150*"/>
+            <ColumnDefinition Width="189*"/>
+            <ColumnDefinition Width="115*"/>
+            <ColumnDefinition Width="150*"/>
+            <ColumnDefinition Width="187*"/>
+            <ColumnDefinition Width="5*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="10*"/>
+            <RowDefinition Height="51*"/>
+            <RowDefinition Height="12*"/>
+            <RowDefinition Height="17*"/>
+            <RowDefinition Height="49*"/>
+            <RowDefinition Height="49*"/>
+            <RowDefinition Height="49*"/>
+            <RowDefinition Height="49*"/>
+            <RowDefinition Height="49*"/>
+            <RowDefinition Height="49*"/>
+            <RowDefinition Height="10*"/>
+            <RowDefinition Height="45*"/>
+            <RowDefinition Height="10*"/>
+            <RowDefinition Height="327*"/>
+            <RowDefinition Height="45*"/>
+            <RowDefinition Height="10*"/>
+        </Grid.RowDefinitions>
+        <Label Content="nom du salarié :" Grid.ColumnSpan="1" FontWeight="Bold"  Grid.RowSpan="2"  Grid.Column="1" Background="#FFD5F0F7"  />
+        <ComboBox Grid.ColumnSpan="4"  Grid.RowSpan="2" Grid.Column="2"    >
+            <ComboBoxItem Content="TIKDAM Ahmed" IsSelected="True"  FontWeight="Bold" Background="#FFD5F0F7"></ComboBoxItem>
+        </ComboBox>
+        <GroupBox Header="Information Salarié" Grid.Row="3" Grid.ColumnSpan="5"  Grid.RowSpan="8" Grid.Column="1" >
+            <Grid >
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="1*"/>
+                    <ColumnDefinition Width="1*"/>
+                    <ColumnDefinition Width="1*"/>
+                    <ColumnDefinition Width="1*"/>
+
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="1*"/>
+                    <RowDefinition Height="1*"/>
+                    <RowDefinition Height="1*"/>
+                    <RowDefinition Height="1*"/>
+                    <RowDefinition Height="1*"/>
+                    <RowDefinition Height="1*"/>
+                </Grid.RowDefinitions>
+                <Label Content=" Identifiant :"  Grid.Row="0" Grid.Column="0" Grid.RowSpan="1" Grid.ColumnSpan="1" FontWeight="Bold" Background="#FFD5F0F7" />
+                <ComboBox Grid.Row="0" Grid.Column="1"  Text="TextBox"  >
+                    <ComboBoxItem Content="TIKDAM Ahmed" IsSelected="True"  FontWeight="Bold" Background="#FFD5F0F7"></ComboBoxItem>
+                </ComboBox>
+                <Label Content=" Nom :"  Grid.Row="1" Grid.Column="0" Grid.RowSpan="1" Grid.ColumnSpan="1" FontWeight="Bold" Background="#FFD5F0F7" />
+                <ComboBox Grid.Row="1" Grid.Column="1"  Text="TextBox"  >
+                    <ComboBoxItem Content="TIKDAM " IsSelected="True"  FontWeight="Bold"></ComboBoxItem>
+                </ComboBox>
+                <Label Content=" Prénom :"  Grid.Row="2" Grid.Column="0" Grid.RowSpan="1" Grid.ColumnSpan="1" FontWeight="Bold" Background="#FFD5F0F7" />
+                <ComboBox Grid.Row="2" Grid.Column="1"  Text="TextBox"  >
+                    <ComboBoxItem Content="Ahmed " IsSelected="True"  FontWeight="Bold"></ComboBoxItem>
+                </ComboBox>
+                <Label Content=" DateNaissance :"  Grid.Row="3" Grid.Column="0" Grid.RowSpan="1" Grid.ColumnSpan="1" FontWeight="Bold" Background="#FFD5F0F7"/>
+                <ComboBox Grid.Row="3" Grid.Column="1"  Text="TextBox"  >
+                    <ComboBoxItem Content="01/10/1987 " IsSelected="True"  FontWeight="Bold"></ComboBoxItem>
+                </ComboBox>
+                <Label Content=" Date d'entrée :"  Grid.Row="4" Grid.Column="0" Grid.RowSpan="1" Grid.ColumnSpan="1" FontWeight="Bold" Background="#FFD5F0F7"/>
+                <ComboBox Grid.Row="4" Grid.Column="1"  Text="TextBox"  >
+                    <ComboBoxItem Content="01/10/2010 " IsSelected="True"  FontWeight="Bold"></ComboBoxItem>
+                </ComboBox>
+                <Label Content=" Situation familiale:"  Grid.Row="5" Grid.Column="0" Grid.RowSpan="1" Grid.ColumnSpan="1" FontWeight="Bold" Background="#FFD5F0F7" />
+                <ComboBox Grid.Row="5" Grid.Column="1"  Text="TextBox"  >
+                    <ComboBoxItem Content="01/10/2010 " IsSelected="True"  FontWeight="Bold"></ComboBoxItem>
+                </ComboBox>
+
+                <Label Content=" Nombre d'enfants :"  Grid.Row="0" Grid.Column="2" Grid.RowSpan="1" Grid.ColumnSpan="1" FontWeight="Bold" Background="#FFD5F0F7"/>
+                <ComboBox Grid.Row="0" Grid.Column="3"  Text="TextBox"  >
+                    <ComboBoxItem Content="0 " IsSelected="True"  FontWeight="Bold"></ComboBoxItem>
+                </ComboBox>
+                <Label Content=" Fonction :"  Grid.Row="1" Grid.Column="2" Grid.RowSpan="1" Grid.ColumnSpan="1" FontWeight="Bold" Background="#FFD5F0F7"/>
+                <ComboBox Grid.Row="1" Grid.Column="3"  Text="TextBox"  >
+                    <ComboBoxItem Content=" Comptable" IsSelected="True"  FontWeight="Bold"></ComboBoxItem>
+                </ComboBox>
+                <Label Content=" CNSS :"  Grid.Row="2" Grid.Column="2" Grid.RowSpan="1" Grid.ColumnSpan="1" FontWeight="Bold" Background="#FFD5F0F7" />
+                <ComboBox Grid.Row="2" Grid.Column="3"  Text="TextBox"  >
+                    <ComboBoxItem Content=" 654123" IsSelected="True"  FontWeight="Bold"></ComboBoxItem>
+                </ComboBox>
+                <Label Content=" Adresse :"  Grid.Row="3" Grid.Column="2" Grid.RowSpan="1" Grid.ColumnSpan="1" FontWeight="Bold" Background="#FFD5F0F7"/>
+                <ComboBox Grid.Row="3" Grid.Column="3"  Text="TextBox"  >
+                    <ComboBoxItem Content=" 215 bd Ch de Gaulle PARIS" IsSelected="True"  FontWeight="Bold"></ComboBoxItem>
+                </ComboBox>
+                <Label Content=" Adresse :"  Grid.Row="3" Grid.Column="2" Grid.RowSpan="1" Grid.ColumnSpan="1" FontWeight="Bold" Background="#FFD5F0F7"/>
+                <ComboBox Grid.Row="3" Grid.Column="3"  Text="TextBox"  >
+                    <ComboBoxItem Content=" 215 bd Ch de Gaulle PARIS" IsSelected="True"  FontWeight="Bold"></ComboBoxItem>
+                </ComboBox>
+                <Label Content=" Matricule :"  Grid.Row="4" Grid.Column="2" Grid.RowSpan="1" Grid.ColumnSpan="1" FontWeight="Bold" Background="#FFD5F0F7" />
+                <ComboBox Grid.Row="4" Grid.Column="4"  Text="TextBox"  >
+                    <ComboBoxItem Content=" 856325" IsSelected="True"  FontWeight="Bold"></ComboBoxItem>
+                </ComboBox>
+                <Label Content=" Département :"  Grid.Row="5" Grid.Column="2" Grid.RowSpan="1" Grid.ColumnSpan="1" FontWeight="Bold" Background="#FFD5F0F7"/>
+                <ComboBox Grid.Row="5" Grid.Column="5"  Text="TextBox"  >
+                    <ComboBoxItem Content="Administratif" IsSelected="True"  FontWeight="Bold"></ComboBoxItem>
+                </ComboBox>
+
+
+
+
+
+
+            </Grid>
+
+
+
+
+        </GroupBox>
+
+
+
+
+
+
+
+
+
+        <Label Content="Mois" Grid.Column="1" Grid.Row="10" Grid.ColumnSpan="3" FontWeight="Bold"  Background="#FFD5F0F7" Grid.RowSpan="3" Margin="0,8,114,10" />
+        <ComboBox Grid.Row="11" Grid.Column="3" Grid.ColumnSpan="3"  Text=""  >
+            <ComboBoxItem Content=" Mars 2021" IsSelected="True"  FontWeight="Bold"></ComboBoxItem>
+        </ComboBox>
+        <GroupBox Grid.Column="1" Header="Données fiche de paie" Grid.Row="13" Grid.ColumnSpan="5"  Grid.RowSpan="1">
+            <Grid >
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="1*"/>
+                    <ColumnDefinition Width="1*"/>
+                    <ColumnDefinition Width="1*"/>
+                    <ColumnDefinition Width="1*"/>
+                    <ColumnDefinition Width="1*"/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="1*"/>
+                    <RowDefinition Height="1*"/>
+                    <RowDefinition Height="1*"/>
+                    <RowDefinition Height="1*"/>
+                    <RowDefinition Height="1*"/>
+                    <RowDefinition Height="1*"/>
+                    <RowDefinition Height="1*"/>
+                    <RowDefinition Height="1*"/>
+                    <RowDefinition Height="1*"/>
+                    <RowDefinition Height="1*"/>
+                </Grid.RowDefinitions>
+                <Label Content=""  Grid.Row="0" Grid.Column="0" Grid.RowSpan="1" Grid.ColumnSpan="1" FontWeight="Bold" Background="#FFD5F0F7" />
+                <TextBox Grid.ColumnSpan="1" Grid.Column="1" Grid.Row="0" Text="Base"  Grid.RowSpan="1" Background="#FFD5F0F7"/>
+                <Label Content=" Salaire de base :"  Grid.Row="1" Grid.Column="0" Grid.RowSpan="1" Grid.ColumnSpan="1" FontWeight="Bold" Background="#FFD5F0F7" />
+                <TextBox Grid.ColumnSpan="1" Grid.Column="1" Grid.Row="1" Text="191"  Grid.RowSpan="1" Background="#FFD8D3D3"/>
+                <Label Content=" Prime d'ancienneté :"  Grid.Row="2" Grid.Column="0" Grid.RowSpan="1" Grid.ColumnSpan="1" FontWeight="Bold" Background="#FFD5F0F7" />
+                <TextBox  Grid.Row="2" Grid.ColumnSpan="1" Grid.Column="1" Text="7000"  Grid.RowSpan="1" Background="#FFD8D3D3"/>
+                <Label Content=" Salaire brut :"  Grid.Row="3" Grid.Column="0" Grid.RowSpan="1" Grid.ColumnSpan="1" FontWeight="Bold" Background="#FFD5F0F7" />
+                <TextBox  Grid.Row="3" Grid.ColumnSpan="1" Grid.Column="1" Text=""  Grid.RowSpan="1" />
+                <Label Content=" Cotisation CNSS :"  Grid.Row="4" Grid.Column="0" Grid.RowSpan="1" Grid.ColumnSpan="1" FontWeight="Bold" Background="#FFD5F0F7" />
+                <TextBox  Grid.Row="4" Grid.ColumnSpan="1" Grid.Column="1" Text="7000"  Grid.RowSpan="1" Background="#FFD8D3D3"/>
+                <Label Content=" AMO :"  Grid.Row="5" Grid.Column="0" Grid.RowSpan="1" Grid.ColumnSpan="1" FontWeight="Bold" Background="#FFD5F0F7" />
+                <TextBox  Grid.Row="5" Grid.ColumnSpan="1" Grid.Column="1" Text="7000"  Grid.RowSpan="1" Background="#FFD8D3D3"/>
+                <Label Content=" IGR :"  Grid.Row="6" Grid.Column="0" Grid.RowSpan="1" Grid.ColumnSpan="1" FontWeight="Bold" Background="#FFD5F0F7" />
+                <TextBox  Grid.Row="6" Grid.ColumnSpan="1" Grid.Column="1" Text="7000"  Grid.RowSpan="1" Background="#FFD8D3D3"/>
+                <Label Content=" Mutuelle :"  Grid.Row="7" Grid.Column="0" Grid.RowSpan="1" Grid.ColumnSpan="1" FontWeight="Bold" Background="#FFD5F0F7" />
+                <TextBox  Grid.Row="7" Grid.ColumnSpan="1" Grid.Column="1" Text="20"  Grid.RowSpan="1" Background="#FFD8D3D3"/>
+                <Label Content=" Net à payer :"  Grid.Row="8" Grid.Column="0" Grid.RowSpan="1" Grid.ColumnSpan="1" FontWeight="Bold" Background="#FFD5F0F7" />
+                <TextBox  Grid.Row="8" Grid.ColumnSpan="1" Grid.Column="1" Text=""  Grid.RowSpan="1" />
+                <Label Content=" Taux :"  Grid.Row="0" Grid.Column="2" Grid.RowSpan="1" Grid.ColumnSpan="1" FontWeight="Bold" Background="#FFD5F0F7" />
+                <Label Content=" 36.65 :" Grid.Row="1" Grid.ColumnSpan="1" Grid.Column="2"  Grid.RowSpan="1" Background="#FFD8D3D3"/>
+                <Label Content=" 10% :" Grid.Row="2" Grid.ColumnSpan="1" Grid.Column="2"  Grid.RowSpan="1" Background="#FFD8D3D3"/>
+                <Label Content=" " Grid.Row="3" Grid.ColumnSpan="1" Grid.Column="2"  Grid.RowSpan="1" />
+                <Label Content=" 4.48% " Grid.Row="4" Grid.ColumnSpan="1" Grid.Column="2"  Grid.RowSpan="1" Background="#FFD8D3D3"/>
+                <Label Content=" 2.26% " Grid.Row="5" Grid.ColumnSpan="1" Grid.Column="2"  Grid.RowSpan="1" Background="#FFD8D3D3"/>
+                <Label Content=" 20% " Grid.Row="6" Grid.ColumnSpan="1" Grid.Column="2"  Grid.RowSpan="1" Background="#FFD8D3D3"/>
+                <Label Content=" 1 " Grid.Row="7" Grid.ColumnSpan="1" Grid.Column="2"  Grid.RowSpan="1" Background="#FFD8D3D3"/>
+                <Label Content=" " Grid.Row="8" Grid.ColumnSpan="1" Grid.Column="2"  Grid.RowSpan="1" />
+                <Label Content=" A payer :"  Grid.Row="0" Grid.Column="3" Grid.RowSpan="1" Grid.ColumnSpan="1" FontWeight="Bold" Background="#FFD5F0F7" />
+                <Label Content=" 7000.00€ :" Grid.Row="1" Grid.ColumnSpan="1" Grid.Column="3"  Grid.RowSpan="1" Background="#FFD8D3D3"/>
+                <Label Content=" 700.00€ :" Grid.Row="2" Grid.ColumnSpan="1" Grid.Column="3"  Grid.RowSpan="1" Background="#FFD8D3D3"/>
+                <Label Content=" 7700.00€ :" Grid.Row="3" Grid.ColumnSpan="1" Grid.Column="3"  Grid.RowSpan="1" Background="#FFD8D3D3"/>
+                <Label Content=" " Grid.Row="4" Grid.ColumnSpan="1" Grid.Column="3"  Grid.RowSpan="1" />
+                <Label Content=" " Grid.Row="5" Grid.ColumnSpan="1" Grid.Column="3"  Grid.RowSpan="1" />
+                <Label Content=" " Grid.Row="6" Grid.ColumnSpan="1" Grid.Column="3"  Grid.RowSpan="1" />
+                <Label Content=" " Grid.Row="7" Grid.ColumnSpan="1" Grid.Column="3"  Grid.RowSpan="1" />
+                <Label Content=" 5808.20€ :" Grid.Row="8" Grid.ColumnSpan="1" Grid.Column="3"  Grid.RowSpan="1" Background="#FFD8D3D3"/>
+                <Label Content=" A retenir :"  Grid.Row="0" Grid.Column="4" Grid.RowSpan="1" Grid.ColumnSpan="1" FontWeight="Bold" Background="#FFD5F0F7" />
+                <Label Content="" Grid.Row="1" Grid.ColumnSpan="1" Grid.Column="4"  Grid.RowSpan="1" />
+                <Label Content="" Grid.Row="2" Grid.ColumnSpan="1" Grid.Column="4"  Grid.RowSpan="1" />
+                <Label Content="" Grid.Row="3" Grid.ColumnSpan="1" Grid.Column="4"  Grid.RowSpan="1" />
+                <Label Content=" 313.60€ :" Grid.Row="4" Grid.ColumnSpan="1" Grid.Column="4"  Grid.RowSpan="1" Background="#FFD8D3D3"/>
+                <Label Content=" 158.20€ :" Grid.Row="5" Grid.ColumnSpan="1" Grid.Column="4"  Grid.RowSpan="1" Background="#FFD8D3D3"/>
+                <Label Content=" 1400.00€ :" Grid.Row="6" Grid.ColumnSpan="1" Grid.Column="4"  Grid.RowSpan="1" Background="#FFD8D3D3"/>
+                <Label Content=" 20.00€ :" Grid.Row="7" Grid.ColumnSpan="1" Grid.Column="4"  Grid.RowSpan="1" Background="#FFD8D3D3"/>
+                <Label Content=" " Grid.Row="8" Grid.ColumnSpan="1" Grid.Column="4"  Grid.RowSpan="1"/>
+
+
+
+
+
+
+
+
+
+
+
+
+            </Grid>
+        </GroupBox>
+        <Button Content="Enregister"  Grid.ColumnSpan="1" Grid.Column="4"  Grid.Row="14" Grid.RowSpan="1" Background="#FFE8F7B2"/>
+        <Button Content="Modifier"  Grid.ColumnSpan="2" Grid.Column="5"  Grid.Row="14" Grid.RowSpan="1" Background="#FFE8F7B2"/>
+    </Grid>
+</Window>

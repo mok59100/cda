@@ -1,5 +1,6 @@
 using ExerciceApi2.Data;
 using ExerciceApi2.Data.Profiles;
+using ExerciceApi2.Data.Services;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
@@ -33,6 +34,7 @@ namespace ExerciceApi2
              options.UseMySQL(Configuration.GetConnectionString("Default")));
             services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
             services.AddTransient<ClientsService>();
+            services.AddTransient<VentesService>();
             services.AddControllers();
             services.AddSwaggerGen(c =>
             {
