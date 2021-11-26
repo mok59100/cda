@@ -15,5 +15,18 @@ namespace ExerciceApi2.Data
         {
 
         }
-    }
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            modelBuilder.Entity<Ventes>(v1 =>
+            {
+                v1.ToTable("Ventes");
+                v1.Property(e => e.IdVente).HasColumnName("IdVente");
+            });
+            modelBuilder.Entity<Clients>(c1 =>
+            {
+                c1.ToTable("Clients");
+                c1.Property(e => e.IdVente).HasColumnName("IdVente");
+                c1.HasOne(e => e.Consumer).WithOne().HasForeignKey<Ventes>(e => e.IdVente);
+            });
+        }   }
 }

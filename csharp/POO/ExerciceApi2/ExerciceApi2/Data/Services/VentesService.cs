@@ -35,7 +35,7 @@ namespace ExerciceApi2.Data.Services
         }
         public Ventes GetVentesById(int id)
         {
-            var liste = (from c1 in _context.Clients
+            var ent = (from c1 in _context.Clients
                          join v1 in _context.Ventes
                          on c1.IdClient equals v1.IdClient
                          select new Ventes
@@ -47,18 +47,30 @@ namespace ExerciceApi2.Data.Services
 
                          }).FirstOrDefault(p => p.IdVente == id);
 
-            return liste;
+            return ent;
         }
 
         public void UpdateVentes(Ventes p)
         {
-           var liste = uptade Ventes   _context.SaveChanges();
+            if (p == null)
+            {
+                throw new ArgumentNullException(nameof(p));
+            }
+            var entite = new Clients()
+
+            { 
+                IdVente = p.IdVente,
+                Quantite = p.Quantite,
+                IdClient = p.IdClient,
+            };
+            _context.Update(p);
+            _context.SaveChanges();
 
             //nothing
             //on va mettre à jour le context dans le controller par mapping et passer 
             //les modifs à la base
-        }
-        public void DeleteVentes(Ventes p)
+
+            public void DeleteVentes(Ventes p)
         {
             //si l'objet ventes est null, on renvoi une exception
             if (p == null)
