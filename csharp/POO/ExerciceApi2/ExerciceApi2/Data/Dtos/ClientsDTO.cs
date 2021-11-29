@@ -10,6 +10,6 @@ namespace ExerciceApi2.Data.Dtos
         public string NomClient { get; set; }
         public string VilleClient { get; set; }
 
-        //public List<VentesDTO> v1 { get; set; }
+        public VentesDTO v1 { get; set; }
 }
 }

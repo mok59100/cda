@@ -12,7 +12,7 @@ namespace ExerciceApi2.Data.Models
         public int IdClient { get; set; }
         public string NomClient { get; set; }
         public string VilleClient { get; set; }
-       
-
-}
+        public int IdVente { get; set; }
+        public Ventes Consumer { get; set; }
+    }
 }

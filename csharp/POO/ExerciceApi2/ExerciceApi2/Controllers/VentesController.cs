@@ -75,18 +75,7 @@ namespace ExerciceApi2.Controllers
             _service.DeleteVentes(VentesModelFromRepo);
             return NoContent();
         }
-        //POST api/Ventes
-        [HttpPost]
-        public ActionResult<VentesDTO> CreateVentes(Ventes Vente)
-        {
-            //on ajoute l’objet à la base de données
-            _service.AddVentes(Vente);
-            //on retourne le chemin de findById avec l'objet créé
-            return CreatedAtRoute(nameof(GetVentesById), new
-            {
-                Id =
-         Vente.IdVente
-            }, Vente);
-        }
+      
+       
     }
 }

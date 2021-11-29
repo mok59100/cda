@@ -14,7 +14,7 @@ namespace ExerciceApi2.Data.Models
         public int IdClient { get; set; }
         public int Quantite { get; set; }
 
-        public Clients Consumer { get; set; }
+
 
     }
 }

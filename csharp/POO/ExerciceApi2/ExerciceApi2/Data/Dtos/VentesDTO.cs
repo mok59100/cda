@@ -13,6 +13,6 @@ namespace ExerciceApi2.Data.Dtos
         public int Quantite { get; set; }
 
         
-        public Clients Consumer { get; set; }
+  
     }
 }

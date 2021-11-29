@@ -74,16 +74,29 @@ namespace ExerciceApi2.Controllers
         }
         //POST api/Clients
         [HttpPost]
-        public ActionResult<ClientsDTO> CreateClients(Clients Client)
+        public ActionResult CreateClients(ClientsDTOIn p)
         {
             //on ajoute l’objet à la base de données
-            _service.AddClients(Client);
+            _service.AddClients(p);
             //on retourne le chemin de findById avec l'objet créé
-            return CreatedAtRoute(nameof(GetClientsById), new
-            {
-                Id =
-         Client.IdClient
-            }, Client);
+            return NoContent();
+           
         }
+        public void AddVentes(Ventes p)
+        {
+            if (p == null)
+            {
+                throw new ArgumentNullException(nameof(p));
+            }
+            var entite = new Ventes()
+            {
+                IdClient = p.IdClient,
+                Quantite = p.Quantite,
+                IdVente = p.IdVente,
+            };
+            _context.Ventes.Add(entite);
+            _context.SaveChanges();
+        }
+
     }
 }
