@@ -61,17 +61,17 @@ namespace ExerciceApi2.Controllers
             return NoContent();
         }
         //DELETE api/Clients/{id}
-        [HttpDelete("{id}")]
-        public ActionResult DeleteClients(int id)
-        {
-            var ClientsModelFromRepo = _service.GetClientsById(id);
-            if (ClientsModelFromRepo == null)
-            {
-                return NotFound();
-            }
-            _service.DeleteClients(ClientsModelFromRepo);
-            return NoContent();
-        }
+        //[HttpDelete("{id}")]
+        //public ActionResult DeleteClients(int id)
+        //{
+        //    var ClientsModelFromRepo = _service.GetClientsById(id);
+        //    if (ClientsModelFromRepo == null)
+        //    {
+        //        return NotFound();
+        //    }
+        //    _service.DeleteClients(ClientsModelFromRepo);
+        //    return NoContent();
+        //}
         //POST api/Clients
         [HttpPost]
         public ActionResult CreateClients(ClientsDTOIn p)
