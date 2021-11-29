@@ -23,9 +23,9 @@ namespace ExerciceApi2.Data.Profiles
                          on c1.IdClient equals v1.IdClient
                          select new Clients
                          {
-                             IdClient = v1.IdClient,
-                             NomClient =v1.NomClient,
-                             VilleClient=v1.VilleClient,
+                             IdClient = c1.IdClient,
+                             NomClient =c1.NomClient,
+                             VilleClient=c1.VilleClient,
 
 
 
@@ -35,17 +35,18 @@ namespace ExerciceApi2.Data.Profiles
 
             return liste;
         }
-        public Ventes GetVentesById(int id)
+        public Clients GetClientsById(int id)
         {
             var ent = (from c1 in _context.Clients
                        join v1 in _context.Ventes
                        on c1.IdClient equals v1.IdClient
-                       select new Ventes
+                       select new Clients
                        {
-                           IdVente = v1.IdVente,
-                           Quantite = v1.Quantite,
-                           IdClient = v1.IdClient,
-                       
+                           IdVente = c1.IdVente,
+                           NomClient = c1.NomClient,
+                           VilleClient = c1.VilleClient,
+                           ent2=c1
+
 
                        }).FirstOrDefault(p => p.IdVente == id);
 
