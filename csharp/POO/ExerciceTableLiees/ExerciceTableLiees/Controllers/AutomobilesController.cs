@@ -47,15 +47,16 @@ namespace ExerciceTableLiees.Controllers
 
         //POST api/Automobiles
         [HttpPost]
-        public ActionResult<AutomobilesDTO> CreateAutomobile(Automobile obj)
+        public ActionResult<AutomobilesDTO> CreateAutomobile(AutomobileDTOIn obj)
         {
-            _service.AddAutomobile(obj);
-            return CreatedAtRoute(nameof(GetAutomobileById), new { Id = obj.IdAuto }, obj);
+            Automobile newObj = _mapper.Map<Automobile>(obj);
+            _service.AddAutomobile(newObj);
+            return CreatedAtRoute(nameof(GetAutomobileById), new { Id = newObj.IdAuto }, newObj);
         }
 
         //POST api/Automobiles/{id}
         [HttpPut("{id}")]
-        public ActionResult UpdateAutomobile(int id, AutomobilesDTO obj)
+        public ActionResult UpdateAutomobile(int id, AutomobileDTOIn obj)
         {
             Automobile objFromRepo = _service.GetAutomobileById(id);
             if (objFromRepo == null)
