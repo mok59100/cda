@@ -90,4 +90,42 @@ FOREIGN KEY(idBureau) REFERENCES Bureaux(idBureau),
 ADD CONSTRAINT FK_Gere_courrier
 FOREIGN KEY(idCourrier) REFERENCES Courriers(idCourrier);
 
+DROP DATABASE IF EXISTS LocationAuto; 
+CREATE DATABASE LocationAuto DEFAULT CHARACTER SET utf8;
+USE LocationAuto;
 
+CREATE TABLE AgenceLocations(
+   IdAgence INT,
+   NomGerant VARCHAR(50),
+   Adresse VARCHAR(50),
+   NumeroTelephone INT,
+   PRIMARY KEY(IdAgence)
+)ENGINE=InnoDB;
+
+CREATE TABLE Clients(
+   IdClient INT,
+   Nom VARCHAR(50),
+   Prenom VARCHAR(50),
+   Adresse VARCHAR(50),
+   NumTelephone INT,
+   PRIMARY KEY(IdClient)
+)ENGINE=InnoDB;
+
+CREATE TABLE Voitures(
+   IdVoiture INT,
+   Marque VARCHAR(50),
+   Modele VARCHAR(50),
+   IdAgence INT NOT NULL,
+   PRIMARY KEY(IdVoiture),
+   FOREIGN KEY(IdAgence) REFERENCES AgenceLocations(IdAgence)
+)ENGINE=InnoDB;
+
+CREATE TABLE Location(
+   IdClient INT,
+   IdVoiture INT,
+   DateDeLocation DATE,
+   KilometrageSorti INT,
+   PRIMARY KEY(IdClient, IdVoiture),
+   FOREIGN KEY(IdClient) REFERENCES Clients(IdClient),
+   FOREIGN KEY(IdVoiture) REFERENCES Voitures(IdVoiture)
+)ENGINE=InnoDB;

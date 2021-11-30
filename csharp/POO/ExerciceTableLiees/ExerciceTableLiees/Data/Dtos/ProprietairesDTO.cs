@@ -8,11 +8,25 @@ namespace ExerciceTableLiees.Data.Dtos
 {
     public class ProprietairesDTO
     {
-        public int IdProprio { get; set; }
+      
+        public string Nom { get; set; }
+        public string Prenom { get; set; }
+        public string Adresse { get; set; }
+        public ICollection<AutomobilesDTOOut> Auto { get; set; }
+    }
+    
+    
+    public partial class ProprietairesDTOIn
+    {
+
+
+        
         public string Nom { get; set; }
         public string Prenom { get; set; }
         public string Adresse { get; set; }
 
-        public ICollection<AutomobilesDTOOut> Auto { get; set; }
+        
+
     }
+
 }

@@ -36,7 +36,7 @@ namespace ExerciceTableLiees.Controllers
         }
 
         //GET api//{i}
-        [HttpGet("{id}", Name = "GetProprietairesById")]
+        [HttpGet("{id}", Name = "GetProprietaireById")]
         public ActionResult<ProprietairesDTO> GetProprietaireById(int id)
         {
             Proprietaire commandItem = _service.GetProprietaireById(id);
@@ -49,15 +49,16 @@ namespace ExerciceTableLiees.Controllers
 
         //POST api/
         [HttpPost]
-        public ActionResult<ProprietairesDTO> CreateProprietaire(Proprietaire obj)
+        public ActionResult<ProprietairesDTO> CreateProprietaire(ProprietairesDTOIn obj)
         {
-            _service.AddProprietaire(obj);
-            return CreatedAtRoute(nameof(GetProprietaireById), new { Id = obj.IdProprio }, obj);
+            Proprietaire newObj = _mapper.Map<Proprietaire>(obj);
+            _service.AddProprietaire(newObj);
+            return CreatedAtRoute(nameof(GetProprietaireById), new { Id = newObj.IdProprio }, newObj);
         }
 
         //POST api//{id}
         [HttpPut("{id}")]
-        public ActionResult UpdateProprietaire(int id, ProprietairesDTO obj)
+        public ActionResult UpdateProprietaire(int id, ProprietairesDTOIn obj)
         {
         Proprietaire objFromRepo = _service.GetProprietaireById(id);
             if (objFromRepo == null)

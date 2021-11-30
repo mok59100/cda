@@ -14,6 +14,8 @@ namespace ExerciceTableLiees.Data.Profiles
         {
             CreateMap <ProprietairesDTO, Proprietaire>(); 
             CreateMap <Proprietaire, ProprietairesDTO>();
+            CreateMap<ProprietairesDTOIn, Proprietaire>();
+            CreateMap<Proprietaire, ProprietairesDTOIn>();
 
         }
     }
