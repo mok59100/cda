@@ -78,6 +78,13 @@ namespace ExerciceTableLiees.Data.Models
                     .HasMaxLength(50)
                     .HasColumnName("prenom");
             });
+            modelBuilder.Entity<Automobile>(v1 =>
+            {
+                v1.ToTable("Automobiles");
+                v1.Property(v => v.IdProprio).HasColumnName("IdProprio");
+                v1.HasOne<Proprietaire>(p => p.Conducteur).WithMany(p=>p.Auto).HasForeignKey(p => p.IdProprio);
+
+            });
 
             OnModelCreatingPartial(modelBuilder);
         }

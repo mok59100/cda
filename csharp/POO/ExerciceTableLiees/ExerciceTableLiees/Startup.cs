@@ -32,6 +32,7 @@ namespace ExerciceTableLiees
             services.AddDbContext<garagesContext>(options => options.UseMySQL(Configuration.GetConnectionString("def")));
             services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
             services.AddTransient<AutomobilesServices>();
+            services.AddTransient<ProprietairesServices>();
             services.AddControllers();
             services.AddSwaggerGen(c =>
             {

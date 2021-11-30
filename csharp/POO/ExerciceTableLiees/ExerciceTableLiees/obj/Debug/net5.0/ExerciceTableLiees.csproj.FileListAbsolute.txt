@@ -15,6 +15,8 @@ U:\59011-07-10\csharp\POO\ExerciceTableLiees\ExerciceTableLiees\bin\Debug\net5.0
 U:\59011-07-10\csharp\POO\ExerciceTableLiees\ExerciceTableLiees\bin\Debug\net5.0\K4os.Compression.LZ4.dll
 U:\59011-07-10\csharp\POO\ExerciceTableLiees\ExerciceTableLiees\bin\Debug\net5.0\K4os.Compression.LZ4.Streams.dll
 U:\59011-07-10\csharp\POO\ExerciceTableLiees\ExerciceTableLiees\bin\Debug\net5.0\K4os.Hash.xxHash.dll
+U:\59011-07-10\csharp\POO\ExerciceTableLiees\ExerciceTableLiees\bin\Debug\net5.0\Microsoft.AspNetCore.JsonPatch.dll
+U:\59011-07-10\csharp\POO\ExerciceTableLiees\ExerciceTableLiees\bin\Debug\net5.0\Microsoft.AspNetCore.Mvc.NewtonsoftJson.dll
 U:\59011-07-10\csharp\POO\ExerciceTableLiees\ExerciceTableLiees\bin\Debug\net5.0\Microsoft.EntityFrameworkCore.dll
 U:\59011-07-10\csharp\POO\ExerciceTableLiees\ExerciceTableLiees\bin\Debug\net5.0\Microsoft.EntityFrameworkCore.Abstractions.dll
 U:\59011-07-10\csharp\POO\ExerciceTableLiees\ExerciceTableLiees\bin\Debug\net5.0\Microsoft.EntityFrameworkCore.Design.dll
@@ -25,6 +27,8 @@ U:\59011-07-10\csharp\POO\ExerciceTableLiees\ExerciceTableLiees\bin\Debug\net5.0
 U:\59011-07-10\csharp\POO\ExerciceTableLiees\ExerciceTableLiees\bin\Debug\net5.0\Ubiety.Dns.Core.dll
 U:\59011-07-10\csharp\POO\ExerciceTableLiees\ExerciceTableLiees\bin\Debug\net5.0\ZstdNet.dll
 U:\59011-07-10\csharp\POO\ExerciceTableLiees\ExerciceTableLiees\bin\Debug\net5.0\MySql.EntityFrameworkCore.dll
+U:\59011-07-10\csharp\POO\ExerciceTableLiees\ExerciceTableLiees\bin\Debug\net5.0\Newtonsoft.Json.dll
+U:\59011-07-10\csharp\POO\ExerciceTableLiees\ExerciceTableLiees\bin\Debug\net5.0\Newtonsoft.Json.Bson.dll
 U:\59011-07-10\csharp\POO\ExerciceTableLiees\ExerciceTableLiees\bin\Debug\net5.0\Swashbuckle.AspNetCore.Swagger.dll
 U:\59011-07-10\csharp\POO\ExerciceTableLiees\ExerciceTableLiees\bin\Debug\net5.0\Swashbuckle.AspNetCore.SwaggerGen.dll
 U:\59011-07-10\csharp\POO\ExerciceTableLiees\ExerciceTableLiees\bin\Debug\net5.0\Swashbuckle.AspNetCore.SwaggerUI.dll
@@ -32,7 +36,6 @@ U:\59011-07-10\csharp\POO\ExerciceTableLiees\ExerciceTableLiees\bin\Debug\net5.0
 U:\59011-07-10\csharp\POO\ExerciceTableLiees\ExerciceTableLiees\bin\Debug\net5.0\System.Diagnostics.DiagnosticSource.dll
 U:\59011-07-10\csharp\POO\ExerciceTableLiees\ExerciceTableLiees\bin\Debug\net5.0\System.Security.Cryptography.ProtectedData.dll
 U:\59011-07-10\csharp\POO\ExerciceTableLiees\ExerciceTableLiees\bin\Debug\net5.0\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll
-U:\59011-07-10\csharp\POO\ExerciceTableLiees\ExerciceTableLiees\obj\Debug\net5.0\ExerciceTableLiees.csproj.AssemblyReference.cache
 U:\59011-07-10\csharp\POO\ExerciceTableLiees\ExerciceTableLiees\obj\Debug\net5.0\ExerciceTableLiees.GeneratedMSBuildEditorConfig.editorconfig
 U:\59011-07-10\csharp\POO\ExerciceTableLiees\ExerciceTableLiees\obj\Debug\net5.0\ExerciceTableLiees.AssemblyInfoInputs.cache
 U:\59011-07-10\csharp\POO\ExerciceTableLiees\ExerciceTableLiees\obj\Debug\net5.0\ExerciceTableLiees.AssemblyInfo.cs
@@ -48,7 +51,4 @@ U:\59011-07-10\csharp\POO\ExerciceTableLiees\ExerciceTableLiees\obj\Debug\net5.0
 U:\59011-07-10\csharp\POO\ExerciceTableLiees\ExerciceTableLiees\obj\Debug\net5.0\ref\ExerciceTableLiees.dll
 U:\59011-07-10\csharp\POO\ExerciceTableLiees\ExerciceTableLiees\obj\Debug\net5.0\ExerciceTableLiees.pdb
 U:\59011-07-10\csharp\POO\ExerciceTableLiees\ExerciceTableLiees\obj\Debug\net5.0\ExerciceTableLiees.genruntimeconfig.cache
-U:\59011-07-10\csharp\POO\ExerciceTableLiees\ExerciceTableLiees\bin\Debug\net5.0\Microsoft.AspNetCore.JsonPatch.dll
-U:\59011-07-10\csharp\POO\ExerciceTableLiees\ExerciceTableLiees\bin\Debug\net5.0\Microsoft.AspNetCore.Mvc.NewtonsoftJson.dll
-U:\59011-07-10\csharp\POO\ExerciceTableLiees\ExerciceTableLiees\bin\Debug\net5.0\Newtonsoft.Json.dll
-U:\59011-07-10\csharp\POO\ExerciceTableLiees\ExerciceTableLiees\bin\Debug\net5.0\Newtonsoft.Json.Bson.dll
+U:\59011-07-10\csharp\POO\ExerciceTableLiees\ExerciceTableLiees\obj\Debug\net5.0\ExerciceTableLiees.csproj.AssemblyReference.cache

@@ -11,7 +11,7 @@ using System.Threading.Tasks;
 
 namespace ExerciceTableLiees.Controllers
 {
-    [Route("api/proprietaires")]
+    [Route("api/Automobiles")]
     [ApiController]
     public class AutomobilesController :ControllerBase
     {
@@ -27,9 +27,9 @@ namespace ExerciceTableLiees.Controllers
 
         //GET api/Automobiles
         [HttpGet]
-        public ActionResult<IEnumerable<AutomobilesDTO>> GetAllAutomobiles()
+        public ActionResult<IEnumerable<AutomobilesDTO>> GetAllAutomobile()
         {
-            IEnumerable<Automobile> listeAutomobiles = _service.GetAllAutomobiles();
+            IEnumerable<Automobile> listeAutomobiles = _service.GetAllAutomobile();
             return Ok(_mapper.Map<IEnumerable<AutomobilesDTO>>(listeAutomobiles));
         }
 

@@ -13,7 +13,9 @@ namespace ExerciceTableLiees.Data.Profiles
         public AutomobilesProfiles()
         {
             CreateMap<AutomobilesDTO, Automobile>();
-            CreateMap< Automobile, AutomobilesDTO>();
+            CreateMap<Automobile, AutomobilesDTO>();
+            CreateMap<AutomobilesDTOOut, Automobile>();
+            CreateMap<Automobile, AutomobilesDTOOut>();
 
         }
     }
