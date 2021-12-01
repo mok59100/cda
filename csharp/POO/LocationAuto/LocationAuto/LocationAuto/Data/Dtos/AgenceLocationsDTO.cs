@@ -12,23 +12,50 @@ namespace LocationAuto.Data
     //    public string Adresse { get; set; }
     //    public int? NumeroTelephone { get; set; }
     //}
-    public partial class AgenceLocationsDTOin()
+    public partial class AgenceLocationsDTO
     {
-       
-        // les données de la table sans les id et sans les clés etrangères
-        public string NomGerant { get; set; }
+        public  AgenceLocationsDTO()
+    { 
+    
+    
+    }
+
+
+    // les données de la table sans les id et sans les clés etrangères
+       public string NomGerant { get; set; }
         public string Adresse { get; set; }
         public int? NumeroTelephone { get; set; }
     }
 
     public partial class AgenceLocationsDTOOut
     {
+        public AgenceLocationsDTOOut()
+        {
+
+
+        }
+
 
         // les données de la table sans les id et sans les clés etrangères
-        public int IdAgence { get; set; }
+        
         public string NomGerant { get; set; }
         public string Adresse { get; set; }
         public int? NumeroTelephone { get; set; }
     }
+    public partial class AgenceLocationsDTOOutAvecLocation
+    {
+        public AgenceLocationsDTOOutAvecLocation()
+        {
+
+
+        }
+
+
+        // les données de la table sans les id et sans les clés etrangères
+        public string NomGerant { get; set; }
+        public string Adresse { get; set; }
+        public int? NumeroTelephone { get; set; }
+    }
+
 
 }
