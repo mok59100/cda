@@ -1,4 +1,5 @@
 ﻿using LocationAuto.Data.Models;
+using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -39,19 +40,20 @@ namespace LocationAuto.Data.Service
 
         public IEnumerable<Voitures> GetAllVoitures()
         {
-            return _context.Voitures.ToList();
+            return _context.Voitures.Include("IdAgenceNavigation").Include("Agence").ToList();
         }
+    
 
-        public Voitures GetVoituresById(int id)
-        {
-            return _context.Voitures.FirstOrDefault(obj => obj.IdVoiture == id);
-        }
+    public Voitures GetVoituresById(int id)
+    {
+        return _context.Voitures.Include("IdAgenceNavigation").Include("Agence").FirstOrDefault(obj => obj.IdVoiture == id);
+    }
 
-        public void UpdateVoitures(Voitures obj)
+    public void UpdateVoitures(Voitures obj)
         {
             _context.SaveChanges();
         }
 
-
     }
 }
+

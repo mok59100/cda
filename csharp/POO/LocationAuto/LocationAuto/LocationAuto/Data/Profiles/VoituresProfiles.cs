@@ -15,7 +15,15 @@ namespace LocationAuto.Profiles
 
             CreateMap<Voitures, VoituresDTO>();
             CreateMap<VoituresDTO, Voitures>();
-
+            CreateMap<Voitures, VoituresDTOIn>();
+            CreateMap<VoituresDTOIn, Voitures>();
+            CreateMap<Voitures, VoituresDTOOut>();
+            CreateMap<VoituresDTOOut, Voitures>();
+            
+            CreateMap<Voitures, VoituresDTOOutAgence>();
+            CreateMap<VoituresDTOOutAgence, Voitures>();
+            CreateMap<Voitures, VoituresDTOOutLocation>();
+            CreateMap<VoituresDTOOutLocation, Voitures>();
 
         }
 

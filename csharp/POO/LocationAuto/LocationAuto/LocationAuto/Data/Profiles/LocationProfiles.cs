@@ -15,6 +15,14 @@ namespace LocationAuto.Profiles
         {
             CreateMap<Location, LocationDTO>();
             CreateMap<LocationDTO, Location>();
+            CreateMap<Location, LocationDTOOut>();
+            CreateMap<LocationDTOOut, Location>();
+            CreateMap<Location, LocationDTOOutVoiture>();
+            CreateMap<LocationDTOOutVoiture, Location>();
+            CreateMap<Location, LocationDTOOutClient>();
+            CreateMap<LocationDTOOutClient, Location>();
+            CreateMap<Location, LocationDTOOutVoitureClient>();
+            CreateMap<LocationDTOOutVoitureClient, Location>();
         }
 
 

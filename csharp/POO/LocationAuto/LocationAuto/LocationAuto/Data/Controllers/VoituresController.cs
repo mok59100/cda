@@ -28,30 +28,31 @@ namespace LocationAuto.Data.Controllers
 
         //GET api/NomController
         [HttpGet]
-        public ActionResult<IEnumerable<VoituresDTO>> GetAllVoitures()
+        public ActionResult<IEnumerable<VoituresDTOOut>> GetAllVoitures()
         {
             IEnumerable<Voitures> listeVoitures = _service.GetAllVoitures();
-            return Ok(_mapper.Map<IEnumerable<VoituresDTO>>(listeVoitures));
+            return Ok(_mapper.Map<IEnumerable<VoituresDTOOut>>(listeVoitures));
         }
 
         //GET api/NomController/{i}
         [HttpGet("{id}", Name = "GetVoituresById")]
-        public ActionResult<VoituresDTO> GetVoituresById(int id)
+        public ActionResult<VoituresDTOOut> GetVoituresById(int id)
         {
             Voitures commandItem = _service.GetVoituresById(id);
             if (commandItem != null)
             {
-                return Ok(_mapper.Map<VoituresDTO>(commandItem));
+                return Ok(_mapper.Map<VoituresDTOOut>(commandItem));
             }
             return NotFound();
         }
 
         //POST api/NomController
         [HttpPost]
-        public ActionResult<VoituresDTO> CreateVoitures(Voitures obj)
+        public ActionResult<Voitures> CreateVoitures(VoituresDTO obj)
         {
-            _service.AddVoitures(obj);
-            return CreatedAtRoute(nameof(GetVoituresById), new { Id = obj.IdVoiture }, obj);
+            Voitures newVoitures = _mapper.Map<Voitures>(obj);
+            _service.AddVoitures(newVoitures);
+            return CreatedAtRoute(nameof(GetVoituresById), new { Id = newVoitures.IdVoiture }, newVoitures);
         }
 
         //POST api/NomController/{id}

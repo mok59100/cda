@@ -1,22 +1,56 @@
-﻿using System;
+﻿using LocationAuto.Data.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
 namespace LocationAuto.Data
 {
-    public class LocationDTO
+    public partial class LocationDTO
     {
-        public int IdLocation { get; set; }
-        public int IdClient { get; set; }
-        public int IdVoiture { get; set; }
+      
+   
         public DateTime DateDeLocation { get; set; }
         public int KilometrageSorti { get; set; }
     }
-    public class LocationDTOIn
+    public partial class LocationDTOOut
+    {
+       
+    
+        public int IdClient { get; set; }
+        public int IdVoiture { get; set; }
+        public DateTime DateDeLocation { get; set; }
+       public int KilometrageSorti { get; set; }
+     }
+    public partial class LocationDTOOutVoiture
     {
       
-    public DateTime DateDeLocation { get; set; }
-    public int KilometrageSorti { get; set; }
-}
+
+   
+        public int IdVoiture { get; set; }
+        public DateTime DateDeLocation { get; set; }
+        public int KilometrageSorti { get; set; }
+
+        public virtual Voitures IdVoitureNavigation { get; set; }
+    }
+    public partial class LocationDTOOutClient
+    {
+       
+
+        public int IdClient { get; set; }
+        public DateTime DateDeLocation { get; set; }
+        public int KilometrageSorti { get; set; }
+        public virtual Clients IdClientNavigation { get; set; }
+    }
+    public partial class LocationDTOOutVoitureClient
+    {
+       
+
+        public int IdVoiture { get; set; }
+        public int IdClient { get; set; }
+        public DateTime DateDeLocation { get; set; }
+        public int KilometrageSorti { get; set; }
+        public virtual Clients IdClientNavigation { get; set; }
+        public virtual Voitures IdVoitureNavigation { get; set; }
+    }
 }

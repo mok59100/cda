@@ -15,12 +15,16 @@ namespace LocationAuto.Profiles
 
 
 
-        { 
-
-
+        {
 
             CreateMap<AgenceLocations, AgenceLocationsDTO>();
             CreateMap<AgenceLocationsDTO, AgenceLocations>();
+
+            CreateMap<AgenceLocations, AgenceLocationsDTOOut>();
+            CreateMap<AgenceLocationsDTOOut, AgenceLocations>();
+
+            CreateMap<AgenceLocations,AgenceLocationsDTOOutAvecLocation>();
+            CreateMap<AgenceLocationsDTOOutAvecLocation, AgenceLocations>();
 
 
 

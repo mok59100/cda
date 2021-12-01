@@ -30,35 +30,36 @@ namespace LocationAuto.Data.Controllers
 
         //GET api/
         [HttpGet]
-        public ActionResult<IEnumerable<AgenceLocationsDTO>> GetAll()
+        public ActionResult<IEnumerable<LocationDTOOutVoiture>> GetAllAgenceLocations()
         {
             IEnumerable<AgenceLocations> listeAgenceLocations = _service.GetAllAgenceLocations();
-            return Ok(_mapper.Map<IEnumerable<AgenceLocationsDTO>>(listeAgenceLocations));
+            return Ok(_mapper.Map<IEnumerable<LocationDTOOutVoiture>>(listeAgenceLocations));
         }
 
         //GET api//{i}
         [HttpGet("{id}", Name = "GetAgenceLocationsById")]
-        public ActionResult<AgenceLocationsDTO> GetAgenceLocationsById(int id)
+        public ActionResult<LocationDTOOutVoiture> GetAgenceLocationsById(int id)
         {
             AgenceLocations commandItem = _service.GetAgenceLocationsById(id);
             if (commandItem != null)
             {
-                return Ok(_mapper.Map<AgenceLocationsDTO>(commandItem));
+                return Ok(_mapper.Map<LocationDTOOutVoiture>(commandItem));
             }
             return NotFound();
         }
 
         //POST api/
         [HttpPost]
-        public ActionResult<AgenceLocationsDTO> CreateAgenceLocations(AgenceLocations obj)
+        public ActionResult<AgenceLocationsDTO> CreateAgenceLocations(AgenceLocationsDTOOut obj)
         {
-            _service.AddAgenceLocations(obj);
-            return CreatedAtRoute(nameof(GetAgenceLocationsById), new { Id = obj.IdAgence }, obj);
+            AgenceLocations newAgenceLocations = _mapper.Map<AgenceLocations>(obj);
+            _service.AddAgenceLocations(newAgenceLocations);
+            return CreatedAtRoute(nameof(GetAgenceLocationsById), new { Id = newAgenceLocations.IdAgence }, newAgenceLocations);
         }
 
         //POST api//{id}
         [HttpPut("{id}")]
-        public ActionResult UpdateAgenceLocations(int id, AgenceLocationsDTO obj)
+        public ActionResult UpdateAgenceLocations(int id, AgenceLocationsDTOOut obj)
         {
             AgenceLocations objFromRepo = _service.GetAgenceLocationsById(id);
             if (objFromRepo == null)

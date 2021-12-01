@@ -1,4 +1,5 @@
-﻿using System;
+﻿using LocationAuto.Data.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -20,9 +21,9 @@ namespace LocationAuto.Data
     
     }
 
-
-    // les données de la table sans les id et sans les clés etrangères
-       public string NomGerant { get; set; }
+      
+        // les données de la table sans les id et sans les clés etrangères
+        public string NomGerant { get; set; }
         public string Adresse { get; set; }
         public int? NumeroTelephone { get; set; }
     }
@@ -37,7 +38,7 @@ namespace LocationAuto.Data
 
 
         // les données de la table sans les id et sans les clés etrangères
-        
+        public int IdAgence { get; set; }
         public string NomGerant { get; set; }
         public string Adresse { get; set; }
         public int? NumeroTelephone { get; set; }
@@ -47,7 +48,7 @@ namespace LocationAuto.Data
         public AgenceLocationsDTOOutAvecLocation()
         {
 
-
+            Location = new HashSet<LocationDTOOutVoiture>();
         }
 
 
@@ -55,6 +56,8 @@ namespace LocationAuto.Data
         public string NomGerant { get; set; }
         public string Adresse { get; set; }
         public int? NumeroTelephone { get; set; }
+
+        public virtual ICollection<LocationDTOOutVoiture> Location { get; set; }
     }
 
 

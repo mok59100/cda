@@ -1,5 +1,5 @@
 ﻿using LocationAuto.Data.Models;
-
+using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -40,12 +40,12 @@ namespace LocationAuto.Data.Services
 
         public IEnumerable<Location> GetAllLocation()
         {
-            return _context.Locations.ToList();
+            return _context.Locations.Include("IdVoitureNavigation").Include("IdClientNavigation").ToList();
         }
 
         public Location GetLocationById(int id)
         {
-            return _context.Locations.FirstOrDefault(obj => obj.IdLocation == id);
+            return _context.Locations.Include("IdVoitureNavigation").Include("IdClientNavigation").FirstOrDefault(obj => obj.IdLocation == id);
         }
 
         public void UpdateLocation(Location obj)

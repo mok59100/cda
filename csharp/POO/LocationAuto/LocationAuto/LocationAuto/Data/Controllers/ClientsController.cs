@@ -27,35 +27,37 @@ namespace LocationAuto.Data.Controllers
 
         //GET api/NomController
         [HttpGet]
-        public ActionResult<IEnumerable<ClientsDTO>> GetAllClients()
+        public ActionResult<IEnumerable<ClientsDTOOut>> GetAllClients()
         {
             IEnumerable<Clients> listeClients = _service.GetAllClients();
-            return Ok(_mapper.Map<IEnumerable<ClientsDTO>>(listeClients));
+            return Ok(_mapper.Map<IEnumerable<ClientsDTOOut>>(listeClients));
         }
 
         //GET api/NomController/{i}
         [HttpGet("{id}", Name = "GetNomModelById")]
-        public ActionResult<ClientsDTO> GetClientsById(int id)
+        public ActionResult<ClientsDTOOut> GetClientsById(int id)
         {
             Clients commandItem = _service.GetClientsById(id);
             if (commandItem != null)
             {
-                return Ok(_mapper.Map<ClientsDTO>(commandItem));
+                return Ok(_mapper.Map<ClientsDTOOut>(commandItem));
             }
             return NotFound();
         }
 
         //POST api/NomController
         [HttpPost]
-        public ActionResult<ClientsDTO> CreateClients(Clients obj)
+        public ActionResult<Clients> CreateClients(ClientsDTOIn obj)
         {
-            _service.AddClients(obj);
-            return CreatedAtRoute(nameof(GetClientsById), new { Id = obj.IdClient }, obj);
+            Clients newClients = _mapper.Map<Clients>(obj);
+
+            _service.AddClients(newClients);
+            return CreatedAtRoute(nameof(GetClientsById), new { Id = newClients.IdClient }, newClients);
         }
 
         //POST api/NomController/{id}
         [HttpPut("{id}")]
-        public ActionResult UpdateClients(int id, ClientsDTO obj)
+        public ActionResult UpdateClients(int id, ClientsDTOIn obj)
         {
             Clients objFromRepo = _service.GetClientsById(id);
             if (objFromRepo == null)

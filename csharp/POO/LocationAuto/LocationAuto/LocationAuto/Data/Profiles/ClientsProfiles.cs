@@ -13,7 +13,11 @@ namespace LocationAuto.Profiles
 public ClientsProfiles()
         {
             CreateMap<Clients, ClientsDTO>();
-            CreateMap<ClientsDTO, Clients>();
+            CreateMap<ClientsDTO, Clients>(); 
+            CreateMap<Clients, ClientsDTOIn>();
+            CreateMap<ClientsDTOIn, Clients>(); 
+            CreateMap<Clients, ClientsDTOOut>();
+            CreateMap<ClientsDTOOut, Clients>();
         }
 
 
