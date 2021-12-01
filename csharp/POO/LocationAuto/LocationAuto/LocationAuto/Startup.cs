@@ -1,7 +1,10 @@
+using LocationAuto.Data.Service;
+using LocationAuto.Data.Services;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
@@ -11,6 +14,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using LocationAuto.Data.Models;
 
 namespace LocationAuto
 {
@@ -26,7 +30,11 @@ namespace LocationAuto
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-           
+            services.AddDbContext<locationautoContext>(options => options.UseMySQL(Configuration.GetConnectionString("MaConnection")));
+            services.AddTransient<AgenceLocationsServices>();
+            services.AddTransient<ClientsServices>();
+            services.AddTransient<LocationServices>();
+            services.AddTransient<VoituresServices>();
             services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
             services.AddControllers();
             services.AddSwaggerGen(c =>

@@ -1,51 +1,54 @@
-﻿using System;
+﻿using LocationAuto.Data.Models;
+
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+
 
 namespace LocationAuto.Data.Services
 {
     public class LocationServices
     {
 
-        private readonly MyDbContext _context;
+        private readonly locationautoContext _context;
 
-        public NomServiceServices(MyDbContext context)
+        public LocationServices(locationautoContext context)
         {
             _context = context;
         }
 
-        public void AddnomModel(nomModel obj)
+        public void AddLocation(Location obj)
         {
             if (obj == null)
             {
                 throw new ArgumentNullException(nameof(obj));
             }
-            _context.NomService.Add(obj);
+            _context.Locations.Add(obj);
             _context.SaveChanges();
         }
 
-        public void DeletenomModel(nomModel obj)
+        public void DeleteLocation(Location obj)
         {
             if (obj == null)
             {
                 throw new ArgumentNullException(nameof(obj));
             }
-            _context.NomService.Remove(obj);
+            _context.Locations.Remove(obj);
             _context.SaveChanges();
         }
 
-        public IEnumerable<nomModel> GetAllNomService()
+        public IEnumerable<Location> GetAllLocation()
         {
-            return _context.NomService.ToList();
+            return _context.Locations.ToList();
         }
 
-        public nomModel GetnomModelById(int id)
+        public Location GetLocationById(int id)
         {
-            return _context.NomService.FirstOrDefault(obj => obj.Id == id);
+            return _context.Locations.FirstOrDefault(obj => obj.IdLocation == id);
         }
 
-        public void UpdatenomModel(nomModel obj)
+        public void UpdateLocation(Location obj)
         {
             _context.SaveChanges();
         }

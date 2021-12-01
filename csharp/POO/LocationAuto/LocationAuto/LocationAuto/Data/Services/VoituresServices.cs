@@ -1,51 +1,53 @@
-﻿using System;
+﻿using LocationAuto.Data.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+
 
 namespace LocationAuto.Data.Service
 {
     public class VoituresServices
     {
 
-        private readonly MyDbContext _context;
+        private readonly locationautoContext _context;
 
-        public NomServiceServices(MyDbContext context)
+        public VoituresServices(locationautoContext context)
         {
-            _context = context;
+           _context = context;
         }
 
-        public void AddnomModel(nomModel obj)
-        {
-            if (obj == null)
-            {
-                throw new ArgumentNullException(nameof(obj));
-            }
-            _context.NomService.Add(obj);
-            _context.SaveChanges();
-        }
-
-        public void DeletenomModel(nomModel obj)
+        public void AddVoitures(Voitures obj)
         {
             if (obj == null)
             {
                 throw new ArgumentNullException(nameof(obj));
             }
-            _context.NomService.Remove(obj);
+            _context.Voitures.Add(obj);
             _context.SaveChanges();
         }
 
-        public IEnumerable<nomModel> GetAllNomService()
+        public void DeleteVoitures(Voitures obj)
         {
-            return _context.NomService.ToList();
+            if (obj == null)
+            {
+                throw new ArgumentNullException(nameof(obj));
+            }
+            _context.Voitures.Remove(obj);
+            _context.SaveChanges();
         }
 
-        public nomModel GetnomModelById(int id)
+        public IEnumerable<Voitures> GetAllVoitures()
         {
-            return _context.NomService.FirstOrDefault(obj => obj.Id == id);
+            return _context.Voitures.ToList();
         }
 
-        public void UpdatenomModel(nomModel obj)
+        public Voitures GetVoituresById(int id)
+        {
+            return _context.Voitures.FirstOrDefault(obj => obj.IdVoiture == id);
+        }
+
+        public void UpdateVoitures(Voitures obj)
         {
             _context.SaveChanges();
         }

@@ -1,51 +1,53 @@
-﻿using System;
+﻿using LocationAuto.Data.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+
 
 namespace LocationAuto.Data.Services
 {
     public class AgenceLocationsServices
     {
 
-        private readonly MyDbContext _context;
+       private readonly locationautoContext _context;
 
-        public NomServiceServices(MyDbContext context)
+       public AgenceLocationsServices(locationautoContext context)
         {
             _context = context;
         }
 
-        public void AddnomModel(nomModel obj)
+        public void AddAgenceLocations(AgenceLocations obj)
         {
             if (obj == null)
             {
                 throw new ArgumentNullException(nameof(obj));
             }
-            _context.NomService.Add(obj);
+            _context.AgenceLocations.Add(obj);
             _context.SaveChanges();
         }
 
-        public void DeletenomModel(nomModel obj)
+        public void DeleteAgenceLocations(AgenceLocations obj)
         {
             if (obj == null)
             {
                 throw new ArgumentNullException(nameof(obj));
             }
-            _context.NomService.Remove(obj);
+            _context.AgenceLocations.Remove(obj);
             _context.SaveChanges();
         }
 
-        public IEnumerable<nomModel> GetAllNomService()
+        public IEnumerable<AgenceLocations> GetAllAgenceLocations()
         {
-            return _context.NomService.ToList();
+            return _context.AgenceLocations.ToList();
         }
 
-        public nomModel GetnomModelById(int id)
+        public AgenceLocations GetAgenceLocationsById(int id)
         {
-            return _context.NomService.FirstOrDefault(obj => obj.Id == id);
+            return _context.AgenceLocations.FirstOrDefault(obj => obj.IdAgence == id);
         }
 
-        public void UpdatenomModel(nomModel obj)
+        public void UpdateAgenceLocations(AgenceLocations obj)
         {
             _context.SaveChanges();
         }
