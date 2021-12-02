@@ -40,13 +40,13 @@ namespace LocationAuto.Data.Service
 
         public IEnumerable<Voitures> GetAllVoitures()
         {
-            return _context.Voitures.Include("IdAgenceNavigation").Include("Agence").ToList();
+            return _context.Voitures.ToList();
         }
     
 
     public Voitures GetVoituresById(int id)
     {
-        return _context.Voitures.Include("IdAgenceNavigation").Include("Agence").FirstOrDefault(obj => obj.IdVoiture == id);
+        return _context.Voitures.FirstOrDefault(obj => obj.IdVoiture == id);
     }
 
     public void UpdateVoitures(Voitures obj)

@@ -30,20 +30,20 @@ namespace LocationAuto.Data.Controllers
 
         //GET api/
         [HttpGet]
-        public ActionResult<IEnumerable<LocationDTOOutVoiture>> GetAllAgenceLocations()
+        public ActionResult<IEnumerable<AgenceLocationsDTOOutAvecLocation>> GetAllAgenceLocations()
         {
             IEnumerable<AgenceLocations> listeAgenceLocations = _service.GetAllAgenceLocations();
-            return Ok(_mapper.Map<IEnumerable<LocationDTOOutVoiture>>(listeAgenceLocations));
+            return Ok(_mapper.Map<IEnumerable<AgenceLocationsDTOOutAvecLocation>>(listeAgenceLocations));
         }
 
         //GET api//{i}
         [HttpGet("{id}", Name = "GetAgenceLocationsById")]
-        public ActionResult<LocationDTOOutVoiture> GetAgenceLocationsById(int id)
+        public ActionResult<AgenceLocationsDTO> GetAgenceLocationsById(int id)
         {
             AgenceLocations commandItem = _service.GetAgenceLocationsById(id);
             if (commandItem != null)
             {
-                return Ok(_mapper.Map<LocationDTOOutVoiture>(commandItem));
+                return Ok(_mapper.Map<AgenceLocationsDTO>(commandItem));
             }
             return NotFound();
         }

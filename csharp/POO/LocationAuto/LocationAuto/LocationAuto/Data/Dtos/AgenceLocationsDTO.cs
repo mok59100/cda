@@ -25,7 +25,7 @@ namespace LocationAuto.Data
         // les données de la table sans les id et sans les clés etrangères
         public string NomGerant { get; set; }
         public string Adresse { get; set; }
-        public int? NumeroTelephone { get; set; }
+        public int NumeroTelephone { get; set; }
     }
 
     public partial class AgenceLocationsDTOOut
@@ -41,7 +41,7 @@ namespace LocationAuto.Data
         public int IdAgence { get; set; }
         public string NomGerant { get; set; }
         public string Adresse { get; set; }
-        public int? NumeroTelephone { get; set; }
+        public int NumeroTelephone { get; set; }
     }
     public partial class AgenceLocationsDTOOutAvecLocation
     {
@@ -55,7 +55,7 @@ namespace LocationAuto.Data
         // les données de la table sans les id et sans les clés etrangères
         public string NomGerant { get; set; }
         public string Adresse { get; set; }
-        public int? NumeroTelephone { get; set; }
+        public int NumeroTelephone { get; set; }
 
         public virtual ICollection<LocationDTOOutVoiture> Location { get; set; }
     }

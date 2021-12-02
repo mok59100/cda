@@ -40,12 +40,12 @@ namespace LocationAuto.Data.Services
 
         public IEnumerable<Location> GetAllLocation()
         {
-            return _context.Locations.Include("IdVoitureNavigation").Include("IdClientNavigation").ToList();
+            return _context.Locations.Include("VoitureNavigation").Include("ClientNavigation").ToList();
         }
 
         public Location GetLocationById(int id)
         {
-            return _context.Locations.Include("IdVoitureNavigation").Include("IdClientNavigation").FirstOrDefault(obj => obj.IdLocation == id);
+            return _context.Locations.Include("VoitureNavigation").Include("ClientNavigation").FirstOrDefault(obj => obj.IdLocation == id);
         }
 
         public void UpdateLocation(Location obj)

@@ -11,7 +11,7 @@ namespace LocationAuto.Data.Models
         public int IdClient { get; set; }
         public int IdVoiture { get; set; }
         public DateTime? DateDeLocation { get; set; }
-        public int? KilometrageSorti { get; set; }
+        public int KilometrageSorti { get; set; }
 
         public virtual Clients IdClientNavigation { get; set; }
         public virtual Voitures IdVoitureNavigation { get; set; }
