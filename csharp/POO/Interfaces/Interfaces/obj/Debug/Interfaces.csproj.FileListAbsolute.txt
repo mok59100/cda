@@ -17,3 +17,4 @@ U:\59011-07-10\csharp\POO\Interfaces\Interfaces\obj\Debug\Interfaces.csproj.Gene
 U:\59011-07-10\csharp\POO\Interfaces\Interfaces\obj\Debug\Interfaces.csproj.CoreCompileInputs.cache
 U:\59011-07-10\csharp\POO\Interfaces\Interfaces\obj\Debug\Interfaces.exe
 U:\59011-07-10\csharp\POO\Interfaces\Interfaces\obj\Debug\Interfaces.pdb
+U:\59011-07-10\csharp\POO\Interfaces\Interfaces\obj\Debug\Interfaces.csproj.AssemblyReference.cache
