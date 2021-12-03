@@ -37,7 +37,7 @@ namespace Interfaces
             /* Enregistrer un produit avec les données dans le formulaire*/
             int idProduit = int.Parse(tbxIdProduit.Text);
             string libelleProduit = tbxLibelleProduit.Text;
-       2 libbele a terminer
+            //2 libbele a terminer
             /* Créer un produit */
 
             /* Appeler la methode d'ajout de produit dans la liste */
