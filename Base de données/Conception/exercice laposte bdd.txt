@@ -218,37 +218,49 @@ CREATE TABLE MenusDuJour(
   
 )ENGINE=InnoDB;
 
-CREATE TABLE Reservation(
+CREATE TABLE Reservations(
    IdReservation COUNTER AUTO_INCREMENT PRIMARY KEY,
    IdMenu INT,
    IdUtilisateur INT,
    DateReservation DATE NOT NULL,
    DateRepas DATE NOT NULL
    
-   FOREIGN KEY(IdMenu) REFERENCES Menus(IdMenu),
-   FOREIGN KEY(IdUtilisateur) REFERENCES Eleves(IdUtilisateur)
+   
 )ENGINE=InnoDB;
 
-CREATE TABLE Reglement(
+CREATE TABLE Reglements(
    IdReglement COUNTER AUTO_INCREMENT PRIMARY KEY,
    IdMenu INT,
    IdUtilisateur INT,
    IdTypePaiement INT,
    DateReglement DATE NOT NULL
 
-   FOREIGN KEY(IdMenu) REFERENCES Menus(IdMenu),
-   FOREIGN KEY(IdUtilisateur) REFERENCES Eleves(IdUtilisateur),
-   FOREIGN KEY(IdTypePaiement) REFERENCES TypePaiements(IdTypePaiement)
+  
 )ENGINE=InnoDB;
 
-CREATE TABLE Composition(
+CREATE TABLE Compositions(
    IdComposition COUNTER AUTO_INCREMENT PRIMARY KEY,
    IdMenu INT,
    IdMenuDuJour INT
   
-   FOREIGN KEY(IdMenu) REFERENCES Menus(IdMenu),
-   FOREIGN KEY(IdMenuDuJour) REFERENCES MenusDuJour(IdMenuDuJour)
+   
 )ENGINE=InnoDB;
 
 
-ALTER TABLE
+  
+  ALTER TABLE Reservations
+
+ADD CONSTRAINT FK_Reservation_Menus FOREIGN KEY(IdMenu) REFERENCES Menus(IdMenu),
+ ADD CONSTRAINT FK_Reservation_Eleves FOREIGN KEY(IdUtilisateur) REFERENCES Eleves(IdUtilisateur)
+
+  
+  ALTER TABLE Reglements
+
+   ADD CONSTRAINT FK_Reglements_Menus FOREIGN KEY(IdMenu) REFERENCES Menus(IdMenu),
+  ADD CONSTRAINT FK_Reglements_Eleves FOREIGN KEY(IdUtilisateur) REFERENCES Eleves(IdUtilisateur),
+  ADD CONSTRAINT FK_Reglements_TypePaiements FOREIGN KEY(IdTypePaiement) REFERENCES TypePaiements(IdTypePaiement)
+
+
+ALTER TABLE Compositions
+ADD CONSTRAINT FK_Compositions_Menus FOREIGN KEY(IdMenu) REFERENCES Menus(IdMenu),
+ADD CONSTRAINT FK_Compositions_MenusDuJour FOREIGN KEY(IdMenuDuJour) REFERENCES MenusDuJour(IdMenuDuJour)
