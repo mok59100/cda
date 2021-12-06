@@ -176,73 +176,79 @@ ALTER TABLE Articles  ADD CONSTRAINT FK_Articles_Categories FOREIGN KEY(IdCatego
 
 
 
-DROP DATA BASE IF EXISTS CDA; 
-CREATE DATABASE CDA DEFAULT CARACTER SET utf8;
-USE CDA;
+DROP DATABASE IF EXISTS Cantine; 
+CREATE DATABASE Cantine DEFAULT CHARACTER SET utf8;
+USE Cantine;
 CREATE TABLE Menus(
-   IdMenu COUNTER,
+   IdMenu COUNTER AUTO_INCREMENT PRIMARY KEY,
    LibelleMenu VARCHAR(150) NOT NULL,
    Entree VARCHAR(150) NOT NULL,
    Plat VARCHAR(150) NOT NULL,
    Dessert VARCHAR(150) NOT NULL,
-   Prix DECIMAL(15,2) NOT NULL,
-   PRIMARY KEY(IdMenu)
-);
+   Prix DECIMAL(15,2) NOT NULL
+   
+)ENGINE=InnoDB;
 
 CREATE TABLE Eleves(
-   IdUtilisateur COUNTER,
+   IdUtilisateur COUNTER AUTO_INCREMENT PRIMARY KEY,
    Nom VARCHAR(50) NOT NULL,
    Prenom VARCHAR(50) NOT NULL,
    Classe VARCHAR(50) NOT NULL,
    DateNaissance DATE,
    Adresse VARCHAR(200),
-   Mail VARCHAR(150) NOT NULL,
-   PRIMARY KEY(IdUtilisateur)
-);
+   Mail VARCHAR(150) NOT NULL
+ 
+)ENGINE=InnoDB;
 
 CREATE TABLE TypePaiements(
-   IdTypePaiement COUNTER,
-   LibelleTypePaiement VARCHAR(50) NOT NULL,
-   PRIMARY KEY(IdTypePaiement)
-);
+   IdTypePaiement COUNTER AUTO_INCREMENT PRIMARY KEY,
+   LibelleTypePaiement VARCHAR(50) NOT NULL
+  
+)ENGINE=InnoDB;
 
 CREATE TABLE Utilisateurs(
-   IdUtilisateur COUNTER,
-   TypeUtilisateur INT NOT NULL,
-   PRIMARY KEY(IdUtilisateur)
-);
+   IdUtilisateur COUNTER AUTO_INCREMENT PRIMARY KEY,
+   TypeUtilisateur INT NOT NULL
+   
+)ENGINE=InnoDB;
 
 CREATE TABLE MenusDuJour(
-   IdMenuDuJour COUNTER,
-   DateDuJour DATE NOT NULL,
-   PRIMARY KEY(IdMenuDuJour)
-);
+   IdMenuDuJour COUNTER AUTO_INCREMENT PRIMARY KEY,
+   DateDuJour DATE NOT NULL
+  
+)ENGINE=InnoDB;
 
 CREATE TABLE Reservation(
+   IdReservation COUNTER AUTO_INCREMENT PRIMARY KEY,
    IdMenu INT,
    IdUtilisateur INT,
    DateReservation DATE NOT NULL,
-   DateRepas DATE NOT NULL,
-   PRIMARY KEY(IdMenu, IdUtilisateur),
+   DateRepas DATE NOT NULL
+   
    FOREIGN KEY(IdMenu) REFERENCES Menus(IdMenu),
    FOREIGN KEY(IdUtilisateur) REFERENCES Eleves(IdUtilisateur)
-);
+)ENGINE=InnoDB;
 
 CREATE TABLE Reglement(
+   IdReglement COUNTER AUTO_INCREMENT PRIMARY KEY,
    IdMenu INT,
    IdUtilisateur INT,
    IdTypePaiement INT,
-   DateReglement DATE NOT NULL,
-   PRIMARY KEY(IdMenu, IdUtilisateur, IdTypePaiement),
+   DateReglement DATE NOT NULL
+
    FOREIGN KEY(IdMenu) REFERENCES Menus(IdMenu),
    FOREIGN KEY(IdUtilisateur) REFERENCES Eleves(IdUtilisateur),
    FOREIGN KEY(IdTypePaiement) REFERENCES TypePaiements(IdTypePaiement)
-);
+)ENGINE=InnoDB;
 
 CREATE TABLE Composition(
+   IdComposition COUNTER AUTO_INCREMENT PRIMARY KEY,
    IdMenu INT,
-   IdMenuDuJour INT,
-   PRIMARY KEY(IdMenu, IdMenuDuJour),
+   IdMenuDuJour INT
+  
    FOREIGN KEY(IdMenu) REFERENCES Menus(IdMenu),
    FOREIGN KEY(IdMenuDuJour) REFERENCES MenusDuJour(IdMenuDuJour)
-);
+)ENGINE=InnoDB;
+
+
+ALTER TABLE
