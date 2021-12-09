@@ -1,18 +1,18 @@
 ﻿Projet Gestion Stocks
-1.0.0.0
+
 
 winexe
 C#
 .cs
-C:\afpa\cda\csharp\POO\Projet Gestion Stocks\Projet Gestion Stocks\obj\Debug\net5.0-windows\
+C:\afpa\cda\csharp\POO\Projet Gestion Stocks\Projet Gestion Stocks\obj\Release\net5.0-windows\
 Projet_Gestion_Stocks
 none
 false
-TRACE;DEBUG;NET;NET5_0;NETCOREAPP
+TRACE;RELEASE;NET;NET5_0;NETCOREAPP
 C:\afpa\cda\csharp\POO\Projet Gestion Stocks\Projet Gestion Stocks\App.xaml
 11407045341
 
-211518550986
+19-1208598176
 338970866236
 MainWindow.xaml;
 
