@@ -2,14 +2,10 @@
   "ExpandedNodes": [
     "",
     "\\Projet Gestion Stocks",
-    "\\Projet Gestion Stocks\\Controllers",
     "\\Projet Gestion Stocks\\Data",
     "\\Projet Gestion Stocks\\Data\\Dtos",
-    "\\Projet Gestion Stocks\\Data\\Models",
-    "\\Projet Gestion Stocks\\Data\\Profiles",
-    "\\Projet Gestion Stocks\\Data\\Services",
-    "\\Projet Gestion Stocks\\obj"
+    "\\Projet Gestion Stocks\\Data\\Models"
   ],
-  "SelectedNode": "\\Projet Gestion Stocks\\Data\\Services\\ArticlesService.cs",
+  "SelectedNode": "\\Projet Gestion Stocks\\Data\\Dtos\\TypesProduitsDTO.cs",
   "PreviewInSolutionExplorer": false
 }

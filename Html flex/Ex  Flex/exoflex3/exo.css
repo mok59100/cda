@@ -1,0 +1,79 @@
+html,
+body {
+    margin: 0;
+    padding: 0;
+    background-color: blue;
+}
+
+div,
+main,
+body,
+header {
+    display: flex;
+    flex: 1;
+}
+
+img,
+video {
+    width: 100%;
+}
+
+.centrer {
+    justify-content: center;
+}
+
+.orange {
+    background-color: orange;
+    height: 20vh;
+    flex: 4;
+
+
+}
+
+.orangePetite {
+    background-color: orangered;
+    height:30vh;
+    
+}
+
+.grisClaire {
+    background-color: grey;
+    height: 20vh;
+    flex: 4;
+}
+
+.column {
+    flex-direction: column;
+}
+
+
+/* .gris {
+    flex: 3;
+    background-color: grey;
+} */
+
+
+.jaune {
+    
+    background-color: yellow;
+ 
+}
+
+.espace1 {
+
+    flex:0.1;
+    height: 2vh;
+
+
+}
+
+.espaceH {
+    flex: none;
+    height: 2vh;
+}
+
+.vert {
+    flex: 4;
+    background-color: green;
+    height: 60vh;
+}
