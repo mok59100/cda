@@ -16,7 +16,7 @@ body {
    
     background-position: 100%;
      display: flex; 
-  background-color: rgb(184, 145, 145);
+  background-color: pink;
 }
 .titre>h3{
     margin: 0%;
@@ -56,10 +56,10 @@ video {
    
     flex: none; 
     background: linear-gradient(to bottom, pink);
-    border: solid pink 3px;
+    border: solid rgb(242, 110, 132) 3px;
     border-radius: 5px;
     font-size: 2em;
-    color: white;
+    color: pink;
     padding: 0 0.5vw;
     position: relative;
     cursor: pointer;
@@ -71,9 +71,9 @@ video {
     margin-top: 1.5em;
     margin-left: -0.5vw;
     background: linear-gradient(to bottom pink);
-    border: solid #e3bae7 3px;
-    border-radius: 5px;
-    color: white;
+     border: solid #f589ff 3px;
+    border-radius: 5px; 
+    color: pink;
     padding: 0 0.5vw;
     font-size: 0.8em;
     white-space: nowrap;   /*evite le retour à la ligne du sous menu*/
@@ -95,7 +95,7 @@ video {
     height: 20vh;
     background-color: pink;
    
-    background: linear-gradient(to bottom, pink 50%, rgba(229, 229, 229, 1) 100%);
+    background: linear-gradient(to bottom, pink 50%, pink 100%);
     
 }
 
