@@ -1,0 +1,33 @@
+@media screen and (max-width:900px)
+{
+    .entete{
+        width: 90vw;
+    }
+    .texte{
+        word-spacing: 0.8em;
+        color:rgb(117, 73, 131);
+    }
+    .DeleteSmall
+    {display:none;
+    }
+}
+
+
+@media screen and (max-width:800px)
+{
+    .entete{
+        width: 98vw;
+    }
+    .description{
+        flex-direction: column;
+    }
+    .photo{
+        width: 50%;
+        align-self: center;
+    }
+    .texte{
+        word-spacing: 0.8em;
+        color:blue;
+    }
+   
+}

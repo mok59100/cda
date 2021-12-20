@@ -1,14 +1,19 @@
 html,
 body {
-    margin: 10px;
-    padding: 10px;
+    margin: 0;
+    padding: 0;
 }
 .column{
     flex-direction: column;
 }
+.entete{
+    position: fixed;
+    flex-direction: column;
+    width: 100%;
+}
 
 body {
-    /* background-color: rgb(236, 208, 243); */
+   
     background-position: 100%;
      display: flex; 
   background-color: rgb(184, 145, 145);
@@ -22,22 +27,23 @@ div {
     display: flex;
     flex: 1;
 }
-/* img{
+ /* img{
     width: 15%;
-} */
+}  */
 video {
-    width: 50%;
+    width: 30%;
+    margin-top: 20vh;
 }
 
 .espace {
     height: 5vh;
 }
-.logo{
+ /* .logo{
     background-color: rgb(243, 165, 250);
     position: left;
     justify-content: left;
     height: 150px;
-} 
+}   */
 .photo{
     position: left;
     width: 100%;
@@ -56,6 +62,7 @@ video {
     color: white;
     padding: 0 0.5vw;
     position: relative;
+    cursor: pointer;
 }
 .sousMenu{
     display: none;
@@ -64,7 +71,7 @@ video {
     margin-top: 1.5em;
     margin-left: -0.5vw;
     background: linear-gradient(to bottom pink);
-    border: solid #326280 3px;
+    border: solid #e3bae7 3px;
     border-radius: 5px;
     color: white;
     padding: 0 0.5vw;
@@ -73,6 +80,12 @@ video {
 }
 .menu:hover .sousMenu{
     display: flex;
+    cursor: pointer;
+}
+.sousItem:hover{
+        color: #ccc;
+        border: 1px solid #ccc;
+    
    
 }
 .brownie
@@ -85,13 +98,18 @@ video {
     background: linear-gradient(to bottom, pink 50%, rgba(229, 229, 229, 1) 100%);
     
 }
+
+
 .recette{
-    overflow-y: scroll; 
+    overflow-y: scroll;  
 }
 .texte{
-    background-image: url("./image/bois.jpg");
+   background-color: rgb(252, 225, 230);
     position: center;
     flex-direction: column;
     border-radius: 10px;
+    background-size: cover;
+    display: block;
+    flex: 1;
     
 }
