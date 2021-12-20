@@ -1,0 +1,74 @@
+html,
+body {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    /* background-color: rgb(236, 208, 243); */
+    background-position: 100%;
+    display: flex;
+  background-image: url(././image/images\ \(3\).jfif);
+}
+
+div {
+    display: flex;
+    flex: 1;
+}
+img{
+    width: 70%;
+}
+video {
+    width: 100%;
+}
+
+.espace {
+    height: 5vh;
+}
+.logo{
+    position: center;
+    justify-content: center;
+    height: 150px;
+
+   
+    
+}
+.menu{
+   
+    flex: none; 
+    background: linear-gradient(to bottom, grey);
+    border: solid #326280 3px;
+    border-radius: 5px;
+    font-size: 2em;
+    color: white;
+    padding: 0 0.5vw;
+    position: relative;
+}
+.sousMenu{
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    margin-top: 1.5em;
+    margin-left: -0.5vw;
+    background: linear-gradient(to bottom,grey);
+    border: solid #326280 3px;
+    border-radius: 5px;
+    color: white;
+    padding: 0 0.5vw;
+    font-size: 0.8em;
+    white-space: nowrap;   /*evite le retour à la ligne du sous menu*/
+}
+.menu:hover .sousMenu{
+    display: flex;
+   
+}
+.brownie
+{
+    flex: 3;
+    flex-direction: column;
+    height: 35vh;
+    background-color: grey;
+    overflow-y: scroll; 
+    background: linear-gradient(to bottom, rgb(184, 172, 172) 0%, rgba(229, 229, 229, 1) 100%);
+    
+}
