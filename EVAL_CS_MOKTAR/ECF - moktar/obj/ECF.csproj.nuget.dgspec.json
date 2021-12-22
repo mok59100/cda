@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\59011-07-10\\Desktop\\LocalCDA\\EVAL_CS_MOKTAR\\ECF - moktar\\ECF.csproj": {}
+    "U:\\59011-07-10\\EVAL_CS_MOKTAR\\ECF - moktar\\ECF.csproj": {}
   },
   "projects": {
-    "C:\\Users\\59011-07-10\\Desktop\\LocalCDA\\EVAL_CS_MOKTAR\\ECF - moktar\\ECF.csproj": {
+    "U:\\59011-07-10\\EVAL_CS_MOKTAR\\ECF - moktar\\ECF.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\59011-07-10\\Desktop\\LocalCDA\\EVAL_CS_MOKTAR\\ECF - moktar\\ECF.csproj",
+        "projectUniqueName": "U:\\59011-07-10\\EVAL_CS_MOKTAR\\ECF - moktar\\ECF.csproj",
         "projectName": "ECF",
-        "projectPath": "C:\\Users\\59011-07-10\\Desktop\\LocalCDA\\EVAL_CS_MOKTAR\\ECF - moktar\\ECF.csproj",
+        "projectPath": "U:\\59011-07-10\\EVAL_CS_MOKTAR\\ECF - moktar\\ECF.csproj",
         "packagesPath": "C:\\Users\\59011-07-10\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\59011-07-10\\Desktop\\LocalCDA\\EVAL_CS_MOKTAR\\ECF - moktar\\obj\\",
+        "outputPath": "U:\\59011-07-10\\EVAL_CS_MOKTAR\\ECF - moktar\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

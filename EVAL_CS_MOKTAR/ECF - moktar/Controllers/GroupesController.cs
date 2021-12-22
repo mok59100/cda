@@ -1,6 +1,8 @@
 ﻿using AutoMapper;
+using ECF.Data;
 using ECF.Data.Dtos;
 using ECF.Data.Models;
+using ECF.Data.Profiles;
 using ECF.Data.Services;
 using Microsoft.AspNetCore.JsonPatch;
 using Microsoft.AspNetCore.Mvc;
@@ -17,25 +19,30 @@ namespace ECF.Controllers
         private readonly GroupesServices _service;
         private readonly IMapper _mapper;
 
-        public GroupesController(GroupesServices service)
+        public GroupesController(EcfContext _context)
         {
-            _service = service;
-            _mapper = mapper;
+            _service = new GroupesServices(_context);
+            var config = new MapperConfiguration(cfg =>
+            {
+                cfg.AddProfile<GroupesProfiles>();
+
+            });
+            _mapper = config.CreateMapper();
         }
 
         //GET api/Groupe
         [HttpGet]
-        public ActionResult<IEnumerable<GroupesDTOIn>> GetAllGroupes()
+        public IEnumerable<GroupesDTOIn> GetAllGroupes()
         {
             IEnumerable<Groupe> listeGroupe = _service.GetAllGroupes();
-            return Ok(_mapper.Map<IEnumerable<GroupesDTOIn>>(listeGroupe));
+            return _mapper.Map<IEnumerable<GroupesDTOIn>>(listeGroupe);
         }
         //GET api/Groupe
         [HttpGet]
-        public ActionResult<IEnumerable<GroupesDTOOutavecMusiciens>> GetAllGroupesAvecMusiciens()
+        public IEnumerable<GroupesDTOOutavecMusiciens> GetAllGroupesAvecMusiciens()
         {
             IEnumerable<Groupe> listeGroupe = _service.GetAllGroupes();
-            return Ok(_mapper.Map<IEnumerable<GroupesDTOOutavecMusiciens>>(listeGroupe));
+            return _mapper.Map<IEnumerable<GroupesDTOOutavecMusiciens>>(listeGroupe);
         }
 
         //GET api/Groupe/{i}
@@ -52,15 +59,15 @@ namespace ECF.Controllers
 
         //POST api/Groupe
         [HttpPost]
-        public ActionResult<GroupesDTOOut> CreateGroupe(Groupe obj)
+        public void CreateGroupe(GroupesDTOIn objIn)
         {
+            Groupe obj = _mapper.Map<Groupe>(objIn);
             _service.AddGroupe(obj);
-            return CreatedAtRoute(nameof(GetGroupeById), new { Id = obj.IdGroupe }, obj);
         }
 
         //POST api/Groupe/{id}
         [HttpPut("{id}")]
-        public ActionResult UpdateGroupe(int id, GroupesDTOOut obj)
+        public ActionResult UpdateGroupe(int id, GroupesDTOIn obj)
         {
             Groupe objFromRepo = _service.GetGroupeById(id);
             if (objFromRepo == null)
@@ -82,17 +89,18 @@ namespace ECF.Controllers
 
         //DELETE api/Groupe/{id}
         [HttpDelete("{id}")]
-        public ActionResult DeleteGroupe(int id)
+        public bool DeleteGroupe(int id)
         {
             Groupe obj = _service.GetGroupeById(id);
             if (obj == null)
             {
-                return NotFound();
+                return false;
             }
             _service.DeleteGroupe(obj);
-            return NoContent();
+            return true;
         }
 
 
     }
+
 }
