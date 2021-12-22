@@ -6,13 +6,13 @@ namespace ECF.Data.Dtos
 {
 
 
-     public partial class GroupesDTOIn
+    public partial class GroupesDTOIn
     {
         public string Logo { get; set; }
         public int NombreDeFollowers { get; set; }
         public string NomDuGroupe { get; set; }
-        
-        
+
+
     }
     public partial class GroupesDTOOut
     {
@@ -25,13 +25,20 @@ namespace ECF.Data.Dtos
     }
     public partial class GroupesDTOOutavecMusiciens
     {
+        public GroupesDTOOutavecMusiciens()
+        {
+            ListeMusiciens = new HashSet<MusiciensDTOOut>();
+        }
         public int IdGroupe { get; set; }
-        public List <Musicien> musicien { get; set; }
         public string Logo { get; set; }
         public int NombreDeFollowers { get; set; }
         public string NomDuGroupe { get; set; }
 
+        public virtual ICollection<MusiciensDTOOut> ListeMusiciens { get; set; }
 
     }
-}
+    
+     
+ }
+
 

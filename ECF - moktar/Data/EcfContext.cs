@@ -59,7 +59,7 @@ namespace ECF.Data
 
                 entity.ToTable("musiciens");
 
-                entity.HasIndex(e => e.IdGroupe, "FK_Membres_Groupes");
+                entity.HasIndex(e => e.IdGroupe, "FK_Musiciens_Groupes");
 
                 entity.Property(e => e.IdMusicien)
                     .HasColumnType("int(11)")
@@ -79,11 +79,11 @@ namespace ECF.Data
                     .IsRequired()
                     .HasMaxLength(50);
 
-                entity.HasOne(d => d.IdGroupeNavigation)
-                    .WithMany(p => p.musicien)
+                entity.HasOne(d => d.Groupe)
+                    .WithMany(p => p.ListeMusiciens)
                     .HasForeignKey(d => d.IdGroupe)
                     .OnDelete(DeleteBehavior.ClientSetNull)
-                    .HasConstraintName("FK_Membres_Groupes");
+                    .HasConstraintName("FK_Musiciens_Groupes");
             });
 
             OnModelCreatingPartial(modelBuilder);

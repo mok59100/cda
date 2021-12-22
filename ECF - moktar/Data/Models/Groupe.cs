@@ -9,7 +9,7 @@ namespace ECF.Data.Models
     {
         public Groupe()
         {
-            musicien = new HashSet<Musicien>();
+            ListeMusiciens = new HashSet<Musicien>();
         }
 
         public int IdGroupe { get; set; }
@@ -17,6 +17,6 @@ namespace ECF.Data.Models
         public int NombreDeFollowers { get; set; }
         public string Logo { get; set; }
 
-        public virtual ICollection<Musicien> musicien { get; set; }
+        public virtual ICollection<Musicien> ListeMusiciens { get; set; }
     }
 }

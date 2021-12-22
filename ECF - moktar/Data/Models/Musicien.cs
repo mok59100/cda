@@ -13,6 +13,6 @@ namespace ECF.Data.Models
         public string Instrument { get; set; }
         public int IdGroupe { get; set; }
 
-        public virtual Groupe IdGroupeNavigation { get; set; }
+        public virtual Groupe Groupe { get; set; }
     }
 }

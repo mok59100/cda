@@ -21,9 +21,11 @@ namespace ECF.Data.Controllers
         public MusiciensController(EcfContext _context)
         {
             _service = new MusiciensServices(_context);
+
             var config = new MapperConfiguration(cfg =>
             {
                 cfg.AddProfile<MusiciensProfiles>();
+                cfg.AddProfile<GroupesProfiles>();
             });
             _mapper = config.CreateMapper();
         }
@@ -43,27 +45,27 @@ namespace ECF.Data.Controllers
 
             //GET api/Musiciens/{i}
             [HttpGet("{id}", Name = "MusicienById")]
-            public ActionResult<MusiciensDTOOut> GetMusicienById(int id)
+            public ActionResult<MusiciensDTOOutAvecGroupe> GetMusicienById(int id)
             {
                 Musicien commandItem = _service.GetMusicienById(id);
                 if (commandItem != null)
                 {
-                    return Ok(_mapper.Map<MusiciensDTOOut>(commandItem));
+                    return Ok(_mapper.Map<MusiciensDTOOutAvecGroupe>(commandItem));
                 }
                 return NotFound();
             }
 
             //POST api/Musiciens
             [HttpPost]
-            public void CreateMusicien(MusiciensDTOIn objIn)
-            {
-                Musicien obj = _mapper.Map<Musicien>(objIn);
+        public ActionResult<MusiciensDTOOut> CreateMusicien(MusiciensDTOIn objIn)
+        {
+            Musicien obj = _mapper.Map<Musicien>(objIn);
             _service.AddMusicien(obj);
+            return CreatedAtRoute(nameof(GetMusicienById), new { Id = obj.IdMusicien }, obj);
+        }
 
-            }
-
-            //POST api/Musiciens/{id}
-            [HttpPut("{id}")]
+        //POST api/Musiciens/{id}
+        [HttpPut("{id}")]
             public ActionResult UpdateMusicien(int id, MusiciensDTOIn obj)
             {
                 Musicien objFromRepo = _service.GetMusicienById(id);
@@ -86,15 +88,15 @@ namespace ECF.Data.Controllers
 
             //DELETE api/Musiciens/{id}
             [HttpDelete("{id}")]
-            public bool DeleteMusicien(int id)
+            public ActionResult DeleteMusicien(int id)
             {
                 Musicien obj = _service.GetMusicienById(id);
                 if (obj == null)
                 {
-                    return false;
+                    return NotFound();
                 }
                 _service.DeleteMusicien(obj);
-                return true;
+                return NoContent();
             }
         }
     }
