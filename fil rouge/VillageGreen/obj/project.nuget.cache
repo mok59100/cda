@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "4OMZv1ZRUnfCTDYaMTezxijTLwerbdG0cB3mi5OIQ20T/3ABK7KFpkXUnK6ct5PmodhZ9xUFoXQeWqpEau9h5w==",
+  "dgSpecHash": "HSC3KyhgbShZDhgwfasAxHSGoNyJfiYrAZdieBWUXixaR6XUMGIXhizF67AXV+8pCFyle+865SwYVTJb7Yeljg==",
   "success": true,
-  "projectFilePath": "C:\\afpa\\cda\\fil rouge\\VillageGreen\\VillageGreen.csproj",
+  "projectFilePath": "C:\\afpa\\cda git moktar maison\\fil rouge\\VillageGreen\\VillageGreen.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Abu 3umayr\\.nuget\\packages\\automapper\\10.1.1\\automapper.10.1.1.nupkg.sha512",
     "C:\\Users\\Abu 3umayr\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\8.1.1\\automapper.extensions.microsoft.dependencyinjection.8.1.1.nupkg.sha512",

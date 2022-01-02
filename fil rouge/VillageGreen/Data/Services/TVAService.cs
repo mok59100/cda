@@ -36,7 +36,7 @@ namespace VillageGreen.Data.Services
             _context.SaveChanges();
         }
 
-        public IEnumerable<TVA> GetAllTVAs()
+        public IEnumerable<TVA> GetAllTVA()
         {
             return _context.TVA.ToList();
         }

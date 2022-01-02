@@ -32,7 +32,7 @@ namespace VillageGreen.Data.Controllers
         }
 
         //GET api/Rubrique/{i}
-        [HttpGet("{id}", Rubrique = "GetRubriqueById")]
+        [HttpGet("{id}", Name = "GetRubriqueById")]
         public ActionResult<RubriqueDTOIn> GetRubriqueById(int id)
         {
             Rubrique commandItem = _service.GetRubriqueById(id);
@@ -66,31 +66,7 @@ namespace VillageGreen.Data.Controllers
             return NoContent();
         }
 
-        // Exemple d'appel
-        // [{
-        // "op":"replace",
-        // "path":"",
-        // "value":""
-        // }]
-        //PATCH api/Rubriques/{id}
-        [HttpPatch("{id}")]
-        public ActionResult PartialRubriqueUpdate(int id, JsonPatchDocument<Rubrique> patchDoc)
-        {
-            Rubrique objFromRepo = _service.GetRubriqueById(id);
-            if (objFromRepo == null)
-            {
-                return NotFound();
-            }
-            Rubrique objToPatch = _mapper.Map<Rubrique>(objFromRepo);
-            patchDoc.ApplyTo(objToPatch, ModelState);
-            if (!TryValidateModel(objToPatch))
-            {
-                return ValidationProblem(ModelState);
-            }
-            _mapper.Map(objToPatch, objFromRepo);
-            _service.UpdateRubrique(objFromRepo);
-            return NoContent();
-        }
+       
 
         //DELETE api/Rubriques/{id}
         [HttpDelete("{id}")]

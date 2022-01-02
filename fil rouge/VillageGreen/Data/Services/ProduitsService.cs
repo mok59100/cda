@@ -17,7 +17,7 @@ namespace VillageGreen.Data.Services
             _context = context;
         }
 
-        public void Produit(Produit obj)
+        public void AddProduit(Produit obj)
         {
             if (obj == null)
             {
