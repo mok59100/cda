@@ -1,0 +1,40 @@
+html,
+body {
+    margin: 0;
+    padding: 0;
+    background-color: rgb(187, 181, 181);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+div,
+a,
+header,
+footer,
+nav,
+article,
+section {
+    display: flex;
+    flex: 1;
+}
+
+.ligne div {
+    flex:1;
+    background-color: rgb(220, 238, 205);
+    margin-bottom: 0.5em;
+}
+
+
+.ligne{
+    display: flex;
+    flex-direction: column;
+    padding: 1em;
+
+}
+main{
+    background-color:rgb(147, 213, 147);
+    display: flex;
+    height: 75vh;
+    width: 75vw;
+}

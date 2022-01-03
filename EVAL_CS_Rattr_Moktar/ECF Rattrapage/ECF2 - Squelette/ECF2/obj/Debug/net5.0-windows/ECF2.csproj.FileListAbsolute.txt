@@ -7,3 +7,12 @@ C:\Users\Abu 3umayr\Desktop\EVAL_CS_Rattr_Moktar\ECF Rattrapage\ECF2 - Squelette
 C:\Users\Abu 3umayr\Desktop\EVAL_CS_Rattr_Moktar\ECF Rattrapage\ECF2 - Squelette\ECF2\obj\Debug\net5.0-windows\App.g.cs
 C:\Users\Abu 3umayr\Desktop\EVAL_CS_Rattr_Moktar\ECF Rattrapage\ECF2 - Squelette\ECF2\obj\Debug\net5.0-windows\ECF2_MarkupCompile.cache
 C:\Users\Abu 3umayr\Desktop\EVAL_CS_Rattr_Moktar\ECF Rattrapage\ECF2 - Squelette\ECF2\obj\Debug\net5.0-windows\ECF2_MarkupCompile.lref
+C:\afpa\cda git moktar maison\EVAL_CS_Rattr_Moktar\ECF Rattrapage\ECF2 - Squelette\ECF2\obj\Debug\net5.0-windows\ECF2.csproj.AssemblyReference.cache
+C:\afpa\cda git moktar maison\EVAL_CS_Rattr_Moktar\ECF Rattrapage\ECF2 - Squelette\ECF2\obj\Debug\net5.0-windows\Formulaires\FormulaireChambre.g.cs
+C:\afpa\cda git moktar maison\EVAL_CS_Rattr_Moktar\ECF Rattrapage\ECF2 - Squelette\ECF2\obj\Debug\net5.0-windows\Formulaires\FormulaireHotel.g.cs
+C:\afpa\cda git moktar maison\EVAL_CS_Rattr_Moktar\ECF Rattrapage\ECF2 - Squelette\ECF2\obj\Debug\net5.0-windows\Formulaires\ListeChambres.g.cs
+C:\afpa\cda git moktar maison\EVAL_CS_Rattr_Moktar\ECF Rattrapage\ECF2 - Squelette\ECF2\obj\Debug\net5.0-windows\Formulaires\ListeHotels.g.cs
+C:\afpa\cda git moktar maison\EVAL_CS_Rattr_Moktar\ECF Rattrapage\ECF2 - Squelette\ECF2\obj\Debug\net5.0-windows\MainWindow.g.cs
+C:\afpa\cda git moktar maison\EVAL_CS_Rattr_Moktar\ECF Rattrapage\ECF2 - Squelette\ECF2\obj\Debug\net5.0-windows\App.g.cs
+C:\afpa\cda git moktar maison\EVAL_CS_Rattr_Moktar\ECF Rattrapage\ECF2 - Squelette\ECF2\obj\Debug\net5.0-windows\ECF2_MarkupCompile.cache
+C:\afpa\cda git moktar maison\EVAL_CS_Rattr_Moktar\ECF Rattrapage\ECF2 - Squelette\ECF2\obj\Debug\net5.0-windows\ECF2_MarkupCompile.lref
