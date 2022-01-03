@@ -1,5 +1,6 @@
 ﻿using AutoMapper;
 using ECF2.Data.Dtos;
+using ECF2.Data.Models;
 using ECF2.Data.Profiles;
 using ECF2.Data.Services;
 using Microsoft.AspNetCore.Mvc;
@@ -16,7 +17,7 @@ namespace ECF2.Data.Controllers
         private readonly HotelsServices _service;
         private readonly IMapper _mapper;
 
-        public HotelsController(ecf2Context _context)
+        public HotelsController(Ecf2Context _context)
         {
             {
                 _service = new HotelsServices(_context);
@@ -34,26 +35,26 @@ namespace ECF2.Data.Controllers
         [HttpGet]
         public IEnumerable<HotelsDTOOut> GetAllHotels()
         {
-            IEnumerable<Hotel> listeNomController = _service.GetAllHotels();
-            return _mapper.Map<IEnumerable<HotelsDTOOut>>(listeNomController);
+            IEnumerable<Hotel> ListeHotels = _service.GetAllHotels();
+            return _mapper.Map<IEnumerable<HotelsDTOOut>>(ListeHotels);
         }
 
         //GET api/NomController
         [HttpGet]
-        public IEnumerable<HotelsDTOOutAvecChambre> GetAllHotels()
+        public IEnumerable<HotelsDTOOutAvecChambres> GetAllHotelsAvecChambres()
         {
-            IEnumerable<Hotel> listeNomController = _service.GetAllHotels();
-            return _mapper.Map<IEnumerable<HotelsDTOOutAvecChambre>>(listeNomController);
+            IEnumerable<Hotel> ListeHotels = _service.GetAllHotels();
+            return _mapper.Map<IEnumerable<HotelsDTOOutAvecChambres>>(ListeHotels);
         }
 
         //GET api/NomController/{i}
         [HttpGet("{id}", Name = "GetHotelById")]
-        public ActionResult<HotelsDTOOutAvecChambre> GetHotelById(int id)
+        public ActionResult<HotelsDTOOutAvecChambres> GetHotelById(int id)
         {
             Hotel commandItem = _service.GetHotelById(id);
             if (commandItem != null)
             {
-                return Ok(_mapper.Map<HotelsDTOOutAvecChambre>(commandItem));
+                return Ok(_mapper.Map<HotelsDTOOutAvecChambres>(commandItem));
             }
             return NotFound();
         }

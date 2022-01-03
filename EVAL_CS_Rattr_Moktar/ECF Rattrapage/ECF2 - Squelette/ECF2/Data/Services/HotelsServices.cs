@@ -1,4 +1,5 @@
 ﻿using ECF2.Data.Models;
+using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,9 +10,9 @@ namespace ECF2.Data.Services
 {
     class HotelsServices
     {
-        private readonly ecf2Context _context;
+        private readonly Ecf2Context _context;
 
-        public HotelsServices(ecf2Context context)
+        public HotelsServices(Ecf2Context context)
         {
             _context = context;
         }
@@ -38,12 +39,12 @@ namespace ECF2.Data.Services
 
         public IEnumerable<Hotel> GetAllHotels()
         {
-            return _context.Hotels.ToList();
+            return _context.Hotels.Include("ListeChambres").ToList();
         }
 
         public Hotel GetHotelById(int id)
         {
-            return _context.Hotels.FirstOrDefault(obj => obj.IdHotel == id);
+            return _context.Hotels.Include("ListeChambres").FirstOrDefault(obj => obj.IdHotel == id);
         }
 
         public void UpdateHotel(Hotel obj)

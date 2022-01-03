@@ -19,7 +19,8 @@ namespace ECF2.Data.Profiles
 			CreateMap<Hotel, HotelsDTOOut>();
 			CreateMap<HotelsDTOOut, Hotel>();
 
-			
+			CreateMap<Hotel, HotelsDTOOutAvecChambres>();
+			CreateMap<HotelsDTOOutAvecChambres, Hotel>();
 		}
 	}
 }

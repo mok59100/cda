@@ -10,9 +10,9 @@ namespace ECF2.Data.Services
 {
     class ChambresServices
     {
-        private readonly ecf2Context _context;
+        private readonly Ecf2Context _context;
 
-        public ChambresServices(ecf2Context context)
+        public ChambresServices(Ecf2Context context)
         {
             _context = context;
         }
@@ -39,12 +39,12 @@ namespace ECF2.Data.Services
 
         public IEnumerable<Chambre> GetAllChambres()
         {
-            return _context.Chambres.Include("chambres").ToList();
+            return _context.Chambres.Include("IdHotelNavigation").ToList();
         }
 
         public Chambre GetChambreById(int id)
         {
-            return _context.Chambres.FirstOrDefault(obj => obj.IdChambre == id);
+            return _context.Chambres.Include("IdHotelNavigation").FirstOrDefault(obj => obj.IdChambre == id);
         }
 
         public void UpdateChambre(Chambre obj)

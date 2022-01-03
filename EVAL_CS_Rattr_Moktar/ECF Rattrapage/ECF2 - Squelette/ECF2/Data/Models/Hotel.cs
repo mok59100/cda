@@ -9,7 +9,7 @@ namespace ECF2.Data.Models
     {
         public Hotel()
         {
-            Chambres = new HashSet<Chambre>();
+            ListeChambres = new HashSet<Chambre>();
         }
 
         public int IdHotel { get; set; }
@@ -18,6 +18,6 @@ namespace ECF2.Data.Models
         public string AdresseHotel { get; set; }
         public string VilleHotel { get; set; }
 
-        public virtual ICollection<Chambre> Chambres { get; set; }
+        public virtual ICollection<Chambre> ListeChambres { get; set; }
     }
 }

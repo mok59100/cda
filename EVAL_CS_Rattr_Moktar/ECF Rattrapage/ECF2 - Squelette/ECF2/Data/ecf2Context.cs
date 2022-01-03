@@ -7,13 +7,13 @@ using ECF2.Data.Models;
 
 namespace ECF2.Data
 {
-    public partial class ecf2Context : DbContext
+    public partial class Ecf2Context : DbContext
     {
-        public ecf2Context()
+        public Ecf2Context()
         {
         }
 
-        public ecf2Context(DbContextOptions<ecf2Context> options)
+        public Ecf2Context(DbContextOptions<Ecf2Context> options)
             : base(options)
         {
         }
@@ -25,7 +25,7 @@ namespace ECF2.Data
         {
             if (!optionsBuilder.IsConfigured)
             {
-#warning To protect potentially sensitive information in your connection string, you should move it out of source code. You can avoid scaffolding the connection string by using the Name= syntax to read it from configuration - see https://go.microsoft.com/fwlink/?linkid=2131148. For more guidance on storing connection strings, see http://go.microsoft.com/fwlink/?LinkId=723263.
+
                 optionsBuilder.UseMySQL("server=localhost;user=root;database=ecf2;port=3308;ssl mode=none");
             }
         }
@@ -62,7 +62,7 @@ namespace ECF2.Data
                     .HasColumnName("typeChambre");
 
                 entity.HasOne(d => d.IdHotelNavigation)
-                    .WithMany(p => p.Chambres)
+                    .WithMany(p => p.ListeChambres)
                     .HasForeignKey(d => d.IdHotel)
                     .OnDelete(DeleteBehavior.ClientSetNull)
                     .HasConstraintName("FK_chambres_hotels");

@@ -19,7 +19,7 @@ namespace ECF2.Data.Profiles
 			CreateMap<Chambre, ChambresDTOOut>();
 			CreateMap<ChambresDTOOut, Chambre>();
 
-			CreateMap<Chambre, ChambresDTOOutAvecHotel>();
+			CreateMap<Chambre, ChambresDTOOutAvecHotel>().ForMember(ho => ho.VilleHotel, Option => Option.MapFrom(ch=>ch.IdHotelNavigation.VilleHotel)).ForMember(ho => ho.NomHotel, Option => Option.MapFrom(ch => ch.IdHotelNavigation.NomHotel));
 			CreateMap<ChambresDTOOutAvecHotel, Chambre>();
 		}
 	}

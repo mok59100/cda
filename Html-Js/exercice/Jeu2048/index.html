@@ -1,49 +1,63 @@
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="index.css">
-    <title>Jeu</title>
+    <title>2048</title>
 </head>
-<header>
-
-</header>
 
 <body>
-    <main>
+    <header>
+        <nav>
+        </nav>
+    </header>
+    <h1>2048</h1>
+<div class ="regleTimer">
+    <div class="regle">Regle du jeu : Realise le plus de combinaisons possible avant la fin du timer ! </div>
+    <div class="espaceRegleTimer"></div>
+<div id="timer">10</div>
+<div id="score">0</div>
+</div>
     
-            <div class="ligne">
-              <div class="case1"></div>
-              <div class="case2"></div>
-              <div class="case3"></div>
-              <div class="case4"></div>
-            </div>
-            <div class="ligne">
-              <div class="case5"></div>
-              <div class="case6"></div>
-              <div class="case7"></div>
-              <div class="case8"></div>
-            </div>
-            <div class="ligne">
-              <div class="case9"></div>
-              <div class="case10"></div>
-              <div class="case11"></div>
-              <div class="case12"></div>
-            </div>
-            <div class="ligne">
-              <div class="case13"></div>
-              <div class="case14"></div>
-              <div class="case15"></div>
-              <div class="case16"></div>
-            </div>
-          </div>
-    </main>
-    
-</body>
-<script src="script.js"></script>
-<footer>
+    <main class="colonne">
 
-</footer>
+        <div class="ligne">
+           
+            <button id="case1">2</button>
+            <button id="case2">2</button>
+            <button id="case3">2</button>
+            <button id="case4">2</button>
+        </div>
+
+        <div class="ligne">
+            <div id="case5">2</div>
+            <div id="case6">2</div>
+            <div id="case7">2</div>
+            <div id="case8">2</div>
+        </div>
+
+        <div class="ligne">
+            <div id="case9"></div>
+            <div id="case10"></div>
+            <div id="case11"></div>
+            <div id="case12"></div>
+        </div>
+
+        <div class="ligne">
+            <div id="case13"></div>
+            <div id="case14"></div>
+            <div id="case15"></div>
+            <div id="case16"></div>
+        </div>
+  
+  
+  
+    </main>
+    <footer>
+    </footer>
+    <script src="script.js"></script>
+</body>
+
 </html>

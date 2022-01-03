@@ -23,4 +23,18 @@ namespace ECF2.Data.Dtos
         public string AdresseHotel { get; set; }
         public string VilleHotel { get; set; }
     }
+    public partial class HotelsDTOOutAvecChambres
+    {
+        public HotelsDTOOutAvecChambres()
+            {
+               ListeChambres = new HashSet<ChambresDTOOut>();
+            }
+       public int IdHotel { get; set; }
+        public string NomHotel { get; set; }
+        public int CategorieHotel { get; set; }
+        public string AdresseHotel { get; set; }
+        public string VilleHotel { get; set; }
+
+        public virtual ICollection<ChambresDTOOut> ListeChambres { get; set; }
+    }
 }

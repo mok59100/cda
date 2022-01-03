@@ -32,12 +32,13 @@ namespace ECF2.Data.Dtos
         public int CapaciteChambre { get; set; }
         public int IdChambre { get; set; }
         public int IdHotel { get; set; }
-        public string NomHotel { get; set; }
+          
         public int NumChambre { get; set; }
         public int TypeChambre { get; set; }
         public string VilleHotel { get; set; }
+        public string NomHotel { get; set; }
 
 
 
-    }
+}
 }

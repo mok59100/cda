@@ -18,9 +18,9 @@ namespace ECF2.Data.Controllers
         private readonly ChambresServices _service;
         private readonly IMapper _mapper;
 
-        public ChambresController(ecf2Context _context)
+        public ChambresController(Ecf2Context _context)
         {
-            {
+            
                 _service = new ChambresServices(_context);
                 var config = new MapperConfiguration(cfg =>
                 {
@@ -29,23 +29,23 @@ namespace ECF2.Data.Controllers
 
                 });
                 _mapper = config.CreateMapper();
-            }
+            
         }
 
         //GET api/NomController
         [HttpGet]
         public IEnumerable<ChambresDTOOut> GetAllChambres()
         {
-            IEnumerable<Chambre> listeNomController = _service.GetAllChambres();
-            return _mapper.Map<IEnumerable<ChambresDTOOut>>(listeNomController));
+            IEnumerable<Chambre> ListeChambres = _service.GetAllChambres();
+            return _mapper.Map<IEnumerable<ChambresDTOOut>>(ListeChambres);
         }
 
         //GET api/NomController
         [HttpGet]
         public IEnumerable<ChambresDTOOutAvecHotel> GetAllChambresAvecHotel()
         {
-            IEnumerable<Chambre> listeNomController = _service.GetAllChambres();
-            return _mapper.Map<IEnumerable<ChambresDTOOutAvecHotel>>(listeNomController));
+            IEnumerable<Chambre> ListeChambres = _service.GetAllChambres();
+            return _mapper.Map<IEnumerable<ChambresDTOOutAvecHotel>>(ListeChambres);
         }
         //GET api/NomController/{i}
         [HttpGet("{id}", Name = "GetChambreById")]
