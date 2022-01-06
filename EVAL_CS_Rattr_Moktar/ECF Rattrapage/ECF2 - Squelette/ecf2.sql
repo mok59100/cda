@@ -6,8 +6,31 @@ CREATE DATABASE IF NOT EXISTS `gestionHotel` DEFAULT CHARACTER SET latin1 COLLAT
 USE `gestionHotel`;
 
 -- --------------------------------------------------------
+--
+-- Structure de la table `hotels`
+
+
+DROP TABLE IF EXISTS `hotels`;
+CREATE TABLE IF NOT EXISTS `hotels` (
+  `idHotel` int(11) NOT NULL AUTO_INCREMENT,
+  `nomHotel` varchar(50) NOT NULL,
+  `categorieHotel` int(11) NOT NULL,
+  `adresseHotel` varchar(50) NOT NULL,
+  `villeHotel` varchar(50) NOT NULL,
+  PRIMARY KEY (`idHotel`)
+) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=latin1;
 
 --
+-- Déchargement des données de la table `hotels`
+--
+
+INSERT INTO `hotels` (`idHotel`, `nomHotel`, `categorieHotel`, `adresseHotel`, `villeHotel`) VALUES
+(1, 'Le Magnifique', 3, 'rue du bas', 'Pralo'),
+(2, 'Hotel du haut', 1, 'rue du haut', 'Pralo'),
+(3, 'Le Narval', 3, 'place de la liberation', 'Vonten'),
+(4, 'Les Pissenlis', 4, 'place du 14 juillet', 'Bretou');
+
+
 -- Structure de la table `chambres`
 --
 
@@ -40,42 +63,22 @@ INSERT INTO `chambres` (`idChambre`, `typeChambre`, `capaciteChambre`, `numChamb
 -- --------------------------------------------------------
 DROP TABLE IF EXISTS `utilisateur`;
 CREATE TABLE IF NOT EXISTS `utilisateur` (
-  `idUtilisateur` int(11) NOT NULL AUTO_INCREMENT,
+  `idUtilisateur` int(11) NOT NULL AUTO_INCREMENT PRIMARY KEY,
   `nom` varchar(50) NOT NULL,
   `prenom` varchar(50) NOT NULL,
   `motDePasse` varchar(50) NOT NULL,
   `adresseMail` varchar(50) NOT NULL,
   `role` int(11) NOT NULL,
-  `pseudo` varchar(50) NOT NULL,
-  PRIMARY KEY (`idHotel`)
-) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=latin1;
---
--- Structure de la table `hotels`
---
-
-DROP TABLE IF EXISTS `hotels`;
-CREATE TABLE IF NOT EXISTS `hotels` (
-  `idHotel` int(11) NOT NULL AUTO_INCREMENT,
-  `nomHotel` varchar(50) NOT NULL,
-  `categorieHotel` int(11) NOT NULL,
-  `adresseHotel` varchar(50) NOT NULL,
-  `villeHotel` varchar(50) NOT NULL,
-  PRIMARY KEY (`idHotel`)
+  `pseudo` varchar(50) NOT NULL
+  
 ) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=latin1;
 
---
--- Déchargement des données de la table `hotels`
---
-
-INSERT INTO `hotels` (`idHotel`, `nomHotel`, `categorieHotel`, `adresseHotel`, `villeHotel`) VALUES
-(1, 'Le Magnifique', 3, 'rue du bas', 'Pralo'),
-(2, 'Hotel du haut', 1, 'rue du haut', 'Pralo'),
-(3, 'Le Narval', 3, 'place de la liberation', 'Vonten'),
-(4, 'Les Pissenlis', 4, 'place du 14 juillet', 'Bretou');
 
 
 
---
+
+
+
 -- Contraintes pour la table `chambres`
 --
 ALTER TABLE `chambres`

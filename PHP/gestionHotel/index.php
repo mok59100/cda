@@ -31,13 +31,13 @@ $routes = [
     "accueil" => ["PHP/VIEW/GENERAL/", "Accueil", "Accueil", 0, false],
     "deconnection" => ["PHP/CONTROLLER/ACTION/", "Actiondeconnection", "Erreur", 0, false],
 
-    "listeProduit" => ["PHP/VIEW/LISTE/", "ListeProduit", "Liste de produits", 1, false],
-    "formProduit" => ["PHP/VIEW/FORM/", "FormProduit", "Détail du produit", 1, false],
-    "actionProduit" => ["PHP/CONTROLLER/ACTION/", "ActionProduit", "Mise à jour du produit", 1, false],
+    "listeChambre" => ["PHP/VIEW/LISTE/", "ListeChambre", "Liste des Chambres", 1, false],
+    "formChambre" => ["PHP/VIEW/FORM/", "FormChambre", "Détail des Chambres", 1, false],
+    "actionChambre" => ["PHP/CONTROLLER/ACTION/", "ActionChambre", "Mise à jour des Chambres", 1, false],
 
-    "listeCategorie" => ["PHP/VIEW/LISTE/", "ListeCategorie", "Liste des Catégories", 2, false],
-    "formCategorie" => ["PHP/VIEW/FORM/", "FormCategorie", "Gestion des catégories", 2, false],
-    "actionCategorie" => ["PHP/CONTROLLER/ACTION/", "ActionCategorie", "Mise à jour du produit", 2, false]
+    "listeHotel" => ["PHP/VIEW/LISTE/", "ListeHotel", "Liste des Hotels", 2, false],
+    "formHotel" => ["PHP/VIEW/FORM/", "FormHotel", "Gestion des Hotels", 2, false],
+    "actionHotel" => ["PHP/CONTROLLER/ACTION/", "ActionHotel", "Mise à jour Hotel", 2, false]
 ];
 
 if (isset($_GET["page"])) {
