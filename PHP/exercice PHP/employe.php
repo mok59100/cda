@@ -8,6 +8,10 @@ class employe
     private $_dateEmbauche;
     private $_salaire;
     private $_service;
+    private $_agence;
+    private $_enfants = [];
+    private $chequeVacance;
+    private $ChequeNoel;
     
   /*****************Accesseurs***************** */
   public function getNom()
@@ -54,7 +58,41 @@ class employe
       public function setService($service)
       {
           $this->_service = $service;
+
       }
+      public function getAgence()
+    {
+        return $this->_agence;
+    }
+
+    public function setAgence(Agence $agence)
+    {
+        $this->_agence = $agence;
+    }
+
+    public function getEnfants()
+    {
+        return $this->_enfants;
+    }
+    public function getChequeVacance()
+    {
+        return $this->chequeVacance;
+    }
+
+    public function setChequeVacance($chequeVacance)
+    {
+        $this->chequeVacance = $chequeVacance;
+    }
+    public function getChequeNoel()
+    {
+        return $this->ChequeNoel;
+    }
+
+    public function setChequeNoel($ChequeNoel)
+    {
+        $this->ChequeNoel = $ChequeNoel;
+    }
+
 
       /*****************Constructeur***************** */
 
@@ -86,8 +124,8 @@ class employe
 public function toString()
 {
     $aff = "\n\n*** SALARIE ***\n";
-    $aff .= "Nom :" . $this->getNom() . "\nPrenom :" . $this->getPrenom() . "\nDateEmbauche :" . $this->getDateEmbauche()->format('Y-m-d') . "\nSalaire annuel :" . $this->getSalaire() . "K€\nService :" . $this->getService() . "\n";
-
+    $aff .= "Nom :" . $this->getNom() . "\nPrenom :" . $this->getPrenom() . "\nDateEmbauche :" . $this->getDateEmbauche()->format('Y-m-d') . "\nSalaire annuel :" . $this->getSalaire() . "K€\nService :" . $this->getService()
+    . "\nAgence :" . $this->getAgence()."\nChequeVcance :" . $this->getChequeVacance() ;
     $aff .= "Il reçoit une prime de " . $this->prime() . "K€\n";
 
 }
@@ -188,13 +226,43 @@ public function toString()
     }
 
 
- private function masseSalariale()
- {
-return $this->getSalaire() + $this->PrimeAnciennete() + $this->PrimeSalaireAnnuel();
- }
+    private function masseSalariale()
+   {
+         return $this->getSalaire() + $this->PrimeAnciennete() + $this->PrimeSalaireAnnuel();
+   }
 
 
 
-}
+
+  
     
+     public function ChequeVacance()
+     {
+        if ($this.Anciennete() >= 1)
+            {
+                return "vous avez droit à des cheques vacances";
+            }
+        else
+            {
+                return "vous n'avez pas droit à des cheques vacances";
+            }
+        }
+             
+
+     
+
+     public function ChequeNoel()
+     {
+         if (enfant 0-10)
+     {
+         return "L'agence a un restaurant";
+     }
+     else
+     {
+         return "Le salarié bénéficie de Tickets Resto";
+
+     }
+
+   
+    }    
 ?>

@@ -2,8 +2,8 @@
 --
 -- Base de données :  `ecf2`
 --
-CREATE DATABASE IF NOT EXISTS `ecf2` DEFAULT CHARACTER SET latin1 COLLATE latin1_swedish_ci;
-USE `ecf2`;
+CREATE DATABASE IF NOT EXISTS `gestionHotel` DEFAULT CHARACTER SET latin1 COLLATE latin1_swedish_ci;
+USE `gestionHotel`;
 
 -- --------------------------------------------------------
 
@@ -38,7 +38,17 @@ INSERT INTO `chambres` (`idChambre`, `typeChambre`, `capaciteChambre`, `numChamb
 (9, 1, 3, 109, 2);
 
 -- --------------------------------------------------------
-
+DROP TABLE IF EXISTS `utilisateur`;
+CREATE TABLE IF NOT EXISTS `utilisateur` (
+  `idUtilisateur` int(11) NOT NULL AUTO_INCREMENT,
+  `nom` varchar(50) NOT NULL,
+  `prenom` varchar(50) NOT NULL,
+  `motDePasse` varchar(50) NOT NULL,
+  `adresseMail` varchar(50) NOT NULL,
+  `role` int(11) NOT NULL,
+  `pseudo` varchar(50) NOT NULL,
+  PRIMARY KEY (`idHotel`)
+) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=latin1;
 --
 -- Structure de la table `hotels`
 --
