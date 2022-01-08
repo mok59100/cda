@@ -61,7 +61,7 @@ namespace ECF2.Data
                     .HasColumnType("int(11)")
                     .HasColumnName("typeChambre");
 
-                entity.HasOne(d => d.IdHotelNavigation)
+                entity.HasOne(d => d.HotelAssocie)
                     .WithMany(p => p.ListeChambres)
                     .HasForeignKey(d => d.IdHotel)
                     .OnDelete(DeleteBehavior.ClientSetNull)

@@ -4,7 +4,7 @@ class HotelsManager
     public static function add(Hotels $obj)
     {
         $db = DbConnect::getDb();
-        $q = $db->prepare("INSERT INTO Hotels (nomHotel,categorieHotel,adresseHotel,villeHotel) VALUES (:nomHotel,categorieHotel,adresseHotel,villeHotel)");
+        $q = $db->prepare("INSERT INTO Hotels (nomHotel,categorieHotel,adresseHotel,villeHotel) VALUES (:nomHotel,:categorieHotel,:adresseHotel,:villeHotel)");
         $q->bindValue(":nomHotel", $obj->getNomHotel());
         $q->bindValue(":categorieHotel", $obj->getCategorieHotel());
         $q->bindValue(":adresseHotel", $obj->getAdresseHotel());
@@ -33,7 +33,7 @@ class HotelsManager
     {
         $db = DbConnect::getDb();
         $id = (int) $id;  // on verifie que id est numerique, evite l'injection SQL
-        $q = $db->query("SELECT * FROM Hotels WHERE idHotel=" . $id);
+        $q = $db->query("SELECT * FROM Hotels WHERE idHotel=".$id);
         $results = $q->fetch(PDO::FETCH_ASSOC);
         if ($results != false)
         {

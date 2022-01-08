@@ -6,14 +6,23 @@ body, header,div, nav, main, section{
     display: flex;
 	flex: 1;
 	justify-content: center;
+   
+
 }	
 body{
-    background-color: black;
+    /* background-color: black; */
+    background-image:url(../IMG/Hotel.jpg);
+    background-size: auto 100%;
+  
 }
+
+
 
 img {
 	width: 100%;
+   
 }
+   
 .colonne{
     flex-direction: column;
 }
@@ -23,7 +32,7 @@ img {
 
 .titre {
 	flex: 5;
-	color: coral;
+	color: rgb(19, 18, 18);
     font-size: 3em;
     justify-content: center;
     align-items: center;
@@ -34,7 +43,7 @@ img {
 }
 
 .page{
-	background-color: wheat;
+	background-color: rgb(192, 189, 182);
 	width: 80%;
 	flex: none;
 	align-self: center;

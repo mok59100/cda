@@ -1,7 +1,7 @@
 <body class="colonne">
     <header>
         <div class="demi"></div>
-        <div><img src="./IMG/Hotel.jpg" alt=""></div>
+        <!-- <div><img src="./IMG/Hotel.jpg" alt=""></div> -->
         <div class="titre"><?php echo $titre; ?></div>
         <div class="colonne">
             <?php

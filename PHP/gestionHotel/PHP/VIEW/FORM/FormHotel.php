@@ -15,21 +15,21 @@ echo '  <h5>'.$mode.' un nouveau Hotel</h5></div>
         <form id="formulaire" method="post" action="index.php?page=actionHotel&mode='.$mode.'">';
 
 if (isset($_GET['id'])) {
-    $categ = HotelsManager::findById($_GET['id']);
+    $hotel = HotelsManager::findById($_GET['id']);
 }
 else{
-    $categ = new Hotels();
+    $hotel = new Hotels();
 }
 
-echo '  <input type="hidden" name="idHotel" value="' . $categ->getIdHotel() . '">';
+echo '  <input type="hidden" name="idHotel" value="' . $hotel->getIdHotel() . '">';
 echo '  <label> Nom :</label>
-        <input type="text" name="nomHotel" value="' . $categ->getNomHotel() . '"' .$disabled.'>';
+        <input type="text" name="nomHotel" value="' . $hotel->getNomHotel() . '"' .$disabled.'>';
 echo '  <label>categorie :</label>
-        <input type="number" name="categorieHotel" value="' . $prod->getCategorieHotel() . '"' . $disabled . '>';
+        <input type="number" name="categorieHotel" value="' . $hotel->getCategorieHotel() . '"' . $disabled . '>';
 echo '  <label>adresse :</label>
-        <input type="date" name="adresseHotel" value="' . $prod->getAdresseHotel() . '"' . $disabled . '>';
+        <input type="adresse" name="adresseHotel" value="' . $hotel->getAdresseHotel() . '"' . $disabled . '>';
 echo '  <label>ville :</label>
-        <input type="date" name="villeHotel" value="' . $prod->getVilleHotel() . '"' . $disabled . '>';
+        <input type="ville" name="villeHotel" value="' . $hotel->getVilleHotel() . '"' . $disabled . '>';
 
 echo '<input type="submit" value="'.$mode.'" class=" crudBtn crudBtn'.$mode.'"/>';
 

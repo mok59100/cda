@@ -5,7 +5,7 @@ class ChambresManager
 	public static function add(Chambres $obj)
 	{
  		$db=DbConnect::getDb();
-		$q=$db->prepare("INSERT INTO Chambres (typeChambre,capaciteChambre,numChambre,idHotel) VALUES (:typeChambre,capaciteChambre,numChambre,idHotel)");
+		$q=$db->prepare("INSERT INTO Chambres (typeChambre,capaciteChambre,numChambre,idHotel) VALUES (:typeChambre,:capaciteChambre,:numChambre,:idHotel)");
 		$q->bindValue(":typeChambre", $obj->getTypeChambre());
         $q->bindValue(":capaciteChambre", $obj->getCapaciteChambre());
         $q->bindValue(":numChambre", $obj->getNumChambre());
@@ -58,6 +58,7 @@ class ChambresManager
 		}
 		return $liste;
 	}
+    
     public static function getListByHotel($idHotel)
     {
         $idHotel=(int) $idHotel;

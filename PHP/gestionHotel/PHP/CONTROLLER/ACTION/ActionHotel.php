@@ -13,7 +13,7 @@ switch ($_GET['mode']) {
             break;
         }
     case "Supprimer": {
-            $listeProduit = ChambresManager::getListByHotel($p->getIdHotel());
+            $listeChambre = ChambresManager::getListByHotel($p->getIdHotel());
             /**** Technique informative */
             //    if (count($listeProduit)>0)
             //    {

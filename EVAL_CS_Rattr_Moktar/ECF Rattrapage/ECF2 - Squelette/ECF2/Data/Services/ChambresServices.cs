@@ -39,12 +39,12 @@ namespace ECF2.Data.Services
 
         public IEnumerable<Chambre> GetAllChambres()
         {
-            return _context.Chambres.Include("IdHotelNavigation").ToList();
+            return _context.Chambres.Include("HotelAssocie").ToList();
         }
 
         public Chambre GetChambreById(int id)
         {
-            return _context.Chambres.Include("IdHotelNavigation").FirstOrDefault(obj => obj.IdChambre == id);
+            return _context.Chambres.Include("HotelAssocie").FirstOrDefault(obj => obj.IdChambre == id);
         }
 
         public void UpdateChambre(Chambre obj)

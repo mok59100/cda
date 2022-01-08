@@ -57,8 +57,8 @@ C:\afpa\cda git moktar maison\EVAL_CS_Rattr_Moktar\ECF Rattrapage\ECF2 - Squelet
 C:\afpa\cda git moktar maison\EVAL_CS_Rattr_Moktar\ECF Rattrapage\ECF2 - Squelette\ECF2\obj\Debug\net5.0-windows\ECF2.AssemblyInfoInputs.cache
 C:\afpa\cda git moktar maison\EVAL_CS_Rattr_Moktar\ECF Rattrapage\ECF2 - Squelette\ECF2\obj\Debug\net5.0-windows\ECF2.AssemblyInfo.cs
 C:\afpa\cda git moktar maison\EVAL_CS_Rattr_Moktar\ECF Rattrapage\ECF2 - Squelette\ECF2\obj\Debug\net5.0-windows\ECF2.csproj.CoreCompileInputs.cache
-C:\afpa\cda git moktar maison\EVAL_CS_Rattr_Moktar\ECF Rattrapage\ECF2 - Squelette\ECF2\obj\Debug\net5.0-windows\ECF2.csproj.CopyComplete
 C:\afpa\cda git moktar maison\EVAL_CS_Rattr_Moktar\ECF Rattrapage\ECF2 - Squelette\ECF2\obj\Debug\net5.0-windows\ECF2.dll
 C:\afpa\cda git moktar maison\EVAL_CS_Rattr_Moktar\ECF Rattrapage\ECF2 - Squelette\ECF2\obj\Debug\net5.0-windows\ref\ECF2.dll
 C:\afpa\cda git moktar maison\EVAL_CS_Rattr_Moktar\ECF Rattrapage\ECF2 - Squelette\ECF2\obj\Debug\net5.0-windows\ECF2.pdb
 C:\afpa\cda git moktar maison\EVAL_CS_Rattr_Moktar\ECF Rattrapage\ECF2 - Squelette\ECF2\obj\Debug\net5.0-windows\ECF2.genruntimeconfig.cache
+C:\afpa\cda git moktar maison\EVAL_CS_Rattr_Moktar\ECF Rattrapage\ECF2 - Squelette\ECF2\obj\Debug\net5.0-windows\ECF2.csproj.AssemblyReference.cache

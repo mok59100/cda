@@ -13,6 +13,6 @@ namespace ECF2.Data.Models
         public int NumChambre { get; set; }
         public int IdHotel { get; set; }
 
-        public virtual Hotel IdHotelNavigation { get; set; }
+        public virtual Hotel HotelAssocie { get; set; }
     }
 }

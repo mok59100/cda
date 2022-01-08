@@ -32,7 +32,7 @@ $routes = [
     "deconnection" => ["PHP/CONTROLLER/ACTION/", "Actiondeconnection", "Erreur", 0, false],
 
     "listeChambre" => ["PHP/VIEW/LISTE/", "ListeChambre", "Liste des Chambres", 1, false],
-    "formChambre" => ["PHP/VIEW/FORM/", "FormChambre", "Détail des Chambres", 1, false],
+    "formChambre" => ["PHP/VIEW/FORM/", "FormChambre", "Gestions des Chambres", 1, false],
     "actionChambre" => ["PHP/CONTROLLER/ACTION/", "ActionChambre", "Mise à jour des Chambres", 1, false],
 
     "listeHotel" => ["PHP/VIEW/LISTE/", "ListeHotel", "Liste des Hotels", 2, false],
