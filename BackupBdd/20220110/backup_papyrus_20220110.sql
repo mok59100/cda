@@ -171,27 +171,6 @@ SET character_set_client = utf8;
 SET character_set_client = @saved_cs_client;
 
 --
--- Temporary table structure for view `test`
---
-
-DROP TABLE IF EXISTS `test`;
-/*!50001 DROP VIEW IF EXISTS `test`*/;
-SET @saved_cs_client     = @@character_set_client;
-SET character_set_client = utf8;
-/*!50001 CREATE VIEW `test` AS SELECT 
- 1 AS `numcom`,
- 1 AS `obscom`,
- 1 AS `datcom`,
- 1 AS `numfou`,
- 1 AS `numlig`,
- 1 AS `codart`,
- 1 AS `qtecde`,
- 1 AS `priuni`,
- 1 AS `qteliv`,
- 1 AS `derliv`*/;
-SET character_set_client = @saved_cs_client;
-
---
 -- Table structure for table `vente`
 --
 
@@ -266,24 +245,6 @@ USE `papyrus`;
 /*!50001 SET character_set_client      = @saved_cs_client */;
 /*!50001 SET character_set_results     = @saved_cs_results */;
 /*!50001 SET collation_connection      = @saved_col_connection */;
-
---
--- Final view structure for view `test`
---
-
-/*!50001 DROP VIEW IF EXISTS `test`*/;
-/*!50001 SET @saved_cs_client          = @@character_set_client */;
-/*!50001 SET @saved_cs_results         = @@character_set_results */;
-/*!50001 SET @saved_col_connection     = @@collation_connection */;
-/*!50001 SET character_set_client      = utf8mb4 */;
-/*!50001 SET character_set_results     = utf8mb4 */;
-/*!50001 SET collation_connection      = utf8mb4_unicode_ci */;
-/*!50001 CREATE ALGORITHM=UNDEFINED */
-/*!50013 DEFINER=`root`@`localhost` SQL SECURITY DEFINER */
-/*!50001 VIEW `test` AS select `entcom`.`numcom` AS `numcom`,`entcom`.`obscom` AS `obscom`,`entcom`.`datcom` AS `datcom`,`entcom`.`numfou` AS `numfou`,`ligcom`.`numlig` AS `numlig`,`ligcom`.`codart` AS `codart`,`ligcom`.`qtecde` AS `qtecde`,`ligcom`.`priuni` AS `priuni`,`ligcom`.`qteliv` AS `qteliv`,`ligcom`.`derliv` AS `derliv` from (`entcom` join `ligcom` on((`entcom`.`numcom` = `ligcom`.`numcom`))) */;
-/*!50001 SET character_set_client      = @saved_cs_client */;
-/*!50001 SET character_set_results     = @saved_cs_results */;
-/*!50001 SET collation_connection      = @saved_col_connection */;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 
 /*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
@@ -294,4 +255,4 @@ USE `papyrus`;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2022-01-10 17:25:17
+-- Dump completed on 2022-01-10 18:14:09
