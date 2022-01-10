@@ -32,7 +32,7 @@ echo '  <label> Type :</label>
 echo '  <label>Capacite :</label>
         <input type="number" name="capaciteChambre" value="' . $chambre->getCapaciteChambre() . '"' . $disabled . '>';
 echo '  <label>NumChambre :</label>
-        <input type="numero" name="numeroChambre" value="' . $chambre->getNumChambre() . '"' . $disabled . '>';
+        <input type="numero" name="numChambre" value="' . $chambre->getNumChambre() . '"' . $disabled . '>';
 echo '  <label>Hotel :</label>
         <select name="idHotel" '.$disabled.'>';
 foreach ($listeHotel as $unHotel) {
