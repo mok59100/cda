@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\afpa\\cda\\fil rouge\\VillageGreen\\VillageGreen.csproj": {}
+    "C:\\afpa\\cda git moktar maison\\fil rouge\\VillageGreen\\VillageGreen.csproj": {}
   },
   "projects": {
-    "C:\\afpa\\cda\\fil rouge\\VillageGreen\\VillageGreen.csproj": {
+    "C:\\afpa\\cda git moktar maison\\fil rouge\\VillageGreen\\VillageGreen.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\afpa\\cda\\fil rouge\\VillageGreen\\VillageGreen.csproj",
+        "projectUniqueName": "C:\\afpa\\cda git moktar maison\\fil rouge\\VillageGreen\\VillageGreen.csproj",
         "projectName": "VillageGreen",
-        "projectPath": "C:\\afpa\\cda\\fil rouge\\VillageGreen\\VillageGreen.csproj",
+        "projectPath": "C:\\afpa\\cda git moktar maison\\fil rouge\\VillageGreen\\VillageGreen.csproj",
         "packagesPath": "C:\\Users\\Abu 3umayr\\.nuget\\packages\\",
-        "outputPath": "C:\\afpa\\cda\\fil rouge\\VillageGreen\\obj\\",
+        "outputPath": "C:\\afpa\\cda git moktar maison\\fil rouge\\VillageGreen\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
