@@ -1,8 +1,8 @@
--- MySQL dump 10.13  Distrib 5.7.31, for Win64 (x86_64)
+-- MySQL dump 10.13  Distrib 5.7.28, for Win32 (AMD64)
 --
 -- Host: localhost    Database: cantine
 -- ------------------------------------------------------
--- Server version	5.7.31
+-- Server version	5.7.28
 
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
@@ -39,7 +39,7 @@ CREATE TABLE `eleves` (
   `Adresse` varchar(200) DEFAULT NULL,
   `Mail` varchar(150) NOT NULL,
   PRIMARY KEY (`IdUtilisateur`)
-) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -48,7 +48,6 @@ CREATE TABLE `eleves` (
 
 LOCK TABLES `eleves` WRITE;
 /*!40000 ALTER TABLE `eleves` DISABLE KEYS */;
-INSERT INTO `eleves` VALUES (1,'ryery','reyherh','15','2021-12-10','152 rezgtzergtreg','ergedgerh'),(2,'fbdfhb','dhbdhb','dhbdhb','2021-12-03','dfhbdh','dhdhd'),(3,'rdhytrd','detuhjrt','tutrjuujrt','2021-12-04','rwtut','rturu'),(4,'dhdeh','dehdeh','dehdeh','0001-01-01','dehtth','dehdeh'),(5,'eryhrhy','edhyeryh','eryheyrh','2021-12-10','eryer','eryhe');
 /*!40000 ALTER TABLE `eleves` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -249,4 +248,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2022-01-10 17:25:16
+-- Dump completed on 2022-01-10 20:00:09

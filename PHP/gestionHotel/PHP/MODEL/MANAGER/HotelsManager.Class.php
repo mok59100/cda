@@ -20,13 +20,14 @@ class HotelsManager
         $q->bindValue(":categorieHotel", $obj->getCategorieHotel());
         $q->bindValue(":adresseHotel", $obj->getAdresseHotel());
         $q->bindValue(":villeHotel", $obj->getVilleHotel());
+        $q->bindValue(":idHotel", $obj->getIdHotel());
         $q->execute();
     }
 
     public static function delete(Hotels $obj)
     {
         $db = DbConnect::getDb();
-        $db->exec("DELETE FROM Hotels WHERE idProduit=" . $obj->getIdHotel());
+        $db->exec("DELETE FROM Hotels WHERE idHotel=" . $obj->getIdHotel());
     }
 
     public static function findById($id)
