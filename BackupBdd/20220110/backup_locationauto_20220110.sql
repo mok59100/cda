@@ -1,25 +1,6 @@
--- MySQL dump 10.13  Distrib 5.7.31, for Win64 (x86_64)
---
--- Host: localhost    Database: locationauto
--- ------------------------------------------------------
--- Server version	5.7.31
 
-/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
-/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
-/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
-/*!40101 SET NAMES utf8 */;
-/*!40103 SET @OLD_TIME_ZONE=@@TIME_ZONE */;
-/*!40103 SET TIME_ZONE='+00:00' */;
-/*!40014 SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0 */;
-/*!40014 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0 */;
-/*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
-/*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
 
---
--- Current Database: `locationauto`
---
-
-CREATE DATABASE /*!32312 IF NOT EXISTS*/ `locationauto` /*!40100 DEFAULT CHARACTER SET utf8 */;
+CREATE DATABASE IF NOT EXISTS `locationauto` DEFAULT CHARACTER SET utf8;
 
 USE `locationauto`;
 
@@ -72,7 +53,7 @@ CREATE TABLE `clients` (
 
 LOCK TABLES `clients` WRITE;
 /*!40000 ALTER TABLE `clients` DISABLE KEYS */;
-INSERT INTO `clients` VALUES (1,'marie','pierre','200 allee des lillas paris',611778899),(2,'carpro','pierre','98 boulevard du general de gaulle paris',302010422),(3,'david ','vincent','44444rue de la rose paris',108040912),(4,'robert','henry','1 rue de la besace lille',320202014);
+INSERT INTO `clients` VALUES (1,'marie','pierre','200 allee des lillas paris',0611778899),(2,'carpro','pierre','98 boulevard du general de gaulle paris',0302010422),(3,'david ','vincent','44444rue de la rose paris',0108040912),(4,'robert','henry','1 rue de la besace lille',0320202014);
 /*!40000 ALTER TABLE `clients` ENABLE KEYS */;
 UNLOCK TABLES;
 
