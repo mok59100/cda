@@ -1,8 +1,16 @@
+<<<<<<< HEAD
 -- MySQL dump 10.13  Distrib 5.7.28, for Win32 (AMD64)
 --
 -- Host: localhost    Database: papyrus
 -- ------------------------------------------------------
 -- Server version	5.7.28
+=======
+-- MySQL dump 10.13  Distrib 5.7.31, for Win64 (x86_64)
+--
+-- Host: localhost    Database: papyrus
+-- ------------------------------------------------------
+-- Server version	5.7.31
+>>>>>>> 8404020eab6dc37cacedc76ae6bffd39375e71d6
 
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
@@ -47,11 +55,33 @@ CREATE TABLE `entcom` (
 
 LOCK TABLES `entcom` WRITE;
 /*!40000 ALTER TABLE `entcom` DISABLE KEYS */;
+<<<<<<< HEAD
 INSERT INTO `entcom` VALUES (70010,'','2018-04-23 13:59:51',120),(70011,'Commande urgente','2018-04-23 13:59:51',540),(70020,'','2018-04-23 13:59:51',9120),(70025,'Commande urgente','2018-04-23 13:59:51',9150),(70210,'Commande cadencée','2018-04-23 13:59:51',120),(70250,'Commande cadencée','2018-04-23 13:59:51',8700),(70300,'','2018-04-23 13:59:51',9120),(70620,'','2018-04-23 13:59:51',540),(70625,'','2018-04-23 13:59:51',120),(70629,'','2018-04-23 13:59:51',9180);
+=======
+INSERT INTO `entcom` VALUES (70010,'','2021-10-19 13:27:36',120),(70011,'Commande urgente','2018-04-23 13:59:51',540),(70020,'','2021-10-19 13:19:19',9120),(70025,'Commande urgente','2018-04-23 13:59:51',9150),(70210,'Commande cadencée','2021-10-19 13:59:51',120),(70250,'Commande cadencée','2018-04-23 13:59:51',8700),(70300,'','2018-04-23 13:59:51',9120),(70620,'','2018-04-23 13:59:51',540),(70625,'','2018-04-23 13:59:51',120),(70629,'','2018-04-23 13:59:51',9180);
+>>>>>>> 8404020eab6dc37cacedc76ae6bffd39375e71d6
 /*!40000 ALTER TABLE `entcom` ENABLE KEYS */;
 UNLOCK TABLES;
 
 --
+<<<<<<< HEAD
+=======
+-- Temporary table structure for view `entreprise`
+--
+
+DROP TABLE IF EXISTS `entreprise`;
+/*!50001 DROP VIEW IF EXISTS `entreprise`*/;
+SET @saved_cs_client     = @@character_set_client;
+SET character_set_client = utf8;
+/*!50001 CREATE VIEW `entreprise` AS SELECT 
+ 1 AS `numfou`,
+ 1 AS `nomfou`,
+ 1 AS `codart`,
+ 1 AS `libart`*/;
+SET character_set_client = @saved_cs_client;
+
+--
+>>>>>>> 8404020eab6dc37cacedc76ae6bffd39375e71d6
 -- Table structure for table `fournis`
 --
 
@@ -141,6 +171,24 @@ INSERT INTO `produit` VALUES ('B001','Bande magnétique 1200',20,87,240,'unite')
 UNLOCK TABLES;
 
 --
+<<<<<<< HEAD
+=======
+-- Temporary table structure for view `societe`
+--
+
+DROP TABLE IF EXISTS `societe`;
+/*!50001 DROP VIEW IF EXISTS `societe`*/;
+SET @saved_cs_client     = @@character_set_client;
+SET character_set_client = utf8;
+/*!50001 CREATE VIEW `societe` AS SELECT 
+ 1 AS `numfou`,
+ 1 AS `nomfou`,
+ 1 AS `codart`,
+ 1 AS `libart`*/;
+SET character_set_client = @saved_cs_client;
+
+--
+>>>>>>> 8404020eab6dc37cacedc76ae6bffd39375e71d6
 -- Table structure for table `vente`
 --
 
@@ -173,6 +221,51 @@ LOCK TABLES `vente` WRITE;
 INSERT INTO `vente` VALUES ('B001',8700,15,0,150,50,145,100,140),('B002',8700,15,0,210,50,200,100,185),('D035',120,0,0,40,0,0,0,0),('D035',9120,5,0,40,100,30,0,0),('I100',120,90,0,700,50,600,120,500),('I100',540,70,0,710,60,630,100,600),('I100',9120,60,0,800,70,600,90,500),('I100',9150,90,0,650,90,600,200,590),('I100',9180,30,0,720,50,670,100,490),('I105',120,90,10,705,50,630,120,500),('I105',540,70,0,810,60,645,100,600),('I105',8700,30,0,720,50,670,100,510),('I105',9120,60,0,920,70,800,90,700),('I105',9150,90,0,685,90,600,200,590),('I108',120,90,5,795,30,720,100,680),('I108',9120,60,0,920,70,820,100,780),('I110',9120,60,0,950,70,850,90,790),('I110',9180,90,0,900,70,870,90,835),('P220',120,15,0,3700,100,3500,0,0),('P220',8700,20,50,3500,100,3350,0,0),('P230',120,30,0,5200,100,5000,0,0),('P230',8700,60,0,5000,50,4900,0,0),('P240',120,15,0,2200,100,2000,0,0),('P250',120,30,0,1500,100,1400,500,1200),('P250',9120,30,0,1500,100,1400,500,1200),('R080',9120,10,0,120,100,100,0,0),('R132',9120,5,0,275,0,0,0,0);
 /*!40000 ALTER TABLE `vente` ENABLE KEYS */;
 UNLOCK TABLES;
+<<<<<<< HEAD
+=======
+
+--
+-- Current Database: `papyrus`
+--
+
+USE `papyrus`;
+
+--
+-- Final view structure for view `entreprise`
+--
+
+/*!50001 DROP VIEW IF EXISTS `entreprise`*/;
+/*!50001 SET @saved_cs_client          = @@character_set_client */;
+/*!50001 SET @saved_cs_results         = @@character_set_results */;
+/*!50001 SET @saved_col_connection     = @@collation_connection */;
+/*!50001 SET character_set_client      = utf8mb4 */;
+/*!50001 SET character_set_results     = utf8mb4 */;
+/*!50001 SET collation_connection      = utf8mb4_unicode_ci */;
+/*!50001 CREATE ALGORITHM=UNDEFINED */
+/*!50013 DEFINER=`root`@`localhost` SQL SECURITY DEFINER */
+/*!50001 VIEW `entreprise` AS select `fournis`.`numfou` AS `numfou`,`fournis`.`nomfou` AS `nomfou`,`vente`.`codart` AS `codart`,`produit`.`libart` AS `libart` from ((`fournis` join `vente` on((`fournis`.`numfou` = `vente`.`numfou`))) join `produit` on((`vente`.`codart` = `produit`.`codart`))) */;
+/*!50001 SET character_set_client      = @saved_cs_client */;
+/*!50001 SET character_set_results     = @saved_cs_results */;
+/*!50001 SET collation_connection      = @saved_col_connection */;
+
+--
+-- Final view structure for view `societe`
+--
+
+/*!50001 DROP VIEW IF EXISTS `societe`*/;
+/*!50001 SET @saved_cs_client          = @@character_set_client */;
+/*!50001 SET @saved_cs_results         = @@character_set_results */;
+/*!50001 SET @saved_col_connection     = @@collation_connection */;
+/*!50001 SET character_set_client      = utf8mb4 */;
+/*!50001 SET character_set_results     = utf8mb4 */;
+/*!50001 SET collation_connection      = utf8mb4_unicode_ci */;
+/*!50001 CREATE ALGORITHM=UNDEFINED */
+/*!50013 DEFINER=`root`@`localhost` SQL SECURITY DEFINER */
+/*!50001 VIEW `societe` AS select `fournis`.`numfou` AS `numfou`,`fournis`.`nomfou` AS `nomfou`,`produit`.`codart` AS `codart`,`produit`.`libart` AS `libart` from (((`fournis` join `entcom` on((`fournis`.`numfou` = `entcom`.`numfou`))) join `ligcom` on((`entcom`.`numcom` = `ligcom`.`numcom`))) join `produit` on((`ligcom`.`codart` = `produit`.`codart`))) */;
+/*!50001 SET character_set_client      = @saved_cs_client */;
+/*!50001 SET character_set_results     = @saved_cs_results */;
+/*!50001 SET collation_connection      = @saved_col_connection */;
+>>>>>>> 8404020eab6dc37cacedc76ae6bffd39375e71d6
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 
 /*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
@@ -183,4 +276,8 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
+<<<<<<< HEAD
 -- Dump completed on 2022-01-20 17:30:23
+=======
+-- Dump completed on 2022-01-20 17:20:36
+>>>>>>> 8404020eab6dc37cacedc76ae6bffd39375e71d6
