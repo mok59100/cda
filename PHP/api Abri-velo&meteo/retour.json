@@ -1,0 +1,827 @@
+{
+    "nhits": 33,
+    "parameters": {
+        "dataset": "ilevia-abrisvelos",
+        "rows": 10,
+        "start": 0,
+        "facet": [
+            "nom",
+            "codepostal",
+            "commune",
+            "modeabri"
+        ],
+        "format": "json",
+        "timezone": "UTC"
+    },
+    "records": [
+        {
+            "datasetid": "ilevia-abrisvelos",
+            "recordid": "5a61f33bd57d4a2e456fb88e2ccb1949a464692e",
+            "fields": {
+                "nbplaces": 28,
+                "typeabri": "abris V'Lille",
+                "nom": "Centre Halluin",
+                "adresse": "Place Pierre Semard",
+                "geo": [
+                    50.780946,
+                    3.119719
+                ],
+                "anneeinstallation": "2014-12-03",
+                "codepostal": "59250",
+                "modeabri": "automatis\u00e9",
+                "commune": "HALLUIN"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    3.119719,
+                    50.780946
+                ]
+            },
+            "record_timestamp": "2021-07-28T15:32:11.117000+00:00"
+        },
+        {
+            "datasetid": "ilevia-abrisvelos",
+            "recordid": "07288c0d71ef454021b3ace217cd32f865ae3de0",
+            "fields": {
+                "nbplaces": 18,
+                "typeabri": "abris V'Lille",
+                "nom": "Crois\u00e9 Laroche",
+                "adresse": "Place Lisefranc",
+                "geo": [
+                    50.665991,
+                    3.103728
+                ],
+                "anneeinstallation": "2014-09-22",
+                "codepostal": "59700",
+                "modeabri": "automatis\u00e9",
+                "commune": "MARCQ-EN-BAROEUL"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    3.103728,
+                    50.665991
+                ]
+            },
+            "record_timestamp": "2021-07-28T15:32:11.117000+00:00"
+        },
+        {
+            "datasetid": "ilevia-abrisvelos",
+            "recordid": "4e384b6d31ccfdece9987fd5d764f9b2cf18cf12",
+            "fields": {
+                "nbplaces": 150,
+                "typeabri": "abris V'Lille",
+                "nom": "Gare Seclin",
+                "adresse": "Rue Pierre Semard",
+                "geo": [
+                    50.547452,
+                    3.034268
+                ],
+                "anneeinstallation": "2016-09-21",
+                "codepostal": "59113",
+                "modeabri": "automatis\u00e9",
+                "commune": "SECLIN"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    3.034268,
+                    50.547452
+                ]
+            },
+            "record_timestamp": "2021-07-28T15:32:11.117000+00:00"
+        },
+        {
+            "datasetid": "ilevia-abrisvelos",
+            "recordid": "9112e3da451a6547e76f4e438e6b5efbaf99a5e9",
+            "fields": {
+                "nbplaces": 28,
+                "typeabri": "abris V'Lille",
+                "nom": "Laenec",
+                "adresse": "1 Avenue Charles Guillain",
+                "geo": [
+                    50.589018,
+                    3.050619
+                ],
+                "anneeinstallation": "2013-09-13",
+                "codepostal": "59139",
+                "modeabri": "automatis\u00e9",
+                "commune": "WATTIGNIES"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    3.050619,
+                    50.589018
+                ]
+            },
+            "record_timestamp": "2021-07-28T15:32:11.117000+00:00"
+        },
+        {
+            "datasetid": "ilevia-abrisvelos",
+            "recordid": "2b24ad849aacb29ce59b6d1cb31e229d9a7e696c",
+            "fields": {
+                "nbplaces": 18,
+                "typeabri": "abris V'Lille",
+                "nom": "Mairie Loos",
+                "adresse": "2 Square Eug\u00e8ne Thomas",
+                "geo": [
+                    50.614588,
+                    3.012336
+                ],
+                "anneeinstallation": "2016-04-30",
+                "codepostal": "59120",
+                "modeabri": "automatis\u00e9",
+                "commune": "LOOS"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    3.012336,
+                    50.614588
+                ]
+            },
+            "record_timestamp": "2021-07-28T15:32:11.117000+00:00"
+        },
+        {
+            "datasetid": "ilevia-abrisvelos",
+            "recordid": "67374427cb6df350579b906a33614426fee0d563",
+            "fields": {
+                "nbplaces": 28,
+                "typeabri": "abris V'Lille",
+                "nom": "Wazemmes",
+                "adresse": "93 Rue Racine",
+                "geo": [
+                    50.623358,
+                    3.051647
+                ],
+                "anneeinstallation": "2015-11-30",
+                "codepostal": "59000",
+                "modeabri": "automatis\u00e9",
+                "commune": "LILLE"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    3.051647,
+                    50.623358
+                ]
+            },
+            "record_timestamp": "2021-07-28T15:32:11.117000+00:00"
+        },
+        {
+            "datasetid": "ilevia-abrisvelos",
+            "recordid": "c3ccfd64a7483e51590f29b69af040ad14f19b20",
+            "fields": {
+                "nbplaces": 18,
+                "typeabri": "abris V'Lille",
+                "nom": "3 Suisses",
+                "adresse": "6 Boulevard de la Marne",
+                "geo": [
+                    50.69899,
+                    3.138302
+                ],
+                "anneeinstallation": "2014-09-26",
+                "codepostal": "59420",
+                "modeabri": "automatis\u00e9",
+                "commune": "MOUVAUX"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    3.138302,
+                    50.69899
+                ]
+            },
+            "record_timestamp": "2021-07-28T15:32:11.117000+00:00"
+        },
+        {
+            "datasetid": "ilevia-abrisvelos",
+            "recordid": "eb8e94c4658dae9f67873c8e40a1790a7f666002",
+            "fields": {
+                "nbplaces": 28,
+                "typeabri": "abris V'Lille",
+                "nom": "Centre Comines",
+                "adresse": "12 avenue de Versailles",
+                "geo": [
+                    50.761928,
+                    3.011547
+                ],
+                "anneeinstallation": "2016-10-20",
+                "codepostal": "59560",
+                "modeabri": "automatis\u00e9",
+                "commune": "COMINES"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    3.011547,
+                    50.761928
+                ]
+            },
+            "record_timestamp": "2021-07-28T15:32:11.117000+00:00"
+        },
+        {
+            "datasetid": "ilevia-abrisvelos",
+            "recordid": "c36ff211c9cc41bad6a068f09982b1be47ec7768",
+            "fields": {
+                "nbplaces": 68,
+                "typeabri": "abris V'Lille",
+                "nom": "Centre Croix",
+                "adresse": "Rue de la Fonderie",
+                "geo": [
+                    50.674954,
+                    3.145916
+                ],
+                "anneeinstallation": "2013-05-31",
+                "codepostal": "59170",
+                "modeabri": "automatis\u00e9",
+                "commune": "CROIX"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    3.145916,
+                    50.674954
+                ]
+            },
+            "record_timestamp": "2021-07-28T15:32:11.117000+00:00"
+        },
+        {
+            "datasetid": "ilevia-abrisvelos",
+            "recordid": "5cdf69eb4c0e2376e965378c0e21c9c67d32bf46",
+            "fields": {
+                "nbplaces": 45,
+                "typeabri": "abris V'Lille",
+                "nom": "Les Pr\u00e9s Edgard Pisani",
+                "adresse": "Rue du Moulin Delmar",
+                "geo": [
+                    50.650048,
+                    3.125509
+                ],
+                "codepostal": "59650",
+                "modeabri": "humanis\u00e9",
+                "commune": "VILLENEUVE D'ASCQ"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    3.125509,
+                    50.650048
+                ]
+            },
+            "record_timestamp": "2021-07-28T15:32:11.117000+00:00"
+        }
+    ],
+    "facet_groups": [
+        {
+            "name": "nom",
+            "facets": [
+                {
+                    "name": "3 Fermes",
+                    "count": 1,
+                    "state": "displayed",
+                    "path": "3 Fermes"
+                },
+                {
+                    "name": "3 Suisses",
+                    "count": 1,
+                    "state": "displayed",
+                    "path": "3 Suisses"
+                },
+                {
+                    "name": "4 Cantons Stade Pierre Mauroy",
+                    "count": 1,
+                    "state": "displayed",
+                    "path": "4 Cantons Stade Pierre Mauroy"
+                },
+                {
+                    "name": "C.H.U. Eurasant\u00e9",
+                    "count": 1,
+                    "state": "displayed",
+                    "path": "C.H.U. Eurasant\u00e9"
+                },
+                {
+                    "name": "Centre Comines",
+                    "count": 1,
+                    "state": "displayed",
+                    "path": "Centre Comines"
+                },
+                {
+                    "name": "Centre Croix",
+                    "count": 1,
+                    "state": "displayed",
+                    "path": "Centre Croix"
+                },
+                {
+                    "name": "Centre Halluin",
+                    "count": 1,
+                    "state": "displayed",
+                    "path": "Centre Halluin"
+                },
+                {
+                    "name": "Centre Tourcoing",
+                    "count": 1,
+                    "state": "displayed",
+                    "path": "Centre Tourcoing"
+                },
+                {
+                    "name": "Centre Wattrelos",
+                    "count": 1,
+                    "state": "displayed",
+                    "path": "Centre Wattrelos"
+                },
+                {
+                    "name": "Crois\u00e9 Laroche",
+                    "count": 1,
+                    "state": "displayed",
+                    "path": "Crois\u00e9 Laroche"
+                },
+                {
+                    "name": "Don Sainghin",
+                    "count": 1,
+                    "state": "displayed",
+                    "path": "Don Sainghin"
+                },
+                {
+                    "name": "Epeule Montesquieu",
+                    "count": 1,
+                    "state": "displayed",
+                    "path": "Epeule Montesquieu"
+                },
+                {
+                    "name": "Gare Armenti\u00e8res",
+                    "count": 1,
+                    "state": "displayed",
+                    "path": "Gare Armenti\u00e8res"
+                },
+                {
+                    "name": "Gare Seclin",
+                    "count": 1,
+                    "state": "displayed",
+                    "path": "Gare Seclin"
+                },
+                {
+                    "name": "Jardin Public",
+                    "count": 1,
+                    "state": "displayed",
+                    "path": "Jardin Public"
+                },
+                {
+                    "name": "Laenec",
+                    "count": 1,
+                    "state": "displayed",
+                    "path": "Laenec"
+                },
+                {
+                    "name": "Les Pr\u00e9s Edgard Pisani",
+                    "count": 1,
+                    "state": "displayed",
+                    "path": "Les Pr\u00e9s Edgard Pisani"
+                },
+                {
+                    "name": "Mairie Hellemmes",
+                    "count": 1,
+                    "state": "displayed",
+                    "path": "Mairie Hellemmes"
+                },
+                {
+                    "name": "Mairie Loos",
+                    "count": 1,
+                    "state": "displayed",
+                    "path": "Mairie Loos"
+                },
+                {
+                    "name": "Mairie Mons-en-Baroeul",
+                    "count": 1,
+                    "state": "displayed",
+                    "path": "Mairie Mons-en-Baroeul"
+                },
+                {
+                    "name": "Mairie Quesnoy-sur-De\u00fble",
+                    "count": 1,
+                    "state": "displayed",
+                    "path": "Mairie Quesnoy-sur-De\u00fble"
+                },
+                {
+                    "name": "Mairie Ronchin",
+                    "count": 1,
+                    "state": "displayed",
+                    "path": "Mairie Ronchin"
+                },
+                {
+                    "name": "Mairie St Andr\u00e9",
+                    "count": 1,
+                    "state": "displayed",
+                    "path": "Mairie St Andr\u00e9"
+                },
+                {
+                    "name": "Mairie Wambrechies",
+                    "count": 1,
+                    "state": "displayed",
+                    "path": "Mairie Wambrechies"
+                },
+                {
+                    "name": "Maison des enfants",
+                    "count": 1,
+                    "state": "displayed",
+                    "path": "Maison des enfants"
+                },
+                {
+                    "name": "Parking Eurot\u00e9l\u00e9port",
+                    "count": 1,
+                    "state": "displayed",
+                    "path": "Parking Eurot\u00e9l\u00e9port"
+                },
+                {
+                    "name": "Pav\u00e9 de Lille",
+                    "count": 1,
+                    "state": "displayed",
+                    "path": "Pav\u00e9 de Lille"
+                },
+                {
+                    "name": "Pont de Bois",
+                    "count": 1,
+                    "state": "displayed",
+                    "path": "Pont de Bois"
+                },
+                {
+                    "name": "Porte de Douai",
+                    "count": 1,
+                    "state": "displayed",
+                    "path": "Porte de Douai"
+                },
+                {
+                    "name": "Porte des Postes",
+                    "count": 1,
+                    "state": "displayed",
+                    "path": "Porte des Postes"
+                },
+                {
+                    "name": "Romarin",
+                    "count": 1,
+                    "state": "displayed",
+                    "path": "Romarin"
+                },
+                {
+                    "name": "Saint Philibert",
+                    "count": 1,
+                    "state": "displayed",
+                    "path": "Saint Philibert"
+                },
+                {
+                    "name": "Wazemmes",
+                    "count": 1,
+                    "state": "displayed",
+                    "path": "Wazemmes"
+                }
+            ]
+        },
+        {
+            "name": "codepostal",
+            "facets": [
+                {
+                    "name": "59000",
+                    "count": 4,
+                    "state": "displayed",
+                    "path": "59000"
+                },
+                {
+                    "name": "59100",
+                    "count": 2,
+                    "state": "displayed",
+                    "path": "59100"
+                },
+                {
+                    "name": "59160",
+                    "count": 2,
+                    "state": "displayed",
+                    "path": "59160"
+                },
+                {
+                    "name": "59650",
+                    "count": 2,
+                    "state": "displayed",
+                    "path": "59650"
+                },
+                {
+                    "name": "56666",
+                    "count": 1,
+                    "state": "displayed",
+                    "path": "56666"
+                },
+                {
+                    "name": "59110",
+                    "count": 1,
+                    "state": "displayed",
+                    "path": "59110"
+                },
+                {
+                    "name": "59113",
+                    "count": 1,
+                    "state": "displayed",
+                    "path": "59113"
+                },
+                {
+                    "name": "59118",
+                    "count": 1,
+                    "state": "displayed",
+                    "path": "59118"
+                },
+                {
+                    "name": "59120",
+                    "count": 1,
+                    "state": "displayed",
+                    "path": "59120"
+                },
+                {
+                    "name": "59139",
+                    "count": 1,
+                    "state": "displayed",
+                    "path": "59139"
+                },
+                {
+                    "name": "59150",
+                    "count": 1,
+                    "state": "displayed",
+                    "path": "59150"
+                },
+                {
+                    "name": "59170",
+                    "count": 1,
+                    "state": "displayed",
+                    "path": "59170"
+                },
+                {
+                    "name": "59184",
+                    "count": 1,
+                    "state": "displayed",
+                    "path": "59184"
+                },
+                {
+                    "name": "59200",
+                    "count": 1,
+                    "state": "displayed",
+                    "path": "59200"
+                },
+                {
+                    "name": "59250",
+                    "count": 1,
+                    "state": "displayed",
+                    "path": "59250"
+                },
+                {
+                    "name": "59260",
+                    "count": 1,
+                    "state": "displayed",
+                    "path": "59260"
+                },
+                {
+                    "name": "59290",
+                    "count": 1,
+                    "state": "displayed",
+                    "path": "59290"
+                },
+                {
+                    "name": "59320",
+                    "count": 1,
+                    "state": "displayed",
+                    "path": "59320"
+                },
+                {
+                    "name": "59350",
+                    "count": 1,
+                    "state": "displayed",
+                    "path": "59350"
+                },
+                {
+                    "name": "59370",
+                    "count": 1,
+                    "state": "displayed",
+                    "path": "59370"
+                },
+                {
+                    "name": "59420",
+                    "count": 1,
+                    "state": "displayed",
+                    "path": "59420"
+                },
+                {
+                    "name": "59427",
+                    "count": 1,
+                    "state": "displayed",
+                    "path": "59427"
+                },
+                {
+                    "name": "59510",
+                    "count": 1,
+                    "state": "displayed",
+                    "path": "59510"
+                },
+                {
+                    "name": "59560",
+                    "count": 1,
+                    "state": "displayed",
+                    "path": "59560"
+                },
+                {
+                    "name": "59700",
+                    "count": 1,
+                    "state": "displayed",
+                    "path": "59700"
+                },
+                {
+                    "name": "59790",
+                    "count": 1,
+                    "state": "displayed",
+                    "path": "59790"
+                },
+                {
+                    "name": "59890",
+                    "count": 1,
+                    "state": "displayed",
+                    "path": "59890"
+                }
+            ]
+        },
+        {
+            "name": "commune",
+            "facets": [
+                {
+                    "name": "LILLE",
+                    "count": 4,
+                    "state": "displayed",
+                    "path": "LILLE"
+                },
+                {
+                    "name": "VILLENEUVE D'ASCQ",
+                    "count": 3,
+                    "state": "displayed",
+                    "path": "VILLENEUVE D'ASCQ"
+                },
+                {
+                    "name": "LOMME",
+                    "count": 2,
+                    "state": "displayed",
+                    "path": "LOMME"
+                },
+                {
+                    "name": "ROUBAIX",
+                    "count": 2,
+                    "state": "displayed",
+                    "path": "ROUBAIX"
+                },
+                {
+                    "name": "ARMENTI\u00c8RES",
+                    "count": 1,
+                    "state": "displayed",
+                    "path": "ARMENTI\u00c8RES"
+                },
+                {
+                    "name": "COMINES",
+                    "count": 1,
+                    "state": "displayed",
+                    "path": "COMINES"
+                },
+                {
+                    "name": "CROIX",
+                    "count": 1,
+                    "state": "displayed",
+                    "path": "CROIX"
+                },
+                {
+                    "name": "HALLUIN",
+                    "count": 1,
+                    "state": "displayed",
+                    "path": "HALLUIN"
+                },
+                {
+                    "name": "HAUBOURDIN",
+                    "count": 1,
+                    "state": "displayed",
+                    "path": "HAUBOURDIN"
+                },
+                {
+                    "name": "HELLEMMES",
+                    "count": 1,
+                    "state": "displayed",
+                    "path": "HELLEMMES"
+                },
+                {
+                    "name": "HEM",
+                    "count": 1,
+                    "state": "displayed",
+                    "path": "HEM"
+                },
+                {
+                    "name": "LA MADELEINE",
+                    "count": 1,
+                    "state": "displayed",
+                    "path": "LA MADELEINE"
+                },
+                {
+                    "name": "LOOS",
+                    "count": 1,
+                    "state": "displayed",
+                    "path": "LOOS"
+                },
+                {
+                    "name": "MARCQ-EN-BAROEUL",
+                    "count": 1,
+                    "state": "displayed",
+                    "path": "MARCQ-EN-BAROEUL"
+                },
+                {
+                    "name": "MONS-EN-BAROEUL",
+                    "count": 1,
+                    "state": "displayed",
+                    "path": "MONS-EN-BAROEUL"
+                },
+                {
+                    "name": "MOUVAUX",
+                    "count": 1,
+                    "state": "displayed",
+                    "path": "MOUVAUX"
+                },
+                {
+                    "name": "QUESNOY-SUR-DE\u00dbLE",
+                    "count": 1,
+                    "state": "displayed",
+                    "path": "QUESNOY-SUR-DE\u00dbLE"
+                },
+                {
+                    "name": "RONCHIN",
+                    "count": 1,
+                    "state": "displayed",
+                    "path": "RONCHIN"
+                },
+                {
+                    "name": "SAINGHIN-EN-WEPPES",
+                    "count": 1,
+                    "state": "displayed",
+                    "path": "SAINGHIN-EN-WEPPES"
+                },
+                {
+                    "name": "SECLIN",
+                    "count": 1,
+                    "state": "displayed",
+                    "path": "SECLIN"
+                },
+                {
+                    "name": "ST ANDR\u00c9",
+                    "count": 1,
+                    "state": "displayed",
+                    "path": "ST ANDR\u00c9"
+                },
+                {
+                    "name": "TOURCOING",
+                    "count": 1,
+                    "state": "displayed",
+                    "path": "TOURCOING"
+                },
+                {
+                    "name": "WAMBRECHIES",
+                    "count": 1,
+                    "state": "displayed",
+                    "path": "WAMBRECHIES"
+                },
+                {
+                    "name": "WASQUEHAL",
+                    "count": 1,
+                    "state": "displayed",
+                    "path": "WASQUEHAL"
+                },
+                {
+                    "name": "WATTIGNIES",
+                    "count": 1,
+                    "state": "displayed",
+                    "path": "WATTIGNIES"
+                },
+                {
+                    "name": "WATTRELOS",
+                    "count": 1,
+                    "state": "displayed",
+                    "path": "WATTRELOS"
+                }
+            ]
+        },
+        {
+            "name": "modeabri",
+            "facets": [
+                {
+                    "name": "automatis\u00e9",
+                    "count": 27,
+                    "state": "displayed",
+                    "path": "automatis\u00e9"
+                },
+                {
+                    "name": "humanis\u00e9",
+                    "count": 6,
+                    "state": "displayed",
+                    "path": "humanis\u00e9"
+                }
+            ]
+        }
+    ]
+}
