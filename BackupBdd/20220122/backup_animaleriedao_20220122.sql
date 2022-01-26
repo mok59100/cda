@@ -1,16 +1,8 @@
-<<<<<<< HEAD
--- MySQL dump 10.13  Distrib 5.7.28, for Win32 (AMD64)
---
--- Host: localhost    Database: animaleriedao
--- ------------------------------------------------------
--- Server version	5.7.28
-=======
 -- MySQL dump 10.13  Distrib 5.7.31, for Win64 (x86_64)
 --
 -- Host: localhost    Database: animaleriedao
 -- ------------------------------------------------------
 -- Server version	5.7.31
->>>>>>> bb3e6ec689b7358000274a7ba42a7e2257e1087d
 
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
@@ -42,11 +34,7 @@ CREATE TABLE `alimentations` (
   `idAliment` int(11) NOT NULL AUTO_INCREMENT,
   `libelleAliment` varchar(50) NOT NULL,
   PRIMARY KEY (`idAliment`)
-<<<<<<< HEAD
-) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8;
-=======
 ) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
->>>>>>> bb3e6ec689b7358000274a7ba42a7e2257e1087d
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -55,11 +43,7 @@ CREATE TABLE `alimentations` (
 
 LOCK TABLES `alimentations` WRITE;
 /*!40000 ALTER TABLE `alimentations` DISABLE KEYS */;
-<<<<<<< HEAD
-INSERT INTO `alimentations` VALUES (1,'vegetaux'),(2,'viandes'),(3,'croquette');
-=======
 INSERT INTO `alimentations` VALUES (1,'vegetaux'),(2,'viandes');
->>>>>>> bb3e6ec689b7358000274a7ba42a7e2257e1087d
 /*!40000 ALTER TABLE `alimentations` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -134,11 +118,7 @@ CREATE TABLE `texte` (
   `fr` longtext NOT NULL,
   `en` longtext NOT NULL,
   PRIMARY KEY (`idTexte`)
-<<<<<<< HEAD
-) ENGINE=InnoDB AUTO_INCREMENT=10 DEFAULT CHARSET=utf8;
-=======
 ) ENGINE=InnoDB AUTO_INCREMENT=11 DEFAULT CHARSET=utf8;
->>>>>>> bb3e6ec689b7358000274a7ba42a7e2257e1087d
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -162,22 +142,12 @@ CREATE TABLE `utilisateurs` (
   `idUtilisateur` int(11) NOT NULL AUTO_INCREMENT,
   `nom` varchar(50) NOT NULL,
   `prenom` varchar(50) NOT NULL,
-<<<<<<< HEAD
-  `adresseMail` varchar(50) NOT NULL,
-  `telephone` int(10) NOT NULL,
-  `motDePasse` varchar(50) NOT NULL,
-  `role` int(11) DEFAULT NULL COMMENT '2 Admin 1 User',
-  `pseudo` varchar(50) DEFAULT NULL,
-  PRIMARY KEY (`idUtilisateur`)
-) ENGINE=InnoDB AUTO_INCREMENT=12 DEFAULT CHARSET=utf8;
-=======
   `motDePasse` varchar(50) NOT NULL,
   `adresseMail` varchar(50) NOT NULL,
   `role` int(11) NOT NULL COMMENT '2 Admin 1 User',
   `pseudo` varchar(50) NOT NULL,
   PRIMARY KEY (`idUtilisateur`)
 ) ENGINE=InnoDB AUTO_INCREMENT=11 DEFAULT CHARSET=utf8;
->>>>>>> bb3e6ec689b7358000274a7ba42a7e2257e1087d
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -186,11 +156,7 @@ CREATE TABLE `utilisateurs` (
 
 LOCK TABLES `utilisateurs` WRITE;
 /*!40000 ALTER TABLE `utilisateurs` DISABLE KEYS */;
-<<<<<<< HEAD
-INSERT INTO `utilisateurs` VALUES (7,'ad','ad','test@gmail.com',615121512,'11d437a3e6695447bd1bf2331651049e',2,'ad'),(8,'u','u','u',203010203,'1d0a5a28d53430e7f2293a1f36682f23',1,'u'),(9,'alan','poson','alan.poson@gmail.com',2147483647,'0c2d53364f5e70cdb05768e79ae5f683',1,'alan'),(10,'moktar','Moktar','Moktar@gmail.com',623252526,'0c2d53364f5e70cdb05768e79ae5f683',1,'Moktar'),(11,'moktar','moktar','moktar.terki@gmail.com',622322565,'80a910d42093f7901a3ddcdbc4bbc140',1,'mok');
-=======
 INSERT INTO `utilisateurs` VALUES (7,'ad','ad','11d437a3e6695447bd1bf2331651049e','ad',2,'ad'),(8,'u','u','1d0a5a28d53430e7f2293a1f36682f23','u',1,'u'),(9,'moktar','terki','6c1df8ebedd4bfce53f14c4a9129c83e','moktar.terki@gmail.com',1,'mok1'),(10,'Alan','Alan','fb469d7ef430b0baf0cab6c436e70375','Alan@live.fr',2,'Alan');
->>>>>>> bb3e6ec689b7358000274a7ba42a7e2257e1087d
 /*!40000 ALTER TABLE `utilisateurs` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -203,8 +169,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
-<<<<<<< HEAD
--- Dump completed on 2022-01-21  8:21:42
-=======
--- Dump completed on 2022-01-21 17:20:33
->>>>>>> bb3e6ec689b7358000274a7ba42a7e2257e1087d
+-- Dump completed on 2022-01-22 17:20:33

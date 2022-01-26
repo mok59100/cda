@@ -1,16 +1,8 @@
-<<<<<<< HEAD
--- MySQL dump 10.13  Distrib 5.7.28, for Win32 (AMD64)
---
--- Host: localhost    Database: gestionreunion
--- ------------------------------------------------------
--- Server version	5.7.28
-=======
 -- MySQL dump 10.13  Distrib 5.7.31, for Win64 (x86_64)
 --
 -- Host: localhost    Database: gestionreunion
 -- ------------------------------------------------------
 -- Server version	5.7.31
->>>>>>> bb3e6ec689b7358000274a7ba42a7e2257e1087d
 
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
@@ -42,11 +34,7 @@ CREATE TABLE `etatsavancements` (
   `idEtatAvancement` int(11) NOT NULL AUTO_INCREMENT,
   `libelleEtatAvancement` varchar(50) DEFAULT NULL,
   PRIMARY KEY (`idEtatAvancement`)
-<<<<<<< HEAD
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
-=======
 ) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8;
->>>>>>> bb3e6ec689b7358000274a7ba42a7e2257e1087d
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -55,11 +43,7 @@ CREATE TABLE `etatsavancements` (
 
 LOCK TABLES `etatsavancements` WRITE;
 /*!40000 ALTER TABLE `etatsavancements` DISABLE KEYS */;
-<<<<<<< HEAD
-INSERT INTO `etatsavancements` VALUES (1,'visio en cours');
-=======
 INSERT INTO `etatsavancements` VALUES (1,'En attente'),(2,'En cours'),(3,'Terminer');
->>>>>>> bb3e6ec689b7358000274a7ba42a7e2257e1087d
 /*!40000 ALTER TABLE `etatsavancements` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -75,11 +59,7 @@ CREATE TABLE `fichiersannexes` (
   `titreFichierAnnexe` varchar(50) DEFAULT NULL,
   `lienFichierAnnexe` varchar(50) DEFAULT NULL,
   PRIMARY KEY (`idFichierAnnexe`)
-<<<<<<< HEAD
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-=======
 ) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
->>>>>>> bb3e6ec689b7358000274a7ba42a7e2257e1087d
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -88,10 +68,7 @@ CREATE TABLE `fichiersannexes` (
 
 LOCK TABLES `fichiersannexes` WRITE;
 /*!40000 ALTER TABLE `fichiersannexes` DISABLE KEYS */;
-<<<<<<< HEAD
-=======
 INSERT INTO `fichiersannexes` VALUES (1,'Historique entreprise','https://fr.wikipedia.org/wiki/Histoire'),(2,'Diagramme coups production','https://fr.wikipedia.org/wiki/Histoire');
->>>>>>> bb3e6ec689b7358000274a7ba42a7e2257e1087d
 /*!40000 ALTER TABLE `fichiersannexes` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -111,11 +88,7 @@ CREATE TABLE `gestionsannexes` (
   KEY `FK_GestionsAnnexes_FichiersAnnexes` (`idFichierAnnexe`),
   CONSTRAINT `FK_GestionsAnnexes_FichiersAnnexes` FOREIGN KEY (`idFichierAnnexe`) REFERENCES `fichiersannexes` (`idFichierAnnexe`),
   CONSTRAINT `FK_GestionsAnnexes_Reunions` FOREIGN KEY (`idReunion`) REFERENCES `reunions` (`idReunion`)
-<<<<<<< HEAD
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-=======
 ) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
->>>>>>> bb3e6ec689b7358000274a7ba42a7e2257e1087d
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -124,10 +97,7 @@ CREATE TABLE `gestionsannexes` (
 
 LOCK TABLES `gestionsannexes` WRITE;
 /*!40000 ALTER TABLE `gestionsannexes` DISABLE KEYS */;
-<<<<<<< HEAD
-=======
 INSERT INTO `gestionsannexes` VALUES (1,2,2),(2,1,1);
->>>>>>> bb3e6ec689b7358000274a7ba42a7e2257e1087d
 /*!40000 ALTER TABLE `gestionsannexes` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -147,11 +117,7 @@ CREATE TABLE `gestionstaches` (
   KEY `FK_GestionsTaches_Taches` (`idTache`),
   CONSTRAINT `FK_GestionsTaches_Reunions` FOREIGN KEY (`idReunion`) REFERENCES `reunions` (`idReunion`),
   CONSTRAINT `FK_GestionsTaches_Taches` FOREIGN KEY (`idTache`) REFERENCES `taches` (`idTache`)
-<<<<<<< HEAD
-) ENGINE=InnoDB AUTO_INCREMENT=12 DEFAULT CHARSET=utf8;
-=======
 ) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
->>>>>>> bb3e6ec689b7358000274a7ba42a7e2257e1087d
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -160,11 +126,7 @@ CREATE TABLE `gestionstaches` (
 
 LOCK TABLES `gestionstaches` WRITE;
 /*!40000 ALTER TABLE `gestionstaches` DISABLE KEYS */;
-<<<<<<< HEAD
-INSERT INTO `gestionstaches` VALUES (10,3,2),(11,4,2);
-=======
 INSERT INTO `gestionstaches` VALUES (1,2,1),(2,1,2);
->>>>>>> bb3e6ec689b7358000274a7ba42a7e2257e1087d
 /*!40000 ALTER TABLE `gestionstaches` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -184,11 +146,7 @@ CREATE TABLE `ordresdujour` (
   KEY `FK_OrdresDuJour_Sujets` (`idSujet`),
   CONSTRAINT `FK_OrdresDuJour_Reunions` FOREIGN KEY (`idReunion`) REFERENCES `reunions` (`idReunion`),
   CONSTRAINT `FK_OrdresDuJour_Sujets` FOREIGN KEY (`idSujet`) REFERENCES `sujets` (`idSujet`)
-<<<<<<< HEAD
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-=======
 ) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
->>>>>>> bb3e6ec689b7358000274a7ba42a7e2257e1087d
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -197,10 +155,7 @@ CREATE TABLE `ordresdujour` (
 
 LOCK TABLES `ordresdujour` WRITE;
 /*!40000 ALTER TABLE `ordresdujour` DISABLE KEYS */;
-<<<<<<< HEAD
-=======
 INSERT INTO `ordresdujour` VALUES (1,1,3),(2,2,4);
->>>>>>> bb3e6ec689b7358000274a7ba42a7e2257e1087d
 /*!40000 ALTER TABLE `ordresdujour` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -224,11 +179,7 @@ CREATE TABLE `participations` (
   CONSTRAINT `FK_Participations_Reunions` FOREIGN KEY (`idReunion`) REFERENCES `reunions` (`idReunion`),
   CONSTRAINT `FK_Participations_StatutsPresences` FOREIGN KEY (`idStatutPresence`) REFERENCES `statutspresences` (`idStatutPresence`),
   CONSTRAINT `FK_Participations_Utilisateurs` FOREIGN KEY (`idUtilisateur`) REFERENCES `utilisateurs` (`idUtilisateur`)
-<<<<<<< HEAD
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-=======
 ) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
->>>>>>> bb3e6ec689b7358000274a7ba42a7e2257e1087d
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -237,10 +188,7 @@ CREATE TABLE `participations` (
 
 LOCK TABLES `participations` WRITE;
 /*!40000 ALTER TABLE `participations` DISABLE KEYS */;
-<<<<<<< HEAD
-=======
 INSERT INTO `participations` VALUES (1,1,2,1,1),(2,3,2,2,2);
->>>>>>> bb3e6ec689b7358000274a7ba42a7e2257e1087d
 /*!40000 ALTER TABLE `participations` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -255,11 +203,7 @@ CREATE TABLE `prioritestaches` (
   `idPrioriteTache` int(11) NOT NULL AUTO_INCREMENT,
   `libellePrioriteTache` varchar(50) DEFAULT NULL,
   PRIMARY KEY (`idPrioriteTache`)
-<<<<<<< HEAD
-) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
-=======
 ) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8;
->>>>>>> bb3e6ec689b7358000274a7ba42a7e2257e1087d
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -268,11 +212,7 @@ CREATE TABLE `prioritestaches` (
 
 LOCK TABLES `prioritestaches` WRITE;
 /*!40000 ALTER TABLE `prioritestaches` DISABLE KEYS */;
-<<<<<<< HEAD
-INSERT INTO `prioritestaches` VALUES (1,'urgent'),(2,'urgent');
-=======
 INSERT INTO `prioritestaches` VALUES (1,'Faible importance '),(2,'Moyenne importance '),(3,'Forte importance');
->>>>>>> bb3e6ec689b7358000274a7ba42a7e2257e1087d
 /*!40000 ALTER TABLE `prioritestaches` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -311,11 +251,7 @@ CREATE TABLE `reunions` (
   CONSTRAINT `FK_Reunions_Salles` FOREIGN KEY (`idSalle`) REFERENCES `salles` (`idSalle`),
   CONSTRAINT `FK_Reunions_Secretaire` FOREIGN KEY (`idSecretaire`) REFERENCES `utilisateurs` (`idUtilisateur`),
   CONSTRAINT `FK_Reunions_TypesReunions` FOREIGN KEY (`idTypeReunion`) REFERENCES `typesreunions` (`idTypeReunion`)
-<<<<<<< HEAD
-) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8;
-=======
 ) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
->>>>>>> bb3e6ec689b7358000274a7ba42a7e2257e1087d
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -324,11 +260,7 @@ CREATE TABLE `reunions` (
 
 LOCK TABLES `reunions` WRITE;
 /*!40000 ALTER TABLE `reunions` DISABLE KEYS */;
-<<<<<<< HEAD
-INSERT INTO `reunions` VALUES (3,'debrief salon','2022-01-17','paris','08:00:00','15:00:00',20,'yrdjfu',1,2,1,1,1,1),(4,'debrief salon','2022-01-17','paris','08:00:00','15:00:00',20,'yrdjfu',1,2,1,1,1,1);
-=======
 INSERT INTO `reunions` VALUES (1,'financiere','2022-01-13','dunkerque ','06:30:30','07:30:30',50,'la reunion portera sur les comptes de l\'entreprise , on verra l\'intégralités des projet réalisés en 2021',1,2,3,1,1,1),(2,'compte rendu operation noel ','2022-01-19','maubeuge','15:36:30','20:36:30',150,'projet noel , compte rendu de l\'operation',3,1,2,2,2,1);
->>>>>>> bb3e6ec689b7358000274a7ba42a7e2257e1087d
 /*!40000 ALTER TABLE `reunions` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -343,11 +275,7 @@ CREATE TABLE `roles` (
   `idRole` int(11) NOT NULL AUTO_INCREMENT,
   `libelleRole` varchar(50) DEFAULT NULL,
   PRIMARY KEY (`idRole`)
-<<<<<<< HEAD
-) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
-=======
 ) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8;
->>>>>>> bb3e6ec689b7358000274a7ba42a7e2257e1087d
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -356,11 +284,7 @@ CREATE TABLE `roles` (
 
 LOCK TABLES `roles` WRITE;
 /*!40000 ALTER TABLE `roles` DISABLE KEYS */;
-<<<<<<< HEAD
-INSERT INTO `roles` VALUES (1,'secretaire'),(2,'orateur');
-=======
 INSERT INTO `roles` VALUES (1,'Secretaire '),(2,'Animateur'),(3,'Participant'),(4,'Administrateur');
->>>>>>> bb3e6ec689b7358000274a7ba42a7e2257e1087d
 /*!40000 ALTER TABLE `roles` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -385,11 +309,7 @@ CREATE TABLE `salles` (
 
 LOCK TABLES `salles` WRITE;
 /*!40000 ALTER TABLE `salles` DISABLE KEYS */;
-<<<<<<< HEAD
-INSERT INTO `salles` VALUES (1,'f3',20),(2,'f3',20);
-=======
 INSERT INTO `salles` VALUES (1,'coluche',50),(2,'Charles de gaulle',150);
->>>>>>> bb3e6ec689b7358000274a7ba42a7e2257e1087d
 /*!40000 ALTER TABLE `salles` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -413,11 +333,7 @@ CREATE TABLE `statutspresences` (
 
 LOCK TABLES `statutspresences` WRITE;
 /*!40000 ALTER TABLE `statutspresences` DISABLE KEYS */;
-<<<<<<< HEAD
-INSERT INTO `statutspresences` VALUES (3,'absent');
-=======
 INSERT INTO `statutspresences` VALUES (1,'Present'),(2,'Absent'),(3,'Excuse');
->>>>>>> bb3e6ec689b7358000274a7ba42a7e2257e1087d
 /*!40000 ALTER TABLE `statutspresences` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -436,11 +352,7 @@ CREATE TABLE `sujets` (
   PRIMARY KEY (`idSujet`),
   KEY `FK_Sujets_Orateur` (`idOrateur`),
   CONSTRAINT `FK_Sujets_Orateur` FOREIGN KEY (`idOrateur`) REFERENCES `utilisateurs` (`idUtilisateur`)
-<<<<<<< HEAD
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
-=======
 ) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8;
->>>>>>> bb3e6ec689b7358000274a7ba42a7e2257e1087d
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -449,11 +361,7 @@ CREATE TABLE `sujets` (
 
 LOCK TABLES `sujets` WRITE;
 /*!40000 ALTER TABLE `sujets` DISABLE KEYS */;
-<<<<<<< HEAD
-INSERT INTO `sujets` VALUES (1,'evolution commerciale','00:40:00',2);
-=======
 INSERT INTO `sujets` VALUES (3,'cout','09:33:14',1),(4,'temps','00:18:40',2),(5,'structure','00:33:22',3);
->>>>>>> bb3e6ec689b7358000274a7ba42a7e2257e1087d
 /*!40000 ALTER TABLE `sujets` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -478,11 +386,7 @@ CREATE TABLE `taches` (
   CONSTRAINT `FK_Taches_EtatsAvancements` FOREIGN KEY (`idEtatAvancement`) REFERENCES `etatsavancements` (`idEtatAvancement`),
   CONSTRAINT `FK_Taches_PrioritesTaches` FOREIGN KEY (`idPrioriteTache`) REFERENCES `prioritestaches` (`idPrioriteTache`),
   CONSTRAINT `FK_Taches_Utilisateurs` FOREIGN KEY (`idUtilisateur`) REFERENCES `utilisateurs` (`idUtilisateur`)
-<<<<<<< HEAD
-) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8;
-=======
 ) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8;
->>>>>>> bb3e6ec689b7358000274a7ba42a7e2257e1087d
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -491,11 +395,7 @@ CREATE TABLE `taches` (
 
 LOCK TABLES `taches` WRITE;
 /*!40000 ALTER TABLE `taches` DISABLE KEYS */;
-<<<<<<< HEAD
-INSERT INTO `taches` VALUES (2,'test','2009-12-20',1,1,1),(3,'test','2009-12-20',1,1,1),(4,'test','2009-12-20',1,1,1),(5,'test','2009-12-20',1,1,1);
-=======
 INSERT INTO `taches` VALUES (1,'Structure des ducuments','2022-01-19',1,4,3),(2,'Calcule des couts ','2022-01-12',2,2,2),(3,'Mise en production','2022-01-12',3,1,3);
->>>>>>> bb3e6ec689b7358000274a7ba42a7e2257e1087d
 /*!40000 ALTER TABLE `taches` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -510,11 +410,7 @@ CREATE TABLE `typesreunions` (
   `idTypeReunion` int(11) NOT NULL AUTO_INCREMENT,
   `libelleTypeReunion` varchar(50) DEFAULT NULL,
   PRIMARY KEY (`idTypeReunion`)
-<<<<<<< HEAD
-) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8;
-=======
 ) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
->>>>>>> bb3e6ec689b7358000274a7ba42a7e2257e1087d
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -523,11 +419,7 @@ CREATE TABLE `typesreunions` (
 
 LOCK TABLES `typesreunions` WRITE;
 /*!40000 ALTER TABLE `typesreunions` DISABLE KEYS */;
-<<<<<<< HEAD
-INSERT INTO `typesreunions` VALUES (1,'commerce'),(2,'commerce'),(3,'commerce');
-=======
 INSERT INTO `typesreunions` VALUES (1,'Presentiel'),(2,'Distanciel ');
->>>>>>> bb3e6ec689b7358000274a7ba42a7e2257e1087d
 /*!40000 ALTER TABLE `typesreunions` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -549,11 +441,7 @@ CREATE TABLE `utilisateurs` (
   PRIMARY KEY (`idUtilisateur`),
   KEY `FK_Utilisateurs_Roles` (`idRole`),
   CONSTRAINT `FK_Utilisateurs_Roles` FOREIGN KEY (`idRole`) REFERENCES `roles` (`idRole`)
-<<<<<<< HEAD
-) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
-=======
 ) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8;
->>>>>>> bb3e6ec689b7358000274a7ba42a7e2257e1087d
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -562,11 +450,7 @@ CREATE TABLE `utilisateurs` (
 
 LOCK TABLES `utilisateurs` WRITE;
 /*!40000 ALTER TABLE `utilisateurs` DISABLE KEYS */;
-<<<<<<< HEAD
-INSERT INTO `utilisateurs` VALUES (1,'terki','moktar','moktar.terki@gmail.com','1234',0,1),(2,'terki','moktar','moktar.terki@gmail.com','1234',0,1);
-=======
 INSERT INTO `utilisateurs` VALUES (1,'Poson','Alan','Alan@gmail.com','test',1,4),(2,'Mayeux','Bruno','Bruno@gmail.com','test',1,2),(3,'Terki','Moktar','Moktar@gmail.com','test',1,1),(4,'Bolt','Usain','usain@gmail.com','test',1,3);
->>>>>>> bb3e6ec689b7358000274a7ba42a7e2257e1087d
 /*!40000 ALTER TABLE `utilisateurs` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -579,8 +463,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
-<<<<<<< HEAD
--- Dump completed on 2022-01-21  8:21:44
-=======
--- Dump completed on 2022-01-21 17:20:35
->>>>>>> bb3e6ec689b7358000274a7ba42a7e2257e1087d
+-- Dump completed on 2022-01-23 17:20:35
