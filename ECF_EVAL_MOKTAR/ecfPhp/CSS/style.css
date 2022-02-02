@@ -1,0 +1,30 @@
+
+
+header,footer{
+background-color: rgb(82, 70, 70);
+
+}
+body{
+    background-color: rgb(175, 165, 165);
+}
+footer{
+    position: fixed;/*mok on fixe la position du footer*/
+    bottom: 0;/*bottom permet de fixer vers le bas le footer*/
+    width: 100%;/*permet de prendre toute la nlargeur de l'ecran*/
+    color:var(--color1);/*mok pour appeler une variable deaja existante on ecrit var(--on appel la variable en question*/
+}
+nav div{/*mok les elements peuvent etre appeler en css sans creer de classe mais il faut mettre un espace*/
+padding: 20px;
+border: 1px solid;
+margin: 10px;
+box-shadow: 2px 2px 3px black;
+}  
+nav div:active{
+    box-shadow: -2px -2px 3px black;
+    /*le box sahdow s'inverse en le mettant en negative pour donner l'effet d'un bouton*/
+}
+.encadrer{
+    padding:20px;
+    margin: 5px;
+    border: solid var(--color1) 1px;
+}

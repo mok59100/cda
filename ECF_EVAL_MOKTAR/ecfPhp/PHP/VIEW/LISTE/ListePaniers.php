@@ -18,20 +18,21 @@ echo '<div class="caseListe grid-columns-span-6">
 <div></div>
 </div>';
 
-echo '<div class="caseListe">IdClient</div>';
-echo '<div class="caseListe">DatePanier</div>';
-echo '<div class="caseListe">AdresseLivraison</div>';
+echo '<div class="caseListe">Client</div>';
+echo '<div class="caseListe">Nombre Articles</div>';
+
 
 //Remplissage de div vide pour la structure de la grid
 echo '<div class="caseListe"></div>';
 echo '<div class="caseListe"></div>';
 echo '<div class="caseListe"></div>';
-
+UtilisateursManager::getList(null,["role"=>1]);/*je demande a la classe utilisateurmanager avec le getlist  tout les info utilisateur avec le role client (je met toute les condition)*/
 // Affichage des ennregistrements de la base de données
+var_dump(UtilisateursManager::getList(null,["role"=>1]));
 foreach($objets as $unObjet)
 {
-echo '<div class="caseListe">'.$unObjet->getIdClient().'</div>';
-echo '<div class="caseListe">'.$unObjet->getDatePanier().'</div>';
+echo '<div class="caseListe">'.$unObjet->getNomUtilisateur().'</div>';
+echo '<div class="caseListe">'.$unObjet->getQuantite().'</div>';
 echo '<div class="caseListe">'.$unObjet->getAdresseLivraison().'</div>';
 echo '<div class="caseListe"> <a href="index.php?page=FormPaniers&mode=Afficher&id='.$unObjet->getIdPanier().'"><i class="fas fa-file-contract"></i></a></div>';
                                                     
