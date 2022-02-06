@@ -1,8 +1,16 @@
+<<<<<<< HEAD
 -- MySQL dump 10.13  Distrib 5.7.28, for Win32 (AMD64)
 --
 -- Host: localhost    Database: automate
 -- ------------------------------------------------------
 -- Server version	5.7.28
+=======
+-- MySQL dump 10.13  Distrib 5.7.31, for Win64 (x86_64)
+--
+-- Host: localhost    Database: automate
+-- ------------------------------------------------------
+-- Server version	5.7.31
+>>>>>>> 0da64853af6ba85569fdda00f1791068c00ddb71
 
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
@@ -136,7 +144,11 @@ DROP TABLE IF EXISTS `afpa_lumieres`;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `afpa_lumieres` (
   `IdLumiere` int(11) NOT NULL AUTO_INCREMENT,
+<<<<<<< HEAD
   `ValeurLumiere` float DEFAULT NULL,
+=======
+  `ValeurLumiere` int(11) DEFAULT NULL,
+>>>>>>> 0da64853af6ba85569fdda00f1791068c00ddb71
   `DateLumiere` datetime DEFAULT NULL,
   PRIMARY KEY (`IdLumiere`)
 ) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
@@ -165,7 +177,10 @@ CREATE TABLE `afpa_objectifs` (
   `MaxNombreArretTemperature` int(11) DEFAULT NULL,
   `MaxNombreArretDecibel` int(11) DEFAULT NULL,
   `MaxPourcentDeclasses` int(11) DEFAULT NULL,
+<<<<<<< HEAD
   `Date` datetime DEFAULT NULL,
+=======
+>>>>>>> 0da64853af6ba85569fdda00f1791068c00ddb71
   PRIMARY KEY (`IdObjectif`)
 ) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
@@ -176,7 +191,11 @@ CREATE TABLE `afpa_objectifs` (
 
 LOCK TABLES `afpa_objectifs` WRITE;
 /*!40000 ALTER TABLE `afpa_objectifs` DISABLE KEYS */;
+<<<<<<< HEAD
 INSERT INTO `afpa_objectifs` VALUES (1,100,4,5,60,NULL),(2,200,5,4,70,NULL);
+=======
+INSERT INTO `afpa_objectifs` VALUES (1,100,4,5,60),(2,200,5,4,70);
+>>>>>>> 0da64853af6ba85569fdda00f1791068c00ddb71
 /*!40000 ALTER TABLE `afpa_objectifs` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -189,11 +208,18 @@ DROP TABLE IF EXISTS `afpa_seuils`;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `afpa_seuils` (
   `IdSeuil` int(11) NOT NULL AUTO_INCREMENT,
+<<<<<<< HEAD
   `SeuilBas` float DEFAULT NULL,
   `SeuilHaut` float DEFAULT NULL,
   `DateSeuil` date DEFAULT NULL,
   `Temps` int(11) DEFAULT NULL,
   `Nature` int(11) DEFAULT NULL,
+=======
+  `SeuilBas` int(11) DEFAULT NULL,
+  `SeuilHaut` int(11) DEFAULT NULL,
+  `DateSeuil` date DEFAULT NULL,
+  `Temps` int(11) DEFAULT NULL,
+>>>>>>> 0da64853af6ba85569fdda00f1791068c00ddb71
   PRIMARY KEY (`IdSeuil`)
 ) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
@@ -204,7 +230,11 @@ CREATE TABLE `afpa_seuils` (
 
 LOCK TABLES `afpa_seuils` WRITE;
 /*!40000 ALTER TABLE `afpa_seuils` DISABLE KEYS */;
+<<<<<<< HEAD
 INSERT INTO `afpa_seuils` VALUES (1,10,30,'2022-02-01',1,3),(2,40,150,'2022-02-02',2,2),(3,100,1000,'2022-02-25',1,1);
+=======
+INSERT INTO `afpa_seuils` VALUES (1,10,30,'2022-02-01',1),(2,40,150,'2022-02-02',2),(3,100,1000,'2022-02-25',1);
+>>>>>>> 0da64853af6ba85569fdda00f1791068c00ddb71
 /*!40000 ALTER TABLE `afpa_seuils` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -217,7 +247,11 @@ DROP TABLE IF EXISTS `afpa_sons`;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `afpa_sons` (
   `IdSon` int(11) NOT NULL AUTO_INCREMENT,
+<<<<<<< HEAD
   `ValeurSon` float DEFAULT NULL,
+=======
+  `ValeurSon` int(11) DEFAULT NULL,
+>>>>>>> 0da64853af6ba85569fdda00f1791068c00ddb71
   `DateSon` datetime DEFAULT NULL,
   PRIMARY KEY (`IdSon`)
 ) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
@@ -242,7 +276,11 @@ DROP TABLE IF EXISTS `afpa_temperatures`;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `afpa_temperatures` (
   `IdTemperature` int(11) NOT NULL AUTO_INCREMENT,
+<<<<<<< HEAD
   `ValeurTemperature` float DEFAULT NULL,
+=======
+  `ValeurTemperature` decimal(3,1) DEFAULT NULL,
+>>>>>>> 0da64853af6ba85569fdda00f1791068c00ddb71
   `DateTemperature` datetime DEFAULT NULL,
   PRIMARY KEY (`IdTemperature`)
 ) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
@@ -254,11 +292,16 @@ CREATE TABLE `afpa_temperatures` (
 
 LOCK TABLES `afpa_temperatures` WRITE;
 /*!40000 ALTER TABLE `afpa_temperatures` DISABLE KEYS */;
+<<<<<<< HEAD
 INSERT INTO `afpa_temperatures` VALUES (1,21,'2022-02-01 13:57:57'),(2,-3,'2022-02-01 14:57:57');
+=======
+INSERT INTO `afpa_temperatures` VALUES (1,21.0,'2022-02-01 13:57:57'),(2,-3.0,'2022-02-01 14:57:57');
+>>>>>>> 0da64853af6ba85569fdda00f1791068c00ddb71
 /*!40000 ALTER TABLE `afpa_temperatures` ENABLE KEYS */;
 UNLOCK TABLES;
 
 --
+<<<<<<< HEAD
 -- Table structure for table `afpa_textes`
 --
 
@@ -266,6 +309,15 @@ DROP TABLE IF EXISTS `afpa_textes`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `afpa_textes` (
+=======
+-- Table structure for table `textes`
+--
+
+DROP TABLE IF EXISTS `textes`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `textes` (
+>>>>>>> 0da64853af6ba85569fdda00f1791068c00ddb71
   `idTexte` int(11) NOT NULL AUTO_INCREMENT,
   `codeTexte` varchar(50) NOT NULL,
   `fr` longtext NOT NULL,
@@ -275,6 +327,7 @@ CREATE TABLE `afpa_textes` (
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
+<<<<<<< HEAD
 -- Dumping data for table `afpa_textes`
 --
 
@@ -292,6 +345,25 @@ DROP TABLE IF EXISTS `afpa_utilisateurs`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `afpa_utilisateurs` (
+=======
+-- Dumping data for table `textes`
+--
+
+LOCK TABLES `textes` WRITE;
+/*!40000 ALTER TABLE `textes` DISABLE KEYS */;
+INSERT INTO `textes` VALUES (1,'Bonjour','Bonjour','Hello'),(2,'Connexion','Connexion','Log in'),(3,'Deconnexion','Deconnexion','Log out'),(4,'Accueil','Accueil','Home'),(5,'AdresseEmail','Adresse email','Email address'),(6,'Mdp','Mot de passe','Password'),(7,'Inscription','Inscription','Registration'),(8,'Nom','Nom','Surname'),(9,'Prenom','Prenom','Name'),(10,'InfoMdpLegend','Veuillez saisir au moins','Please enter at least'),(11,'UneMajuscule','1 majuscule','1 uppercase'),(12,'UneMinuscule','1 minuscule','1 lowercase'),(13,'UnChiffre','1 chiffre','1 number'),(14,'UnCaractereSpecial','1 caractère spécial ( ! @ & # * ^ $ % +)','1 special character ( ! @ & # * ^ $ % +)'),(15,'MinimumCaractere','8 caractères','8 character'),(16,'Confirmation','Confirmation','Confirmation'),(17,'Reset','Réinitialisation','Reset'),(18,'Envoyer','Envoyer','Send');
+/*!40000 ALTER TABLE `textes` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `utilisateurs`
+--
+
+DROP TABLE IF EXISTS `utilisateurs`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `utilisateurs` (
+>>>>>>> 0da64853af6ba85569fdda00f1791068c00ddb71
   `idUtilisateur` int(11) NOT NULL AUTO_INCREMENT,
   `nom` varchar(50) NOT NULL,
   `prenom` varchar(50) NOT NULL,
@@ -300,6 +372,7 @@ CREATE TABLE `afpa_utilisateurs` (
   `role` int(11) NOT NULL COMMENT '2 Admin 1 User',
   PRIMARY KEY (`idUtilisateur`),
   UNIQUE KEY `adresseMail` (`adresseMail`)
+<<<<<<< HEAD
 ) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -311,6 +384,19 @@ LOCK TABLES `afpa_utilisateurs` WRITE;
 /*!40000 ALTER TABLE `afpa_utilisateurs` DISABLE KEYS */;
 INSERT INTO `afpa_utilisateurs` VALUES (2,'moktar','moktar','moktar.terki@gmail.com','1039c5bba2f583c93c62dc41a3cb365f',2),(3,'toto','tata','pierre@aaa.fr','1039c5bba2f583c93c62dc41a3cb365f',1);
 /*!40000 ALTER TABLE `afpa_utilisateurs` ENABLE KEYS */;
+=======
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `utilisateurs`
+--
+
+LOCK TABLES `utilisateurs` WRITE;
+/*!40000 ALTER TABLE `utilisateurs` DISABLE KEYS */;
+INSERT INTO `utilisateurs` VALUES (1,'moktar','terki','moktar.terki@gmail.com','1039c5bba2f583c93c62dc41a3cb365f',1);
+/*!40000 ALTER TABLE `utilisateurs` ENABLE KEYS */;
+>>>>>>> 0da64853af6ba85569fdda00f1791068c00ddb71
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 
@@ -322,4 +408,8 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
+<<<<<<< HEAD
 -- Dump completed on 2022-02-03 17:30:16
+=======
+-- Dump completed on 2022-02-03 17:20:33
+>>>>>>> 0da64853af6ba85569fdda00f1791068c00ddb71

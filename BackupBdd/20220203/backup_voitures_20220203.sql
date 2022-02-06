@@ -1,8 +1,16 @@
+<<<<<<< HEAD
 -- MySQL dump 10.13  Distrib 5.7.28, for Win32 (AMD64)
 --
 -- Host: localhost    Database: voitures
 -- ------------------------------------------------------
 -- Server version	5.7.28
+=======
+-- MySQL dump 10.13  Distrib 5.7.31, for Win64 (x86_64)
+--
+-- Host: localhost    Database: voitures
+-- ------------------------------------------------------
+-- Server version	5.7.31
+>>>>>>> 0da64853af6ba85569fdda00f1791068c00ddb71
 
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
@@ -31,10 +39,17 @@ DROP TABLE IF EXISTS `marques`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `marques` (
+<<<<<<< HEAD
   `mar_id` int(11) NOT NULL AUTO_INCREMENT,
   `mar_nom` varchar(20) NOT NULL,
   PRIMARY KEY (`mar_id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8;
+=======
+  `marid` int(11) NOT NULL AUTO_INCREMENT,
+  `marnom` varchar(20) NOT NULL,
+  PRIMARY KEY (`marid`)
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8;
+>>>>>>> 0da64853af6ba85569fdda00f1791068c00ddb71
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -43,11 +58,16 @@ CREATE TABLE `marques` (
 
 LOCK TABLES `marques` WRITE;
 /*!40000 ALTER TABLE `marques` DISABLE KEYS */;
+<<<<<<< HEAD
 INSERT INTO `marques` VALUES (1,'Citroën'),(2,'Peugeot'),(3,'Renault'),(4,'bmw');
+=======
+INSERT INTO `marques` VALUES (1,'Citroën'),(2,'Peugeot'),(3,'Renault');
+>>>>>>> 0da64853af6ba85569fdda00f1791068c00ddb71
 /*!40000 ALTER TABLE `marques` ENABLE KEYS */;
 UNLOCK TABLES;
 
 --
+<<<<<<< HEAD
 -- Temporary table structure for view `mavue`
 --
 
@@ -67,6 +87,8 @@ SET character_set_client = utf8;
 SET character_set_client = @saved_cs_client;
 
 --
+=======
+>>>>>>> 0da64853af6ba85569fdda00f1791068c00ddb71
 -- Table structure for table `modeles`
 --
 
@@ -83,8 +105,13 @@ CREATE TABLE `modeles` (
   `mod_date_ajout` date DEFAULT NULL,
   PRIMARY KEY (`mod_id`),
   KEY `fk_modeles_mar_id` (`mod_mar_id`),
+<<<<<<< HEAD
   CONSTRAINT `fk_modeles_mar_id` FOREIGN KEY (`mod_mar_id`) REFERENCES `marques` (`mar_id`) ON DELETE NO ACTION ON UPDATE NO ACTION
 ) ENGINE=InnoDB AUTO_INCREMENT=12 DEFAULT CHARSET=utf8;
+=======
+  CONSTRAINT `fk_modeles_mar_id` FOREIGN KEY (`mod_mar_id`) REFERENCES `marques` (`marid`) ON DELETE NO ACTION ON UPDATE NO ACTION
+) ENGINE=InnoDB AUTO_INCREMENT=11 DEFAULT CHARSET=utf8;
+>>>>>>> 0da64853af6ba85569fdda00f1791068c00ddb71
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -93,7 +120,11 @@ CREATE TABLE `modeles` (
 
 LOCK TABLES `modeles` WRITE;
 /*!40000 ALTER TABLE `modeles` DISABLE KEYS */;
+<<<<<<< HEAD
 INSERT INTO `modeles` VALUES (1,1,'C3',1.0,13500,NULL,'2018-10-18'),(2,1,'Cactus',1.0,18470,'2019-01-02','2018-10-18'),(3,3,'Espace',2.0,40000,'2019-01-02','2018-10-18'),(4,3,'Clio',1.0,14080,'2019-01-02','2018-10-18'),(5,2,'5008',1.2,33250,'2019-01-02','2018-10-18'),(6,2,'308',1.2,23630,'2019-01-02','2018-10-18'),(7,3,'Mégane',1.3,26740,'2019-01-02','2018-10-18'),(8,1,'Picasso',1.2,29100,'2019-01-02','2018-10-18'),(9,3,'Kadjar',1.2,26950,'2019-01-02','2018-10-18'),(10,3,'Koléos',1.5,34900,'2019-01-02','2018-10-18'),(11,4,'325ix',2.5,39000,'2021-12-01','2021-12-02');
+=======
+INSERT INTO `modeles` VALUES (1,1,'C3',1.0,13500,NULL,'2018-10-18'),(2,1,'Cactus',1.0,18470,'2019-01-02','2018-10-18'),(3,3,'Espace',2.0,40000,'2019-01-02','2018-10-18'),(4,3,'Clio',1.0,14080,'2019-01-02','2018-10-18'),(5,2,'5008',1.2,33250,'2019-01-02','2018-10-18'),(6,2,'308',1.2,23630,'2019-01-02','2018-10-18'),(7,3,'Mégane',1.3,26740,'2019-01-02','2018-10-18'),(8,1,'Picasso',1.2,29100,'2019-01-02','2018-10-18'),(9,3,'Kadjar',1.2,26950,'2019-01-02','2018-10-18'),(10,3,'Koléos',1.5,34900,'2019-01-02','2018-10-18');
+>>>>>>> 0da64853af6ba85569fdda00f1791068c00ddb71
 /*!40000 ALTER TABLE `modeles` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -112,7 +143,11 @@ CREATE TABLE `modeles_options` (
   KEY `om_mod_id` (`om_mod_id`),
   KEY `om_opt_id` (`om_opt_id`),
   CONSTRAINT `modeles_options_ibfk_1` FOREIGN KEY (`om_mod_id`) REFERENCES `modeles` (`mod_id`),
+<<<<<<< HEAD
   CONSTRAINT `modeles_options_ibfk_2` FOREIGN KEY (`om_opt_id`) REFERENCES `options` (`opt_id`)
+=======
+  CONSTRAINT `modeles_options_ibfk_2` FOREIGN KEY (`om_opt_id`) REFERENCES `options` (`optid`)
+>>>>>>> 0da64853af6ba85569fdda00f1791068c00ddb71
 ) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -134,10 +169,17 @@ DROP TABLE IF EXISTS `options`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `options` (
+<<<<<<< HEAD
   `opt_id` int(11) unsigned NOT NULL AUTO_INCREMENT,
   `opt_libelle` varchar(50) NOT NULL,
   `opt_prix` smallint(5) unsigned NOT NULL,
   PRIMARY KEY (`opt_id`)
+=======
+  `optid` int(11) unsigned NOT NULL AUTO_INCREMENT,
+  `optlibelle` varchar(50) NOT NULL,
+  `optprix` smallint(5) unsigned NOT NULL,
+  PRIMARY KEY (`optid`)
+>>>>>>> 0da64853af6ba85569fdda00f1791068c00ddb71
 ) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -150,6 +192,7 @@ LOCK TABLES `options` WRITE;
 INSERT INTO `options` VALUES (1,'Jantes alu',600),(2,'GPS',450),(3,'Toit ouvrant',870),(4,'Peinture métallisée',275);
 /*!40000 ALTER TABLE `options` ENABLE KEYS */;
 UNLOCK TABLES;
+<<<<<<< HEAD
 
 --
 -- Table structure for table `textes`
@@ -229,6 +272,8 @@ USE `voitures`;
 /*!50001 SET character_set_client      = @saved_cs_client */;
 /*!50001 SET character_set_results     = @saved_cs_results */;
 /*!50001 SET collation_connection      = @saved_col_connection */;
+=======
+>>>>>>> 0da64853af6ba85569fdda00f1791068c00ddb71
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 
 /*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
@@ -239,4 +284,8 @@ USE `voitures`;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
+<<<<<<< HEAD
 -- Dump completed on 2022-02-03 17:30:23
+=======
+-- Dump completed on 2022-02-03 17:20:36
+>>>>>>> 0da64853af6ba85569fdda00f1791068c00ddb71
