@@ -28,22 +28,22 @@ setcookie("lang", $_SESSION['lang'], time()+36000, '/');
 $routes = [
     
     "default"=>["PHP/MODEL/","TestManager","Test de reunions",0,false],
-    // "inscription" => ["PHP/VIEW/FORM/", "FormInscription", "Identification", 0, false],
-    // "actionInscription" => ["PHP/CONTROLLER/ACTION/", "actionInscription", "Erreur", 0, false],
-    // "connection" => ["PHP/VIEW/FORM/", "FormConnection", "Identification", 0, false],
-    // "actionConnection" => ["PHP/CONTROLLER/ACTION/", "actionConnection", "Erreur", 0, false],
-    // "accueil" => ["PHP/VIEW/GENERAL/", "Accueil", "Accueil", 0, false],
-    // "deconnection" => ["PHP/CONTROLLER/ACTION/", "Actiondeconnection", "Erreur", 0, false],
-// 
-    // "listeProduit" => ["PHP/VIEW/LISTE/", "ListeProduit", "ListeProduits", 1, false],
-    // "formProduit" => ["PHP/VIEW/FORM/", "FormProduit", "GestionProduit", 1, false],
-    // "actionProduit" => ["PHP/CONTROLLER/ACTION/", "ActionProduit", "Mise à jour du produit", 1, false],
-// 
-    // "listeCategorie" => ["PHP/VIEW/LISTE/", "ListeCategorie", "ListeCategories", 2, false],
-    // "formCategorie" => ["PHP/VIEW/FORM/", "FormCategorie", "GestionCategories", 2, false],
-    // "actionCategorie" => ["PHP/CONTROLLER/ACTION/", "ActionCategorie", "Mise à jour du produit", 2, false],
-    //"TestManager" => ["PHP/MODEL/MANAGER/", "TestManager.Class", "titretest", 0, false]
-    // "erreur" => ["PHP/VIEW/GENERAL/", "Erreur", "titreErreur", 0, false]
+    "inscription" => ["PHP/VIEW/FORM/", "FormInscription", "Identification", 0, false],
+    "actionInscription" => ["PHP/CONTROLLER/ACTION/", "actionInscription", "Erreur", 0, false],
+    "connection" => ["PHP/VIEW/FORM/", "FormConnection", "Identification", 0, false],
+    "actionConnection" => ["PHP/CONTROLLER/ACTION/", "actionConnection", "Erreur", 0, false],
+    "accueil" => ["PHP/VIEW/GENERAL/", "Accueil", "Accueil", 0, false],
+    "deconnection" => ["PHP/CONTROLLER/ACTION/", "Actiondeconnection", "Erreur", 0, false],
+
+    "listeProduit" => ["PHP/VIEW/LISTE/", "ListeProduit", "ListeProduits", 1, false],
+    "formProduit" => ["PHP/VIEW/FORM/", "FormProduit", "GestionProduit", 1, false],
+    "actionProduit" => ["PHP/CONTROLLER/ACTION/", "ActionProduit", "Mise à jour du produit", 1, false],
+
+    "listeCategorie" => ["PHP/VIEW/LISTE/", "ListeCategorie", "ListeCategories", 2, false],
+    "formCategorie" => ["PHP/VIEW/FORM/", "FormCategorie", "GestionCategories", 2, false],
+    "actionCategorie" => ["PHP/CONTROLLER/ACTION/", "ActionCategorie", "Mise à jour du produit", 2, false],
+    "TestManager" => ["PHP/MODEL/MANAGER/", "TestManager.Class", "titretest", 0, false],
+    "erreur" => ["PHP/VIEW/GENERAL/", "Erreur", "titreErreur", 0, false]
 ];
 
 if (isset($_GET["page"])) {
