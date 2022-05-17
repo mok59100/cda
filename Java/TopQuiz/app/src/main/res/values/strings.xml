@@ -1,3 +1,7 @@
 <resources>
-    <string name="app_name">TopQuiz</string>
+    <string name="app_name">Mon Appli</string>
+    <string name="edit_message">Entrez un message</string>
+    <string name="button_send">Envoyer</string>
+    <string name="return_button">Retour</string>
+
 </resources>
