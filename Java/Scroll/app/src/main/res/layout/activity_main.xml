@@ -10,12 +10,13 @@
         android:id="@+id/article_heading"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@color/colorPrimary"
+
         android:textColor="@android:color/white"
         android:padding="10dp"
         android:textAppearance="@android:style/TextAppearance.DeviceDefault.Large"
        android:textStyle="bold"
-        android:text="@string/titre_de_l_article"
+        android:text="titre_de_l_article"
+
         />
 
     <ScrollView
@@ -35,7 +36,7 @@
             android:layout_below="@+id/article_heading"
             android:padding="@dimen/padding_regular"
             android:textAppearance="@android:style/TextAppearance.DeviceDefault"
-            android:text="@string/sous_titre_article"
+            android:text="sous_titre_article"
             />
 
         <TextView
@@ -43,6 +44,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:lineSpacingExtra="@dimen/line_spacing"
+            android:layout_below="@id/article_sub_heading"
+            android:autoLink="web"
             android:padding="@dimen/padding_regular"
             android:text="@string/texte_de_l_article" />
         </LinearLayout>
