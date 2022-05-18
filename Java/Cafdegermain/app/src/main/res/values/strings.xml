@@ -1,0 +1,100 @@
+<resources xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <string name="app_name">Café de germain</string>
+    <string name="action_settings">Settings</string>
+    <!-- Strings used for fragments for navigation -->
+    <string name="first_fragment_label">First Fragment</string>
+    <string name="second_fragment_label">Second Fragment</string>
+    <string name="next">Next</string>
+    <string name="previous">Previous</string>
+
+    <string name="hello_first_fragment">Hello first fragment</string>
+    <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
+    <string name="donut_desc">Les Donuts sont fourrés et avec un joli glaçage</string>
+    <string name="ice_cream_desc">Les sandwiches à la crème glacée ont des gaufrettes au chocolat et une garniture à la vanille.</string>
+    <string name="froyo_desc">Le FroYo est un yogourt glacé libre-service de première qualité.</string>
+
+    <string name="donut_order_message">Vous avez commandé un Donut</string>
+    <string name="ice_cream_order_message">Vous avez commandé une Glace</string>
+    <string name="froyo_order_message">Vous avez commandé un Froyo</string>
+    <string name="title_activity_order">OrderActivity</string>
+    <!--    <TextView-->
+    <!--        android:id="@+id/textintro"-->
+    <!--        android:layout_width="wrap_content"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        android:layout_marginTop="8dp"-->
+    <!--        android:text="Les Desserts du Café"-->
+    <!--        android:textSize="24sp"-->
+    <!--        android:textStyle="bold"-->
+    <!--        app:layout_constraintEnd_toEndOf="parent"-->
+    <!--        app:layout_constraintStart_toStartOf="parent"-->
+    <!--        app:layout_constraintTop_toTopOf="parent" />-->
+
+    <!--    <ImageView-->
+    <!--        android:id="@+id/donut"-->
+    <!--        android:layout_width="wrap_content"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        android:layout_marginStart="24dp"-->
+    <!--        android:layout_marginTop="24dp"-->
+    <!--        android:contentDescription="Les Donuts sont fourrés et avec un joli glaçage"-->
+    <!--        app:layout_constraintStart_toStartOf="parent"-->
+    <!--        app:layout_constraintTop_toBottomOf="@+id/textintro"-->
+    <!--        app:srcCompat="@drawable/donut_circle" />-->
+
+    <!--    <ImageView-->
+    <!--        android:id="@+id/ice_cream_sandwich"-->
+    <!--        android:layout_width="wrap_content"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        android:layout_marginStart="24dp"-->
+    <!--        android:layout_marginTop="24dp"-->
+    <!--        android:contentDescription="Les sandwiches à la crème glacée ont des gaufrettes au chocolat et une garniture à la vanille."-->
+    <!--        app:layout_constraintStart_toStartOf="parent"-->
+    <!--        app:layout_constraintTop_toBottomOf="@+id/donut"-->
+    <!--        app:srcCompat="@drawable/icecream_circle" />-->
+
+    <!--    <ImageView-->
+    <!--        android:id="@+id/froyo"-->
+    <!--        android:layout_width="wrap_content"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        android:layout_marginStart="24dp"-->
+    <!--        android:layout_marginTop="24dp"-->
+    <!--        android:contentDescription="Le FroYo est un yogourt glacé libre-service de première qualité."-->
+    <!--        app:layout_constraintStart_toStartOf="parent"-->
+    <!--        app:layout_constraintTop_toBottomOf="@+id/ice_cream_sandwich"-->
+    <!--        app:srcCompat="@drawable/froyo_circle" />-->
+
+    <!--    <TextView-->
+    <!--        android:id="@+id/donut_Description"-->
+    <!--        android:layout_width="wrap_content"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        android:layout_marginStart="24dp"-->
+    <!--        android:layout_marginTop="24dp"-->
+    <!--        android:layout_marginEnd="24dp"-->
+    <!--        android:text="TextView"-->
+    <!--        app:layout_constraintEnd_toEndOf="parent"-->
+    <!--        app:layout_constraintHorizontal_bias="0.503"-->
+    <!--        app:layout_constraintStart_toEndOf="@+id/donut"-->
+    <!--        app:layout_constraintTop_toTopOf="@+id/donut" />-->
+
+    <!--    <TextView-->
+    <!--        android:id="@+id/ice_cream_sandwichs_description"-->
+    <!--        android:layout_width="wrap_content"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        android:layout_marginStart="24dp"-->
+    <!--        android:layout_marginTop="24dp"-->
+    <!--        android:layout_marginEnd="24dp"-->
+    <!--        android:text="TextView"-->
+    <!--        app:layout_constraintEnd_toEndOf="parent"-->
+    <!--        app:layout_constraintStart_toEndOf="@+id/ice_cream_sandwich"-->
+    <!--        app:layout_constraintTop_toTopOf="@+id/ice_cream_sandwich" />-->
+    <!--    <TextView-->
+    <!--        android:id="@+id/froyo_decription"-->
+    <!--        android:layout_width="wrap_content"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        android:layout_marginStart="24dp"-->
+    <!--        android:layout_marginTop="24dp"-->
+    <!--        android:layout_marginEnd="24dp"-->
+    <!--        android:text="TextView"-->
+    <!--        app:layout_constraintEnd_toEndOf="parent"-->
+    <!--        app:layout_constraintStart_toEndOf="@+id/froyo"-->
+    <!--        app:layout_constraintTop_toTopOf="@+id/froyo" />-->
+</resources>

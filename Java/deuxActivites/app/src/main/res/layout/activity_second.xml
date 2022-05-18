@@ -17,7 +17,7 @@
         android:textAppearance="@style/TextAppearance.AppCompat.Medium"
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_contraintTop_toTopOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
     />
 
     <TextView

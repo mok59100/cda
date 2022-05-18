@@ -1,12 +1,12 @@
 <resources>
-    <string name="app_name">deuxActivite</string>
+    <string name="app_name">deuxActivites</string>
     <string name="envoyer">Envoyer</string>
     <string name="activitedeux">Seconde Activité</string>
     <string name="entrez_un_message">Entrez un Message</string>
     <string name="repondre">Répondre</string>
     <string name="message_re_u">Message reçu</string>
-    <string name="entrez_une_r_ponse">Entrez_une_réponse</string>
+    <string name="entrez_une_r_ponse">Entrez une réponse</string>
     <string name="r_ponse_de_la_2eme_vue">Réponse de la 2eme vue</string>
-    <string name="r_ponse_de_la_2eme_vue">Réponse de la 2eme vue</string>
+
 
 </resources>

@@ -9,7 +9,8 @@ import android.widget.EditText;
 import android.widget.TextView;
 
 public class SecondActivity extends AppCompatActivity {
-private static final String EXTRA_REPLY ="deuxactivite.extra.REPLY";
+
+public static final String EXTRA_REPLY ="deuxactivites.extra.REPLY";
         private EditText mReply;
 
 
