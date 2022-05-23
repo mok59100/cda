@@ -31,6 +31,6 @@ public class MainActivity2 extends AppCompatActivity {
         //je recuperer le ramdom sans chiffre o
         int ramdomNumber= result.nextInt(nombreChoisi)+1;
 
-        
+
     }
 }

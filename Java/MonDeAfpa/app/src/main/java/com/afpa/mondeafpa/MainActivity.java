@@ -37,7 +37,7 @@ public class MainActivity extends AppCompatActivity {
 public void lancer(View view){
         //on cherche le contenu de l'input
    String chiffre = insertChiffreDé.getText().toString();
-   //on crer une nouvelle activite
+   //on creer une nouvelle activite
    Intent intent = new Intent(this,MainActivity2.class);
    //on va chercher le contenu de l'input
    intent.putExtra(EXTRA_MESSAGE,chiffre);
