@@ -40,8 +40,7 @@ public static final String EXTRA_MESSAGE ="TrouverUnNombre.extra.MESSAGE";
                 intent.putExtra("proposition", proposition.getText().toString());
                 //intent.putExtra("ChiffreInconnu", ChiffreInconnu().getText().ToString());
                 startActivity(intent);
-            }
-        }
+
     }
             public void Validation(View view) {
 
@@ -65,10 +64,12 @@ public static final String EXTRA_MESSAGE ="TrouverUnNombre.extra.MESSAGE";
                 int randomNumber = result.nextInt(Integer.parseInt(ChiffreInconnu().getText().toString())) + 1;
             }
 
-            public void propositionJoueur (){
+            public void propositionJoueur () {
 
-             System.out.println("[" + nom + "]: Je propose " + proposition);
+                System.out.println("[" + nom + "]: Je propose " + proposition);
 
 
+            }
+        });
     }
 }
