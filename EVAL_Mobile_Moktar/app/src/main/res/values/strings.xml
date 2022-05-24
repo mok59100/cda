@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">TrouverUnNombre</string>
+    <string name="saisir_votre_proposition">Saisir votre proposition ?</string>
+    <string name="validation">Validation</string>
+    <string name="proposition" />
+    <string name="r_sultat">résultat :</string>
+    <string name="rejouer">Rejouer</string>
+    <string name="trouver_un_nombre">Trouver un nombre</string>
+    <string name="nom">nom</string>
+</resources>
